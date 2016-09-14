@@ -1,0 +1,55 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $base-background-color;
+  color: $base-font-color;
+  font-family: $base-font-family;
+  font-weight: 400;
+  font-size: $base-font-size*0.9;
+  line-height: $base-line-height*0.9;
+
+  @include small-view {
+    font-size: $base-font-size;
+    line-height: $base-line-height;
+  }
+
+  @include medium-view {
+    font-size: $base-font-size*1.2;
+    line-height: $base-line-height*1.2;
+  }
+
+  @include large-view {
+    font-size: $base-font-size*1.3;
+  }
+
+  @include xlarge-view {
+    font-size: $base-font-size*1.4;
+  }
+
+  @include xxlarge-view {
+    font-size: $base-font-size*1.6;
+  }
+}
+
+a {
+  color: $base-accent-color;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    color: darken($base-accent-color, 10%);
+  }
+}
+
+img {
+  max-width: 100%;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}

@@ -1,0 +1,36 @@
+/*
+ | ----------------------------------------------------------------
+ | Style settings
+ | ----------------------------------------------------------------
+ |
+ | Here you should configure your projectspecific settings
+ |
+ */
+
+// Brand colors - used by the entire stylesheet
+$color-first: #333333;
+$color-second: #222222;
+$color-third: #444444;
+
+$color-black: #222222;
+$color-white: #ffffff;
+
+// Background color - handy for setting here
+$base-background-color: $color-white;
+
+// Font
+$base-font-color: #222222;
+$base-accent-color: $color-first; // used by e.g. links
+$base-font-family: 'arial, helvetica, sans-serif';
+$base-font-size: 1em;
+$base-line-height: 1.5;
+$header-line-height: 1.25;
+$base-spacing: $base-font-size;
+
+// Grid - breakpoints
+$bp-small: 48em; // 768px
+$bp-medium: 64em; // 1024px
+$bp-large: 85.375em; // 1366px
+$bp-xlarge: 120em; // 1920px
+$bp-xxlarge: 160em; // 2560px
+
