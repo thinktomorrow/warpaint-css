@@ -1,16 +1,28 @@
-// content will be contained in relation to the screen width.
-.container {
-  margin: 0 4%;
+.row{
+  @extend .clearfix;
+}
 
-  @include medium-view {
-    margin: 0 8%;
-  }
+[class*="column-"]{
+  width:100%;
+  padding:1em;
+  min-height:1px; // Displays columns properly, even without content
 
-  @include large-view {
-    margin: 0 12%;
-  }
+  background-color:deepskyblue;
 
-  @include xlarge-view {
-    margin: 0 18%;
+  @include small-view(){
+    float:left;
   }
 }
+
+@for $i from 1 through $grid-columns {
+
+  .column-#{$i} {
+      width: 100% / $grid-columns  * $i;
+  }
+
+}
+
+// .gutter (row)
+// .spacy .spacy-small, spacy-medium, spacy-large spacy-xlarge spacy-xxlarge
+// Rowception
+// .column-5 .large-5 .xlarge-7 // UP

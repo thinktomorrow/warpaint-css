@@ -1,0 +1,16 @@
+// content will be contained in relation to the screen width.
+.container {
+  margin: 0 4%;
+
+  @include medium-view {
+    margin: 0 8%;
+  }
+
+  @include large-view {
+    margin: 0 12%;
+  }
+
+  @include xlarge-view {
+    margin: 0 18%;
+  }
+}
