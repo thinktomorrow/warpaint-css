@@ -1,5 +1,17 @@
 .row{
   @extend .clearfix;
+
+  &.equalheight{
+
+    @include small-view(){
+      overflow:hidden;
+
+      [class*="column-"]{
+        padding-bottom:99999px;
+        margin-bottom:-99999px;
+      }
+    }
+  }
 }
 
 [class*="column-"]{

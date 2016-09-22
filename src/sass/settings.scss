@@ -28,11 +28,12 @@ $header-line-height: 1.25;
 $base-spacing: $base-font-size;
 
 // Grid - breakpoints
-$bp-small: 48em; // 768px
-$bp-medium: 64em; // 1024px
-$bp-large: 85.375em; // 1366px
-$bp-xlarge: 120em; // 1920px
-$bp-xxlarge: 160em; // 2560px
+$bp-xsmall: 20em; // 320px
+$bp-small: 30em; // 480px
+$bp-medium: 48em; // 768px
+$bp-large: 64em; // 1024px
+$bp-xlarge: 85.375em; // 1366px
+$bp-xxlarge: 120em; // 1920px
 
 // Grid columns
 $grid-columns: 12 !default;

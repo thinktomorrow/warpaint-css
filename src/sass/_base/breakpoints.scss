@@ -1,6 +1,18 @@
 // Media Queries - mobile first approach
 $mq-retina: "(-webkit-min-device-pixel-ratio: 2),(min-resolution: 192dpi)";
 
+@mixin xsmall-view{
+  @media (min-width: #{$bp-xsmall}){
+    @content;
+  }
+}
+
+@mixin xsmall-view-retina{
+  @media (min-width: #{$bp-xsmall}) and #{$mq-retina}{
+    @content;
+  }
+}
+
 @mixin small-view{
   @media (min-width: #{$bp-small}){
     @content;
@@ -48,6 +60,7 @@ $mq-retina: "(-webkit-min-device-pixel-ratio: 2),(min-resolution: 192dpi)";
     @content;
   }
 }
+
 
 @mixin xxlarge-view{
   @media (min-width: #{$bp-xxlarge}){
