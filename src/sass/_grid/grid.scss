@@ -7,8 +7,8 @@
       overflow:hidden;
 
       [class*="column-"]{
-        padding-bottom:99999px;
-        margin-bottom:-99999px;
+        padding-bottom:9999em;
+        margin-bottom:-9998em; // we have a 1em padding in place
       }
     }
   }
