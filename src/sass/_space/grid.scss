@@ -1,6 +1,10 @@
 .row{
   @extend .clearfix;
 
+  /**
+   * Equal height css hack
+   * based on http://callmenick.com/post/css-equal-height-columns-three-different-ways
+   */
   &.equalheight{
 
     @include small-view(){
