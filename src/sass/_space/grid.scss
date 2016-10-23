@@ -4,6 +4,8 @@
   /**
    * Equal height css hack
    * based on http://callmenick.com/post/css-equal-height-columns-three-different-ways
+   * Not an ideal solution: bottom-border will disappear if column itself has a border.
+   *
    */
   &.equalheight{
 
@@ -11,8 +13,24 @@
       overflow:hidden;
 
       [class*="column-"]{
-        padding-bottom:9999em;
-        margin-bottom:-9998em; // we have a 1em padding in place
+        padding-bottom:9999rem;
+        margin-bottom:-9999rem + $space-xs; // we have a 1em padding in place
+
+        @include small-view {
+          margin-bottom:-9999rem + $space-s;
+        }
+
+        @include medium-view {
+          margin-bottom:-9999rem + $space-m;
+        }
+
+        @include large-view {
+          margin-bottom:-9999rem + $space-l;
+        }
+
+        @include xlarge-view {
+          margin-bottom:-9999rem + $space-xl;
+        }
       }
     }
   }
@@ -20,10 +38,8 @@
 
 [class*="column-"]{
   width:100%;
-  padding:1em;
+  //padding:1.5rem; // TODO: maybe remove padding and only apply to inner elements? maybe with a class .inner?
   min-height:1px; // Displays columns properly, even without content
-
-  background-color:deepskyblue;
 
   @include small-view(){
     float:left;
@@ -34,6 +50,35 @@
 
   .column-#{$i} {
       width: 100% / $grid-columns  * $i;
+
+    .cards-xs &{
+      @extend .inline-xs;
+      width: calc((100% / #{$grid-columns}  * #{$i}) - 0.5em);
+    }
+
+    .cards-s &{
+      @extend .inline-s;
+      width: calc((100% / #{$grid-columns}  * #{$i}) - 1em);
+    }
+
+     .cards-m &, .cards &{
+        @extend .inline;
+        width: calc((100% / #{$grid-columns}  * #{$i}) - 2em);
+     }
+
+    .cards-l &{
+      @extend .inline-l;
+      width: calc((100% / #{$grid-columns}  * #{$i}) - 4em);
+    }
+
+    .cards-xl &{
+      @extend .inline-xl;
+      width: calc((100% / #{$grid-columns}  * #{$i}) - 8em);
+    }
+
+    .row-inset-xl &{
+      @extend .inset-xl;
+    }
   }
 
 }

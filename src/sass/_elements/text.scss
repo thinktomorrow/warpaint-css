@@ -1,0 +1,53 @@
+/**
+ * Sizes independent of the viewports
+ *
+ * Projected line-heights are best guesses and merely
+ * approximations towards an optimal vertical rhythm
+ * e.g. line-height for size-l will hook into perfect
+ * vertical rhythm only on every 6-th line
+ */
+
+.size-xs{
+  font-size: $font-size-xs;
+  line-height: $base-line-height * $ratio-xs;
+}
+
+.size-s{
+  font-size: $font-size-s;
+  line-height: $base-line-height * $ratio-s;
+}
+
+.size-m{
+  font-size: $font-size-m;
+  line-height: $base-line-height * $ratio-m; // should be approx. 1.4em
+}
+
+.size-l{
+  font-size: $font-size-l;
+  line-height: $base-line-height;
+}
+
+.size-xl{
+  font-size: $font-size-xl;
+  line-height: $base-line-height;
+}
+
+
+p{
+  margin: #{$base-line-height}rem 0;
+}
+
+a {
+  color: $base-accent-color;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    color: darken($base-accent-color, 10%);
+  }
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
