@@ -7,45 +7,53 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <link href='https://fonts.googleapis.com/css?family=Merriweather+Sans:300,300italic,400,400italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Ubuntu:300,400' rel='stylesheet' type='text/css'>
+
     <link rel="stylesheet" href="/warpaint.css">
+    <style type="text/css">
+
+        html{
+            margin:0;
+            padding:0;
+        }
+
+        body{
+            margin:0;
+            padding:0;
+            background-color:rgba(0,0,0,0.1);
+            font-family: 'Merriweather Sans', sans-serif;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Ubuntu', sans-serif;
+            font-weight: 300;
+            color: #818181;
+        }
+
+        [class*="column-"]{
+            background-color:white;
+            color:#444444;
+        }
+
+        .inline-divider{
+            display:inline-block;
+        }
+    </style>
 </head>
 <body>
 
-<h1>Warpaint styleguide</h1>
-<hr>
+<div class="container">
 
-<h2>Typography</h2>
+    <h1>Warpaint</h1>
 
-<h1>This is a title</h1>
-<h2>This is a title</h2>
-<h3>This is a title</h3>
-<h4>This is a title</h4>
-<h5>This is a title</h5>
+    <a href="/grid.html">Grid</a>
+    <span class="inline-divider inline-m">|</span>
+    <a href="/grid.html">Grid</a>
+    <span class="inline-divider inline-m">|</span>
+    <a href="/grid.html">Grid</a>
 
-<div class="row">
-    <p>dmkfqjsdlmkfjsqdlm kfjsdwlmkfjsqwlmdkf jsqlmdk fjslmwdkfjslmqkdfjslqmdkfjlsqmdkfj slqmkdf jsdqfqjdmqsjqflmkdjflmskqdjflmskqjdflmsqkdjf lmskqdjf lsmqdkjfslmqdkjflqsmkdjflqsmdkjfqlsmdkjf qlsmkdfj</p>
-</div>
-
-<div class="row">
-    dfqsd
-</div>
-
-<div class="container" style="background-color:white; border:1px solid black;">
-    <p>dmkfqjsdlmkfjsqdlm kfjsdwlmkfjsqwlmdkf jsqlmdk fjslmwdkfjslmqkdfjslqmdkfjlsqmdkfj slqmkdf jsdqfqjdmqsjqflmkdjflmskqdjflmskqjdflmsqkdjf lmskqdjf lsmqdkjfslmqdkjflqsmkdjflqsmdkjfqlsmdkjf qlsmkdfj</p>
-
-    <button>Presse me!</button><br>
-    <button class="medium">Presse me!</button><br>
-    <button class="large">Presse me!</button><br>
-    <button class="xlarge">Presse me!</button><br>
-    <button class="xxlarge">Presse me!</button><br>
-
-    <p>dmkfqjsdlmkfjsqdlm kfjsdwlmkfjsqwlmdkf jsqlmdk fjslmwdkfjslmqkdfjslqmdkfjlsqmdkfj slqmkdf jsdqfqjdmqsjqflmkdjflmskqdjflmskqjdflmsqkdjf lmskqdjf lsmqdkjfslmqdkjflqsmkdjflqsmdkjfqlsmdkjf qlsmkdfj</p>
-    <p>dmkfqjsdlmkfjsqdlm kfjsdwlmkfjsqwlmdkf jsqlmdk fjslmwdkfjslmqkdfjslqmdkfjlsqmdkfj slqmkdf jsdqfqjdmqsjqflmkdjflmskqdjflmskqjdflmsqkdjf lmskqdjf lsmqdkjfslmqdkjflqsmkdjflqsmdkjfqlsmdkjf qlsmkdfj</p>
-    <p>dmkfqjsdlmkfjsqdlm kfjsdwlmkfjsqwlmdkf jsqlmdk fjslmwdkfjslmqkdfjslqmdkfjlsqmdkfj slqmkdf jsdqfqjdmqsjqflmkdjflmskqdjflmskqjdflmsqkdjf lmskqdjf lsmqdkjfslmqdkjflqsmkdjflqsmdkjfqlsmdkjf qlsmkdfj</p>
-</div>
-
-<h2>Buttons</h2>
-<button>Press me!</button>
+    <p>12-grid column system with seamless positions. By default no margins</p>
 
 </body>
 </html>

@@ -826,6 +826,8 @@ body {
  *
  * Projected line-heights are best guesses and merely
  * approximations towards an optimal vertical rhythm
+ * e.g. line-height for size-l will hook into perfect
+ * vertical rhythm only on every 6-th line
  */
 .size-xs {
   font-size: 0.9rem;
@@ -844,12 +846,37 @@ body {
 
 .size-l {
   font-size: 1.2rem;
-  line-height: 1.8;
+  line-height: 1.5;
 }
 
 .size-xl {
   font-size: 1.4rem;
   line-height: 1.5;
+}
+
+h1 {
+  font-size: 2.2rem;
+  line-height: 1.35em;
+}
+
+h2 {
+  font-size: 1.8rem;
+}
+
+h3 {
+  font-size: 1.4rem;
+}
+
+h4 {
+  font-size: 1.2rem;
+}
+
+h5 {
+  font-size: 1.1rem;
+}
+
+h6 {
+  font-size: 1rem;
 }
 
 p {

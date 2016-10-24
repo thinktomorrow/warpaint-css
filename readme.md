@@ -9,7 +9,7 @@ Think Tomorrow bootstrap stylesheet.
 - it’s a best practice to use relative units like em for font-size.
 - Size in em if the property scales according to it’s font-size
 - Size everything else in rem.
-
+- Increase font-size and line-height as screen sizes increase.
 
 ## Sources
 https://zellwk.com/blog/rem-vs-em/
