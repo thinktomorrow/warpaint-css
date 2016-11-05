@@ -1,5 +1,6 @@
 // content will be contained in relation to the screen width.
 .container {
+  @extend .clearfix;
   margin: 0 4%;
 
   @include medium-view {

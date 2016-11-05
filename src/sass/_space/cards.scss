@@ -1,0 +1,21 @@
+$sizes: (xs : $space-xs, s : $space-s, m : $space-m, l : $space-l, xl : $space-xl);
+@each $size,$space in $sizes
+{
+  .cards-#{$size}{
+    padding-left: #{$space};
+    padding-right: 0;
+  }
+
+  .cards-#{$size} [class*="column-"]{
+    padding-right: #{$space};
+  }
+}
+
+.cards{
+  padding-left: $space-m;
+  padding-right: 0;
+}
+
+.cards [class*="column-"]{
+  padding-right: $space-m;
+}

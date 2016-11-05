@@ -50,40 +50,6 @@
 
   .column-#{$i} {
       width: 100% / $grid-columns  * $i;
-
-    .cards-xs &{
-      @extend .inline-xs;
-      width: calc((100% / #{$grid-columns}  * #{$i}) - 0.5em);
-    }
-
-    .cards-s &{
-      @extend .inline-s;
-      width: calc((100% / #{$grid-columns}  * #{$i}) - 1em);
-    }
-
-     .cards-m &, .cards &{
-        @extend .inline;
-        width: calc((100% / #{$grid-columns}  * #{$i}) - 2em);
-     }
-
-    .cards-l &{
-      @extend .inline-l;
-      width: calc((100% / #{$grid-columns}  * #{$i}) - 4em);
-    }
-
-    .cards-xl &{
-      @extend .inline-xl;
-      width: calc((100% / #{$grid-columns}  * #{$i}) - 8em);
-    }
-
-    .row-inset-xl &{
-      @extend .inset-xl;
-    }
   }
 
 }
-
-// .gutter (row)
-// .spacy .spacy-small, spacy-medium, spacy-large spacy-xlarge spacy-xxlarge
-// Rowception
-// .column-5 .large-5 .xlarge-7 // UP
