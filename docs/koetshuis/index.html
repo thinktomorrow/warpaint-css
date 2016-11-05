@@ -1,0 +1,125 @@
+<!doctype html>
+<html class="no-js" lang="">
+<head>
+    <link rel="stylesheet" href="css/gothic.css">
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="css/warpaint.css">
+    <link rel="stylesheet" href="css/koetshuis.css">
+</head>
+<body class="">
+
+<header class="stickable">
+    <div class="header-container">
+        <span class="header-sticky-logo">
+            <img style="width:48px;" src="img/koetshuis-icon-white.png" alt="Koetshuis">
+        </span>
+        <nav class="header-navigation">
+            <ul>
+                <li><a href="">Kransen</a></li>
+                <li><a href="">Maatwerk</a></li>
+                <li><a href="">Over ons</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<div class="hero">
+    <div class="hero-bg" id="hero-garland"></div>
+    <div class="hero-bg-overlay"></div>
+
+    <div class="hero-container">
+        <span id="hero-logo" class="hero-logo stickable sticky">
+            <img style="width:120px;" src="img/koetshuis-icon-white.png" alt="Koetshuis">
+        </span>
+        <h1 class="hero-title size-l">Het Koetshuis</h1>
+        <p class="subline hero-title-subline">Gezelligheid kan je kopen</p>
+    </div>
+</div>
+
+<div class="slideshow">
+    <div class="slideshow-intro container text-center stack-l">
+        <h2 class="stack-l">Wij zorgen voor jouw gezelligheid</h2>
+        <p class="stack-l">dfmkqsd mfkjqs ldmkfjqlsmkdjfl mqskdjf lmqsdkjflqsmkdfj qslmdkfj qsdmlfkjqsdlmkfjqsdlmkf jds
+        dfk lqsjdfm kqjsdf mkjsdqflmkjqsdmflkjsqdlmfkjqsdlmfkj qsdlmfkjsqdlmkfjqsdf dfqsdf dqsf</p>
+    </div>
+    <div class="slideshow-progress"></div>
+    <div class="slides-container">
+        <div class="slide">
+            <div class="slide-content">
+                <img src="img/oakgarland.jpg" alt="">
+            </div>
+        </div>
+        <div class="slide">
+            <div class="slide-content">
+                <img src="img/blackwhitegarland.jpg" alt="">
+            </div>
+        </div>
+        <div class="slide">
+            <div class="slide-content">
+                <img src="img/witchgarland.jpg" alt="">
+            </div>
+        </div>
+    </div>
+</div>
+<div class="intro clearfix" style="background-color:black;">
+    <div class="container text-center stack-l">
+        <h3 class="stack-m">Dit zijn wij!</h3>
+        <p class="stack-m">qldkfjq klsmdfjsqlm dkfjsqdlmk fjsqldmkf jsqdlmkf jdm qldkfjq klsmdfjsqlm dkfjsqdlmk fjsqldmkf jsqdlmkf jdm
+            qldkfjq klsmdfjsqlm dkfjsqdlmk fjsqldmkf jsqdlmkf jdm</p>
+    </div>
+</div>
+
+<div class="quotes clearfix">
+    <div class="container text-center stack-l">
+        <h3 class="stack-m">Dit zeggen onze klanten</h3>
+        <blockquote>dflkjqsdflm dlmqkf jqdlsmkfj dlsmqkf jsdlmqkf jdslmfk jdf lmqskdf mkfd </blockquote>
+        <blockquote>dflkjqsdflm dlmqkf jqdlsmkfj dlsmqkf jsdlmqkf jdslmfk jdf lmqskdf mkfd </blockquote>
+
+    </div>
+</div>
+
+<div class="quotes">
+    <div class="container">
+    </div>
+</div>
+
+<footer class="size-xs text-center inset-m">
+&copy; Het Koetshuis 2017 - facebook
+</footer>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script>
+    var img = new Image();
+
+    img.onload = function(){
+        var image = document.getElementById('hero-garland');
+        image.className += ' is-loaded';
+    };
+
+    img.src = 'img/witchgarland.jpg';
+
+
+    // STICKY
+    var stickable = $(".stickable");
+
+    $(document).on( 'scroll', function(){
+        if ($(this).scrollTop() > 100) {
+            stickable.addClass("sticky");
+        } else {
+            stickable.removeClass("sticky");
+        }
+    });
+
+    // On logo sticky class is added on start so we remove it immediately so we get a nice load animation
+    setTimeout(function(){
+        $('#hero-logo').removeClass('sticky');
+    },500);
+
+</script>
+</body>
+</html>
