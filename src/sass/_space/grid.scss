@@ -48,8 +48,11 @@
 
 @for $i from 1 through $grid-columns {
 
-  .column-#{$i} {
+  @include small-view(){
+    .column-#{$i} {
       width: 100% / $grid-columns  * $i;
+    }
   }
+
 
 }
