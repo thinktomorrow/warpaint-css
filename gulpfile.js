@@ -44,7 +44,7 @@ gulp.task('watch',function(){
         proxy: config.proxy
     });
 
-    gulp.watch(config.src+'/**/*.scss',['sass'],browserSync.reload());
+    gulp.watch(config.src+'/**/*.scss',['sass','sass-min'],browserSync.reload());
 });
 
-gulp.task('default', ['sass']);
+gulp.task('default', ['sass','sass-min']);

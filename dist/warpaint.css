@@ -3,8 +3,32 @@
  | Style settings
  | ----------------------------------------------------------------
  |
- | Here you should configure your projectspecific settings
+ | Here you should configure your project specific settings
  |
+ */
+/*
+ | ----------------------------------------------------------------
+ | Grid columns
+ | ----------------------------------------------------------------
+ |
+ | By default the grid consists of 12 blocks but you can set this whatever you like.
+ | Some good alternatives are a 10 or 15 block division.
+ */
+/*
+ | ----------------------------------------------------------------
+ | Base font size
+ | ----------------------------------------------------------------
+ |
+ | The default font-size. This is also the value on which all font based spacings
+ | and sizings are measured upon.
+ */
+/*
+ | ----------------------------------------------------------------
+ | Font size ratios
+ | ----------------------------------------------------------------
+ |
+ | Based upon the base font size, here we set the ratios for the
+ | different sizings.
  */
 /*! normalize.css v4.1.1 | MIT License | github.com/necolas/normalize.css */
 /**
@@ -422,31 +446,31 @@ html {
 }
 
 html {
-  font-size: 0.9rem;
+  font-size: 0.675rem;
   line-height: 1.5;
 }
 
 @media (min-width: 30em) {
   html {
-    font-size: 1rem;
+    font-size: 0.75rem;
   }
 }
 
 @media (min-width: 48em) {
   html {
-    font-size: 1.1rem;
+    font-size: 0.825rem;
   }
 }
 
 @media (min-width: 64em) {
   html {
-    font-size: 1.2rem;
+    font-size: 0.9rem;
   }
 }
 
 @media (min-width: 85.375em) {
   html {
-    font-size: 1.4rem;
+    font-size: 1.05rem;
   }
 }
 
@@ -644,27 +668,27 @@ body {
  * vertical rhythm only on every 6-th line
  */
 .size-xs {
-  font-size: 0.9rem;
+  font-size: 0.675rem;
   line-height: 1.35;
 }
 
 .size-s {
-  font-size: 1rem;
+  font-size: 0.75rem;
   line-height: 1.5;
 }
 
 .size-m {
-  font-size: 1.1rem;
+  font-size: 0.825rem;
   line-height: 1.65;
 }
 
 .size-l {
-  font-size: 1.2rem;
+  font-size: 0.9rem;
   line-height: 1.5;
 }
 
 .size-xl {
-  font-size: 1.4rem;
+  font-size: 1.05rem;
   line-height: 1.5;
 }
 
@@ -905,16 +929,16 @@ button, .button {
   margin-right: 6rem;
 }
 
-.clearfix, .container, .row {
+.clearfix, .container, .row, .cards-xs, .cards-s, .cards-m, .cards-l, .cards-xl, .cards {
   *zoom: 1;
 }
 
-.clearfix:before, .container:before, .row:before, .clearfix:after, .container:after, .row:after {
+.clearfix:before, .container:before, .row:before, .cards-xs:before, .cards-s:before, .cards-m:before, .cards-l:before, .cards-xl:before, .cards:before, .clearfix:after, .container:after, .row:after, .cards-xs:after, .cards-s:after, .cards-m:after, .cards-l:after, .cards-xl:after, .cards:after {
   content: " ";
   display: table;
 }
 
-.clearfix:after, .container:after, .row:after {
+.clearfix:after, .container:after, .row:after, .cards-xs:after, .cards-s:after, .cards-m:after, .cards-l:after, .cards-xl:after, .cards:after {
   clear: both;
 }
 

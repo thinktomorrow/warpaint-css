@@ -3,43 +3,44 @@
  | Style settings
  | ----------------------------------------------------------------
  |
- | Here you should configure your projectspecific settings
+ | Here you should configure your project specific settings
  |
  */
 
-// Brand colors - used by the entire stylesheet
-$color-first: #333333;
-$color-second: #222222;
-$color-third: #444444;
 
-$color-black: #222222;
-$color-white: #ffffff;
+/*
+ | ----------------------------------------------------------------
+ | Grid columns
+ | ----------------------------------------------------------------
+ |
+ | By default the grid consists of 12 blocks but you can set this whatever you like.
+ | Some good alternatives are a 10 or 15 block division.
+ */
+$grid-columns: 12 !default;
 
-// Background color - handy for setting here
-$base-background-color: $color-white;
+/*
+ | ----------------------------------------------------------------
+ | Base font size
+ | ----------------------------------------------------------------
+ |
+ | The default font-size. This is also the value on which all font based spacings
+ | and sizings are measured upon.
+ */
+$base-font-size: 0.75rem;
 
-// Font size ratios
+/*
+ | ----------------------------------------------------------------
+ | Font size ratios
+ | ----------------------------------------------------------------
+ |
+ | Based upon the base font size, here we set the ratios for the
+ | different sizings.
+ */
 $ratio-xs: 0.9;
 $ratio-s: 1.0;
 $ratio-m: 1.1;
 $ratio-l: 1.2;
 $ratio-xl: 1.4;
-
-// Font
-$base-font-size: 0.75rem;
-$base-line-height: 1.5;
-$header-line-height: 1.25;
-$base-spacing: $base-font-size;
-$base-font-color: #222222;
-$base-accent-color: $color-first; // used by e.g. links
-$base-font-family: 'arial, helvetica, sans-serif';
-
-// Font-sizes
-$font-size-xs: 0.9rem;
-$font-size-s: 1rem;
-$font-size-m: 1.1rem;
-$font-size-l: 1.2rem;
-$font-size-xl: 1.4rem;
 
 // Spaces
 $space-xs: 0.375rem;
@@ -56,6 +57,22 @@ $bp-large: 64em; // 1024px
 $bp-xlarge: 85.375em; // 1366px
 $bp-xxlarge: 120em; // 1920px
 
-// Grid columns
-$grid-columns: 12 !default;
 
+// Brand colors - used by the entire stylesheet
+$color-first: #333333;
+$color-second: #222222;
+$color-third: #444444;
+
+$color-black: #222222;
+$color-white: #ffffff;
+
+// Background color - handy for setting here
+$base-background-color: $color-white;
+
+// Font
+$base-line-height: 1.5;
+$header-line-height: 1.25;
+$base-spacing: $base-font-size;
+$base-font-color: #222222;
+$base-accent-color: $color-first; // used by e.g. links
+$base-font-family: 'arial, helvetica, sans-serif';

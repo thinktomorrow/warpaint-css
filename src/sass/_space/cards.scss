@@ -2,6 +2,7 @@ $sizes: (xs : $space-xs, s : $space-s, m : $space-m, l : $space-l, xl : $space-x
 @each $size,$space in $sizes
 {
   .cards-#{$size}{
+    @extend .clearfix;
     padding-left: #{$space};
     padding-right: 0;
   }
@@ -12,6 +13,7 @@ $sizes: (xs : $space-xs, s : $space-s, m : $space-m, l : $space-l, xl : $space-x
 }
 
 .cards{
+  @extend .clearfix;
   padding-left: $space-m;
   padding-right: 0;
 }
