@@ -14,6 +14,7 @@ html{
   @include medium-view { font-size: $base-font-size * $ratio-m; }
   @include large-view { font-size: $base-font-size * $ratio-l; }
   @include xlarge-view { font-size: $base-font-size * $ratio-xl; }
+  @include xxlarge-view { font-size: $base-font-size * $ratio-xxl; }
 }
 
 body {
@@ -21,6 +22,4 @@ body {
   color: $base-font-color;
   font-family: $base-font-family;
   font-weight: 400;
-  //font-size: $base-font-size*0.9;
-  //line-height: $base-line-height;
 }

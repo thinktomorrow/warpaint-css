@@ -41,14 +41,14 @@
   //padding:1.5rem; // TODO: maybe remove padding and only apply to inner elements? maybe with a class .inner?
   min-height:1px; // Displays columns properly, even without content
 
-  @include small-view(){
+  @include medium-view(){
     float:left;
   }
 }
 
 @for $i from 1 through $grid-columns {
 
-  @include small-view(){
+  @include medium-view(){
     .column-#{$i} {
       width: 100% / $grid-columns  * $i;
     }

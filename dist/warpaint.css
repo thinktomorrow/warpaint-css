@@ -30,6 +30,15 @@
  | Based upon the base font size, here we set the ratios for the
  | different sizings.
  */
+/*
+ | ----------------------------------------------------------------
+ | Grid breakpoints
+ | ----------------------------------------------------------------
+ |
+ | Breakpoints are only used for updating the base font size. Warpaint
+ | is mobile first are encourages to use as little breakpoints as
+ | possible. We use relative units to account for proper zooming of the webpage.
+ */
 /*! normalize.css v4.1.1 | MIT License | github.com/necolas/normalize.css */
 /**
  * 1. Change the default font family in all browsers (opinionated).
@@ -474,6 +483,12 @@ html {
   }
 }
 
+@media (min-width: 120em) {
+  html {
+    font-size: 1.2rem;
+  }
+}
+
 body {
   background-color: #ffffff;
   color: #222222;
@@ -551,79 +566,79 @@ body {
   min-height: 1px;
 }
 
-@media (min-width: 30em) {
+@media (min-width: 48em) {
   [class*="column-"] {
     float: left;
   }
 }
 
-@media (min-width: 30em) {
+@media (min-width: 48em) {
   .column-1 {
     width: 8.33333%;
   }
 }
 
-@media (min-width: 30em) {
+@media (min-width: 48em) {
   .column-2 {
     width: 16.66667%;
   }
 }
 
-@media (min-width: 30em) {
+@media (min-width: 48em) {
   .column-3 {
     width: 25%;
   }
 }
 
-@media (min-width: 30em) {
+@media (min-width: 48em) {
   .column-4 {
     width: 33.33333%;
   }
 }
 
-@media (min-width: 30em) {
+@media (min-width: 48em) {
   .column-5 {
     width: 41.66667%;
   }
 }
 
-@media (min-width: 30em) {
+@media (min-width: 48em) {
   .column-6 {
     width: 50%;
   }
 }
 
-@media (min-width: 30em) {
+@media (min-width: 48em) {
   .column-7 {
     width: 58.33333%;
   }
 }
 
-@media (min-width: 30em) {
+@media (min-width: 48em) {
   .column-8 {
     width: 66.66667%;
   }
 }
 
-@media (min-width: 30em) {
+@media (min-width: 48em) {
   .column-9 {
     width: 75%;
   }
 }
 
-@media (min-width: 30em) {
+@media (min-width: 48em) {
   .column-10 {
     width: 83.33333%;
   }
 }
 
-@media (min-width: 30em) {
+@media (min-width: 48em) {
   .column-11 {
     width: 91.66667%;
   }
 }
 
-@media (min-width: 30em) {
+@media (min-width: 48em) {
   .column-12 {
     width: 100%;
   }
@@ -990,22 +1005,6 @@ button, .button {
   float: none;
   margin-left: auto;
   margin-right: auto;
-}
-
-.medium {
-  font-size: 130%;
-}
-
-.large {
-  font-size: 160%;
-}
-
-.xlarge {
-  font-size: 190%;
-}
-
-.xxlarge {
-  font-size: 220%;
 }
 
 .space-overlay {
