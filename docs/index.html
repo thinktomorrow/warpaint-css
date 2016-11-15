@@ -1,65 +1,152 @@
 <!doctype html>
-<html class="no-js" lang="">
+<html class="no-js" lang="en">
 <head>
+    <link rel="stylesheet" href="/docs/css/fonts.css">
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title></title>
-    <meta name="description" content="">
+    <title>Warpaint</title>
+    <meta name="description" content="Warpaint stylesheet. Design with freedom. Style with constraints.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link href='https://fonts.googleapis.com/css?family=Merriweather+Sans:300,300italic,400,400italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Ubuntu:300,400' rel='stylesheet' type='text/css'>
-
-    <link rel="stylesheet" href="/warpaint.css">
-    <style type="text/css">
-
-        html{
-            margin:0;
-            padding:0;
-        }
-
-        body{
-            margin:0;
-            padding:0;
-            background-color:rgba(0,0,0,0.1);
-            font-family: 'Merriweather Sans', sans-serif;
-        }
-
-        h1, h2, h3, h4, h5, h6 {
-            font-family: 'Ubuntu', sans-serif;
-            font-weight: 300;
-            color: #818181;
-        }
-
-        [class*="column-"]{
-            background-color:white;
-            color:#444444;
-        }
-
-        .inline-divider{
-            display:inline-block;
-        }
-    </style>
+    <link rel="stylesheet" href="/dist/warpaint.css">
+    <link rel="stylesheet" href="/docs/css/docs.css">
 </head>
-<body>
+<body class="">
 
-<div class="container">
+<header class="stickable">
+    <div class="container header-container">
+        WARPAINT
+        <span class="header-sticky-logo">
+            <img style="width:48px;" src="img/warpaint-logo-white.png" alt="Warpaint">
+        </span>
+        <nav class="header-navigation">
+            <ul>
+                <li><a href="#usage">Usage</a></li>
+                <li><a href="#headers">Headers</a></li>
+                <li><a href="#grid">Grid</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
 
-    <h1>Warpaint</h1>
+<div class="first-block" id="usage">
+    <div class="container">
+        <h2>Constraints</h2>
+        - reduces risk of small divergions of the design. (e.g. setting your own random margin of 10px on a button)
+        - no risk of these isolated measurements 'measure creep'
+        - focus on maintaining and respecting the spacings and element boundaries. Your whitespace is space too!
+        - Honors the vertical rhythm
+        - typographic scaling
+        - small size.
+        - no bootstrap!
+        <p>Ironically designing with constraints is very liberating. It reduces the need for revising during development.</p>
+    </div>
+</div>
 
-    <a href="/index.html">home</a>
-    <span class="inline-divider inline-m">|</span>
-    <a href="/typography.html">Typography</a>
-    <span class="inline-divider inline-m">|</span>
-    <a href="/grid.html">Grid</a>
+<div class="" id="headers">
+    <div class="container">
+        <h2>Headers</h2>
 
-    <h2>Core concepts</h2>
+        <h1>This is an example of an h1 title. This in an example of a title indeed.</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec rhoncus augue iaculisSed in sodales lorem. Quisque orci turpis, ornare a ex non, aliquet consectetur nulla. Sed sodales neque quis odio lacinia, eu consequat nibh aliquet. Mauris gravida eu nulla eget tristique.</p>
+        <h2>This is an example of an h2 title. This in an example of a title indeed.</h2>
+        <p>Integer sollicitudin id augue ac consequat. Ut vestibulum eget lorem sagittis porttitor. Morbi id ullamcorper turpis, sit amet fermentum tortor. Duis sed libero ligula. Pellentesque orci risus, eleifend ac venenatis nec, commodo at nisl. Aenean porta commodo mauris, quis convallis orci.</p>
+        <h3>This is an example of an h3 title. This in an example of a title indeed.</h3>
+        <p>Vivamus tempus metus in mauris mollis, ut cursus diam fringilla. Phasellus varius magna non libero tincidunt, eu suscipit risus ornare. Nunc faucibus vehicula erat, at luctus purus. Vivamus venenatis et ipsum eget hendrerit. Maecenas sit amet purus cursus, venenatis elit ac, cursus urna. Nullam sollicitudin erat in venenatis molestie.
+        </p>
+        <h4>This is an example of an h4 title. This in an example of a title indeed.</h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec rhoncus augue iaculisSed in sodales lorem. Quisque orci turpis, ornare a ex non, aliquet consectetur nulla. </p>
+        <h5>This is an example of an h5 title. This in an example of a title indeed.</h5>
+        <p>Vivamus tempus metus in mauris mollis, ut cursus diam fringilla. Phasellus varius magna non libero tincidunt, eu suscipit risus ornare. Nunc faucibus vehicula erat, at luctus purus. Vivamus venenatis et ipsum eget hendrerit. Maecenas sit amet purus cursus, venenatis elit ac, cursus urna. Nullam sollicitudin erat in venenatis molestie.
+        </p>
+        <h6>This is an example of an h6 title. This in an example of a title indeed.</h6>
+        <p>Integer sollicitudin id augue ac consequat. Ut vestibulum eget lorem sagittis porttitor. Maecenas posuere, lacus maximus rhoncus aliquam, lectus nunc dignissim metus, eget consectetur sem turpis finibus lectus. Duis sed libero ligula. Pellentesque orci risus, eleifend ac venenatis nec, commodo at nisl. Aenean porta commodo mauris, quis convallis orci.</p>
+    </div>
+</div>
 
-    <ul>
-        <li>vertical rhythm</li>
-        <li>typographic scaling</li>
-    </ul>
-    <p>12-grid column system with seamless positions. By default no margins</p>
+<div class="" id="grid">
+    <div class="container">
+        <h2>Grid</h2>
 
+        <p>Warpaint provides a basic grid system.</p>
+
+        <h3>Grid columns (example of 12-grid columns)</h3>
+
+        <div class="row">
+            <div class="column-10">.column-10</div>
+            <div class="column-2">.column-2</div>
+        </div>
+        <div class="row">
+            <div class="column-8">.column-8</div>
+            <div class="column-4">.column-4</div>
+        </div>
+        <div class="row">
+            <div class="column-6">.column-6</div>
+            <div class="column-6">.column-6</div>
+        </div>
+
+        <h3>Equal height columns</h3>
+        <p>Work with the padding/margin hack based on http://callmenick.com/post/css-equal-height-columns-three-different-ways. It works well in most cases but it has some restrictions. It means for instance that you cannot set a custom margin or padding on these columns.</p>
+        <div class="row equalheight">
+            <div class="column-8">
+                <img style="object-fit:cover;" src="https://static.pexels.com/photos/7976/pexels-photo.jpg" alt="nature">
+            </div>
+            <div class="column-4 inset">
+                <p>Integer sollicitudin id augue ac consequat. Ut vestibulum eget lorem sagittis porttitor. Maecenas posuere, lacus maximus rhoncus aliquam, lectus nunc dignissim metus, eget consectetur sem turpis finibus lectus. Duis sed libero ligula. Pellentesque orci risus, eleifend ac venenatis nec, commodo at nisl. Aenean porta commodo mauris, quis convallis orci.</p>
+            </div>
+        </div>
+
+
+        <h3>Cards</h3>
+        <p>By default grid columns don't contain any spacing between each other. However with cards you can
+            present your elements with a margin spacing between them. Since the columns themselves will have an padding and not a margin, you will need to add an inner child element inside each columns to physically represent a card module.</p>
+        <p>Please note that flexbox is not being used for grid purposes. The main reason is that flexbox is a content-driven layout mechanism and is best suited for small components</p>
+
+        <div class="stack-m">
+            <div class="row cards-s stack-m">
+                <div class="column-4">
+                    <div class="inset card">Integer sollicitudin id augue ac consequat. Ut vestibulum eget lorem sagittis porttitor. Maecenas posuere, lacus maximus rhoncus aliquam.</div>
+                </div>
+                <div class="column-4">
+                    <div class="inset card">Integer sollicitudin id augue ac consequat. Ut vestibulum eget lorem sagittis porttitor. Maecenas posuere, lacus maximus rhoncus aliquam.</div>
+                </div>
+                <div class="column-4">
+                    <div class="inset card">Integer sollicitudin id augue ac consequat. Ut vestibulum eget lorem sagittis porttitor. Maecenas posuere, lacus maximus rhoncus aliquam.</div>
+                </div>
+            </div>
+            <div class="row cards-l stack-m">
+                <div class="column-4">
+                    <div class="inset card">Integer sollicitudin id augue ac consequat. Ut vestibulum eget lorem sagittis porttitor. Maecenas posuere, lacus maximus rhoncus aliquam.</div>
+                </div>
+                <div class="column-4">
+                    <div class="inset card">Integer sollicitudin id augue ac consequat. Ut vestibulum eget lorem sagittis porttitor. Maecenas posuere, lacus maximus rhoncus aliquam.</div>
+                </div>
+                <div class="column-4">
+                    <div class="inset card">Integer sollicitudin id augue ac consequat. Ut vestibulum eget lorem sagittis porttitor. Maecenas posuere, lacus maximus rhoncus aliquam.</div>
+                </div>
+            </div>
+
+    </div>
+</div>
+
+<footer class="size-xs text-center inset-m">
+    &copy; Warpaint
+</footer>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script>
+
+    // STICKY
+    var stickable = $(".stickable");
+
+    $(document).on( 'scroll', function(){
+        if ($(this).scrollTop() > 100) {
+            stickable.addClass("sticky");
+        } else {
+            stickable.removeClass("sticky");
+        }
+    });
+
+</script>
 </body>
 </html>

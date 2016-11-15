@@ -20,23 +20,33 @@
  | ----------------------------------------------------------------
  |
  | The default font-size. This is also the value on which all font based spacings
- | and sizings are measured upon.
+ | and sizings are measured upon. By default this is set to 1rem.
  */
 /*
  | ----------------------------------------------------------------
- | Font size ratios
+ | Size ratios
  | ----------------------------------------------------------------
  |
- | Based upon the base font size, here we set the ratios for the
- | different sizings.
+ | Based upon the base font size, here we set the font-size ratios for the
+ | different screen sizes. These values are carefully selected to
+ | allow for a responsive typography. Important since
+ | font-size determines the sizing of a lot of components
+ */
+/*
+ | ----------------------------------------------------------------
+ | Spaces
+ | ----------------------------------------------------------------
+ |
+ | Based upon the base font size,  These values determine the
+ | spacing of elements like margins and paddings.
  */
 /*
  | ----------------------------------------------------------------
  | Grid breakpoints
  | ----------------------------------------------------------------
  |
- | Breakpoints are only used for updating the base font size. Warpaint
- | is mobile first are encourages to use as little breakpoints as
+ | Breakpoints are mainly used for updating the base font size. Warpaint
+ | is mobile first and encourages to use as little breakpoints as
  | possible. We use relative units to account for proper zooming of the webpage.
  */
 /*! normalize.css v4.1.1 | MIT License | github.com/necolas/normalize.css */
@@ -455,45 +465,38 @@ html {
 }
 
 html {
-  font-size: 0.675rem;
+  font-size: 0.9rem;
   line-height: 1.5;
 }
 
 @media (min-width: 30em) {
   html {
-    font-size: 0.75rem;
+    font-size: 1rem;
   }
 }
 
 @media (min-width: 48em) {
   html {
-    font-size: 0.825rem;
+    font-size: 1.1rem;
   }
 }
 
 @media (min-width: 64em) {
   html {
-    font-size: 0.9rem;
+    font-size: 1.2rem;
   }
 }
 
 @media (min-width: 85.375em) {
   html {
-    font-size: 1.05rem;
+    font-size: 1.4rem;
   }
 }
 
 @media (min-width: 120em) {
   html {
-    font-size: 1.2rem;
+    font-size: 1.6rem;
   }
-}
-
-body {
-  background-color: #ffffff;
-  color: #222222;
-  font-family: "arial, helvetica, sans-serif";
-  font-weight: 400;
 }
 
 .container {
@@ -707,27 +710,27 @@ body {
  * vertical rhythm only on every 6-th line
  */
 .size-xs {
-  font-size: 0.675rem;
+  font-size: 0.9rem;
   line-height: 1.35;
 }
 
 .size-s {
-  font-size: 0.75rem;
+  font-size: 1rem;
   line-height: 1.5;
 }
 
 .size-m {
-  font-size: 0.825rem;
+  font-size: 1.1rem;
   line-height: 1.65;
 }
 
 .size-l {
-  font-size: 0.9rem;
+  font-size: 1.2rem;
   line-height: 1.5;
 }
 
 .size-xl {
-  font-size: 1.05rem;
+  font-size: 1.4rem;
   line-height: 1.5;
 }
 
@@ -736,45 +739,36 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 1.65rem;
+  font-size: 2.2rem;
   line-height: 1em;
   margin-top: 2.8125rem;
 }
 
 h2 {
-  font-size: 1.35rem;
+  font-size: 1.8rem;
   line-height: 1.25em;
   margin-top: 2.8125rem;
 }
 
 h3 {
-  font-size: 1.05rem;
+  font-size: 1.4rem;
   margin-top: 2.1875rem;
 }
 
 h4 {
-  font-size: 0.9rem;
+  font-size: 1.2rem;
 }
 
 h5 {
-  font-size: 0.825rem;
+  font-size: 1.1rem;
 }
 
 h6 {
-  font-size: 0.75rem;
+  font-size: 1rem;
 }
 
 p {
   margin: 1.5rem 0;
-}
-
-a {
-  color: #333333;
-  text-decoration: none;
-}
-
-a:hover, a:focus {
-  color: #1a1a1a;
 }
 
 ul {
@@ -782,13 +776,9 @@ ul {
   list-style: none;
 }
 
-.subline {
+.subtitle {
   margin-top: 0.3125rem;
   margin-bottom: 1.375rem;
-}
-
-.after--title {
-  margin-top: 0.5rem;
 }
 
 .boxes {

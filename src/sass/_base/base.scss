@@ -16,10 +16,3 @@ html{
   @include xlarge-view { font-size: $base-font-size * $ratio-xl; }
   @include xxlarge-view { font-size: $base-font-size * $ratio-xxl; }
 }
-
-body {
-  background-color: $base-background-color;
-  color: $base-font-color;
-  font-family: $base-font-family;
-  font-weight: 400;
-}

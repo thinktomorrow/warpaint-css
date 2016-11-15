@@ -1,0 +1,23 @@
+{
+  "name": "warpaint",
+  "description": "Design with freedom. Style with constraints. ",
+  "authors": [
+    "Ben Cavens"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "sass",
+    "css",
+    "bootstrap",
+    "design with constraints",
+    "spacing"
+  ],
+  "homepage": "https://github.com/thinktomorrow/warpaint",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

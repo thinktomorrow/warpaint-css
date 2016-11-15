@@ -70,26 +70,13 @@ p{
   margin: #{$base-line-height}rem 0;
 }
 
-a {
-  color: $base-accent-color;
-  text-decoration: none;
-
-  &:hover,
-  &:focus {
-    color: darken($base-accent-color, 10%);
-  }
-}
-
 ul {
   padding: 0;
   list-style: none;
 }
 
-.subline{
+// Subtitle is an element which is tightly coupled with a header title.
+.subtitle{
   margin-top:0.3125rem;
   margin-bottom: 1.375rem;
-}
-
-.after--title{
-  margin-top:0.5rem;
 }

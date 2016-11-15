@@ -11,6 +11,29 @@ Think Tomorrow bootstrap stylesheet.
 - Size everything else in rem.
 - Increase font-size and line-height as screen sizes increase.
 
+## Content
+
+To just get started, you can use the `warpaint.css` from the /dist folder. For production, you may want to use
+the minified `warpaint.min.css` file instead.
+
+However warpaint really shines when you customize it. If you include the `src/sass` files to your build process, 
+you can easily adjust the warpaint settings to match your project. Al the adjustable settings are found
+in the `src/sass/settings.scss` file. 
+
+```
+warpaint/
+├── dist/
+│   ├── warpaint.css
+│   ├── warpaint.css.map
+│   └── warpaint.min.css
+└── docs/
+└── src/
+    └── sass
+        ├── ...
+        ├── settings.scss
+        └── warpaint.scss
+```
+
 ## Sources
 https://zellwk.com/blog/rem-vs-em/
 https://zellwk.com/blog/responsive-typography/
@@ -24,10 +47,9 @@ Next, install the node dependencies by running `npm install` in the root of the 
 
 If you discover any security related issues, please email one of the authors (see below) or use the issue tracker.
 
-## Credits
+## Creators
 
 - Ben Cavens <ben@thinktomorrow.be>
-- Johnny Berkmans <johnny@thinktomorrow.be>
 
 ## License
 
