@@ -11,8 +11,6 @@
 
 @import '_elements/text';
 @import '_elements/boxes';
-@import '_elements/images';
-@import '_elements/buttons';
 
 // states
 @import '_space/spaces';
@@ -20,4 +18,4 @@
 
 // For Dev purposes you can add a grid overlay to visualize the vertical rhythm
 // uncomment the line below to display it.
-@import '_space/overlay';
+//@import '_space/overlay';
