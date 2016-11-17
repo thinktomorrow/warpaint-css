@@ -39,7 +39,15 @@
         <p>Warpaint is not intended for jumpstarting the website UI development. You have bootstrap or foundation for this purposes.
         Its focus is to provide constraints for proper spacing between your site elements.</p>
 
-        <h2>Constraints</h2>
+        <h2>Class based approach</h2>
+            - a general set of predefined classes that each serves a single purpose.
+            - The classnames reflect what they represent.
+            - In practise a styled element will have a combination of these classes to get the desired result.
+            - Avoid cascade hierarchy conflicts between different css selectors. This usually leads to a messy nesting of selectors and ultimately you are forced to pull the dreaded !important card.
+            By defining css with single-purpose classes we keep a low specificity, avoid css property wars and keep the codebase open for extension.
+            - Responsive: Warpaint spacing works with any viewport. In fact it is designed for this purpose.
+
+        <h2>Constraints are good</h2>
         - focus on maintaining and respecting the spacings and element boundaries. Your whitespace is space too!
         - reduce risk of these isolated measurements 'margin and padding creep'. (e.g. setting your own random margin of 10px on a button)
         - Honors the vertical rhythm
@@ -47,7 +55,36 @@
         - small size.
         - no bootstrap!
         <p>Ironically designing with constraints is very liberating. It reduces the need for revising during development.</p>
+
     </div>
+</div>
+
+<div class="container">
+    <h2>Spacing</h2>
+    <h3>Spacing between elements</h3>
+    <p>There are 2 classes you can use to handle the spacing between elements: `.stack` and `.inline`.
+        <strong>Stack</strong> sets the vertical margins. Since current designs still stack the page elements vertically, this class
+        is used to add less or more breathing room in between. </p>
+
+    <p><strong>Inline</strong> class sets a horizontal margin. This can be used for adding space between small sibling elements like navigation links, pills, tags, breadcrumbs or buttons.
+    Please note that this does not serve the need for spacing your grid. For this purpose you must use the 'cards' class. (see below)</p>
+
+    <h3>Spacing inside element</h3>
+    <p>You can use 3 classes for spacing the inside of elements: `.inset` which sets a square padding and adds padding on four sides of the element, `.squished`
+        which adds padding on left and right and only half of it on top and bottom, and `.stretched` that uses half the padding on the left/right sides.</p>
+
+    <p>
+        A squished inset stretches horizontally as it reduces space top and bottom by 50% of the inset.
+        Less common than the square inset but is used for buttons and cell-like containers as tables of lists
+        Stretched inset stretches vertically and is ideally for textboxes and other form elements
+    </p>
+
+    <h3>Sizes</h3>
+    <p>
+        Each of these classes are available in 5 different sizes: xs, s, m (default), l and xl. This allows you to play with different spacings.
+
+    </p>
+
 </div>
 
 <div class="" id="headers">

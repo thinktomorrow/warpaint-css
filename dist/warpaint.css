@@ -523,10 +523,9 @@ html {
 
 .row {
   /**
-   * Equal height css hack
-   * based on http://callmenick.com/post/css-equal-height-columns-three-different-ways
-   * Not an ideal solution: bottom-border will disappear if column itself has a border.
-   *
+   * Equal height css
+   * By setting the parent as flexbox the direct children are set with equalheight
+   * Note that this will not work on IE 11 and below http://caniuse.com/#search=flex
    */
 }
 
