@@ -69,14 +69,3 @@ h6{
 p{
   margin: #{$base-line-height}rem 0;
 }
-
-ul {
-  padding: 0;
-  list-style: none;
-}
-
-// Subtitle is an element which is tightly coupled with a header title.
-.subtitle{
-  margin-top:0.3125rem;
-  margin-bottom: 1.375rem;
-}
