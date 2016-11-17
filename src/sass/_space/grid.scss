@@ -10,35 +10,13 @@
   &.equalheight{
 
     @include small-view(){
-      overflow:hidden;
-
-      [class*="column-"]{
-        padding-bottom:9999rem;
-        margin-bottom:-9999rem + $space-xs; // we have a 1em padding in place
-
-        @include small-view {
-          margin-bottom:-9999rem + $space-s;
-        }
-
-        @include medium-view {
-          margin-bottom:-9999rem + $space-m;
-        }
-
-        @include large-view {
-          margin-bottom:-9999rem + $space-l;
-        }
-
-        @include xlarge-view {
-          margin-bottom:-9999rem + $space-xl;
-        }
-      }
+      display:flex;
     }
   }
 }
 
 [class*="column-"]{
   width:100%;
-  //padding:1.5rem; // TODO: maybe remove padding and only apply to inner elements? maybe with a class .inner?
   min-height:1px; // Displays columns properly, even without content
 
   @include medium-view(){
@@ -53,6 +31,5 @@
       width: 100% / $grid-columns  * $i;
     }
   }
-
 
 }

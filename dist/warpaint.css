@@ -532,35 +532,8 @@ html {
 
 @media (min-width: 30em) {
   .row.equalheight {
-    overflow: hidden;
-  }
-  .row.equalheight [class*="column-"] {
-    padding-bottom: 9999rem;
-    margin-bottom: -9998.625rem;
-  }
-}
-
-@media (min-width: 30em) and (min-width: 30em) {
-  .row.equalheight [class*="column-"] {
-    margin-bottom: -9998.25rem;
-  }
-}
-
-@media (min-width: 30em) and (min-width: 48em) {
-  .row.equalheight [class*="column-"] {
-    margin-bottom: -9997.5rem;
-  }
-}
-
-@media (min-width: 30em) and (min-width: 64em) {
-  .row.equalheight [class*="column-"] {
-    margin-bottom: -9996rem;
-  }
-}
-
-@media (min-width: 30em) and (min-width: 85.375em) {
-  .row.equalheight [class*="column-"] {
-    margin-bottom: -9993rem;
+    display: -webkit-box;
+    display: flex;
   }
 }
 
@@ -656,6 +629,10 @@ html {
   padding-right: 0.375rem;
 }
 
+.cards-xs [class*="column-"] > .card {
+  height: 100%;
+}
+
 .cards-s {
   padding-left: 0.75rem;
   padding-right: 0;
@@ -663,6 +640,10 @@ html {
 
 .cards-s [class*="column-"] {
   padding-right: 0.75rem;
+}
+
+.cards-s [class*="column-"] > .card {
+  height: 100%;
 }
 
 .cards-m {
@@ -674,6 +655,10 @@ html {
   padding-right: 1.5rem;
 }
 
+.cards-m [class*="column-"] > .card {
+  height: 100%;
+}
+
 .cards-l {
   padding-left: 3rem;
   padding-right: 0;
@@ -683,6 +668,10 @@ html {
   padding-right: 3rem;
 }
 
+.cards-l [class*="column-"] > .card {
+  height: 100%;
+}
+
 .cards-xl {
   padding-left: 6rem;
   padding-right: 0;
@@ -690,6 +679,10 @@ html {
 
 .cards-xl [class*="column-"] {
   padding-right: 6rem;
+}
+
+.cards-xl [class*="column-"] > .card {
+  height: 100%;
 }
 
 .cards {

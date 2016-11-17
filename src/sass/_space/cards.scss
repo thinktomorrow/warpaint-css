@@ -9,6 +9,11 @@ $sizes: (xs : $space-xs, s : $space-s, m : $space-m, l : $space-l, xl : $space-x
 
   .cards-#{$size} [class*="column-"]{
     padding-right: #{$space};
+
+    // Inner card elements should be full height inside the column
+    & > .card{
+      height:100%;
+    }
   }
 }
 
