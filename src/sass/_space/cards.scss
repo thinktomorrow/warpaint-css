@@ -9,6 +9,11 @@ $sizes: (xs : $space-xs, s : $space-s, m : $space-m, l : $space-l, xl : $space-x
 
   .cards-#{$size} [class*="column-"]{
     padding-right: #{$space};
+    padding-bottom: #{$space}; // Allow for stacked spacing when not floating
+
+    @include medium-view(){
+      padding-bottom:0;
+    }
 
     // Inner card elements should be full height inside the column
     & > .card{
@@ -25,4 +30,18 @@ $sizes: (xs : $space-xs, s : $space-s, m : $space-m, l : $space-l, xl : $space-x
 
 .cards [class*="column-"]{
   padding-right: $space-m;
+  padding-bottom: $space-m; // Allow for stacked spacing when not floating
+
+  &:last-child{
+    padding-bottom:0; // Let the stack of cards container handle the spacing in general
+  }
+
+  @include medium-view(){
+    padding-bottom:0;
+  }
+
+  // Inner card elements should be full height inside the column
+  & > .card{
+    height:100%;
+  }
 }

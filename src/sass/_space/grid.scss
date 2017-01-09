@@ -1,17 +1,5 @@
 .row{
   @extend .clearfix;
-
-  /**
-   * Equal height css
-   * By setting the parent as flexbox the direct children are set with equalheight
-   * Note that this will not work on IE 11 and below http://caniuse.com/#search=flex
-   */
-  &.equalheight{
-
-    @include small-view(){
-      display:flex;
-    }
-  }
 }
 
 [class*="column-"]{
@@ -31,4 +19,17 @@
     }
   }
 
+}
+
+/**
+ * Equal height css
+ * By setting the parent as flexbox the direct children are set with equalheight
+ * Note that this will not work on IE 11 and below http://caniuse.com/#search=flex
+ * This should be added to the row or cards container
+ */
+.equalheight{
+
+  @include small-view(){
+    display:flex;
+  }
 }
