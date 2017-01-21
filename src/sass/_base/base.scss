@@ -16,3 +16,7 @@ html{
   @include xlarge-view { font-size: $base-font-size * $ratio-xl; }
   @include xxlarge-view { font-size: $base-font-size * $ratio-xxl; }
 }
+
+img{
+  max-width: 100%;
+}
