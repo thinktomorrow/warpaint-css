@@ -499,6 +499,10 @@ html {
   }
 }
 
+img {
+  max-width: 100%;
+}
+
 .container {
   margin: 0 4%;
 }
@@ -832,6 +836,44 @@ p {
   display: block;
   width: 100%;
   padding: 1em;
+}
+
+/* -------------------------------------------------------
+ Button
+ ------------------------------------------------------- */
+.btn {
+  border-radius: 3px;
+  background: #8e44ad;
+  border: 1px solid #8e44ad;
+  color: #FFF;
+  display: inline-block;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn:hover {
+  background: transparent;
+  color: #8e44ad;
+}
+
+.btn-o {
+  background: transparent;
+  color: #8e44ad;
+}
+
+.btn-o:hover {
+  background: #8e44ad;
+  color: #FFF;
+}
+
+.btn-link {
+  background: none;
+  border: none;
+  color: #8e44ad;
+}
+
+.btn-link:hover {
+  text-decoration: underline;
 }
 
 /**

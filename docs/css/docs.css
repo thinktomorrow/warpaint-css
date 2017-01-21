@@ -9,23 +9,56 @@ body{
  ------------------------------------------------------- */
 a{ text-decoration: none; }
 
+
+
+/* -------------------------------------------------------
+ HERO
+ ------------------------------------------------------- */
+.hero{
+  height: 80vh;
+  position: relative;
+  text-align: center;
+  background-color: #efefef;
+}
+.hero-caption{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: inline-block;
+  left: 0;
+  right: 0;
+}
+.hero-caption h1{
+  margin-top: 0;
+  font-weight: lighter;
+  text-transform: uppercase;
+}
+.hero-logo{
+  max-width: 100px;
+}
+
 /* -------------------------------------------------------
  HEADER AND NAV
  ------------------------------------------------------- */
 header{
-    padding:0.75rem 1.5rem;
     position:fixed;
     top:0;
     left:0;
     right:0;
     width:100%;
     z-index:10;
-    background-color:rgba(0,0,0,.8);
+    border-bottom: 1px solid #cccccc;
     transition:background-color .9s ease-out;
 }
 
 header.sticky{
-    background-color:rgba(0,0,0,.9);
+    background-color: #efefef;
+}
+.header-logo{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
 }
 
 .header-sticky-logo{
@@ -50,6 +83,8 @@ header.sticky .header-sticky-logo{
 .header-container{
     display:flex;
     align-items: center;
+    justify-content: flex-end;
+    position: relative;
 }
 
 .header-container h1{
@@ -57,7 +92,9 @@ header.sticky .header-sticky-logo{
 }
 
 nav ul{
-    margin:0;
+}
+.fixed nav ul{
+margin: 0;
 }
 
 nav li{
@@ -70,11 +107,11 @@ nav li a{
     font-size: 0.65em;
     letter-spacing: 1px;
     position:relative;
-    color:white;
+    color: #8e44ad;
 }
 
 nav li a:hover{
-    color:white;
+    color: #39323a;
 }
 
 nav li a:after{
