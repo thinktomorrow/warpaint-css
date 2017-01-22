@@ -24,9 +24,9 @@ $grid-columns: 12 !default;
  | ----------------------------------------------------------------
  |
  | The default font-size. This is also the value on which all font based spacings
- | and sizings are measured upon. By default this is set to 1rem.
+ | and sizings are measured upon. By default this is set to 0.875em.
  */
-$base-font-size: 1rem;
+$base-font-size:  0.875em;
 
 /*
  | ----------------------------------------------------------------
