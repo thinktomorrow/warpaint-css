@@ -20,7 +20,7 @@
  | ----------------------------------------------------------------
  |
  | The default font-size. This is also the value on which all font based spacings
- | and sizings are measured upon. By default this is set to 1rem.
+ | and sizings are measured upon. By default this is set to 0.875em.
  */
 /*
  | ----------------------------------------------------------------
@@ -465,42 +465,52 @@ html {
 }
 
 html {
-  font-size: 0.9rem;
+  font-size: 0.7875em;
   line-height: 1.5;
 }
 
 @media (min-width: 30em) {
   html {
-    font-size: 1rem;
+    font-size: 0.875em;
   }
 }
 
 @media (min-width: 48em) {
   html {
-    font-size: 1.1rem;
+    font-size: 0.9625em;
   }
 }
 
 @media (min-width: 64em) {
   html {
-    font-size: 1.2rem;
+    font-size: 1.05em;
   }
 }
 
 @media (min-width: 85.375em) {
   html {
-    font-size: 1.4rem;
+    font-size: 1.225em;
   }
 }
 
 @media (min-width: 120em) {
   html {
-    font-size: 1.6rem;
+    font-size: 1.4em;
   }
 }
 
 img {
   max-width: 100%;
+}
+
+::-moz-selection {
+  color: #FFF;
+  background-color: #8e44ad;
+}
+
+::selection {
+  color: #FFF;
+  background-color: #8e44ad;
 }
 
 .container {
@@ -754,27 +764,27 @@ img {
  * vertical rhythm only on every 6-th line
  */
 .size-xs {
-  font-size: 0.9rem;
+  font-size: 0.7875em;
   line-height: 1.35;
 }
 
 .size-s {
-  font-size: 1rem;
+  font-size: 0.875em;
   line-height: 1.5;
 }
 
 .size-m {
-  font-size: 1.1rem;
+  font-size: 0.9625em;
   line-height: 1.65;
 }
 
 .size-l {
-  font-size: 1.2rem;
+  font-size: 1.05em;
   line-height: 1.5;
 }
 
 .size-xl {
-  font-size: 1.4rem;
+  font-size: 1.225em;
   line-height: 1.5;
 }
 
@@ -783,32 +793,32 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 2.2rem;
+  font-size: 1.925em;
   line-height: 1em;
   margin-top: 2.8125rem;
 }
 
 h2 {
-  font-size: 1.8rem;
+  font-size: 1.575em;
   line-height: 1.25em;
   margin-top: 2.8125rem;
 }
 
 h3 {
-  font-size: 1.4rem;
+  font-size: 1.225em;
   margin-top: 2.1875rem;
 }
 
 h4 {
-  font-size: 1.2rem;
+  font-size: 1.05em;
 }
 
 h5 {
-  font-size: 1.1rem;
+  font-size: 0.9625em;
 }
 
 h6 {
-  font-size: 1rem;
+  font-size: 0.875em;
 }
 
 p {

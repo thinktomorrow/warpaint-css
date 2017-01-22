@@ -25,7 +25,7 @@
             <ul>
                 <li><a href="#whatiswarpaint">What</a></li>
                 <li><a href="#spacing">Spacing</a></li>
-                <li><a href="#headers">Typography</a></li>
+                <li><a href="#styling">Styling</a></li>
                 <li><a href="#grid">Grid</a></li>
             </ul>
         </nav>
@@ -76,17 +76,37 @@
 
 <div class="container" id="spacing">
     <h2 class="title">Spacing</h2>
-    <h3>Spacing between elements</h3>
-    <p>There are 2 classes you can use to handle the spacing between elements: `.stack` and `.inline`.
-        <strong>Stack</strong> sets the vertical margins. Since current designs still stack the page elements vertically, this class
+    <h3>Margins: <em>Spacing between elements</em></h3>
+    <p>There are 2 classes you can use to handle the spacing between elements: `.stack` and `.inline`.<p>
+        <p><strong>Stack</strong> sets the vertical margins. Since current designs still stack the page /elements vertically, this class
         is used to add less or more breathing room in between. </p>
+
+        <div class="row grid-blocks">
+          <div class="column-12 stack">
+            Inline
+          </div>
+          <div class="column-12 stack">
+            inline
+          </div>
+        </div>
 
     <p><strong>Inline</strong> class sets a horizontal margin. This can be used for adding space between small sibling elements like navigation links, pills, tags, breadcrumbs or buttons.
     Please note that this does not serve the need for spacing your grid. For this purpose you must use the 'cards' class. (see below)</p>
 
-    <h3>Spacing inside element</h3>
-    <p>You can use 3 classes for spacing the inside of elements: `.inset` which sets a square padding and adds padding on four sides of the element, `.squished`
-        which adds padding on left and right and only half of it on top and bottom, and `.stretched` that uses half the padding on the left/right sides.</p>
+    <div class="row grid-blocks">
+      <div class="column-5 inline">
+        Inline
+      </div>
+      <div class="column-5 inline">
+        inline
+      </div>
+    </div>
+
+    <h3>Paddings: <em>Spacing inside element</em></h3>
+    <p>You can use <strong>3 classes</strong> for spacing the inside of elements:
+      <pre>.inset</pre> which sets a square padding and adds padding on four sides of the element,
+      <pre>.squished</pre> which adds padding on left and right and only half of it on top and bottom
+      <pre>.stretched</pre> that uses half the padding on the left/right sides.</p>
 
     <p>
         A squished inset stretches horizontally as it reduces space top and bottom by 50% of the inset.
@@ -96,41 +116,60 @@
 
     <h3>Sizes</h3>
     <p>
-        Each of these classes are available in 5 different sizes: xs, s, m (default), l and xl. This allows you to play with different spacings.
-
+        Each of these classes are available in 5 different sizes:
+        <pre>xs, s, m (default), l and xl</pre>
+        This allows you to play with different spacings.
     </p>
 
 </div>
 
-<div class="" id="headers">
+<div class="" id="styling">
     <div class="container">
-        <h2 class="title">Typography</h2>
+        <h2 class="title">Styles</h2>
 
-        <!-- Standard Headings -->
-  <h1>H1 heading</h1>
-  <h2>H2 heading</h2>
-  <h3>H3 heading</h3>
-  <h4>H4 heading</h4>
-  <h5>H5 heading</h5>
-  <h6>H6 heading</h6>
-
-  <!-- Base type size -->
-  <p>The base type is 15px over 1.6 line height (24px)</p>
-
-  <!-- Other styled text tags -->
-  <strong>Bolded</strong>
-  <em>Italicized</em>
-  <a>Colored</a>
-  <u>Underlined</u>
+<div class="row">
+  <div class="column-4">
+      <pre>Headings</pre>
     </div>
+  <div class="column-8">
+        <!-- Standard Headings -->
+      <h1>H1 heading</h1>
+      <h2>H2 heading</h2>
+      <h3>H3 heading</h3>
+      <h4>H4 heading</h4>
+      <h5>H5 heading</h5>
+      <h6>H6 heading</h6>
+    </div>
+</div>
+<div class="row">
+  <!-- Base type size -->
+  <div class="column-4">
+      <pre>Paragraph</pre>
+    </div>
+  <div class="column-8">
+    <p>The base type is 15px over 1.6 line height (24px)</p>
+  </div>
+</div>
+<div class="row">
+      <!-- Other styled text tags -->
+      <div class="column-4">
+          <pre>Default styles</pre>
+        </div>
+      <div class="column-8">
+        <strong>Bolded</strong>
+        <em>Italicized</em>
+        <a>Colored</a>
+        <u>Underlined</u>
+    </div>
+  </div>
 </div>
 <div class="" id="buttons">
     <div class="container">
         <h2 class="buttons">Buttons</h2>
         <p>There are three class-types of buttons in Warpaint: <code>btn, btn-o, btn-link</code></p>
-        <a class="btn inset-xs" href="#">Anchor button</a>
-        <a class="btn-o inset-xs" href="#">Anchor button</a>
-        <a class="btn-link inset-xs" href="#">Anchor button</a>
+        <a class="btn inset-xs" href="#">Default button</a>
+        <a class="btn btn-o inset-xs" href="#">Ghost button</a>
+        <a class="btn btn-link inset-xs" href="#">Link button</a>
 
     </div>
 </div>
@@ -142,20 +181,32 @@
         <p>Warpaint provides a basic grid system.</p>
 
         <h3>Grid columns (example of 12-grid columns)</h3>
-
+        <section class="grid-blocks">
         <div class="row">
-            <div class="column-10">.column-10</div>
-            <div class="column-2">.column-2</div>
+            <div class="column-11">11</div>
+            <div class="column-1">1</div>
         </div>
         <div class="row">
-            <div class="column-8">.column-8</div>
-            <div class="column-4">.column-4</div>
+            <div class="column-10">10</div>
+            <div class="column-2">2</div>
         </div>
         <div class="row">
-            <div class="column-6">.column-6</div>
-            <div class="column-6">.column-6</div>
+            <div class="column-9">9</div>
+            <div class="column-3">3</div>
         </div>
-
+        <div class="row">
+            <div class="column-8">8</div>
+            <div class="column-4">4</div>
+        </div>
+        <div class="row">
+            <div class="column-7">7</div>
+            <div class="column-5">5</div>
+        </div>
+        <div class="row">
+            <div class="column-6">6</div>
+            <div class="column-6">6</div>
+        </div>
+  </section>
         <h3>Equal height columns</h3>
         <p>Work with the padding/margin hack based on http://callmenick.com/post/css-equal-height-columns-three-different-ways. It works well in most cases but it has some restrictions. It means for instance that you cannot set a custom margin or padding on these columns.</p>
         <div class="row equalheight">
