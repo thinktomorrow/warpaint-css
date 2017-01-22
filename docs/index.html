@@ -7,6 +7,7 @@
     <title>Warpaint</title>
     <meta name="description" content="Warpaint stylesheet. Design with freedom. Style with constraints.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="/docs/favicon.ico" type="image/x-icon">
 
     <link rel="stylesheet" href="/dist/warpaint.css">
     <link rel="stylesheet" href="/docs/css/docs.css">
@@ -15,36 +16,38 @@
 
 <header class="stickable">
     <div class="container header-container">
-        <div class="header-logo">WARPAINT</div>
-        <!-- <span class="header-sticky-logo">
-            <img src="img/warpaint-logo-white.png" alt="Warpaint">
-        </span> -->
+        <div class="header-logo">
+          <span class="header-sticky-logo">
+              <a href="#top"><img src="/docs/img/warpaint-logo.png" alt="Warpaint"></a>
+          </span>
+        </div>
         <nav class="header-navigation">
             <ul>
-                <li><a href="#usage">Usage</a></li>
-                <li><a href="#headers">Headers</a></li>
+                <li><a href="#whatiswarpaint">What</a></li>
+                <li><a href="#spacing">Spacing</a></li>
+                <li><a href="#headers">Typography</a></li>
                 <li><a href="#grid">Grid</a></li>
             </ul>
         </nav>
     </div>
 </header>
 
-<section class="hero">
+<section class="hero" id="top">
   <div class="hero-caption">
     <img src="/docs/img/warpaint-hero.svg" alt="warpaint" class="hero-logo">
     <h1>Warpaint</h1>
-    <p>      A minimalist css grid   <br>
+    <p>Design with freedom. Style with constraints.<br>
     <small><em>currently v0.0.1</em></small>
   </p>
 
-    <a href="#" class="inset-s btn btn-o">Getting started</a>
+    <a href="#whatiswarpaint" class="inset-s btn btn-o">Getting started</a>
   </div>
 </section>
 
-<div class="first-block" id="usage">
+<div class="first-block" id="whatiswarpaint">
     <div class="container">
 
-        <h2>What is Warpaint?</h2>
+        <h2 class="title">What is Warpaint?</h2>
         <p>Let me tell you what it's not. It's not a full blown frontend framework for blasting out UI prototypes. Warpaint doesn't push your frontend work to get any faster. Faster development leads to more monotone, generic designs. You
 
         </p>
@@ -52,27 +55,27 @@
         Its focus is to provide constraints for proper spacing between your site elements.</p>
 
         <h2>Class based approach</h2>
-            - a general set of predefined classes that each serves a single purpose.
-            - The classnames reflect what they represent.
-            - In practise a styled element will have a combination of these classes to get the desired result.
-            - Avoid cascade hierarchy conflicts between different css selectors. This usually leads to a messy nesting of selectors and ultimately you are forced to pull the dreaded !important card.
-            By defining css with single-purpose classes we keep a low specificity, avoid css property wars and keep the codebase open for extension.
-            - Responsive: Warpaint spacing works with any viewport. In fact it is designed for this purpose.
+            <ul><li>a general set of predefined classes that each serves a single purpose.</li>
+            <li>The classnames reflect what they represent.</li>
+            <li>In practise a styled element will have a combination of these classes to get the desired result.</li>
+            <li>Avoid cascade hierarchy conflicts between different css selectors. This usually leads to a messy nesting of selectors and ultimately you are forced to pull the dreaded !important card.
+            By defining css with single-purpose classes we keep a low specificity, avoid css property wars and keep the codebase open for extension.</li>
+            <li>Responsive: Warpaint spacing works with any viewport. In fact it is designed for this purpose.</li></ul>
 
         <h2>Constraints are good</h2>
-        - focus on maintaining and respecting the spacings and element boundaries. Your whitespace is space too!
-        - reduce risk of these isolated measurements 'margin and padding creep'. (e.g. setting your own random margin of 10px on a button)
-        - Honors the vertical rhythm
-        - typographic scaling
-        - small size.
-        - no bootstrap!
+        <ul><li>focus on maintaining and respecting the spacings and element boundaries. Your whitespace is space too!</li>
+        <li>reduce risk of these isolated measurements 'margin and padding creep'. (e.g. setting your own random margin of 10px on a button)</li>
+        <li>Honors the vertical rhythm</li>
+        <li>typographic scaling</li>
+        <li>small size.</li>
+        <li>no bootstrap!</li></ul>
         <p>Ironically designing with constraints is very liberating. It reduces the need for revising during development.</p>
 
     </div>
 </div>
 
-<div class="container">
-    <h2>Spacing</h2>
+<div class="container" id="spacing">
+    <h2 class="title">Spacing</h2>
     <h3>Spacing between elements</h3>
     <p>There are 2 classes you can use to handle the spacing between elements: `.stack` and `.inline`.
         <strong>Stack</strong> sets the vertical margins. Since current designs still stack the page elements vertically, this class
@@ -101,28 +104,40 @@
 
 <div class="" id="headers">
     <div class="container">
-        <h2>Headers</h2>
+        <h2 class="title">Typography</h2>
 
-        <h1>This is an example of an h1 title. This in an example of a title indeed.</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec rhoncus augue iaculisSed in sodales lorem. Quisque orci turpis, ornare a ex non, aliquet consectetur nulla. Sed sodales neque quis odio lacinia, eu consequat nibh aliquet. Mauris gravida eu nulla eget tristique.</p>
-        <h2>This is an example of an h2 title. This in an example of a title indeed.</h2>
-        <p>Integer sollicitudin id augue ac consequat. Ut vestibulum eget lorem sagittis porttitor. Morbi id ullamcorper turpis, sit amet fermentum tortor. Duis sed libero ligula. Pellentesque orci risus, eleifend ac venenatis nec, commodo at nisl. Aenean porta commodo mauris, quis convallis orci.</p>
-        <h3>This is an example of an h3 title. This in an example of a title indeed.</h3>
-        <p>Vivamus tempus metus in mauris mollis, ut cursus diam fringilla. Phasellus varius magna non libero tincidunt, eu suscipit risus ornare. Nunc faucibus vehicula erat, at luctus purus. Vivamus venenatis et ipsum eget hendrerit. Maecenas sit amet purus cursus, venenatis elit ac, cursus urna. Nullam sollicitudin erat in venenatis molestie.
-        </p>
-        <h4>This is an example of an h4 title. This in an example of a title indeed.</h4>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec rhoncus augue iaculisSed in sodales lorem. Quisque orci turpis, ornare a ex non, aliquet consectetur nulla. </p>
-        <h5>This is an example of an h5 title. This in an example of a title indeed.</h5>
-        <p>Vivamus tempus metus in mauris mollis, ut cursus diam fringilla. Phasellus varius magna non libero tincidunt, eu suscipit risus ornare. Nunc faucibus vehicula erat, at luctus purus. Vivamus venenatis et ipsum eget hendrerit. Maecenas sit amet purus cursus, venenatis elit ac, cursus urna. Nullam sollicitudin erat in venenatis molestie.
-        </p>
-        <h6>This is an example of an h6 title. This in an example of a title indeed.</h6>
-        <p>Integer sollicitudin id augue ac consequat. Ut vestibulum eget lorem sagittis porttitor. Maecenas posuere, lacus maximus rhoncus aliquam, lectus nunc dignissim metus, eget consectetur sem turpis finibus lectus. Duis sed libero ligula. Pellentesque orci risus, eleifend ac venenatis nec, commodo at nisl. Aenean porta commodo mauris, quis convallis orci.</p>
+        <!-- Standard Headings -->
+  <h1>H1 heading</h1>
+  <h2>H2 heading</h2>
+  <h3>H3 heading</h3>
+  <h4>H4 heading</h4>
+  <h5>H5 heading</h5>
+  <h6>H6 heading</h6>
+
+  <!-- Base type size -->
+  <p>The base type is 15px over 1.6 line height (24px)</p>
+
+  <!-- Other styled text tags -->
+  <strong>Bolded</strong>
+  <em>Italicized</em>
+  <a>Colored</a>
+  <u>Underlined</u>
+    </div>
+</div>
+<div class="" id="buttons">
+    <div class="container">
+        <h2 class="buttons">Buttons</h2>
+        <p>There are three class-types of buttons in Warpaint: <code>btn, btn-o, btn-link</code></p>
+        <a class="btn inset-xs" href="#">Anchor button</a>
+        <a class="btn-o inset-xs" href="#">Anchor button</a>
+        <a class="btn-link inset-xs" href="#">Anchor button</a>
+
     </div>
 </div>
 
 <div class="" id="grid">
     <div class="container">
-        <h2>Grid</h2>
+        <h2 class="title">Grid</h2>
 
         <p>Warpaint provides a basic grid system.</p>
 
@@ -153,10 +168,10 @@
         </div>
 
 
-        <h3>Cards</h3>
+        <h2>Cards</h2>
         <p>By default grid columns don't contain any spacing between each other. However with cards you can
             present your elements with a margin spacing between them. Since the columns themselves will have an padding and not a margin, you will need to add an inner child element inside each columns to physically represent a card module.</p>
-        <p>Please note that flexbox is not being used for grid purposes. The main reason is that flexbox is a content-driven layout mechanism and is best suited for small components</p>
+        <mark>Please note that flexbox is not being used for grid purposes. The main reason is that flexbox is a content-driven layout mechanism and is best suited for small components</mark>
 
         <div class="stack-m">
             <div class="row cards-s stack-m equalheight">
@@ -186,7 +201,7 @@
 </div>
 
 <footer class="size-xs text-center inset-m">
-    &copy; Warpaint
+  <small>  &copy; Warpaint</small>
 </footer>
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
@@ -202,6 +217,21 @@
             stickable.removeClass("sticky");
         }
     });
+
+    $(function() {
+        $('a[href*="#"]:not([href="#"])').click(function() {
+          if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+            var target = $(this.hash);
+            target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+            if (target.length) {
+              $('html, body').animate({
+                scrollTop: target.offset().top - 50
+              }, 1000);
+              return false;
+            }
+          }
+        });
+      });
 
 </script>
 </body>
