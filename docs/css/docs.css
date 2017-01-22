@@ -16,16 +16,11 @@ mark{
 a{ text-decoration: none; color: #8e44ad;}
 
 /* -------------------------------------------------------
- the grid
- ------------------------------------------------------- */
-.grid-blocks [class*="column-"]{
+Border-grey
+------------------------------------------------------- */
+.border-grey{
   border: 1px solid #ccc;
-  background-color: #efefef;
-  padding: 1rem;
-  text-align: center;
-  color: #ccc;
 }
-
 
 /* -------------------------------------------------------
  HERO
@@ -163,4 +158,11 @@ h2.title{
     border:1px solid #ccc;
     box-shadow:0px 6px 32px -6px rgba(0,0,0,0.2);
     background-color:#f7f7f7;
+}
+
+.grid-blocks [class*="column-"]{
+  border: 1px solid #ccc;
+  background-color: #efefef;
+  text-align: center;
+  color: #ccc;
 }

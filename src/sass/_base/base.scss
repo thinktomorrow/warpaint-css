@@ -17,6 +17,10 @@ html{
   @include xxlarge-view { font-size: $base-font-size * $ratio-xxl; }
 }
 
+li{
+  list-style: circle;
+}
+
 img{
   max-width: 100%;
 }
