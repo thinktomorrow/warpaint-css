@@ -1,0 +1,226 @@
+<!doctype html>
+<html class="no-js" lang="">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Warpaint grid</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href='https://fonts.googleapis.com/css?family=Merriweather+Sans:300,300italic,400,400italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Ubuntu:300,400' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="/dist/warpaint.min.css">
+    <style type="text/css">
+
+        html, body{
+            margin:0;
+            padding:0;
+        }
+
+        body{
+            background-color:rgba(0,0,0,0.1);
+            font-family: 'Merriweather Sans', sans-serif;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Ubuntu', sans-serif;
+            font-weight: 300;
+            color: #818181;
+        }
+
+        [class*="column-"]{
+            background-color:white;
+            color:#444444;
+            border:1px solid #666666;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <h1>Warpaint - Grid examples</h1>
+
+    <p>Testpage for grid layout</p>
+
+<h3>12-Column overview</h3>
+<div class="row">
+    <div class="column-11">11</div>
+    <div class="column-1">1</div>
+</div>
+<div class="row">
+    <div class="column-10">10</div>
+    <div class="column-2">2</div>
+</div>
+<div class="row">
+    <div class="column-9">9</div>
+    <div class="column-3">3</div>
+</div>
+<div class="row">
+    <div class="column-8">8</div>
+    <div class="column-4">4</div>
+</div>
+<div class="row">
+    <div class="column-7">7</div>
+    <div class="column-5">5</div>
+</div>
+<div class="row">
+    <div class="column-6">6</div>
+    <div class="column-6">6</div>
+</div>
+<div class="row">
+    <div class="column-5">5</div>
+    <div class="column-2">2</div>
+    <div class="column-5">5</div>
+</div>
+<div class="row">
+    <div class="column-4">4</div>
+    <div class="column-4">4</div>
+    <div class="column-4">4</div>
+</div>
+<div class="row">
+    <div class="column-3">3</div>
+    <div class="column-3">3</div>
+    <div class="column-3">3</div>
+    <div class="column-3">3</div>
+</div>
+<div class="row">
+    <div class="column-2">2</div>
+    <div class="column-2">2</div>
+    <div class="column-2">2</div>
+    <div class="column-2">2</div>
+    <div class="column-2">2</div>
+    <div class="column-2">2</div>
+</div>
+<div class="row">
+    <div class="column-1">1</div>
+    <div class="column-1">1</div>
+    <div class="column-1">1</div>
+    <div class="column-1">1</div>
+    <div class="column-1">1</div>
+    <div class="column-1">1</div>
+    <div class="column-6">6</div>
+</div>
+
+<h3>Default columnset - no gutter</h3>
+<div class="row">
+
+    <div class="column-4 inset">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. A adipisci aut autem, blanditiis commodi deleniti dolor doloribus fugiat hic id molestiae pariatur quasi saepe, similique sit veniam veritatis voluptas voluptate.
+    </div>
+    <div class="column-4 inset">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. A adipisci aut autem, blanditiis commodi deleniti dolor doloribus fugiat hic id molestiae pariatur quasi saepe, similique sit veniam veritatis voluptas voluptate.
+    </div>
+    <div class="column-4 inset">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. A adipisci aut autem, blanditiis commodi deleniti dolor doloribus fugiat hic id molestiae pariatur quasi saepe, similique sit veniam veritatis voluptas voluptate.
+    </div>
+</div>
+
+<h3>Incompleted columnset</h3>
+<div class="row">
+    <div class="column-4 inset">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. A adipisci aut autem.
+    </div>
+    <div class="column-4 inset right">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. A adipisci aut autem.
+    </div>
+</div>
+<div class="row">
+    <div class="column-4 inset center">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. A adipisci aut autem.
+    </div>
+</div>
+<div class="row">
+    <div class="column-4 inset right">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. A adipisci aut autem.
+    </div>
+</div>
+
+<h3>Equal height columns</h3>
+<div class="row equalheight">
+    <div class="column-8">
+        <img src="https://static.pexels.com/photos/7976/pexels-photo.jpg" alt="nature">
+    </div>
+    <div class="column-4 inset">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aut consectetur cum dignissimos dolore ea enim esse exercitationem necessitatibus nesciunt nisi, omnis quasi quidem sed sint sit ullam unde. Recusandae.
+    </div>
+</div>
+
+<div class="row equalheight stack-m">
+    <div class="column-4 inset">Lorem ipsum dolor sit amet</div>
+    <div class="column-3 inset">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aut consectetur cum dignissimos dolore ea enim esse exercitationem necessitatibus nesciunt nisi, omnis quasi quidem sed sint sit ullam unde. Recusandae.</div>
+    <div class="column-5 inset">
+        I'm a sidebar
+    </div>
+</div>
+
+
+<h2>Cards</h2>
+<p>By default grid columns don't contain any spacing between each other. However with cards you can
+    present your elements with a margin spacing between them. Since the columns themselves will have an padding and not a margin, you will need to add an inner child element inside each columns to physically represent a card module.</p>
+<p>Please note that flexbox is not being used for grid purposes. The main reason is that flexbox is a content-driven layout mechanism and is best suited for small components</p>
+
+<div class="stack-m" style="background-color:#f5f5f5;">
+    <div class="cards-xs">
+        <div class="column-4">
+            <div class="inset"> flsmdfj qsmdkfj lmqsdkjf lsqdmk jflsqdmkj fqdsmf ds</div>
+        </div>
+        <div class="column-4">
+            <div class="inset"> flsmdfj qsmdkfj lmqsdkjf lsqdmk jflsqdmkj fqdsmf ds</div>
+        </div>
+        <div class="column-4">
+            <div class="inset"> flsmdfj qsmdkfj lmqsdkjf lsqdmk jflsqdmkj fqdsmf ds</div>
+        </div>
+    </div>
+    <div class="row cards-s">
+        <div class="column-4">
+            <div class="inset"> flsmdfj qsmdkfj lmqsdkjf lsqdmk jflsqdmkj fqdsmf ds</div>
+        </div>
+        <div class="column-4">
+            <div class="inset"> flsmdfj qsmdkfj lmqsdkjf lsqdmk jflsqdmkj fqdsmf ds</div>
+        </div>
+        <div class="column-4">
+            <div class="inset"> flsmdfj qsmdkfj lmqsdkjf lsqdmk jflsqdmkj fqdsmf ds</div>
+        </div>
+    </div>
+    <div class="row cards-m">
+        <div class="column-4">
+            <div class="inset"> flsmdfj qsmdkfj lmqsdkjf lsqdmk jflsqdmkj fqdsmf ds</div>
+        </div>
+        <div class="column-4">
+            <div class="inset"> flsmdfj qsmdkfj lmqsdkjf lsqdmk jflsqdmkj fqdsmf ds</div>
+        </div>
+        <div class="column-4">
+            <div class="inset"> flsmdfj qsmdkfj lmqsdkjf lsqdmk jflsqdmkj fqdsmf ds</div>
+        </div>
+    </div>
+    <div class="row cards-l">
+        <div class="column-4">
+            <div class="inset"> flsmdfj qsmdkfj lmqsdkjf lsqdmk jflsqdmkj fqdsmf ds</div>
+        </div>
+        <div class="column-4">
+            <div class="inset"> flsmdfj qsmdkfj lmqsdkjf lsqdmk jflsqdmkj fqdsmf ds</div>
+        </div>
+        <div class="column-4">
+            <div class="inset"> flsmdfj qsmdkfj lmqsdkjf lsqdmk jflsqdmkj fqdsmf ds</div>
+        </div>
+    </div>
+    <div class="row cards-xl">
+        <div class="column-4">
+            <div class="inset"> flsmdfj qsmdkfj lmqsdkjf lsqdmk jflsqdmkj fqdsmf ds</div>
+        </div>
+        <div class="column-4">
+            <div class="inset"> flsmdfj qsmdkfj lmqsdkjf lsqdmk jflsqdmkj fqdsmf ds</div>
+        </div>
+        <div class="column-4">
+            <div class="inset"> flsmdfj qsmdkfj lmqsdkjf lsqdmk jflsqdmkj fqdsmf ds</div>
+        </div>
+    </div>
+</div>
+
+</div><!-- end main container -->
+
+</body>
+</html>

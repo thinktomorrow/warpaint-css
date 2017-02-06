@@ -1,0 +1,17 @@
+$sizes: (xs : $space-xs, s : $space-s, m : $space-m, l : $space-l, xl : $space-xl);
+@each $size,$space in $sizes
+{
+  .cards-#{$size}{
+    display:flex;
+    justify-content: space-between;
+  }
+
+  .cards-#{$size} [class*="column-"]{
+      width:32%;
+  }
+}
+
+.cards{
+  display: flex;
+  justify-content: space-between;
+}
