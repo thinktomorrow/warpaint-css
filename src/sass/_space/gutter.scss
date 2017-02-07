@@ -1,0 +1,17 @@
+$sizes: (xs : $space-xs, s : $space-s, m : $space-m, l : $space-l, xl : $space-xl);
+@each $size,$space in $sizes
+{
+  @for $i from 1 through $grid-columns {
+
+    @include small-view(){
+      .gutter-#{$size} .column-#{$i} {
+        width: (100% / $grid-columns  * $i) - ($space / 1rem);
+      }
+    }
+  }
+
+}
+
+.gutter-around{
+  justify-content:space-around;
+}

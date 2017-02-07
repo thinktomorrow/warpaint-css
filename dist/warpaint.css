@@ -539,162 +539,476 @@ img {
   }
 }
 
-[class*="column-"] {
-  width: 100%;
-  min-height: 1px;
+.row {
+  display: block;
 }
 
-@media (min-width: 48em) {
-  [class*="column-"] {
-    float: left;
+@media (min-width: 30em) {
+  .row {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
   }
 }
 
-@media (min-width: 48em) {
+.row.top {
+  -webkit-box-align: start;
+  -ms-grid-row-align: flex-start;
+  align-items: flex-start;
+}
+
+.row.center {
+  -webkit-box-align: center;
+  -ms-grid-row-align: center;
+  align-items: center;
+}
+
+.row.bottom {
+  -webkit-box-align: end;
+  -ms-grid-row-align: flex-end;
+  align-items: flex-end;
+}
+
+@media (min-width: 30em) {
   .column-1 {
     width: 8.33333%;
   }
 }
 
-@media (min-width: 48em) {
+@media (min-width: 30em) {
   .column-2 {
     width: 16.66667%;
   }
 }
 
-@media (min-width: 48em) {
+@media (min-width: 30em) {
   .column-3 {
     width: 25%;
   }
 }
 
-@media (min-width: 48em) {
+@media (min-width: 30em) {
   .column-4 {
     width: 33.33333%;
   }
 }
 
-@media (min-width: 48em) {
+@media (min-width: 30em) {
   .column-5 {
     width: 41.66667%;
   }
 }
 
-@media (min-width: 48em) {
+@media (min-width: 30em) {
   .column-6 {
     width: 50%;
   }
 }
 
-@media (min-width: 48em) {
+@media (min-width: 30em) {
   .column-7 {
     width: 58.33333%;
   }
 }
 
-@media (min-width: 48em) {
+@media (min-width: 30em) {
   .column-8 {
     width: 66.66667%;
   }
 }
 
-@media (min-width: 48em) {
+@media (min-width: 30em) {
   .column-9 {
     width: 75%;
   }
 }
 
-@media (min-width: 48em) {
+@media (min-width: 30em) {
   .column-10 {
     width: 83.33333%;
   }
 }
 
-@media (min-width: 48em) {
+@media (min-width: 30em) {
   .column-11 {
     width: 91.66667%;
   }
 }
 
-@media (min-width: 48em) {
+@media (min-width: 30em) {
   .column-12 {
     width: 100%;
   }
 }
 
-/**
- * Equal height css
- * By setting the parent as flexbox the direct children are set with equalheight
- * Note that this will not work on IE 11 and below http://caniuse.com/#search=flex
- * This should be added to the row or cards container
- */
+.column {
+  -webkit-box-flex: 1;
+  flex: 1;
+}
+
 @media (min-width: 30em) {
-  .equalheight {
-    display: -webkit-box;
-    display: flex;
+  .gutter-xs .column-1 {
+    width: 7.95833%;
   }
 }
 
-.cards-xs {
-  display: -webkit-box;
-  display: flex;
-  -webkit-box-pack: justify;
-  justify-content: space-between;
+@media (min-width: 30em) {
+  .gutter-xs .column-2 {
+    width: 16.29167%;
+  }
 }
 
-.cards-xs [class*="column-"] {
-  width: 32%;
+@media (min-width: 30em) {
+  .gutter-xs .column-3 {
+    width: 24.625%;
+  }
 }
 
-.cards-s {
-  display: -webkit-box;
-  display: flex;
-  -webkit-box-pack: justify;
-  justify-content: space-between;
+@media (min-width: 30em) {
+  .gutter-xs .column-4 {
+    width: 32.95833%;
+  }
 }
 
-.cards-s [class*="column-"] {
-  width: 32%;
+@media (min-width: 30em) {
+  .gutter-xs .column-5 {
+    width: 41.29167%;
+  }
 }
 
-.cards-m {
-  display: -webkit-box;
-  display: flex;
-  -webkit-box-pack: justify;
-  justify-content: space-between;
+@media (min-width: 30em) {
+  .gutter-xs .column-6 {
+    width: 49.625%;
+  }
 }
 
-.cards-m [class*="column-"] {
-  width: 32%;
+@media (min-width: 30em) {
+  .gutter-xs .column-7 {
+    width: 57.95833%;
+  }
 }
 
-.cards-l {
-  display: -webkit-box;
-  display: flex;
-  -webkit-box-pack: justify;
-  justify-content: space-between;
+@media (min-width: 30em) {
+  .gutter-xs .column-8 {
+    width: 66.29167%;
+  }
 }
 
-.cards-l [class*="column-"] {
-  width: 32%;
+@media (min-width: 30em) {
+  .gutter-xs .column-9 {
+    width: 74.625%;
+  }
 }
 
-.cards-xl {
-  display: -webkit-box;
-  display: flex;
-  -webkit-box-pack: justify;
-  justify-content: space-between;
+@media (min-width: 30em) {
+  .gutter-xs .column-10 {
+    width: 82.95833%;
+  }
 }
 
-.cards-xl [class*="column-"] {
-  width: 32%;
+@media (min-width: 30em) {
+  .gutter-xs .column-11 {
+    width: 91.29167%;
+  }
 }
 
-.cards {
-  display: -webkit-box;
-  display: flex;
-  -webkit-box-pack: justify;
-  justify-content: space-between;
+@media (min-width: 30em) {
+  .gutter-xs .column-12 {
+    width: 99.625%;
+  }
+}
+
+@media (min-width: 30em) {
+  .gutter-s .column-1 {
+    width: 7.58333%;
+  }
+}
+
+@media (min-width: 30em) {
+  .gutter-s .column-2 {
+    width: 15.91667%;
+  }
+}
+
+@media (min-width: 30em) {
+  .gutter-s .column-3 {
+    width: 24.25%;
+  }
+}
+
+@media (min-width: 30em) {
+  .gutter-s .column-4 {
+    width: 32.58333%;
+  }
+}
+
+@media (min-width: 30em) {
+  .gutter-s .column-5 {
+    width: 40.91667%;
+  }
+}
+
+@media (min-width: 30em) {
+  .gutter-s .column-6 {
+    width: 49.25%;
+  }
+}
+
+@media (min-width: 30em) {
+  .gutter-s .column-7 {
+    width: 57.58333%;
+  }
+}
+
+@media (min-width: 30em) {
+  .gutter-s .column-8 {
+    width: 65.91667%;
+  }
+}
+
+@media (min-width: 30em) {
+  .gutter-s .column-9 {
+    width: 74.25%;
+  }
+}
+
+@media (min-width: 30em) {
+  .gutter-s .column-10 {
+    width: 82.58333%;
+  }
+}
+
+@media (min-width: 30em) {
+  .gutter-s .column-11 {
+    width: 90.91667%;
+  }
+}
+
+@media (min-width: 30em) {
+  .gutter-s .column-12 {
+    width: 99.25%;
+  }
+}
+
+@media (min-width: 30em) {
+  .gutter-m .column-1 {
+    width: 6.83333%;
+  }
+}
+
+@media (min-width: 30em) {
+  .gutter-m .column-2 {
+    width: 15.16667%;
+  }
+}
+
+@media (min-width: 30em) {
+  .gutter-m .column-3 {
+    width: 23.5%;
+  }
+}
+
+@media (min-width: 30em) {
+  .gutter-m .column-4 {
+    width: 31.83333%;
+  }
+}
+
+@media (min-width: 30em) {
+  .gutter-m .column-5 {
+    width: 40.16667%;
+  }
+}
+
+@media (min-width: 30em) {
+  .gutter-m .column-6 {
+    width: 48.5%;
+  }
+}
+
+@media (min-width: 30em) {
+  .gutter-m .column-7 {
+    width: 56.83333%;
+  }
+}
+
+@media (min-width: 30em) {
+  .gutter-m .column-8 {
+    width: 65.16667%;
+  }
+}
+
+@media (min-width: 30em) {
+  .gutter-m .column-9 {
+    width: 73.5%;
+  }
+}
+
+@media (min-width: 30em) {
+  .gutter-m .column-10 {
+    width: 81.83333%;
+  }
+}
+
+@media (min-width: 30em) {
+  .gutter-m .column-11 {
+    width: 90.16667%;
+  }
+}
+
+@media (min-width: 30em) {
+  .gutter-m .column-12 {
+    width: 98.5%;
+  }
+}
+
+@media (min-width: 30em) {
+  .gutter-l .column-1 {
+    width: 5.33333%;
+  }
+}
+
+@media (min-width: 30em) {
+  .gutter-l .column-2 {
+    width: 13.66667%;
+  }
+}
+
+@media (min-width: 30em) {
+  .gutter-l .column-3 {
+    width: 22%;
+  }
+}
+
+@media (min-width: 30em) {
+  .gutter-l .column-4 {
+    width: 30.33333%;
+  }
+}
+
+@media (min-width: 30em) {
+  .gutter-l .column-5 {
+    width: 38.66667%;
+  }
+}
+
+@media (min-width: 30em) {
+  .gutter-l .column-6 {
+    width: 47%;
+  }
+}
+
+@media (min-width: 30em) {
+  .gutter-l .column-7 {
+    width: 55.33333%;
+  }
+}
+
+@media (min-width: 30em) {
+  .gutter-l .column-8 {
+    width: 63.66667%;
+  }
+}
+
+@media (min-width: 30em) {
+  .gutter-l .column-9 {
+    width: 72%;
+  }
+}
+
+@media (min-width: 30em) {
+  .gutter-l .column-10 {
+    width: 80.33333%;
+  }
+}
+
+@media (min-width: 30em) {
+  .gutter-l .column-11 {
+    width: 88.66667%;
+  }
+}
+
+@media (min-width: 30em) {
+  .gutter-l .column-12 {
+    width: 97%;
+  }
+}
+
+@media (min-width: 30em) {
+  .gutter-xl .column-1 {
+    width: 2.33333%;
+  }
+}
+
+@media (min-width: 30em) {
+  .gutter-xl .column-2 {
+    width: 10.66667%;
+  }
+}
+
+@media (min-width: 30em) {
+  .gutter-xl .column-3 {
+    width: 19%;
+  }
+}
+
+@media (min-width: 30em) {
+  .gutter-xl .column-4 {
+    width: 27.33333%;
+  }
+}
+
+@media (min-width: 30em) {
+  .gutter-xl .column-5 {
+    width: 35.66667%;
+  }
+}
+
+@media (min-width: 30em) {
+  .gutter-xl .column-6 {
+    width: 44%;
+  }
+}
+
+@media (min-width: 30em) {
+  .gutter-xl .column-7 {
+    width: 52.33333%;
+  }
+}
+
+@media (min-width: 30em) {
+  .gutter-xl .column-8 {
+    width: 60.66667%;
+  }
+}
+
+@media (min-width: 30em) {
+  .gutter-xl .column-9 {
+    width: 69%;
+  }
+}
+
+@media (min-width: 30em) {
+  .gutter-xl .column-10 {
+    width: 77.33333%;
+  }
+}
+
+@media (min-width: 30em) {
+  .gutter-xl .column-11 {
+    width: 85.66667%;
+  }
+}
+
+@media (min-width: 30em) {
+  .gutter-xl .column-12 {
+    width: 94%;
+  }
+}
+
+.gutter-around {
+  justify-content: space-around;
 }
 
 /**
@@ -967,16 +1281,16 @@ p {
   margin-right: 6rem;
 }
 
-.clearfix, .container, .row {
+.clearfix, .container {
   *zoom: 1;
 }
 
-.clearfix:before, .container:before, .row:before, .clearfix:after, .container:after, .row:after {
+.clearfix:before, .container:before, .clearfix:after, .container:after {
   content: " ";
   display: table;
 }
 
-.clearfix:after, .container:after, .row:after {
+.clearfix:after, .container:after {
   clear: both;
 }
 

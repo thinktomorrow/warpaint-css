@@ -1,19 +1,19 @@
 .row{
-  @extend .clearfix;
-}
+  display:block;
 
-[class*="column-"]{
-  width:100%;
-  min-height:1px; // Displays columns properly, even without content
-
-  @include medium-view(){
-    float:left;
+  @include small-view(){
+    display:flex;
+    justify-content: space-between;
   }
+
+  &.top{ align-items: flex-start; }
+  &.center{ align-items: center; }
+  &.bottom{ align-items: flex-end; }
 }
 
 @for $i from 1 through $grid-columns {
 
-  @include medium-view(){
+  @include small-view(){
     .column-#{$i} {
       width: 100% / $grid-columns  * $i;
     }
@@ -21,15 +21,6 @@
 
 }
 
-/**
- * Equal height css
- * By setting the parent as flexbox the direct children are set with equalheight
- * Note that this will not work on IE 11 and below http://caniuse.com/#search=flex
- * This should be added to the row or cards container
- */
-.equalheight{
-
-  @include small-view(){
-    display:flex;
-  }
+.column{
+  flex:1;
 }
