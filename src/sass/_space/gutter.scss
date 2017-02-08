@@ -5,7 +5,7 @@ $sizes: (xs : $space-xs, s : $space-s, m : $space-m, l : $space-l, xl : $space-x
 
     @include small-view(){
       .gutter-#{$size} .column-#{$i} {
-        width: (100% / $grid-columns  * $i) - ($space / 1rem);
+        width: (100% / $grid-columns  * $i) - ($space / 1rem); // divide by unit to remove unit
       }
     }
   }
