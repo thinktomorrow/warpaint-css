@@ -1423,4 +1423,9 @@ p {
   margin-right: auto;
 }
 
+/* First elements like headers should be aligned with the top of their parent. */
+.first {
+  margin-top: 0;
+}
+
 /*# sourceMappingURL=warpaint.css.map */

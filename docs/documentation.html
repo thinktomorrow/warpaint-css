@@ -42,10 +42,6 @@
             margin-top:150px;
         }
 
-        .title:first-child{
-            margin-top:0;
-        }
-
         .sidebar{
             padding-right:1rem;
             margin-right:2rem;
@@ -59,6 +55,35 @@
         .sidebar__nav li{
             list-style: none outside none;
             text-align: right;
+        }
+
+        .inline-dummy{
+            padding:0;
+        }
+
+        .inline-dummy li{
+            list-style: none outside none;
+            display:inline-block;
+            text-align: center;
+        }
+
+        .dummy-inset .column{
+            border:1px solid #cccccc;
+        }
+
+        .dummy-inset .inside-element{
+            background-color: #cccccc;
+            height:120px;
+        }
+
+        .zebra{
+            background: repeating-linear-gradient(
+                45deg,
+                #ffffff,
+                #ffffff 10px,
+                #f5f5f5 10px,
+                #f5f5f5 20px
+            );
         }
     </style>
 </head>
@@ -91,6 +116,13 @@
             <li><a href="#grid-container">Container</a></li>
         </ul>
 
+        <h3 class="text-right">SPACING</h3>
+        <ul class="sidebar__nav">
+            <li><a href="#spacing-stack">stack</a></li>
+            <li><a href="#spacing-inline">inline</a></li>
+            <li><a href="#spacing-inset">inset</a></li>
+        </ul>
+
         <h3 class="text-right">TYPOGRAPHY</h3>
         <ul class="sidebar__nav">
             <li><a href="#typo-headers">Headers</a></li>
@@ -100,7 +132,7 @@
 
         <section id="grid-basic">
 
-                <h2 class="title">Basic grid</h2>
+                <h2 class="first">Basic grid</h2>
                 <p>
                     Columns must be wrapped inside a <code>.row</code> element.
                     Each default <code>.column</code> grid element will have the same width and height as its siblings.
@@ -130,18 +162,18 @@
 &lt;/div&gt;
 </pre>
 
-            <h2 class="title" id="grid-gutter">Grid gutter</h2>
+            <h2 id="grid-gutter">Grid gutter</h2>
                 <p>
                     By default there is no gutter between columns. By adding <code>.gutter</code> to your <code>.row</code> element, all child columns will
                     receive a gutter in between.
                 </p>
 
                 <div class="dummy">
-                    <div class="row gutter">
+                    <div class="row gutter stack">
                         <div class="column">2</div>
                         <div class="column">2</div>
                     </div>
-                    <div class="row gutter">
+                    <div class="row gutter stack">
                         <div class="column">3</div>
                         <div class="column">3</div>
                         <div class="column">3</div>
@@ -152,42 +184,44 @@
 
         <section class="first-block" id="grid-width">
 
-                <h2 class="title">Column width</h2>
+                <h2>Column width</h2>
                 <p>
                     If you need to control the width of your columns, you can assign them one of the sizing classes from below:
                 </p>
 
             <div class="dummy">
                 <div class="row">
-                    <div class="column-11">.column-11</div>
-                    <div class="column-1">1</div>
-                </div>
-                <div class="row">
-                    <div class="column-10">.column-10</div>
-                    <div class="column-2">.column-2</div>
-                </div>
-                <div class="row">
-                    <div class="column-9">.column-9</div>
-                    <div class="column-3">.column-3</div>
-                </div>
-                <div class="row">
-                    <div class="column-8">.column-8</div>
-                    <div class="column-4">.column-4</div>
+                    <div class="column-6">.column-6</div>
+                    <div class="column-6">.column-6</div>
                 </div>
                 <div class="row">
                     <div class="column-7">.column-7</div>
                     <div class="column-5">.column-5</div>
                 </div>
                 <div class="row">
-                    <div class="column-6">.column-6</div>
-                    <div class="column-6">.column-6</div>
+                    <div class="column-8">.column-8</div>
+                    <div class="column-4">.column-4</div>
                 </div>
+                <div class="row">
+                    <div class="column-9">.column-9</div>
+                    <div class="column-3">.column-3</div>
+                </div>
+                <div class="row">
+                    <div class="column-10">.column-10</div>
+                    <div class="column-2">2</div>
+                </div>
+                <div class="row">
+                    <div class="column-11">.column-11</div>
+                    <div class="column-1">1</div>
+                </div>
+                
+                
             </div>
 
                 <pre>
 &lt;div class="row"&gt;
-    &lt;div class="column-11"&gt;11&lt;/div&gt;
-    &lt;div class="column-1"&gt;1&lt;/div&gt;
+    &lt;div class="column-6"&gt;6&lt;/div&gt;
+    &lt;div class="column-6"&gt;6&lt;/div&gt;
 &lt;/div&gt;
 &lt;div class="row"&gt;
     &lt;div class="column-10"&gt;10&lt;/div&gt;
@@ -200,13 +234,13 @@
 
         <section id="grid-container" class="stack-l">
 
-            <h2 class="title">Container</h2>
+            <h2>Container</h2>
             <p>
                 By default the grid expands to the full width of its parent. It can be useful to nest the grid inside a <code>.container</code> element.
                 This way it will receive a nice left-right responsive margin, relative to its parent.
             </p>
 
-            <div class="dummy">
+            <div class="dummy zebra">
                 <div class="container">
                     <div class="row">
                         <div class="column-5">5</div>
@@ -228,9 +262,112 @@
 
         </section>
 
+
+        <!-- spacing -->
+
+        <section id="spacing">
+            <h2>Spacing</h2>
+            
+            <p>We define two types of spacings: the spacing of elements inside their parent container (margins) and spacing inside the element (paddings).</p>
+
+
+            <h4 id="spacing-stack">.stack</h4>
+
+            <p>Handle margins with <code>.stack</code>.
+                Stack sets the top and bottom margin. Since the page elements are mostly positioned vertically, this class
+                is used to add breathing room in between.
+
+            </p>
+
+            <div class="dummy zebra">
+                <div class="row">
+                  <div class="column"></div>
+                </div>
+                <div class="row stack">
+                  <div class="column">
+                    .stack
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="column"></div>
+                </div>
+            </div>
+
+            <h4 id="spacing-inline">.inline</h4>
+
+            <p>Inline class sets a horizontal margin. This can be used for adding space between sibling elements like pills, tags, breadcrumbs or buttons.</p>
+
+            <div class="dummy">
+                <ul class="inline-dummy">
+                    <li>Home</li>
+                    <li class="inline">></li>
+                    <li>Category</li>
+                    <li class="inline">></li>
+                    <li>Subcategory</li>
+                    <li class="inline">></li>
+                    <li>Item</li>
+                </ul>
+            </div>
+            
+            <h4 id="spacing-inset">.inset</h4>
+
+            <p>Paddings of an element can be managed by <code>.inset</code>, <code>.stretched</code> or <code>.squished</code>. Inset is the most common and sets a square padding: padding on four sides of the element.</p>
+
+            <div class="dummy dummy-inset">
+                <div class="row gutter">
+                    <div class="column inset zebra">
+                        <div class="inside-element"></div>
+                    </div>
+                    <div class="column inset zebra">
+                         <div class="inside-element"></div>
+                    </div>
+                    <div class="column inset zebra">
+                         <div class="inside-element"></div>
+                    </div>
+                </div>
+            </div>
+
+            <h3>Paddings: <em>Spacing inside element</em></h3>
+            <p>You can use <strong>3 classes</strong> for spacing the inside of elements:
+              <pre>.inset</pre> which sets a square padding and adds padding on four sides of the element,
+              <pre>.squished</pre> which adds padding on left and right and only half of it on top and bottom
+              <pre>.stretched</pre> that uses half the padding on the left/right sides.</p>
+
+              <div class="row grid-blocks">
+                <div class="column-3 inset">
+                  Inset
+                  Integer sollicitudin id augue ac consequat. Ut vestibulum eget lorem sagittis porttitor.
+                </div>
+                <div class="column-3 squished">
+                  Squished
+                  Integer sollicitudin id augue ac consequat. Ut vestibulum eget lorem sagittis porttitor.
+                </div>
+                <div class="column-3 stretched">
+                  Stretched
+                  Integer sollicitudin id augue ac consequat. Ut vestibulum eget lorem sagittis porttitor.
+                </div>
+              </div>
+            <p>
+                <small>A squished inset stretches horizontally as it reduces space top and bottom by 50% of the inset.
+                Less common than the square inset but is used for buttons and cell-like containers as tables of lists
+                Stretched inset stretches vertically and is ideally for textboxes and other form elements</small>
+            </p>
+
+            <h3>Sizes</h3>
+            <p>
+                Each of these classes are available in 5 different sizes:
+                <pre>xs, s, m (default), l and xl</pre>
+                This allows you to play with different spacings.
+            </p>
+
+        </section>
+
+        <!-- end spacing -->
+
+
         <section id="typo-headers">
 
-            <h2 class="title">Typography</h2>
+            <h2>Typography</h2>
 
             <div class="row">
 
