@@ -12,7 +12,7 @@
  | ----------------------------------------------------------------
  |
  | By default the grid consists of 12 blocks but you can set this whatever you like.
- | Some good alternatives are a 10 or 15 block division.
+ | If you feel experimental, we suggest some good alternatives such as a 10 or 15 block division.
  */
 /*
  | ----------------------------------------------------------------
@@ -20,7 +20,8 @@
  | ----------------------------------------------------------------
  |
  | The default font-size. This is also the value on which all font based spacings
- | and sizings are measured upon. By default this is set to 0.875em.
+ | and sizings are measured upon. By defaultt this is set to 0.875em. Depending on
+ | your font family of choice this should be changed to a proper default.
  */
 /*
  | ----------------------------------------------------------------
@@ -507,16 +508,6 @@ img {
   max-width: 100%;
 }
 
-::-moz-selection {
-  color: #FFF;
-  background-color: #8e44ad;
-}
-
-::selection {
-  color: #FFF;
-  background-color: #8e44ad;
-}
-
 .container {
   margin: 0 4%;
 }
@@ -572,77 +563,102 @@ img {
 
 @media (min-width: 30em) {
   .column-1 {
+    float: left;
+    /* non-flexbox support for basic columns */
     width: 8.33333%;
   }
 }
 
 @media (min-width: 30em) {
   .column-2 {
+    float: left;
+    /* non-flexbox support for basic columns */
     width: 16.66667%;
   }
 }
 
 @media (min-width: 30em) {
   .column-3 {
+    float: left;
+    /* non-flexbox support for basic columns */
     width: 25%;
   }
 }
 
 @media (min-width: 30em) {
   .column-4 {
+    float: left;
+    /* non-flexbox support for basic columns */
     width: 33.33333%;
   }
 }
 
 @media (min-width: 30em) {
   .column-5 {
+    float: left;
+    /* non-flexbox support for basic columns */
     width: 41.66667%;
   }
 }
 
 @media (min-width: 30em) {
   .column-6 {
+    float: left;
+    /* non-flexbox support for basic columns */
     width: 50%;
   }
 }
 
 @media (min-width: 30em) {
   .column-7 {
+    float: left;
+    /* non-flexbox support for basic columns */
     width: 58.33333%;
   }
 }
 
 @media (min-width: 30em) {
   .column-8 {
+    float: left;
+    /* non-flexbox support for basic columns */
     width: 66.66667%;
   }
 }
 
 @media (min-width: 30em) {
   .column-9 {
+    float: left;
+    /* non-flexbox support for basic columns */
     width: 75%;
   }
 }
 
 @media (min-width: 30em) {
   .column-10 {
+    float: left;
+    /* non-flexbox support for basic columns */
     width: 83.33333%;
   }
 }
 
 @media (min-width: 30em) {
   .column-11 {
+    float: left;
+    /* non-flexbox support for basic columns */
     width: 91.66667%;
   }
 }
 
 @media (min-width: 30em) {
   .column-12 {
+    float: left;
+    /* non-flexbox support for basic columns */
     width: 100%;
   }
 }
 
 .column {
+  float: left;
   -webkit-box-flex: 1;
   flex: 1;
 }
@@ -720,6 +736,15 @@ img {
 }
 
 @media (min-width: 30em) {
+  .gutter-xs .column {
+    margin-right: 0.375rem;
+  }
+  .gutter-xs .column:last-child {
+    margin-right: 0;
+  }
+}
+
+@media (min-width: 30em) {
   .gutter-s .column-1 {
     width: 7.58333%;
   }
@@ -788,6 +813,15 @@ img {
 @media (min-width: 30em) {
   .gutter-s .column-12 {
     width: 99.25%;
+  }
+}
+
+@media (min-width: 30em) {
+  .gutter-s .column {
+    margin-right: 0.75rem;
+  }
+  .gutter-s .column:last-child {
+    margin-right: 0;
   }
 }
 
@@ -864,6 +898,15 @@ img {
 }
 
 @media (min-width: 30em) {
+  .gutter-m .column {
+    margin-right: 1.5rem;
+  }
+  .gutter-m .column:last-child {
+    margin-right: 0;
+  }
+}
+
+@media (min-width: 30em) {
   .gutter-l .column-1 {
     width: 5.33333%;
   }
@@ -932,6 +975,15 @@ img {
 @media (min-width: 30em) {
   .gutter-l .column-12 {
     width: 97%;
+  }
+}
+
+@media (min-width: 30em) {
+  .gutter-l .column {
+    margin-right: 3rem;
+  }
+  .gutter-l .column:last-child {
+    margin-right: 0;
   }
 }
 
@@ -1007,8 +1059,97 @@ img {
   }
 }
 
+@media (min-width: 30em) {
+  .gutter-xl .column {
+    margin-right: 6rem;
+  }
+  .gutter-xl .column:last-child {
+    margin-right: 0;
+  }
+}
+
 .gutter-around {
   justify-content: space-around;
+}
+
+@media (min-width: 30em) {
+  .gutter .column-1 {
+    width: 6.83333%;
+  }
+}
+
+@media (min-width: 30em) {
+  .gutter .column-2 {
+    width: 15.16667%;
+  }
+}
+
+@media (min-width: 30em) {
+  .gutter .column-3 {
+    width: 23.5%;
+  }
+}
+
+@media (min-width: 30em) {
+  .gutter .column-4 {
+    width: 31.83333%;
+  }
+}
+
+@media (min-width: 30em) {
+  .gutter .column-5 {
+    width: 40.16667%;
+  }
+}
+
+@media (min-width: 30em) {
+  .gutter .column-6 {
+    width: 48.5%;
+  }
+}
+
+@media (min-width: 30em) {
+  .gutter .column-7 {
+    width: 56.83333%;
+  }
+}
+
+@media (min-width: 30em) {
+  .gutter .column-8 {
+    width: 65.16667%;
+  }
+}
+
+@media (min-width: 30em) {
+  .gutter .column-9 {
+    width: 73.5%;
+  }
+}
+
+@media (min-width: 30em) {
+  .gutter .column-10 {
+    width: 81.83333%;
+  }
+}
+
+@media (min-width: 30em) {
+  .gutter .column-11 {
+    width: 90.16667%;
+  }
+}
+
+@media (min-width: 30em) {
+  .gutter .column-12 {
+    width: 98.5%;
+  }
+}
+
+.gutter .column {
+  margin-right: 1.5rem;
+}
+
+.gutter .column:last-child {
+  margin-right: 0;
 }
 
 /**
@@ -1102,44 +1243,6 @@ p {
   display: block;
   width: 100%;
   padding: 1em;
-}
-
-/* -------------------------------------------------------
- Button
- ------------------------------------------------------- */
-.btn {
-  border-radius: 3px;
-  background: #8e44ad;
-  border: 1px solid #8e44ad;
-  color: #FFF;
-  display: inline-block;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-}
-
-.btn:hover {
-  background: transparent;
-  color: #8e44ad;
-}
-
-.btn-o {
-  background: transparent;
-  color: #8e44ad;
-}
-
-.btn-o:hover {
-  background: #8e44ad;
-  color: #FFF;
-}
-
-.btn-link {
-  background: none;
-  border: none;
-  color: #8e44ad;
-}
-
-.btn-link:hover {
-  text-decoration: underline;
 }
 
 /**

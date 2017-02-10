@@ -10,8 +10,35 @@ $sizes: (xs : $space-xs, s : $space-s, m : $space-m, l : $space-l, xl : $space-x
     }
   }
 
+  @include small-view(){
+    .gutter-#{$size} .column {
+      margin-right: $space;
+
+      &:last-child{
+        margin-right:0;
+      }
+    }
+  }
+
 }
 
 .gutter-around{
   justify-content:space-around;
+}
+
+@for $i from 1 through $grid-columns {
+
+  @include small-view(){
+    .gutter .column-#{$i} {
+      width: (100% / $grid-columns  * $i) - ($space-m / 1rem); // divide by unit to remove unit
+    }
+  }
+}
+
+.gutter .column {
+  margin-right: $space-m;
+
+  &:last-child{
+    margin-right:0;
+  }
 }

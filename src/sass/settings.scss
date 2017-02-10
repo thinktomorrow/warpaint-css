@@ -14,7 +14,7 @@
  | ----------------------------------------------------------------
  |
  | By default the grid consists of 12 blocks but you can set this whatever you like.
- | Some good alternatives are a 10 or 15 block division.
+ | If you feel experimental, we suggest some good alternatives such as a 10 or 15 block division.
  */
 $grid-columns: 12 !default;
 
@@ -24,7 +24,8 @@ $grid-columns: 12 !default;
  | ----------------------------------------------------------------
  |
  | The default font-size. This is also the value on which all font based spacings
- | and sizings are measured upon. By default this is set to 0.875em.
+ | and sizings are measured upon. By defaultt this is set to 0.875em. Depending on
+ | your font family of choice this should be changed to a proper default.
  */
 $base-font-size:  0.875em;
 

@@ -1,7 +1,12 @@
+::selection{
+  color: $paint-truce;
+  background-color: $paint-primary
+}
+
 body{
-    font-family: Gotham SSm,sans-serif;
-    font-weight: 300;
-    color:#777777;
+  font-family: Gotham SSm,sans-serif;
+  font-weight: 300;
+  color:#777777;
 }
 mark{
   background-color: #cccccc;
@@ -9,6 +14,7 @@ mark{
   font-style: italic;
   padding: 3px;
 }
+
 
 /* -------------------------------------------------------
  TYPOGRAPHY
@@ -52,18 +58,18 @@ Border-grey
  HEADER AND NAV
  ------------------------------------------------------- */
 header{
-    position:fixed;
-    top:0;
-    left:0;
-    right:0;
-    width:100%;
-    z-index:10;
-    border-bottom: 1px solid #cccccc;
-    transition:background-color .9s ease-out;
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  width:100%;
+  z-index:10;
+  border-bottom: 1px solid #cccccc;
+  transition:background-color .9s ease-out;
 }
 
 header.sticky{
-    background-color: #efefef;
+  background-color: #efefef;
 }
 .header-logo{
   position: absolute;
@@ -73,74 +79,74 @@ header.sticky{
 }
 
 .header-sticky-logo{
-    display:none;
-    transform: scale(0);
-    transition: opacity 0.3s ease-out, transform .3s ease-out;
-    opacity:0;
+  display:none;
+  transform: scale(0);
+  transition: opacity 0.3s ease-out, transform .3s ease-out;
+  opacity:0;
 }
 
 @media (min-width:800px){
-    .header-sticky-logo{
-        display:block;
-    }
+  .header-sticky-logo{
+    display:block;
+  }
 }
 
 
 header.sticky .header-sticky-logo{
-    transform: scale(1);
-    opacity:1;
+  transform: scale(1);
+  opacity:1;
 }
 
 .header-container{
-    display:flex;
-    align-items: center;
-    justify-content: flex-end;
-    position: relative;
+  display:flex;
+  align-items: center;
+  justify-content: flex-end;
+  position: relative;
 }
 
 .header-container h1{
-    margin:0;
+  margin:0;
 }
 
 nav ul{
 }
 .fixed nav ul{
-margin: 0;
+  margin: 0;
 }
 
 nav li{
-    display:inline-block;
-    margin: 0 0.75rem;
+  display:inline-block;
+  margin: 0 0.75rem;
 }
 
 nav li a{
-    text-transform: uppercase;
-    font-size: 0.65em;
-    letter-spacing: 1px;
-    position:relative;
-    color: #8e44ad;
+  text-transform: uppercase;
+  font-size: 0.65em;
+  letter-spacing: 1px;
+  position:relative;
+  color: #8e44ad;
 }
 
 nav li a:hover{
-    color: #39323a;
+  color: #39323a;
 }
 
 nav li a:after{
-    transform: scaleX(0);
-    transform-origin:left center;
-    transition: transform .3s cubic-bezier(.82,0,.12,1);
-    position:absolute;
-    content:"";
-    display:block;
-    left:0;
-    bottom:-2px;
-    width:100%;
-    height:2px;
-    background-color:#dddddd;
+  transform: scaleX(0);
+  transform-origin:left center;
+  transition: transform .3s cubic-bezier(.82,0,.12,1);
+  position:absolute;
+  content:"";
+  display:block;
+  left:0;
+  bottom:-2px;
+  width:100%;
+  height:2px;
+  background-color:#dddddd;
 }
 
 nav li a:hover:after{
-    transform: scaleX(1);
+  transform: scaleX(1);
 }
 h2.title{
   color: #8e44ad;
@@ -151,13 +157,13 @@ h2.title{
  BLOCKS
  ------------------------------------------------------- */
 .first-block{
-    margin-top:50px;
+  margin-top:50px;
 }
 
 .card{
-    border:1px solid #ccc;
-    box-shadow:0px 6px 32px -6px rgba(0,0,0,0.2);
-    background-color:#f7f7f7;
+  border:1px solid #ccc;
+  box-shadow:0px 6px 32px -6px rgba(0,0,0,0.2);
+  background-color:#f7f7f7;
 }
 
 .grid-blocks [class*="column-"]{

@@ -1,0 +1,314 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <link rel="stylesheet" href="/docs/css/fonts.css">
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Warpaint</title>
+    <meta name="description" content="Warpaint stylesheet. Design with freedom. Style with constraints.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="/docs/favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="/dist/warpaint.css">
+    <link rel="stylesheet" href="/docs/css/truce.css">
+
+    <style type="text/css">
+        .dummy .column, .dummy [class*="column-"]{
+            background-color:#777777;
+            font-family: monospace, monospace;
+            text-align: center;
+            padding:1rem;
+            border:2px solid #ffffff;
+            color:#ffffff;
+        }
+
+        code{
+            background-color:#f5f5f5;
+            font-size:.8em;
+            padding: .2em .3em;
+            border-radius: 3px;
+            border:1px solid #cccccc;
+        }
+
+        pre{
+            border:2px solid #cccccc;
+            background-color:#f5f5f5;
+            font-size:.8em;
+            padding:1rem;
+            border-radius:3px;
+        }
+
+        .offset{
+            margin-top:150px;
+        }
+
+        .title:first-child{
+            margin-top:0;
+        }
+
+        .sidebar{
+            padding-right:1rem;
+            margin-right:2rem;
+            border-right:1px dotted #cccccc;
+        }
+
+        .sidebar__nav{
+            padding:0;
+        }
+
+        .sidebar__nav li{
+            list-style: none outside none;
+            text-align: right;
+        }
+    </style>
+</head>
+<body class="">
+
+<header class="stickable">
+    <div class="container header-container">
+        <div class="header-logo">
+          <a href="#top"><img src="/docs/img/warpaint-logo.png" alt="Warpaint"></a>
+        </div>
+        <nav class="header-navigation">
+            <ul>
+                <li><a href="#quickstart">Get started</a></li>
+                <li><a href="#mindset">Mindset</a></li>
+                <li><a href="/docs/documentation.html">Documentation</a></li>
+                <li><a target="_blank" href="https://github.com/thinktomorrow/warpaint">Github</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<div class="container row offset">
+    <div class="column-3 sidebar">
+
+        <h3 class="text-right">GRID</h3>
+        <ul class="sidebar__nav">
+            <li><a href="#grid-basic">Basic grid</a></li>
+            <li><a href="#grid-gutter">Grid gutter</a></li>
+            <li><a href="#grid-width">Column width</a></li>
+            <li><a href="#grid-container">Container</a></li>
+        </ul>
+
+        <h3 class="text-right">TYPOGRAPHY</h3>
+        <ul class="sidebar__nav">
+            <li><a href="#typo-headers">Headers</a></li>
+        </ul>
+    </div>
+    <div class="column">
+
+        <section id="grid-basic">
+
+                <h2 class="title">Basic grid</h2>
+                <p>
+                    Columns must be wrapped inside a <code>.row</code> element.
+                    Each default <code>.column</code> grid element will have the same width and height as its siblings.
+                </p>
+
+                <div class="dummy">
+                    <div class="row">
+                        <div class="column">2</div>
+                        <div class="column">2</div>
+                    </div>
+                    <div class="row">
+                        <div class="column">3</div>
+                        <div class="column">3</div>
+                        <div class="column">3</div>
+                    </div>
+                </div>
+
+                <pre>
+&lt;div class="row"&gt;
+    &lt;div class="column"&gt;2&lt;/div&gt;
+    &lt;div class="column"&gt;2&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="row"&gt;
+    &lt;div class="column"&gt;3&lt;/div&gt;
+    &lt;div class="column"&gt;3&lt;/div&gt;
+    &lt;div class="column"&gt;3&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+
+            <h2 class="title" id="grid-gutter">Grid gutter</h2>
+                <p>
+                    By default there is no gutter between columns. By adding <code>.gutter</code> to your <code>.row</code> element, all child columns will
+                    receive a gutter in between.
+                </p>
+
+                <div class="dummy">
+                    <div class="row gutter">
+                        <div class="column">2</div>
+                        <div class="column">2</div>
+                    </div>
+                    <div class="row gutter">
+                        <div class="column">3</div>
+                        <div class="column">3</div>
+                        <div class="column">3</div>
+                    </div>
+                </div>
+
+        </section>
+
+        <section class="first-block" id="grid-width">
+
+                <h2 class="title">Column width</h2>
+                <p>
+                    If you need to control the width of your columns, you can assign them one of the sizing classes from below:
+                </p>
+
+            <div class="dummy">
+                <div class="row">
+                    <div class="column-11">.column-11</div>
+                    <div class="column-1">1</div>
+                </div>
+                <div class="row">
+                    <div class="column-10">.column-10</div>
+                    <div class="column-2">.column-2</div>
+                </div>
+                <div class="row">
+                    <div class="column-9">.column-9</div>
+                    <div class="column-3">.column-3</div>
+                </div>
+                <div class="row">
+                    <div class="column-8">.column-8</div>
+                    <div class="column-4">.column-4</div>
+                </div>
+                <div class="row">
+                    <div class="column-7">.column-7</div>
+                    <div class="column-5">.column-5</div>
+                </div>
+                <div class="row">
+                    <div class="column-6">.column-6</div>
+                    <div class="column-6">.column-6</div>
+                </div>
+            </div>
+
+                <pre>
+&lt;div class="row"&gt;
+    &lt;div class="column-11"&gt;11&lt;/div&gt;
+    &lt;div class="column-1"&gt;1&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="row"&gt;
+    &lt;div class="column-10"&gt;10&lt;/div&gt;
+    &lt;div class="column-2"&gt;2&lt;/div&gt;
+&lt;/div&gt;
+...
+</pre>
+
+        </section>
+
+        <section id="grid-container" class="stack-l">
+
+            <h2 class="title">Container</h2>
+            <p>
+                By default the grid expands to the full width of its parent. It can be useful to nest the grid inside a <code>.container</code> element.
+                This way it will receive a nice left-right responsive margin, relative to its parent.
+            </p>
+
+            <div class="dummy">
+                <div class="container">
+                    <div class="row">
+                        <div class="column-5">5</div>
+                        <div class="column-4">4</div>
+                        <div class="column">3</div>
+                    </div>
+                </div>
+            </div>
+
+            <pre>
+&lt;div class="container"&gt;
+    &lt;div class="row"&gt;
+        &lt;div class="column-5"&gt;5&lt;/div&gt;
+        &lt;div class="column-4"&gt;4&lt;/div&gt;
+        &lt;div class="column"&gt;3&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+
+        </section>
+
+        <section id="typo-headers">
+
+            <h2 class="title">Typography</h2>
+
+            <div class="row">
+
+                <div class="column-8">
+                    <!-- Standard Headings -->
+                    <h1>H1 heading</h1>
+                    <h2>H2 heading</h2>
+                    <h3>H3 heading</h3>
+                    <h4>H4 heading</h4>
+                    <h5>H5 heading</h5>
+                    <h6>H6 heading</h6>
+                </div>
+                <div class="column-4">
+                    <pre>Headings</pre>
+                </div>
+            </div>
+            <div class="row">
+                <!-- Base type size -->
+                <div class="column-4">
+                    <pre>Paragraph</pre>
+                </div>
+                <div class="column-8">
+                    <p>The base type is 15px over 1.6 line height (24px)</p>
+                </div>
+            </div>
+            <div class="row">
+                <!-- Other styled text tags -->
+                <div class="column-4">
+                    <pre>Default styles</pre>
+                </div>
+                <div class="column-8">
+                    <strong>Bolded</strong>
+                    <em>Italicized</em>
+                    <a>Colored</a>
+                    <u>Underlined</u>
+                </div>
+            </div>
+
+
+        </section>
+
+    </div>
+</div>
+
+
+    <footer class="size-xs text-center inset-m">
+        <small>  &copy; Warpaint</small>
+    </footer>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script>
+
+        // STICKY
+        var stickable = $(".stickable");
+
+        $(document).on( 'scroll', function(){
+            if ($(this).scrollTop() > 100) {
+                stickable.addClass("sticky");
+            } else {
+                stickable.removeClass("sticky");
+            }
+        });
+
+        $(function() {
+            $('a[href*="#"]:not([href="#"])').click(function() {
+                if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+                    var target = $(this.hash);
+                    target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+                    if (target.length) {
+                        $('html, body').animate({
+                            scrollTop: target.offset().top - 50
+                        }, 1000);
+                        return false;
+                    }
+                }
+            });
+        });
+
+    </script>
+</body>
+</html>

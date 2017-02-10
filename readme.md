@@ -1,25 +1,20 @@
 # Warpaint
 
-Think Tomorrow <strike>bootstrap</strike> boilerplate/stylesheet. 
+A responsive typographic CSS stylesheet.
 
-**Note: this stylesheet should not be used in production yet as it is still under heavy construction towards a stable release**
+Warpaint gives you a range of classes to work with typography, element-spacing and -positioning. 
+It aims for typographic rhythm out of the box.
 
-## Warpaint follows these guidelines:
-- never set font-size in the <html> to a pixel value because it overrides the user’s browser settings. Use em or rem instead
-- it’s a best practice to use relative units like em for font-size.
-- Size in em if the property scales according to it’s font-size
-- Size everything else in rem.
-- Increase font-size and line-height as screen sizes increase.
+**Note: this stylesheet should not be used in production yet as it is still under construction towards a stable release**
 
-## Content
+## Quick start
+To get started, download and include the `warpaint.min.css` in the head of your html:
+```html
+    <link rel="stylesheet" href="/warpaint.min.css" type="text/css">
+```
+Full documentation can be consulted at [warpaint.thinktomorrow.be](http://warpaint.thinktomorrow.be).
 
-To just get started, you can use the `warpaint.css` from the /dist folder. For production, you may want to use
-the minified `warpaint.min.css` file instead.
-
-However warpaint really shines when you customize it. If you include the `src/sass` files to your build process, 
-you can easily adjust the warpaint settings to match your project. Al the adjustable settings are found
-in the `src/sass/settings.scss` file. 
-
+## Project file structure
 ```
 warpaint/
 ├── dist/
@@ -34,14 +29,33 @@ warpaint/
         └── warpaint.scss
 ```
 
-## Sources
-https://zellwk.com/blog/rem-vs-em/
-https://zellwk.com/blog/responsive-typography/
+## Browser support
+Out of the box, warpaint is supported in all modern browsers: Chrome, Firefox, Safari, Edge and Opera. 
+
+There is a fairly good support for IE10+ and most functionality should be working. 
+Since it relies on flexbox there is limited compatibility with IE9. For those in need for IE9 support, we provide a separate stylesheet which you can load via a conditional comment:
+
+```html
+    <link rel="stylesheet" href="/warpaint.min.css" type="text/css">
+    <!--[if IE 9]><link rel="stylesheet" href="/warpaint-ie9.css" type="text/css" /><![endif]-->
+```
+
+## Customize
+You can customize Warpaint by editing the `src/sass/settings.scss` file. The most important settings are:
+
+```sass
+  // Grid columns
+  $grid-columns: 12
+  
+  // Base fontsize
+  $base-font-size:  0.875em
+```
 
 ## Contribute
 
 Fork the github repository `https://github.com/thinktomorrow/warpaint.git`.
 Next, install the node dependencies by running `npm install` in the root of the project
+Run the sass build with gulp.
 
 ## Security
 

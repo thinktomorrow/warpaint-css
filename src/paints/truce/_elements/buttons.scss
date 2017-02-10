@@ -1,0 +1,30 @@
+.btn{
+  border-radius: 3px;
+  background: $paint-primary;
+  border: 1px solid $paint-primary;
+  color: $paint-truce;
+  display: inline-block;
+  transition: all 0.3s ease-in-out;
+  &:hover{
+    background: transparent;
+    color: $paint-primary;
+  }
+}
+
+.btn-o{
+  background: transparent;
+  color: $paint-primary;
+  &:hover{
+    background: $paint-primary;;
+    color: $paint-truce;
+  }
+}
+
+.btn-link{
+  background: none;
+  border: none;
+  color: $paint-primary;
+  &:hover{
+    text-decoration: underline
+  }
+}

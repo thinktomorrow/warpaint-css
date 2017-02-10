@@ -15,6 +15,7 @@
 
   @include small-view(){
     .column-#{$i} {
+      float:left; /* non-flexbox support for basic columns */
       width: 100% / $grid-columns  * $i;
     }
   }
@@ -22,5 +23,6 @@
 }
 
 .column{
+  float:left;
   flex:1;
 }

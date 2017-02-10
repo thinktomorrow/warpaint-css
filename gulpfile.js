@@ -39,6 +39,17 @@ gulp.task('sass-min', function() {
         .pipe(reload({ stream:true }));
 });
 
+gulp.task('sass-truce', function() {
+    return gulp.src(config.src + '/../paints/truce/truce.scss')
+        .pipe(sourcemaps.init())
+        .pipe(sass({outputStyle: 'expanded'}).on('error', sass.logError))
+        .pipe(autoprefix({cascade:false, browsers: ['> 1%']}))
+        .pipe(sourcemaps.write('.'))
+        .pipe(rename('truce.css'))
+        .pipe(gulp.dest('./docs/css/'))
+        .pipe(reload({ stream:true }));
+});
+
 gulp.task('watch',function(){
     browserSync({
         proxy: config.proxy
