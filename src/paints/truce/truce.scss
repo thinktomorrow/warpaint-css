@@ -27,4 +27,9 @@
 // TRUCE
 @import 'settings';
 @import '_base/base.scss';
+@import '_base/typography.scss';
+
+@import '_elements/nav';
+@import '_elements/hero';
 @import '_elements/buttons';
+@import '_elements/dummy';

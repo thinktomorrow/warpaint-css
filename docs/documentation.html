@@ -10,91 +10,6 @@
     <link rel="shortcut icon" href="/docs/favicon.ico" type="image/x-icon">
 
     <link rel="stylesheet" href="/docs/css/truce.css">
-
-    <style type="text/css">
-
-        /* crazy overrides to provide a nice demo */
-        .dummy .column:not(.inset):not(.inset-xs):not(.inset-s):not(.inset-l):not(.inset-xl):not(.squished):not(.stretched), .dummy [class*="column-"]:not(.inset):not(.squished):not(.stretched){
-            background-color:#777777;
-            font-family: monospace, monospace;
-            text-align: center;
-            padding:1rem;
-            border:2px solid #ffffff;
-            color:#ffffff;
-        }
-
-        code{
-            background-color:#f5f5f5;
-            font-size:.8em;
-            padding: .2em .3em;
-            border-radius: 3px;
-            border:1px solid #cccccc;
-        }
-
-        pre{
-            border:2px solid #cccccc;
-            background-color:#f5f5f5;
-            font-size:.8em;
-            padding:1rem;
-            border-radius:3px;
-        }
-
-        .offset{
-            margin-top:150px;
-        }
-
-        .sidebar{
-            padding-right:1rem;
-            margin-right:2rem;
-            border-right:1px dotted #cccccc;
-        }
-
-        .sidebar__nav{
-            padding:0;
-        }
-
-        .sidebar__nav li{
-            list-style: none outside none;
-            text-align: right;
-        }
-
-        .sidebar__divider{
-            border-top:1px dotted #cccccc;
-            margin-top:1rem;
-            margin-bottom:1rem;
-            height:1px;
-            display:block;
-        }
-
-        .inline-dummy{
-            padding:0;
-        }
-
-        .inline-dummy li{
-            list-style: none outside none;
-            display:inline-block;
-            text-align: center;
-        }
-
-        .dummy-inset .column{
-            border:1px solid #cccccc;
-        }
-
-        .dummy-inset .inside-element{
-            background-color: #cccccc;
-            height:120px;
-        }
-
-        .zebra{
-            background: repeating-linear-gradient(
-                45deg,
-                #ffffff,
-                #ffffff 10px,
-                #f5f5f5 10px,
-                #f5f5f5 20px
-            );
-        }
-    </style>
 </head>
 <body class="">
 
@@ -314,66 +229,49 @@
             <div class="dummy">
                 <ul class="inline-dummy">
                     <li>Home</li>
-                    <li class="inline">></li>
+                    <li class="inline-s">></li>
                     <li>Category</li>
-                    <li class="inline">></li>
+                    <li class="inline-s">></li>
                     <li>Subcategory</li>
-                    <li class="inline">></li>
+                    <li class="inline-s">></li>
                     <li>Item</li>
                 </ul>
             </div>
+<pre>
+&lt;ul class="breadcrumb"&gt;
+    &lt;li&gt;Home&lt;/li&gt;
+    &lt;li class="inline"&gt;&gt;&lt;/li&gt;
+    &lt;li&gt;Category&lt;/li&gt;
+    &lt;li class="inline"&gt;&gt;&lt;/li&gt;
+    &lt;li&gt;Subcategory&lt;/li&gt;
+    &lt;li class="inline"&gt;&gt;&lt;/li&gt;
+    &lt;li&gt;Item&lt;/li&gt;
+&lt;/ul>
+</pre>
             
             <h3 id="spacing-inset">.inset</h3>
 
             <p>Paddings of an element can be managed by <code>.inset</code>, <code>.stretched</code> or <code>.squished</code>. Inset is the most common and sets a square padding: padding on four sides of the element.</p>
-
-            <div class="dummy dummy-inset">
-                <div class="row gutter">
-                    <div class="column inset zebra">
-                        <div class="inside-element"></div>
-                    </div>
-                    <div class="column inset zebra">
-                         <div class="inside-element"></div>
-                    </div>
-                    <div class="column inset zebra">
-                         <div class="inside-element"></div>
-                    </div>
-                </div>
-            </div>
 
             <h3 id="spacing-squished">.squished</h3>
 
 <p>A squished inset stretches horizontally. It reduces space top and bottom by 50% of the inset.
                 This is mostly used for buttons and cell-like containers as tables or lists</p>
 
-            <div class="dummy dummy-inset">
-                <div class="row gutter">
-                    <div class="column squished zebra">
-                        <div class="inside-element"></div>
-                    </div>
-                    <div class="column squished zebra">
-                         <div class="inside-element"></div>
-                    </div>
-                    <div class="column squished zebra">
-                         <div class="inside-element"></div>
-                    </div>
-                </div>
-            </div>
-
-            <h3 id="spacing-stretched">.stretched</h3>
+                <h3 id="spacing-stretched">.stretched</h3>
 
 <p>A stretched padding is the opposite of squished. It stretches vertically and is ideally for textboxes and other form elements</p>
 
             <div class="dummy dummy-inset">
                 <div class="row gutter">
-                    <div class="column stretched zebra">
-                        <div class="inside-element"></div>
+                    <div class="column inset zebra">
+                        <div class="inside-element center-center">.inset</div>
+                    </div>
+                    <div class="column squished zebra">
+                         <div class="inside-element center-center">.squished</div>
                     </div>
                     <div class="column stretched zebra">
-                         <div class="inside-element"></div>
-                    </div>
-                    <div class="column stretched zebra">
-                         <div class="inside-element"></div>
+                         <div class="inside-element center-center">.stretched</div>
                     </div>
                 </div>
             </div>
@@ -386,21 +284,23 @@
             </p>
 
             <div class="dummy dummy-inset">
-                <div class="row gutter">
+                <div class="row gutter top">
                     <div class="column inset-xs zebra">
-                        <div class="inside-element"></div>
+                        <div class="inside-element center-center">.inset-xs</div>
                     </div>
                     <div class="column inset-s zebra">
-                         <div class="inside-element"></div>
+                         <div class="inside-element center-center">.inset-s</div>
                     </div>
                     <div class="column inset zebra">
-                         <div class="inside-element"></div>
+                         <div class="inside-element center-center">.inset</div>
                     </div>
+                </div>
+                <div class="row gutter stack top">
                     <div class="column inset-l zebra">
-                         <div class="inside-element"></div>
+                         <div class="inside-element center-center">.inset-l</div>
                     </div>
                     <div class="column inset-xl zebra">
-                         <div class="inside-element"></div>
+                         <div class="inside-element center-center">.inset-xl</div>
                     </div>
                 </div>
             </div>

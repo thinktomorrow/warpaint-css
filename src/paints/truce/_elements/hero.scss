@@ -1,0 +1,25 @@
+/* -------------------------------------------------------
+ HERO
+ ------------------------------------------------------- */
+.hero{
+  height: 100vh;
+  position: relative;
+  text-align: center;
+  background-color: #efefef;
+}
+.hero-caption{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: inline-block;
+  left: 0;
+  right: 0;
+}
+.hero-caption h1{
+  margin-top: 0;
+  font-weight: lighter;
+  text-transform: uppercase;
+}
+.hero-logo{
+  max-width: 100px;
+}

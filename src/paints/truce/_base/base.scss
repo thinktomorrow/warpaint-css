@@ -8,6 +8,7 @@ body{
   font-weight: 300;
   color:#777777;
 }
+
 mark{
   background-color: #cccccc;
   color: white;
@@ -17,11 +18,6 @@ mark{
 
 
 /* -------------------------------------------------------
- TYPOGRAPHY
- ------------------------------------------------------- */
-a{ text-decoration: none; color: #8e44ad;}
-
-/* -------------------------------------------------------
 Border-grey
 ------------------------------------------------------- */
 .border-grey{
@@ -29,146 +25,8 @@ Border-grey
 }
 
 /* -------------------------------------------------------
- HERO
- ------------------------------------------------------- */
-.hero{
-  height: 100vh;
-  position: relative;
-  text-align: center;
-  background-color: #efefef;
-}
-.hero-caption{
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  display: inline-block;
-  left: 0;
-  right: 0;
-}
-.hero-caption h1{
-  margin-top: 0;
-  font-weight: lighter;
-  text-transform: uppercase;
-}
-.hero-logo{
-  max-width: 100px;
-}
-
-/* -------------------------------------------------------
- HEADER AND NAV
- ------------------------------------------------------- */
-header{
-  position:fixed;
-  top:0;
-  left:0;
-  right:0;
-  width:100%;
-  z-index:10;
-  border-bottom: 1px solid #cccccc;
-  transition:background-color .9s ease-out;
-}
-
-header.sticky{
-  background-color: #efefef;
-}
-.header-logo{
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  left: 0;
-}
-
-.header-sticky-logo{
-  display:none;
-  transform: scale(0);
-  transition: opacity 0.3s ease-out, transform .3s ease-out;
-  opacity:0;
-}
-
-@media (min-width:800px){
-  .header-sticky-logo{
-    display:block;
-  }
-}
-
-
-header.sticky .header-sticky-logo{
-  transform: scale(1);
-  opacity:1;
-}
-
-.header-container{
-  display:flex;
-  align-items: center;
-  justify-content: flex-end;
-  position: relative;
-}
-
-.header-container h1{
-  margin:0;
-}
-
-nav ul{
-}
-.fixed nav ul{
-  margin: 0;
-}
-
-nav li{
-  display:inline-block;
-  margin: 0 0.75rem;
-}
-
-nav li a{
-  text-transform: uppercase;
-  font-size: 0.65em;
-  letter-spacing: 1px;
-  position:relative;
-  color: #8e44ad;
-}
-
-nav li a:hover{
-  color: #39323a;
-}
-
-nav li a:after{
-  transform: scaleX(0);
-  transform-origin:left center;
-  transition: transform .3s cubic-bezier(.82,0,.12,1);
-  position:absolute;
-  content:"";
-  display:block;
-  left:0;
-  bottom:-2px;
-  width:100%;
-  height:2px;
-  background-color:#dddddd;
-}
-
-nav li a:hover:after{
-  transform: scaleX(1);
-}
-h2{
-  color: #8e44ad;
-  border-bottom: 1px solid #8e44ad;
-  font-weight: 100;
-}
-/* -------------------------------------------------------
  BLOCKS
  ------------------------------------------------------- */
 .first-block{
   margin-top:50px;
-}
-
-.card{
-  border:1px solid #ccc;
-  box-shadow:0px 6px 32px -6px rgba(0,0,0,0.2);
-  background-color:#f7f7f7;
-}
-
-.grid-blocks [class*="column-"]{
-  border: 1px solid #ccc;
-  background-color: #efefef;
-  text-align: center;
-  color: #ccc;
 }
