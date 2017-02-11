@@ -9,11 +9,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="/docs/favicon.ico" type="image/x-icon">
 
-    <link rel="stylesheet" href="/dist/warpaint.css">
     <link rel="stylesheet" href="/docs/css/truce.css">
 
     <style type="text/css">
-        .dummy .column, .dummy [class*="column-"]{
+
+        /* crazy overrides to provide a nice demo */
+        .dummy .column:not(.inset):not(.inset-xs):not(.inset-s):not(.inset-l):not(.inset-xl):not(.squished):not(.stretched), .dummy [class*="column-"]:not(.inset):not(.squished):not(.stretched){
             background-color:#777777;
             font-family: monospace, monospace;
             text-align: center;
@@ -55,6 +56,14 @@
         .sidebar__nav li{
             list-style: none outside none;
             text-align: right;
+        }
+
+        .sidebar__divider{
+            border-top:1px dotted #cccccc;
+            margin-top:1rem;
+            margin-bottom:1rem;
+            height:1px;
+            display:block;
         }
 
         .inline-dummy{
@@ -108,7 +117,7 @@
 <div class="container row offset">
     <div class="column-3 sidebar">
 
-        <h3 class="text-right">GRID</h3>
+        <h3 class="text-right first">GRID</h3>
         <ul class="sidebar__nav">
             <li><a href="#grid-basic">Basic grid</a></li>
             <li><a href="#grid-gutter">Grid gutter</a></li>
@@ -120,7 +129,12 @@
         <ul class="sidebar__nav">
             <li><a href="#spacing-stack">stack</a></li>
             <li><a href="#spacing-inline">inline</a></li>
+            <li class="sidebar__divider"></li>
             <li><a href="#spacing-inset">inset</a></li>
+            <li><a href="#spacing-squished">squished</a></li>
+            <li><a href="#spacing-stretched">stretched</a></li>
+            <li class="sidebar__divider"></li>
+            <li><a href="#spacing-sizes">sizes</a></li>
         </ul>
 
         <h3 class="text-right">TYPOGRAPHY</h3>
@@ -271,7 +285,7 @@
             <p>We define two types of spacings: the spacing of elements inside their parent container (margins) and spacing inside the element (paddings).</p>
 
 
-            <h4 id="spacing-stack">.stack</h4>
+            <h3 id="spacing-stack">.stack</h3>
 
             <p>Handle margins with <code>.stack</code>.
                 Stack sets the top and bottom margin. Since the page elements are mostly positioned vertically, this class
@@ -293,7 +307,7 @@
                 </div>
             </div>
 
-            <h4 id="spacing-inline">.inline</h4>
+            <h3 id="spacing-inline">.inline</h3>
 
             <p>Inline class sets a horizontal margin. This can be used for adding space between sibling elements like pills, tags, breadcrumbs or buttons.</p>
 
@@ -309,7 +323,7 @@
                 </ul>
             </div>
             
-            <h4 id="spacing-inset">.inset</h4>
+            <h3 id="spacing-inset">.inset</h3>
 
             <p>Paddings of an element can be managed by <code>.inset</code>, <code>.stretched</code> or <code>.squished</code>. Inset is the most common and sets a square padding: padding on four sides of the element.</p>
 
@@ -327,38 +341,69 @@
                 </div>
             </div>
 
-            <h3>Paddings: <em>Spacing inside element</em></h3>
-            <p>You can use <strong>3 classes</strong> for spacing the inside of elements:
-              <pre>.inset</pre> which sets a square padding and adds padding on four sides of the element,
-              <pre>.squished</pre> which adds padding on left and right and only half of it on top and bottom
-              <pre>.stretched</pre> that uses half the padding on the left/right sides.</p>
+            <h3 id="spacing-squished">.squished</h3>
 
-              <div class="row grid-blocks">
-                <div class="column-3 inset">
-                  Inset
-                  Integer sollicitudin id augue ac consequat. Ut vestibulum eget lorem sagittis porttitor.
-                </div>
-                <div class="column-3 squished">
-                  Squished
-                  Integer sollicitudin id augue ac consequat. Ut vestibulum eget lorem sagittis porttitor.
-                </div>
-                <div class="column-3 stretched">
-                  Stretched
-                  Integer sollicitudin id augue ac consequat. Ut vestibulum eget lorem sagittis porttitor.
-                </div>
-              </div>
-            <p>
-                <small>A squished inset stretches horizontally as it reduces space top and bottom by 50% of the inset.
-                Less common than the square inset but is used for buttons and cell-like containers as tables of lists
-                Stretched inset stretches vertically and is ideally for textboxes and other form elements</small>
-            </p>
+<p>A squished inset stretches horizontally. It reduces space top and bottom by 50% of the inset.
+                This is mostly used for buttons and cell-like containers as tables or lists</p>
 
-            <h3>Sizes</h3>
+            <div class="dummy dummy-inset">
+                <div class="row gutter">
+                    <div class="column squished zebra">
+                        <div class="inside-element"></div>
+                    </div>
+                    <div class="column squished zebra">
+                         <div class="inside-element"></div>
+                    </div>
+                    <div class="column squished zebra">
+                         <div class="inside-element"></div>
+                    </div>
+                </div>
+            </div>
+
+            <h3 id="spacing-stretched">.stretched</h3>
+
+<p>A stretched padding is the opposite of squished. It stretches vertically and is ideally for textboxes and other form elements</p>
+
+            <div class="dummy dummy-inset">
+                <div class="row gutter">
+                    <div class="column stretched zebra">
+                        <div class="inside-element"></div>
+                    </div>
+                    <div class="column stretched zebra">
+                         <div class="inside-element"></div>
+                    </div>
+                    <div class="column stretched zebra">
+                         <div class="inside-element"></div>
+                    </div>
+                </div>
+            </div>
+
+            <h3 id="spacing-sizes">Sizes</h3>
             <p>
                 Each of these classes are available in 5 different sizes:
-                <pre>xs, s, m (default), l and xl</pre>
+                <code>xs, s, m (default), l and xl</code>
                 This allows you to play with different spacings.
             </p>
+
+            <div class="dummy dummy-inset">
+                <div class="row gutter">
+                    <div class="column inset-xs zebra">
+                        <div class="inside-element"></div>
+                    </div>
+                    <div class="column inset-s zebra">
+                         <div class="inside-element"></div>
+                    </div>
+                    <div class="column inset zebra">
+                         <div class="inside-element"></div>
+                    </div>
+                    <div class="column inset-l zebra">
+                         <div class="inside-element"></div>
+                    </div>
+                    <div class="column inset-xl zebra">
+                         <div class="inside-element"></div>
+                    </div>
+                </div>
+            </div>
 
         </section>
 
