@@ -3,6 +3,7 @@
 
   @include small-view(){
     display:flex;
+    flex-wrap: wrap; /* Allow overflow to wrap to following line */
     justify-content: space-between;
   }
 
@@ -11,9 +12,11 @@
   &.bottom{ align-items: flex-end; }
 }
 
-@for $i from 1 through $grid-columns {
+@include small-view(){
 
-  @include small-view(){
+
+  @for $i from 1 through $grid-columns {
+
     .column-#{$i} {
       float:left; /* non-flexbox support for basic columns */
       width: 100% / $grid-columns  * $i;

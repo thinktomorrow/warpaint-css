@@ -1,16 +1,17 @@
 $sizes: (xs : $space-xs, s : $space-s, m : $space-m, l : $space-l, xl : $space-xl);
-@each $size,$space in $sizes
-{
-  @for $i from 1 through $grid-columns {
 
-    @include small-view(){
+@include small-view(){
+
+  @each $size,$space in $sizes
+  {
+    
+    @for $i from 1 through $grid-columns {
+
       .gutter-#{$size} .column-#{$i} {
         width: (100% / $grid-columns  * $i) - ($space / 1rem); // divide by unit to remove unit
       }
     }
-  }
 
-  @include small-view(){
     .gutter-#{$size} .column {
       margin-right: $space;
 
@@ -18,22 +19,21 @@ $sizes: (xs : $space-xs, s : $space-s, m : $space-m, l : $space-l, xl : $space-x
         margin-right:0;
       }
     }
+
   }
 
+  @for $i from 1 through $grid-columns {
+
+    .gutter .column-#{$i} {
+      width: (100% / $grid-columns  * $i) - ($space-m / 1rem); // divide by unit to remove unit
+    }
+  }
 }
 
 .gutter-around{
   justify-content:space-around;
 }
 
-@for $i from 1 through $grid-columns {
-
-  @include small-view(){
-    .gutter .column-#{$i} {
-      width: (100% / $grid-columns  * $i) - ($space-m / 1rem); // divide by unit to remove unit
-    }
-  }
-}
 
 .gutter .column {
   margin-right: $space-m;

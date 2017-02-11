@@ -38,6 +38,8 @@
             <li><a href="#grid-gutter">Grid gutter</a></li>
             <li><a href="#grid-width">Column width</a></li>
             <li><a href="#grid-container">Container</a></li>
+            <li><a href="#grid-responsive">Responsive</a></li>
+
         </ul>
 
         <h3 class="text-right">SPACING</h3>
@@ -63,8 +65,8 @@
 
                 <h2 class="first">Basic grid</h2>
                 <p>
-                    Columns must be wrapped inside a <code>.row</code> element.
-                    Each default <code>.column</code> grid element will have the same width and height as its siblings.
+                    Columns must be wrapped inside a <code>.row</code> element and must be at least assigned a <code>.column</code> class.
+                    By default the grid element will divide the width equally amongst its child columns.
                 </p>
 
                 <div class="dummy">
@@ -188,6 +190,37 @@
     &lt;/div&gt;
 &lt;/div&gt;
 </pre>
+
+        </section>
+
+        <section id="grid-responsive" class="stack-l">
+
+            <h2>Responsiveness</h2>
+            <p>
+                
+            </p>
+
+
+            <div class="row">
+                <div class="xl-column-4 m-column-6"><div class="inset-dummy">testje 1</div></div>
+                <div class="xl-column-4 m-column-6"><div class="inset-dummy">testje 2</div></div>
+                <div class="xl-column-4 m-column-6"><div class="inset-dummy">testje 3</div></div>
+                <div class="xl-column-4 m-column-6"><div class="inset-dummy">testje 4</div></div>
+            </div>
+
+            <div class="dummy dummy-inset">
+                <div class="row gutter">
+                    <div class="column inset s-inset-xl m-inset-m zebra">
+                        <div class="inside-element center-center">.inset</div>
+                    </div>
+                    <div class="column squished zebra">
+                         <div class="inside-element center-center">.squished</div>
+                    </div>
+                    <div class="column stretched zebra">
+                         <div class="inside-element center-center">.stretched</div>
+                    </div>
+                </div>
+            </div>
 
         </section>
 
