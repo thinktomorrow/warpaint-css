@@ -488,7 +488,7 @@ html {
   }
 }
 
-@media (min-width: 85.375em) {
+@media (min-width: 85em) {
   html {
     font-size: 1.225em;
   }
@@ -524,7 +524,7 @@ img {
   }
 }
 
-@media (min-width: 85.375em) {
+@media (min-width: 85em) {
   .container {
     margin: 0 18%;
   }
