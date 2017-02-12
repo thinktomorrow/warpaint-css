@@ -38,8 +38,6 @@
             <li><a href="#grid-gutter">Grid gutter</a></li>
             <li><a href="#grid-width">Column width</a></li>
             <li><a href="#grid-container">Container</a></li>
-            <li><a href="#grid-responsive">Responsive</a></li>
-
         </ul>
 
         <h3 class="text-right">SPACING</h3>
@@ -52,6 +50,11 @@
             <li><a href="#spacing-stretched">stretched</a></li>
             <li class="sidebar__divider"></li>
             <li><a href="#spacing-sizes">sizes</a></li>
+        </ul>
+
+        <h3 class="text-right">RESPONSIVE</h3>
+        <ul class="sidebar__nav">
+            <li><a href="#responsive">grid and spacing</a></li>
         </ul>
 
         <h3 class="text-right">TYPOGRAPHY</h3>
@@ -193,37 +196,6 @@
 
         </section>
 
-        <section id="grid-responsive" class="stack-l">
-
-            <h2>Responsiveness</h2>
-            <p>
-                
-            </p>
-
-
-            <div class="row">
-                <div class="xl-column-4 m-column-6"><div class="inset-dummy">testje 1</div></div>
-                <div class="xl-column-4 m-column-6"><div class="inset-dummy">testje 2</div></div>
-                <div class="xl-column-4 m-column-6"><div class="inset-dummy">testje 3</div></div>
-                <div class="xl-column-4 m-column-6"><div class="inset-dummy">testje 4</div></div>
-            </div>
-
-            <div class="dummy dummy-inset">
-                <div class="row gutter">
-                    <div class="column inset s-inset-xl m-inset-m zebra">
-                        <div class="inside-element center-center">.inset</div>
-                    </div>
-                    <div class="column squished zebra">
-                         <div class="inside-element center-center">.squished</div>
-                    </div>
-                    <div class="column stretched zebra">
-                         <div class="inside-element center-center">.stretched</div>
-                    </div>
-                </div>
-            </div>
-
-        </section>
-
 
         <!-- spacing -->
 
@@ -341,6 +313,61 @@
         </section>
 
         <!-- end spacing -->
+
+        <!-- responsive -->
+        <section id="responsive" class="stack-l">
+
+            <h2>Responsive</h2>
+            <p>
+                Since the development mindset of warpaint is mobile first, the general idea is that you don't need to account for every viewport size in particular. 
+            </p>
+            <p>Having said that, there are some cases where working with breakpoints can be usefull. Warpaint provides 5 breakpoints: </p>
+
+<pre>
+
+/* smallest viewport (20em ~ 320px) and up */
+@include xsmall-view{ ... }
+
+/* small viewport (30em ~ 480px) and up */
+@include small-view{ ... }
+
+/* regular viewport (48em ~ 768px) and up */
+@include medium-view{ ... }
+
+/* regular viewport (64em ~ 1024px) and up */
+@include large-view{ ... }
+
+/* regular viewport (85em ~ 1365px) and up */
+@include xlarge-view{ ... }
+
+</pre>
+
+            <p>
+                You can force the behaviour of columns and spacing classes in regards to one of these breakpoints. Just prepend the class with a _breakpoint prefix_ like <code>xs-, s-, m-, l- or xl-</code>. E.g. Adding <code>.l-column-3</code> to your column will enforce a 1/4 column size for viewports larger than 64em.
+            </p>
+
+            <div class="dummy">
+
+                <div class="row">
+                    <div class="xl-column-3 column-6"><div class="inset-dummy">.xl-column-3 .column-6</div></div>
+                    <div class="xl-column-3 column-6"><div class="inset-dummy">.xl-column-3 .column-6</div></div>
+                    <div class="xl-column-3 column-6"><div class="inset-dummy">.xl-column-3 .column-6</div></div>
+                    <div class="xl-column-3 column-6"><div class="inset-dummy">.xl-column-3 .column-6</div></div>
+                </div>
+            </div>
+
+            <p>The same breakpoint prefixes can be applied to the spacing classes. E.g. <code>.inset .l-inset-l</code> will set standard inset but from the large breakpoint a large inset will be applied.</p>
+
+            <div class="dummy dummy-inset">
+                <div class="row gutter">
+                    <div class="column inset l-inset-l zebra">
+                        <div class="inside-element center-center">.inset .l-inset-l</div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <!-- end responsive -->
 
 
         <section id="typo-headers">
