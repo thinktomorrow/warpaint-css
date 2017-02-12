@@ -466,37 +466,37 @@ html {
 }
 
 html {
-  font-size: 0.6885em;
+  font-size: 0.7785em;
   line-height: 1.5;
 }
 
 @media (min-width: 30em) {
   html {
-    font-size: 0.765em;
+    font-size: 0.865em;
   }
 }
 
 @media (min-width: 48em) {
   html {
-    font-size: 0.8415em;
+    font-size: 0.9515em;
   }
 }
 
 @media (min-width: 64em) {
   html {
-    font-size: 0.918em;
+    font-size: 1.038em;
   }
 }
 
 @media (min-width: 85.375em) {
   html {
-    font-size: 1.071em;
+    font-size: 1.211em;
   }
 }
 
 @media (min-width: 120em) {
   html {
-    font-size: 1.224em;
+    font-size: 1.384em;
   }
 }
 
@@ -627,9 +627,15 @@ img {
 }
 
 .column {
-  float: left;
-  -webkit-box-flex: 1;
-  flex: 1;
+  width: 100%;
+}
+
+@media (min-width: 30em) {
+  .column {
+    float: left;
+    -webkit-box-flex: 1;
+    flex: 1;
+  }
 }
 
 @media (min-width: 30em) {
@@ -893,74 +899,74 @@ img {
   margin-right: 0;
 }
 
-/**
- * Sizes independent of the viewports
- *
- * Projected line-heights are best guesses and merely
- * approximations towards an optimal vertical rhythm
- * e.g. line-height for size-l will hook into perfect
- * vertical rhythm only on every 6-th line
- */
-.size-xs {
-  font-size: 0.6885em;
-  line-height: 1.35;
-}
-
-.size-s {
-  font-size: 0.765em;
-  line-height: 1.5;
-}
-
-.size-m {
-  font-size: 0.8415em;
-  line-height: 1.65;
-}
-
-.size-l {
-  font-size: 0.918em;
-  line-height: 1.5;
-}
-
-.size-xl {
-  font-size: 1.071em;
-  line-height: 1.5;
-}
-
 h1, h2, h3, h4, h5, h6 {
   margin-bottom: 0;
 }
 
 h1 {
-  font-size: 1.683em;
+  font-size: 1.903em;
   line-height: 1em;
   margin-top: 2.8125rem;
 }
 
 h2 {
-  font-size: 1.377em;
+  font-size: 1.557em;
   line-height: 1.25em;
   margin-top: 2.8125rem;
 }
 
 h3 {
-  font-size: 1.071em;
+  font-size: 1.211em;
   margin-top: 2.1875rem;
 }
 
 h4 {
-  font-size: 0.918em;
+  font-size: 1.038em;
 }
 
 h5 {
-  font-size: 0.8415em;
+  font-size: 0.9515em;
 }
 
 h6 {
-  font-size: 0.765em;
+  font-size: 0.865em;
 }
 
 p {
   margin: 1.5rem 0;
+}
+
+/**
+ * Sizes independent of the viewports
+ *
+ * Projected line-heights are best guesses and merely
+ * approximations towards an optimal vertical rhythm
+ * e.g. line-height for font-l will hook into perfect
+ * vertical rhythm only on every 6-th line
+ */
+.font-xs {
+  font-size: 0.7785em;
+  line-height: 1.35;
+}
+
+.font-s {
+  font-size: 0.865em;
+  line-height: 1.5;
+}
+
+.font-m {
+  font-size: 0.9515em;
+  line-height: 1.65;
+}
+
+.font-l {
+  font-size: 1.038em;
+  line-height: 1.5;
+}
+
+.font-xl {
+  font-size: 1.211em;
+  line-height: 1.5;
 }
 
 /**
@@ -1843,67 +1849,39 @@ p {
  | Here you should configure your paint related settings
  |
  */
-::-moz-selection {
+.btn {
+  border-radius: 3px;
+  background: #8e44ad;
+  border: 1px solid #8e44ad;
   color: #FFF;
-  background-color: #8e44ad;
-}
-::selection {
-  color: #FFF;
-  background-color: #8e44ad;
+  display: inline-block;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
-body {
-  font-family: Gotham SSm,sans-serif;
-  font-weight: 300;
-  color: #777777;
-}
-
-mark {
-  background-color: #cccccc;
-  color: white;
-  font-style: italic;
-  padding: 3px;
-}
-
-/* -------------------------------------------------------
-Border-grey
-------------------------------------------------------- */
-.border-grey {
-  border: 1px solid #ccc;
-}
-
-/* -------------------------------------------------------
- BLOCKS
- ------------------------------------------------------- */
-.first-block {
-  margin-top: 50px;
-}
-
-a {
-  text-decoration: none;
+.btn:hover {
+  background: transparent;
   color: #8e44ad;
 }
 
-h2 {
+.btn-o {
+  background: transparent;
   color: #8e44ad;
-  border-bottom: 1px solid #8e44ad;
-  font-weight: 100;
 }
 
-code {
-  background-color: #f5f5f5;
-  font-size: .8em;
-  padding: .2em .3em;
-  border-radius: 3px;
-  border: 1px solid #cccccc;
+.btn-o:hover {
+  background: #8e44ad;
+  color: #FFF;
 }
 
-pre {
-  border: 2px solid #cccccc;
-  background-color: #f5f5f5;
-  font-size: .8em;
-  padding: 1rem;
-  border-radius: 3px;
+.btn-link {
+  background: none;
+  border: none;
+  color: #8e44ad;
+}
+
+.btn-link:hover {
+  text-decoration: underline;
 }
 
 header {
@@ -2069,39 +2047,138 @@ nav li a:hover:after {
   max-width: 100px;
 }
 
-.btn {
-  border-radius: 3px;
-  background: #8e44ad;
-  border: 1px solid #8e44ad;
+::-moz-selection {
   color: #FFF;
+  background-color: #8e44ad;
+}
+
+::selection {
+  color: #FFF;
+  background-color: #8e44ad;
+}
+
+body {
+  font-family: Gotham SSm,sans-serif;
+  font-weight: 300;
+  color: #777777;
+}
+
+mark {
+  background-color: #cccccc;
+  color: white;
+  font-style: italic;
+  padding: 3px;
+}
+
+/* -------------------------------------------------------
+Border-grey
+------------------------------------------------------- */
+.border-grey {
+  border: 1px solid #ccc;
+}
+
+/* -------------------------------------------------------
+ BLOCKS
+ ------------------------------------------------------- */
+.first-block {
+  margin-top: 50px;
+}
+
+.active-breakpoint-text:after {
   display: inline-block;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
+  content: 'default';
 }
 
-.btn:hover {
-  background: transparent;
+@media (min-width: 20em) {
+  .active-breakpoint-text:after {
+    content: 'xsmall';
+  }
+}
+
+@media (min-width: 30em) {
+  .active-breakpoint-text:after {
+    content: 'small';
+  }
+}
+
+@media (min-width: 48em) {
+  .active-breakpoint-text:after {
+    content: 'medium';
+  }
+}
+
+@media (min-width: 64em) {
+  .active-breakpoint-text:after {
+    content: 'large';
+  }
+}
+
+@media (min-width: 85.375em) {
+  .active-breakpoint-text:after {
+    content: 'xlarge';
+  }
+}
+
+.nav__up {
+  position: fixed;
+  padding: 1rem;
+  background-color: #ffffff;
+  display: none;
+  bottom: 0.6rem;
+  left: -0.6rem;
+}
+
+@media (min-width: 30em) {
+  .nav__up {
+    bottom: 2rem;
+    left: 2rem;
+  }
+}
+
+.nav__up.active {
+  display: block;
+}
+
+.nav__up__guidetext {
+  position: absolute;
+  bottom: -17px;
+  left: 0px;
+  white-space: nowrap;
+  color: #cccccc;
+  display: none;
+}
+
+@media (min-width: 30em) {
+  .nav__up__guidetext {
+    display: block;
+  }
+}
+
+a {
+  text-decoration: none;
   color: #8e44ad;
 }
 
-.btn-o {
-  background: transparent;
+h2 {
   color: #8e44ad;
+  border-bottom: 1px solid #8e44ad;
+  font-weight: 100;
 }
 
-.btn-o:hover {
-  background: #8e44ad;
-  color: #FFF;
+code {
+  background-color: #f5f5f5;
+  font-size: .8em;
+  padding: .2em .3em;
+  border-radius: 3px;
+  border: 1px solid #cccccc;
 }
 
-.btn-link {
-  background: none;
-  border: none;
-  color: #8e44ad;
-}
-
-.btn-link:hover {
-  text-decoration: underline;
+pre {
+  border: 2px solid #cccccc;
+  background-color: #f5f5f5;
+  font-size: .8em;
+  padding: 1rem;
+  border-radius: 3px;
 }
 
 /* crazy overrides to provide a nice demo */

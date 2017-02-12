@@ -30,3 +30,80 @@ Border-grey
 .first-block{
   margin-top:50px;
 }
+
+.active-breakpoint-text{
+
+  &:after{
+    display:inline-block;
+    content:'default';
+  }
+
+  @include xsmall-view{
+    &:after{
+      content:'xsmall';
+
+    }
+  }
+
+  @include small-view{
+    &:after{
+      content:'small';
+
+    }
+  }
+
+  @include medium-view{
+    &:after{
+      content:'medium';
+
+    }
+  }
+
+  @include large-view{
+    &:after{
+      content:'large';
+
+    }
+  }
+
+  @include xlarge-view{
+    &:after{
+      content:'xlarge';
+
+    }
+  }
+}
+
+.nav__up{
+    position: fixed;
+    padding: 1rem;
+    background-color:#ffffff;
+    display:none;
+
+    bottom: 0.6rem;
+    left: -0.6rem;
+
+    @include small-view{
+      bottom: 2rem;
+      left: 2rem;
+    }
+}
+
+.nav__up.active{
+  
+  display:block;
+  
+}
+
+.nav__up__guidetext{
+  position:absolute;
+  bottom: -17px;
+  left: 0px;
+  white-space: nowrap; 
+  color: #cccccc;   
+  display:none;
+
+  @include small-view{
+    display:block;
+  }
+}

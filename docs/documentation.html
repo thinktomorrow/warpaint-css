@@ -29,6 +29,8 @@
     </div>
 </header>
 
+<span id="nav-top"></span>
+
 <div class="container row offset">
     <div class="column-3 sidebar">
 
@@ -54,13 +56,21 @@
 
         <h3 class="text-right">RESPONSIVE</h3>
         <ul class="sidebar__nav">
-            <li><a href="#responsive">grid and spacing</a></li>
+            <li><a href="#responsive-breakpoints">breakpoints</a></li>
+            <li><a href="#responsive-grid">grid</a></li>
+            <li><a href="#responsive-spacing">spacing</a></li>
         </ul>
 
         <h3 class="text-right">TYPOGRAPHY</h3>
         <ul class="sidebar__nav">
-            <li><a href="#typo-headers">Headers</a></li>
+            <li><a href="#fontsize">Fontsize</a></li>
         </ul>
+
+        <a class="btn btn-o nav__up" href="#nav-top">
+            &uarr; top <span class="nav__up__guidetext font-xs"><span class="active-breakpoint-text"></span> viewport</span>
+        </a>
+
+
     </div>
     <div class="column">
 
@@ -315,9 +325,11 @@
         <!-- end spacing -->
 
         <!-- responsive -->
-        <section id="responsive" class="stack-l">
+        <section class="stack-l">
 
             <h2>Responsive</h2>
+
+            <h3 id="responsive-breakpoints">Breakpoints</h3>
             <p>
                 Since the development mindset of warpaint is mobile first, the general idea is that you don't need to account for every viewport size in particular. 
             </p>
@@ -342,6 +354,7 @@
 
 </pre>
 
+            <h3 id="responsive-grid">Grid</h3>
             <p>
                 You can force the behaviour of columns and spacing classes in regards to one of these breakpoints. Just prepend the class with a _breakpoint prefix_ like <code>xs-, s-, m-, l- or xl-</code>. E.g. Adding <code>.l-column-3</code> to your column will enforce a 1/4 column size for viewports larger than 64em.
             </p>
@@ -355,8 +368,11 @@
                     <div class="xl-column-3 column-6"><div class="inset-dummy">.xl-column-3 .column-6</div></div>
                 </div>
             </div>
+            <div class="text-center font-s"><em>Resize the viewport to view the change. Active breakpoint is <span class="active-breakpoint-text"></span></em>. </div>
 
-            <p>The same breakpoint prefixes can be applied to the spacing classes. E.g. <code>.inset .l-inset-l</code> will set standard inset but from the large breakpoint a large inset will be applied.</p>
+            <h3 id="responsive-spacing">Spacing</h3>
+
+            <p>The same breakpoint prefixes can be applied to the spacing classes. E.g. <code>.inset .l-inset-l</code> will set standard inset but from the large breakpoint a large inset will be applied. </p>
 
             <div class="dummy dummy-inset">
                 <div class="row gutter">
@@ -365,60 +381,86 @@
                     </div>
                 </div>
             </div>
+            <div class="text-center font-s"><em>Resize the viewport to view the change. Active breakpoint is <span class="active-breakpoint-text"></span></em>. </div>
 
         </section>
         <!-- end responsive -->
 
+        <!-- typography -->
+        <section id="typography">
 
-        <section id="typo-headers">
+            <h2 class="first">Typography</h2>
+            <p>
+                Basic typographic tags are given a sensible font-size and line-height default. 
+            </p>
 
-            <h2>Typography</h2>
+            <h3 id="fontsize">Font size</h3>
+            <p>By default fonts are automatically sizing to each breakpoint. You can however set a specific fontsize with the following classes. These classes still respect the up- or downscaling across the different breakpoints.</p>
 
             <div class="row">
 
-                <div class="column-8">
-                    <!-- Standard Headings -->
-                    <h1>H1 heading</h1>
-                    <h2>H2 heading</h2>
-                    <h3>H3 heading</h3>
-                    <h4>H4 heading</h4>
-                    <h5>H5 heading</h5>
-                    <h6>H6 heading</h6>
+                <div class="column-6">
+                    <p class="first font-xl">The quick brown fox jumps over the lazy dog</p>
                 </div>
-                <div class="column-4">
-                    <pre>Headings</pre>
+                <div class="column-6">
+                    <code>&lt;p class="font-xl"&gt;...&lt;/p&gt;</code>
                 </div>
-            </div>
-            <div class="row">
-                <!-- Base type size -->
-                <div class="column-4">
-                    <pre>Paragraph</pre>
-                </div>
-                <div class="column-8">
-                    <p>The base type is 15px over 1.6 line height (24px)</p>
-                </div>
-            </div>
-            <div class="row">
-                <!-- Other styled text tags -->
-                <div class="column-4">
-                    <pre>Default styles</pre>
-                </div>
-                <div class="column-8">
-                    <strong>Bolded</strong>
-                    <em>Italicized</em>
-                    <a>Colored</a>
-                    <u>Underlined</u>
-                </div>
+
             </div>
 
+            <div class="row">
+
+                <div class="column-6">
+                    <p class="first font-l">The quick brown fox jumps over the lazy dog</p>
+                </div>
+                <div class="column-6">
+                    <code>&lt;p class="font-l"&gt;...&lt;/p&gt;</code>
+                </div>
+
+            </div>
+
+            <div class="row">
+
+                <div class="column-6">
+                    <p class="first font-m">The quick brown fox jumps over the lazy dog</p>
+                </div>
+                <div class="column-6">
+                    <code>&lt;p class="font-m"&gt;...&lt;/p&gt;</code>
+                </div>
+
+            </div>
+
+            <div class="row">
+
+                <div class="column-6">
+                    <p class="first font-s">The quick brown fox jumps over the lazy dog</p>
+                </div>
+                <div class="column-6">
+                    <code>&lt;p class="font-s"&gt;...&lt;/p&gt;</code>
+                </div>
+
+            </div>
+
+            <div class="row">
+
+                <div class="column-6">
+                    <p class="first font-xs">The quick brown fox jumps over the lazy dog</p>
+                </div>
+                <div class="column-6">
+                    <code>&lt;p class="font-xs"&gt;...&lt;/p&gt;</code>
+                </div>
+
+            </div>
 
         </section>
+        <!-- end typography -->
+
 
     </div>
 </div>
 
 
-    <footer class="size-xs text-center inset-m">
+    <footer class="font-xs text-center inset-m">
         <small>  &copy; Warpaint</small>
     </footer>
 
@@ -427,12 +469,15 @@
 
         // STICKY
         var stickable = $(".stickable");
+        var navUp = $('.nav__up');
 
         $(document).on( 'scroll', function(){
             if ($(this).scrollTop() > 100) {
                 stickable.addClass("sticky");
+                navUp.addClass('active');
             } else {
                 stickable.removeClass("sticky");
+                navUp.removeClass('active');
             }
         });
 
