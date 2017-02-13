@@ -56,8 +56,10 @@
 </pre>
         <p>Next, read through the <a href="documentation.html">full documentation</a>.</p>
 
-        <p>Warpaint includes <a href="https://necolas.github.io/normalize.css/" target="_blank">normalize.css</a> by default. Even with normalize included, Warpaint is small in size. Roughly 10.9879KB minified.
-            <em>Note: If you build warpaint from sass, you can opt to leave normalize out.</em>
+        <p>Warpaint includes <a href="https://necolas.github.io/normalize.css/" target="_blank">normalize.css</a> by default. Even with normalize included, Warpaint is small in size. Roughly <em>10.9879KB</em> minified.
+        </p>
+        <p>
+            Note: If you <a href="#custom-build">build warpaint from sass</a>, you can opt to leave normalize out.
         </p>
 
         <h2>Browser support</h2>
@@ -68,11 +70,11 @@
         </p>
 
 <pre>
-&lt;link rel="stylesheet" href="/warpaint.min.css" type="text/css"&lt;
-&lt;!--[if IE 9]&lt;&lt;link rel="stylesheet" href="/warpaint-ie9.css" type="text/css" /&lt;&lt;![endif]--&lt;
+&lt;link rel="stylesheet" href="/warpaint.min.css" type="text/css"&gt;
+&lt;!--[if IE 9]&gt;&lt;link rel="stylesheet" href="/warpaint-ie9.css" type="text/css" /&gt;&lt;![endif]--&gt;
 </pre>
 
-        <h2>Custom build</h2>
+        <h2 id="custom-build">Custom build</h2>
         <p>You can customize Warpaint by including the main sassfile <code>src/sass/warpaint.scss</code> into your own build process. You can then edit the <code>src/sass/settings.scss</code> file which contains all the customisable features. The most important settings are:
 
 <pre>
