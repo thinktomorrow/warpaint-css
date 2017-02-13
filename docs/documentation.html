@@ -16,12 +16,12 @@
 <header class="stickable">
     <div class="container header-container">
         <div class="header-logo">
-          <a href="#top"><img src="/docs/img/warpaint-logo.png" alt="Warpaint"></a>
+          <a href="/docs/index.html/#top"><img src="/docs/img/warpaint-logo.png" alt="Warpaint"></a>
         </div>
         <nav class="header-navigation">
             <ul>
-                <li><a href="#quickstart">Get started</a></li>
-                <li><a href="#mindset">Mindset</a></li>
+                <li><a href="/docs/index.html#quickstart">Get started</a></li>
+                <li><a href="/docs/index.html#mindset">Mindset</a></li>
                 <li><a href="/docs/documentation.html">Documentation</a></li>
                 <li><a target="_blank" href="https://github.com/thinktomorrow/warpaint">Github</a></li>
             </ul>
@@ -108,8 +108,8 @@
 
             <h2 id="grid-gutter">Grid gutter</h2>
                 <p>
-                    By default there is no gutter between columns. By adding <code>.gutter</code> to your <code>.row</code> element, all child columns will
-                    receive a gutter in between.
+                    By default there are no gutters between columns. By adding <code>.gutter</code> to your <code>.row</code> element, all child columns will
+                    receive a gutter in between. Use a <a href="#spacing-stack">.stack</a> class to add vertical gutters.
                 </p>
 
                 <div class="dummy">
@@ -130,7 +130,7 @@
 
                 <h2>Column width</h2>
                 <p>
-                    If you need to control the width of your columns, you can assign them one of the sizing classes from below:
+                    If you need to control the width of your columns, assign them one of the following sizing classes. By default it is a 12-grid system.
                 </p>
 
             <div class="dummy">
@@ -180,8 +180,7 @@
 
             <h2>Container</h2>
             <p>
-                By default the grid expands to the full width of its parent. It can be useful to nest the grid inside a <code>.container</code> element.
-                This way it will receive a nice left-right responsive margin, relative to its parent.
+                By default the grid expands to the full width of its parent. To provide a left-right responsive margin, nest the grid inside a <code>.container</code> element.
             </p>
 
             <div class="dummy zebra">
@@ -217,10 +216,8 @@
 
             <h3 id="spacing-stack">.stack</h3>
 
-            <p>Handle margins with <code>.stack</code>.
-                Stack sets the top and bottom margin. Since the page elements are mostly positioned vertically, this class
-                is used to add breathing room in between.
-
+            <p>Handle vertical margins with <code>.stack</code>.
+                Stack sets the top and bottom margin. This class gives breathing room for vertically stacked page elements.
             </p>
 
             <div class="dummy zebra">
@@ -239,7 +236,7 @@
 
             <h3 id="spacing-inline">.inline</h3>
 
-            <p>Inline class sets a horizontal margin. This can be used for adding space between sibling elements like pills, tags, breadcrumbs or buttons.</p>
+            <p>Handle horizontal margins with <code>.inline</code>. This is used for adding space between sibling elements like pills, tags, breadcrumbs or buttons.</p>
 
             <div class="dummy">
                 <ul class="inline-dummy">
@@ -266,7 +263,7 @@
             
             <h3 id="spacing-inset">.inset</h3>
 
-            <p>Paddings of an element can be managed by <code>.inset</code>, <code>.stretched</code> or <code>.squished</code>. Inset is the most common and sets a square padding: padding on four sides of the element.</p>
+            <p>Padding of an element can be managed by <code>.inset</code>, <code>.stretched</code> or <code>.squished</code>. Inset is the most common and sets a square padding (equal padding on four sides of the element).</p>
 
             <h3 id="spacing-squished">.squished</h3>
 
@@ -331,13 +328,13 @@
 
             <h3 id="responsive-breakpoints">Breakpoints</h3>
             <p>
-                Since the development mindset of warpaint is mobile first, the general idea is that you don't need to account for every viewport size in particular. 
+                Since the develop mindset of warpaint is mobile first, the general idea is that you don't need to account for every viewport size in particular.
             </p>
-            <p>Having said that, there are some cases where working with breakpoints can be usefull. Warpaint provides 5 breakpoints: </p>
+            <p>Having said that, there are some cases where working with breakpoints can be useful. Warpaint provides 5 breakpoints: </p>
 
 <pre>
 
-/* smallest viewport (20em ~ 320px) and up */
+/* extra small viewport (20em ~ 320px) and up */
 @include xsmall-view{ ... }
 
 /* small viewport (30em ~ 480px) and up */
@@ -346,26 +343,26 @@
 /* regular viewport (48em ~ 768px) and up */
 @include medium-view{ ... }
 
-/* regular viewport (64em ~ 1024px) and up */
+/* large viewport (64em ~ 1024px) and up */
 @include large-view{ ... }
 
-/* regular viewport (85em ~ 1365px) and up */
+/* extra large viewport (85em ~ 1365px) and up */
 @include xlarge-view{ ... }
 
 </pre>
 
             <h3 id="responsive-grid">Grid</h3>
             <p>
-                You can force the behaviour of columns and spacing classes in regards to one of these breakpoints. Just prepend the class with a _breakpoint prefix_ like <code>xs-, s-, m-, l- or xl-</code>. E.g. Adding <code>.l-column-3</code> to your column will enforce a 1/4 column size for viewports larger than 64em.
+                You can force the behaviour of columns and spacing classes in one of these breakpoints. Prepend the class with a <em>breakpoint prefix</em> like <code>xs-, s-, m-, l- or xl-</code>. E.g. Adding <code>.l-column-3</code> to your column will enforce a 1/4 column size for viewports larger than 64em.
             </p>
 
             <div class="dummy">
 
                 <div class="row">
-                    <div class="xl-column-3 column-6"><div class="inset-dummy">.xl-column-3 .column-6</div></div>
-                    <div class="xl-column-3 column-6"><div class="inset-dummy">.xl-column-3 .column-6</div></div>
-                    <div class="xl-column-3 column-6"><div class="inset-dummy">.xl-column-3 .column-6</div></div>
-                    <div class="xl-column-3 column-6"><div class="inset-dummy">.xl-column-3 .column-6</div></div>
+                    <div class="l-column-3 column-6"><div class="inset-dummy">.l-column-3 .column-6</div></div>
+                    <div class="l-column-3 column-6"><div class="inset-dummy">.l-column-3 .column-6</div></div>
+                    <div class="l-column-3 column-6"><div class="inset-dummy">.l-column-3 .column-6</div></div>
+                    <div class="l-column-3 column-6"><div class="inset-dummy">.l-column-3 .column-6</div></div>
                 </div>
             </div>
             <div class="text-center font-s"><em>Resize the viewport to view the change. Active breakpoint is <span class="active-breakpoint-text"></span></em>. </div>
@@ -455,14 +452,12 @@
         </section>
         <!-- end typography -->
 
-
     </div>
 </div>
 
-
-    <footer class="font-xs text-center inset-m">
-        <small>  &copy; Warpaint</small>
-    </footer>
+<footer class="size-xs text-center inset-m zebra">
+    <small>  &copy; Warpaint</small>
+</footer>
 
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script>
@@ -488,7 +483,7 @@
                     target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
                     if (target.length) {
                         $('html, body').animate({
-                            scrollTop: target.offset().top - 50
+                            scrollTop: target.offset().top - 120
                         }, 1000);
                         return false;
                     }

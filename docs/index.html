@@ -18,13 +18,13 @@
     <div class="container header-container">
         <div class="header-logo">
           <span class="header-sticky-logo">
-              <a href="#top"><img src="/docs/img/warpaint-logo.png" alt="Warpaint"></a>
+              <a href="/docs/index.html/#top"><img src="/docs/img/warpaint-logo.png" alt="Warpaint"></a>
           </span>
         </div>
         <nav class="header-navigation">
             <ul>
-                <li><a href="#quickstart">Get started</a></li>
-                <li><a href="#mindset">Mindset</a></li>
+                <li><a href="/docs/index.html#quickstart">Get started</a></li>
+                <li><a href="/docs/index.html#mindset">Mindset</a></li>
                 <li><a href="/docs/documentation.html">Documentation</a></li>
                 <li><a target="_blank" href="https://github.com/thinktomorrow/warpaint">Github</a></li>
             </ul>
@@ -40,7 +40,7 @@
     <small><em>currently v0.0.1</em></small>
   </p>
 
-    <a href="https://github.com/thinktomorrow/warpaint" class="inset-s btn">Download</a>
+    <a href="https://github.com/thinktomorrow/warpaint/archive/0.0.2.zip" class="inset-s btn">Download v0.0.2</a>
     <a href="#quickstart" class="inset-s btn btn-o">Get started</a>
   </div>
 </section>
@@ -50,190 +50,100 @@
 
         <h2 class="title">Quickstart</h2>
 
-        Download the compiled css from github. Include the stylesheet in your header.
+        <p>To get started, <a href="https://github.com/thinktomorrow/warpaint/archive/0.0.2.zip">download v0.0.2</a> and include the <code>warpaint.min.css</code> in the head of your html:
+<pre>
+&lt;link rel="stylesheet" href="/warpaint.min.css" type="text/css"&gt;
+</pre>
+        <p>Next, read through the <a href="documentation.html">full documentation</a>.</p>
+
+        <p>Warpaint includes <a href="https://necolas.github.io/normalize.css/" target="_blank">normalize.css</a> by default. Even with normalize included, Warpaint is small in size. Roughly 10.9879KB minified.
+            <em>Note: If you build warpaint from sass, you can opt to leave normalize out.</em>
+        </p>
+
+        <h2>Browser support</h2>
+        <p> Out of the box, warpaint is supported in all modern browsers: Chrome, Firefox, Safari, Edge and Opera.
+</p><p>
+            There is a fairly good support for IE10+ and most functionality should be working.
+            Since it relies on flexbox there is limited compatibility with IE9. For those in need for IE9 support, we provide a separate stylesheet which you can load via a conditional comment:
+        </p>
+
+<pre>
+&lt;link rel="stylesheet" href="/warpaint.min.css" type="text/css"&lt;
+&lt;!--[if IE 9]&lt;&lt;link rel="stylesheet" href="/warpaint-ie9.css" type="text/css" /&lt;&lt;![endif]--&lt;
+</pre>
+
+        <h2>Custom build</h2>
+        <p>You can customize Warpaint by including the main sassfile <code>src/sass/warpaint.scss</code> into your own build process. You can then edit the <code>src/sass/settings.scss</code> file which contains all the customisable features. The most important settings are:
+
+<pre>
+// Grid columns
+$grid-columns: 12
+
+// Base fontsize - root for all spacing units
+$base-font-size:  0.875em
+</pre>
 
     </div>
 </div>
 
-<div class="" id="mindset">
+<div id="mindset">
     <div class="container">
 
-        <h2 class="title">What is Warpaint?</h2>
+        <h2 class="title">Why Warpaint?</h2>
 
         <p>
-            Warpaint is a responsive typographic stylesheet. It provides you with designing with constraints never felt so liberating.
-            Behind the scenes, flexbox is used for the grid system.
+            <a href="https://github.com/thinktomorrow/warpaint" target="_blank">Warpaint</a> is a responsive typographic stylesheet. It is a collection of classes to help you maintain consistent spacing and typography throughout your entire css. </p>
+        <p>Its focus lies on:</p>
+            <ul>
+                <li><a href="#why-mindset">Focus on creating beautiful responsive site, not a 'pixel-perfect' design replication.</a></li>
+                <li><a href="#why-relative">Use of relative units for consistency of all your spacing and margins</a></li>
+                <li><a href="#why-spacing">Globalized spacing: maintainting harmony of the typographic elements</a></li>
+                <li><a href="#why-class">Avoid conflicts with classbased approach</a></li>
+            </ul>
         </p>
-        <p>Warpaint is small in size. Roughly 10.9879KB minified.</p>
 
-        <p>Let me tell you what it's not. It's not a full blown frontend framework for blasting out UI prototypes. Warpaint doesn't push your frontend work to get any faster. Faster development leads to more monotone, generic designs. You
+        <h3 id="why-mindset">Mindset</h3>
+        <p>Warpaint is not so much intended for jumpstarting the website UI development. It's not a full blown frontend framework for blasting out UI prototypes. You have the well-known bootstrap or foundation projects for this purposes.
+             Warpaint doesn't push your frontend work to get any faster. Faster development leads to more monotone, generic designs.
+            Warpaint tries to assist you in your coding process, and not so much short circuit your visual creativity. It does however give constraints on spacing and sizing.</p>
 
-        </p>
-        <p>Warpaint is not intended for jumpstarting the website UI development. You have bootstrap or foundation for this purposes.
-        Its focus is to provide constraints for proper spacing between your site elements.</p>
+        <h3 id="why-relative">Relative units</h3>
+        <p>Never set font-size to a pixel value because it overrides the user’s browser settings. Use em or rem instead. </p>
+        <ul>
+            <li>It’s a best practice to use relative units like em for font-size.</li>
+            <li>Size in em if the property scales according to it’s font-size</li>
+            <li>Size everything else in rem, like margin or padding. If it is more parent-focused rather than content-focused, you should use %. e.g. <code>.container</code></li>
+            <li>Increase font-size and line-height as screen sizes increase.</li>
+        </ul>
 
-        <h2>Class based approach</h2>
-            <ul><li>a general set of predefined classes that each serves a single purpose.</li>
+        <h3 id="why-spacing">Globalized spacing</h3>
+        <p>Spacing and sizing values are set globally for the entire project. Never set an unique padding or margin value to an element. This lead to disharmony of your page. E.g. setting <code>.button{ padding:15px; }</code> is something Warpaint tries to avoid.</p>
+        <ul>
+            <li>focus on maintaining and respecting the spacings and element boundaries. Your whitespace is space too!</li>
+            <li>reduce risk of these isolated measurements 'margin and padding creep'. (e.g. setting your own random margin of 10px on a button)</li>
+            <li>Honors the vertical rhythm</li>
+        </ul>
+
+        <h3 id="why-class">Class based approach</h3>
+        <ul><li>a set of predefined classes that each serves a single purpose.</li>
             <li>The classnames reflect what they represent.</li>
-            <li>In practise a styled element will have a combination of these classes to get the desired result.</li>
-            <li>Avoid cascade hierarchy conflicts between different css selectors. This usually leads to a messy nesting of selectors and ultimately you are forced to pull the dreaded !important card.
-            By defining css with single-purpose classes we keep a low specificity, avoid css property wars and keep the codebase open for extension.</li>
-            <li>Responsive: Warpaint spacing works with any viewport. In fact it is designed for this purpose.</li></ul>
-
-        <h2>Constraints are good</h2>
-        <ul><li>focus on maintaining and respecting the spacings and element boundaries. Your whitespace is space too!</li>
-        <li>reduce risk of these isolated measurements 'margin and padding creep'. (e.g. setting your own random margin of 10px on a button)</li>
-        <li>Honors the vertical rhythm</li>
-        <li>typographic scaling</li>
-        <li>small size.</li>
-        <li>no bootstrap!</li></ul>
-        <p>Ironically designing with constraints is very liberating. It reduces the need for revising during development.</p>
-
-        ## Warpaint follows these guidelines:
-        - never set font-size in the <html> to a pixel value because it overrides the user’s browser settings. Use em or rem instead
-    - it’s a best practice to use relative units like em for font-size.
-    - Size in em if the property scales according to it’s font-size
-    - Size everything else in rem.
-    - Increase font-size and line-height as screen sizes increase.
+            <li>It helps to avoid cascade hierarchy conflicts. These usually lead to a messy nesting of selectors and ultimately you are forced to pull the dreaded !important card.
+                By defining css with single-purpose classes we keep a low specificity, avoid css property wars and keep the codebase open for extension.</li>
 
     </div>
 </div>
 
-
-
-<div class="" id="styling">
-    <div class="container">
-        <h2 class="title">Styles</h2>
-
-<div class="row">
-  <div class="column-4">
-      <pre>Headings</pre>
-    </div>
-  <div class="column-8">
-        <!-- Standard Headings -->
-      <h1>H1 heading</h1>
-      <h2>H2 heading</h2>
-      <h3>H3 heading</h3>
-      <h4>H4 heading</h4>
-      <h5>H5 heading</h5>
-      <h6>H6 heading</h6>
-    </div>
-</div>
-<div class="row">
-  <!-- Base type size -->
-  <div class="column-4">
-      <pre>Paragraph</pre>
-    </div>
-  <div class="column-8">
-    <p>The base type is 15px over 1.6 line height (24px)</p>
-  </div>
-</div>
-<div class="row">
-      <!-- Other styled text tags -->
-      <div class="column-4">
-          <pre>Default styles</pre>
-        </div>
-      <div class="column-8">
-        <strong>Bolded</strong>
-        <em>Italicized</em>
-        <a>Colored</a>
-        <u>Underlined</u>
-    </div>
-  </div>
-</div>
-<div class="" id="buttons">
-    <div class="container">
-        <h2 class="buttons">Buttons</h2>
-        <p>There are three class-types of buttons in Warpaint: <code>btn, btn-o, btn-link</code></p>
-        <a class="btn inset-xs" href="#">Default button</a>
-        <a class="btn btn-o inset-xs" href="#">Ghost button</a>
-        <a class="btn btn-link inset-xs" href="#">Link button</a>
-
-    </div>
+<div class="container">
+    <h2>Inspiration</h2>
+    <p>The spacing concept is heavily based on this <a href="https://medium.com/eightshapes-llc/space-in-design-systems-188bcbae0d62#.cz5lvpc9z" target="_blank">article on space in design systems</a>. Other resources are:</p>
+    <ul>
+        <li>https://zellwk.com/blog/responsive-typography/</li>
+        <li>http://typecast.com/blog/4-simple-steps-to-vertical-rhythm</li>
+    </ul>
 </div>
 
-<div class="" id="grid">
-    <div class="container">
-        <h2 class="title">Grid</h2>
 
-        <p>Warpaint provides a basic grid system.</p>
-
-        <h3>Grid columns (example of 12-grid columns)</h3>
-        <section class="grid-blocks">
-        <div class="row">
-            <div class="column-11">11</div>
-            <div class="column-1">1</div>
-        </div>
-        <div class="row">
-            <div class="column-10">10</div>
-            <div class="column-2">2</div>
-        </div>
-        <div class="row">
-            <div class="column-9">9</div>
-            <div class="column-3">3</div>
-        </div>
-        <div class="row">
-            <div class="column-8">8</div>
-            <div class="column-4">4</div>
-        </div>
-        <div class="row">
-            <div class="column-7">7</div>
-            <div class="column-5">5</div>
-        </div>
-        <div class="row">
-            <div class="column-6">6</div>
-            <div class="column-6">6</div>
-        </div>
-  </section>
-        <h3>Equal height columns</h3>
-        <p>Work with the padding/margin hack based on http://callmenick.com/post/css-equal-height-columns-three-different-ways. It works well in most cases but it has some restrictions. It means for instance that you cannot set a custom margin or padding on these columns.</p>
-        <div class="row equalheight">
-            <div class="column-8">
-                <img style="object-fit:cover;" src="https://static.pexels.com/photos/7976/pexels-photo.jpg" alt="nature">
-            </div>
-            <div class="column-4 inset">
-                <p>Integer sollicitudin id augue ac consequat. Ut vestibulum eget lorem sagittis porttitor. Maecenas posuere, lacus maximus rhoncus aliquam, lectus nunc dignissim metus, eget consectetur sem turpis finibus lectus. Duis sed libero ligula. Pellentesque orci risus, eleifend ac venenatis nec, commodo at nisl. Aenean porta commodo mauris, quis convallis orci.</p>
-            </div>
-        </div>
-
-
-        <h2>Cards</h2>
-        <p>By default grid columns don't contain any spacing between each other. However with cards you can
-            present your elements with a margin spacing between them. Since the columns themselves will have an padding and not a margin, you will need to add an inner child element inside each columns to physically represent a card module.</p>
-        <mark>Please note that flexbox is not being used for grid purposes. The main reason is that flexbox is a content-driven layout mechanism and is best suited for small components</mark>
-
-        <div class="stack-m">
-            <div class="row cards-s stack-m equalheight">
-                <div class="column-4">
-                    <div class="inset card">Integer sollicitudin id augue ac consequat. Ut vestibulum eget lorem sagittis porttitor. Maecenas posuere, lacus maximus rhoncus aliquam.</div>
-                </div>
-                <div class="column-4">
-                    <div class="inset card">Integer sollicitudin id augue ac consequat. lacus maximus rhoncus aliquam.</div>
-                </div>
-                <div class="column-4">
-                    <div class="inset card">Integer sollicitudin id augue ac consequat. Ut vestibulum eget lorem sagittis porttitor. Maecenas posuere, lacus maximus rhoncus aliquam.</div>
-                </div>
-            </div>
-            <div class="row cards-l stack-m">
-                <div class="column-4">
-                    <div class="inset card">Integer sollicitudin id augue ac consequat. Ut vestibulum eget lorem sagittis porttitor. Maecenas posuere, lacus maximus rhoncus aliquam.</div>
-                </div>
-                <div class="column-4">
-                    <div class="inset card">Integer sollicitudin id augue ac consequat. Ut vestibulum eget lorem sagittis porttitor. Maecenas posuere, lacus maximus rhoncus aliquam.</div>
-                </div>
-                <div class="column-4">
-                    <div class="inset card">Integer sollicitudin id augue ac consequat. Ut vestibulum eget lorem sagittis porttitor. Maecenas posuere, lacus maximus rhoncus aliquam.</div>
-                </div>
-            </div>
-
-    </div>
-</div>
-
-    ## Sources
-    https://zellwk.com/blog/rem-vs-em/
-    https://zellwk.com/blog/responsive-typography/
-
-<footer class="size-xs text-center inset-m">
+<footer class="size-xs text-center inset-m zebra">
   <small>  &copy; Warpaint</small>
 </footer>
 
@@ -258,7 +168,7 @@
             target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
             if (target.length) {
               $('html, body').animate({
-                scrollTop: target.offset().top - 50
+                scrollTop: target.offset().top - 120
               }, 1000);
               return false;
             }
