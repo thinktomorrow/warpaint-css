@@ -109,15 +109,15 @@
             <h2 id="grid-gutter">Grid gutter</h2>
                 <p>
                     By default there are no gutters between columns. By adding <code>.gutter</code> to your <code>.row</code> element, all child columns will
-                    receive a gutter in between. Use a <a href="#spacing-stack">.stack</a> class to add vertical gutters.
+                    receive a gutter in between.
                 </p>
 
                 <div class="dummy">
-                    <div class="row gutter stack">
+                    <div class="row gutter">
                         <div class="column">2</div>
                         <div class="column">2</div>
                     </div>
-                    <div class="row gutter stack">
+                    <div class="row gutter">
                         <div class="column">3</div>
                         <div class="column">3</div>
                         <div class="column">3</div>
@@ -217,7 +217,7 @@
             <h3 id="spacing-stack">.stack</h3>
 
             <p>Handle vertical margins with <code>.stack</code>.
-                Stack sets the top and bottom margin. This class gives breathing room for vertically stacked page elements.
+                Stack sets the top and bottom margin. This class gives breathing room for vertically stacked page elements. If <a href="#grid-gutter">.gutter</a> is used on your grid columns this is done automatically.
             </p>
 
             <div class="dummy zebra">
