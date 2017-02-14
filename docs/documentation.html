@@ -13,7 +13,7 @@
 </head>
 <body class="">
 
-<header class="stickable">
+<header>
     <div class="container header-container">
         <div class="header-logo">
           <a href="/docs/index.html/#top"><img src="/docs/img/warpaint-logo.png" alt="Warpaint"></a>
@@ -32,7 +32,7 @@
 <span id="nav-top"></span>
 
 <div class="container row offset">
-    <div class="column-3 sidebar">
+    <sidebar class="column-3 sidebar">
 
         <h3 class="text-right first">GRID</h3>
         <ul class="sidebar__nav">
@@ -71,8 +71,8 @@
         </a>
 
 
-    </div>
-    <div class="column">
+    </sidebar>
+    <article class="column">
 
         <section id="grid-basic">
 
@@ -98,16 +98,16 @@
                 </div>
 
                 <pre>
-&lt;div class="row"&gt;
-    &lt;div class="column"&gt;2&lt;/div&gt;
-    &lt;div class="column"&gt;2&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="row"&gt;
-    &lt;div class="column"&gt;3&lt;/div&gt;
-    &lt;div class="column"&gt;3&lt;/div&gt;
-    &lt;div class="column"&gt;3&lt;/div&gt;
-&lt;/div&gt;
-</pre>
+                  &lt;div class="row"&gt;
+                      &lt;div class="column"&gt;2&lt;/div&gt;
+                      &lt;div class="column"&gt;2&lt;/div&gt;
+                  &lt;/div&gt;
+                  &lt;div class="row"&gt;
+                      &lt;div class="column"&gt;3&lt;/div&gt;
+                      &lt;div class="column"&gt;3&lt;/div&gt;
+                      &lt;div class="column"&gt;3&lt;/div&gt;
+                  &lt;/div&gt;
+                  </pre>
 
             <h2 id="grid-gutter">Grid gutter</h2>
                 <p>
@@ -161,21 +161,21 @@
                     <div class="column-11">.column-11</div>
                     <div class="column-1">1</div>
                 </div>
-                
-                
+
+
             </div>
 
                 <pre>
-&lt;div class="row"&gt;
-    &lt;div class="column-6"&gt;6&lt;/div&gt;
-    &lt;div class="column-6"&gt;6&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="row"&gt;
-    &lt;div class="column-10"&gt;10&lt;/div&gt;
-    &lt;div class="column-2"&gt;2&lt;/div&gt;
-&lt;/div&gt;
-...
-</pre>
+              &lt;div class="row"&gt;
+                  &lt;div class="column-6"&gt;6&lt;/div&gt;
+                  &lt;div class="column-6"&gt;6&lt;/div&gt;
+              &lt;/div&gt;
+              &lt;div class="row"&gt;
+                  &lt;div class="column-10"&gt;10&lt;/div&gt;
+                  &lt;div class="column-2"&gt;2&lt;/div&gt;
+              &lt;/div&gt;
+              ...
+              </pre>
 
         </section>
 
@@ -200,14 +200,14 @@
             </div>
 
             <pre>
-&lt;div class="container"&gt;
-    &lt;div class="row"&gt;
-        &lt;div class="column-5"&gt;5&lt;/div&gt;
-        &lt;div class="column-4"&gt;4&lt;/div&gt;
-        &lt;div class="column"&gt;3&lt;/div&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
-</pre>
+              &lt;div class="container"&gt;
+                  &lt;div class="row"&gt;
+                      &lt;div class="column-5"&gt;5&lt;/div&gt;
+                      &lt;div class="column-4"&gt;4&lt;/div&gt;
+                      &lt;div class="column"&gt;3&lt;/div&gt;
+                  &lt;/div&gt;
+              &lt;/div&gt;
+              </pre>
 
         </section>
 
@@ -216,7 +216,7 @@
 
         <section id="spacing">
             <h2>Spacing</h2>
-            
+
             <p>We define two types of spacings: the spacing of elements inside their parent container (margins) and spacing inside the element (paddings).</p>
 
 
@@ -255,18 +255,18 @@
                     <li>Item</li>
                 </ul>
             </div>
-<pre>
-&lt;ul class="breadcrumb"&gt;
-    &lt;li&gt;Home&lt;/li&gt;
-    &lt;li class="inline"&gt;&gt;&lt;/li&gt;
-    &lt;li&gt;Category&lt;/li&gt;
-    &lt;li class="inline"&gt;&gt;&lt;/li&gt;
-    &lt;li&gt;Subcategory&lt;/li&gt;
-    &lt;li class="inline"&gt;&gt;&lt;/li&gt;
-    &lt;li&gt;Item&lt;/li&gt;
-&lt;/ul>
-</pre>
-            
+            <pre>
+            &lt;ul class="breadcrumb"&gt;
+                &lt;li&gt;Home&lt;/li&gt;
+                &lt;li class="inline"&gt;&gt;&lt;/li&gt;
+                &lt;li&gt;Category&lt;/li&gt;
+                &lt;li class="inline"&gt;&gt;&lt;/li&gt;
+                &lt;li&gt;Subcategory&lt;/li&gt;
+                &lt;li class="inline"&gt;&gt;&lt;/li&gt;
+                &lt;li&gt;Item&lt;/li&gt;
+            &lt;/ul>
+            </pre>
+
             <h3 id="spacing-inset">.inset</h3>
 
             <p>Padding of an element can be managed by <code>.inset</code>, <code>.stretched</code> or <code>.squished</code>. Inset is the most common and sets a square padding (equal padding on four sides of the element).</p>
@@ -397,7 +397,7 @@
 
             <h2 class="first">Typography</h2>
             <p>
-                Basic typographic tags are given a sensible font-size and line-height default. 
+                Basic typographic tags are given a sensible font-size and line-height default.
             </p>
 
             <h3 id="fontsize">Font size</h3>
@@ -462,7 +462,7 @@
         <!-- end typography -->
 
     </div>
-</div>
+</article>
 
 <footer class="size-xs text-center inset-m zebra">
     <small>  &copy; Warpaint</small>
@@ -472,7 +472,7 @@
     <script>
 
         // STICKY
-        var stickable = $(".stickable");
+        var stickable = $("header");
         var navUp = $('.nav__up');
 
         $(document).on( 'scroll', function(){
