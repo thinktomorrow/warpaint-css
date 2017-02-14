@@ -2,7 +2,7 @@
 
 A responsive typographic CSS stylesheet.
 
-Warpaint gives you a range of classes to work with typography, element-spacing and -positioning. 
+Warpaint gives you a range of classes to work with typography, element-spacing and -positioning.
 It aims for typographic rhythm out of the box.
 
 **Note: this stylesheet should not be used in production yet as it is still under construction towards a stable release**
@@ -30,9 +30,9 @@ warpaint/
 ```
 
 ## Browser support
-Out of the box, warpaint is supported in all modern browsers: Chrome, Firefox, Safari, Edge and Opera. 
+Out of the box, warpaint is supported in all modern browsers: Chrome, Firefox, Safari, Edge and Opera.
 
-There is a fairly good support for IE10+ and most functionality should be working. 
+There is a fairly good support for IE10+ and most functionality should be working.
 Since it relies on flexbox there is limited compatibility with IE9. For those in need for IE9 support, we provide a separate stylesheet which you can load via a conditional comment:
 
 ```html
@@ -46,7 +46,7 @@ You can customize Warpaint by editing the `src/sass/settings.scss` file. The mos
 ```sass
   // Grid columns
   $grid-columns: 12
-  
+
   // Base fontsize
   $base-font-size:  0.875em
 ```
@@ -64,6 +64,10 @@ If you discover any security related issues, please email one of the author (see
 ## Creators
 
 - Ben Cavens <ben@thinktomorrow.be>
+
+## Contributor
+
+- Berkmans Johnny <johnny@thinktomorrow.be>
 
 ## License
 
