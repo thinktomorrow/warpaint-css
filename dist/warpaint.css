@@ -509,24 +509,28 @@ img {
 }
 
 .container {
-  margin: 0 4%;
+  margin-left: 4%;
+  margin-right: 4%;
 }
 
 @media (min-width: 48em) {
   .container {
-    margin: 0 8%;
+    margin-left: 8%;
+    margin-right: 8%;
   }
 }
 
 @media (min-width: 64em) {
   .container {
-    margin: 0 12%;
+    margin-left: 12%;
+    margin-right: 12%;
   }
 }
 
 @media (min-width: 85em) {
   .container {
-    margin: 0 18%;
+    margin-left: 18%;
+    margin-right: 18%;
   }
 }
 
