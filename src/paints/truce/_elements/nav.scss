@@ -5,18 +5,19 @@ header{
   right:0;
   width:100%;
   z-index:10;
-  border-bottom: 1px solid #cccccc;
   transition:background-color .9s ease-out;
 }
 
 header.sticky{
   background-color: #efefef;
+  border-bottom: 1px solid #cccccc;
 }
 .header-logo{
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   left: 0;
+  width: 35px;
 }
 
 .header-sticky-logo{
@@ -50,26 +51,25 @@ header.sticky .header-sticky-logo{
 }
 
 nav ul{
-}
-.fixed nav ul{
   margin: 0;
 }
 
 nav li{
-  display:inline-block;
-  margin: 0 0.75rem;
-}
-
-nav li a{
-  text-transform: uppercase;
-  font-size: 0.65em;
-  letter-spacing: 1px;
-  position:relative;
-  color: #8e44ad;
-}
-
-nav li a:hover{
-  color: #39323a;
+  list-style: none;
+  display: inline-block;
+  a{
+    text-transform: uppercase;
+    font-size: 0.65rem;
+    letter-spacing: 1px;
+    position:relative;
+    color: $paint-primary;
+    &:hover{
+      color: darken($paint-primary, 30%);
+      &:after{
+        transform: scaleX(1);
+      }
+    }
+  }
 }
 
 nav li a:after{
@@ -86,9 +86,6 @@ nav li a:after{
   background-color:#dddddd;
 }
 
-nav li a:hover:after{
-  transform: scaleX(1);
-}
 
 // Navbar offset
 .offset{
