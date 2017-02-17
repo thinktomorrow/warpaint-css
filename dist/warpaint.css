@@ -1218,6 +1218,11 @@ img {
   justify-content: space-around;
 }
 
+/**
+ * You should avoid setting container on a gutter row element since the margins will conflict
+ * If this is the case, we try to compensate the negative margins of the gutter. This is
+ * however not consistent if you use different gutter widths.
+ */
 .container.gutter-xs {
   margin-left: 3.625%;
 }

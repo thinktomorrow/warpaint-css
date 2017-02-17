@@ -3427,13 +3427,13 @@ header {
   right: 0;
   width: 100%;
   z-index: 10;
-  border-bottom: 1px solid #cccccc;
   -webkit-transition: background-color .9s ease-out;
   transition: background-color .9s ease-out;
 }
 
 header.sticky {
   background-color: #efefef;
+  border-bottom: 1px solid #cccccc;
 }
 
 .header-logo {
@@ -3442,6 +3442,7 @@ header.sticky {
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
   left: 0;
+  width: 35px;
 }
 
 .header-sticky-logo {
@@ -3481,25 +3482,30 @@ header.sticky .header-sticky-logo {
   margin: 0;
 }
 
-.fixed nav ul {
+nav ul {
   margin: 0;
 }
 
 nav li {
+  list-style: none;
   display: inline-block;
-  margin: 0 0.75rem;
 }
 
 nav li a {
   text-transform: uppercase;
-  font-size: 0.65em;
+  font-size: 0.65rem;
   letter-spacing: 1px;
   position: relative;
   color: #8e44ad;
 }
 
 nav li a:hover {
-  color: #39323a;
+  color: #34193f;
+}
+
+nav li a:hover:after {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
 }
 
 nav li a:after {
@@ -3519,11 +3525,6 @@ nav li a:after {
   width: 100%;
   height: 2px;
   background-color: #dddddd;
-}
-
-nav li a:hover:after {
-  -webkit-transform: scaleX(1);
-  transform: scaleX(1);
 }
 
 .offset {
@@ -3563,7 +3564,7 @@ nav li a:hover:after {
   background-color: #efefef;
 }
 
-.hero-caption {
+.hero-inner {
   position: absolute;
   top: 50%;
   -webkit-transform: translateY(-50%);
@@ -3571,6 +3572,81 @@ nav li a:hover:after {
   display: inline-block;
   left: 0;
   right: 0;
+}
+
+svg {
+  max-width: 150px;
+  margin: auto;
+}
+
+svg .st0 {
+  opacity: 0;
+  fill-opacity: 0;
+  fill: #8e44ad;
+  stroke: #8e44ad;
+  stroke-width: 2px;
+  stroke-dasharray: 870px;
+  stroke-dashoffset: 870px;
+  -webkit-animation-name: draw;
+  animation-name: draw;
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes draw {
+  to {
+    opacity: 1;
+    stroke-dashoffset: 1;
+    fill-opacity: 1;
+  }
+}
+
+@keyframes draw {
+  to {
+    opacity: 1;
+    stroke-dashoffset: 1;
+    fill-opacity: 1;
+  }
+}
+
+.fadeIn {
+  opacity: 0;
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .hero-caption h1 {
@@ -3735,7 +3811,7 @@ pre {
   font-family: monospace, monospace;
   text-align: center;
   padding: 1rem;
-  border: 2px solid #ffffff;
+  outline: 1px solid #ffffff;
   color: #ffffff;
 }
 

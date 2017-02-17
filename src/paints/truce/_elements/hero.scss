@@ -1,19 +1,60 @@
 /* -------------------------------------------------------
  HERO
  ------------------------------------------------------- */
-.hero{
-  height: 100vh;
-  position: relative;
-  text-align: center;
-  background-color: #efefef;
+ .hero{
+   height: 100vh;
+   position: relative;
+   text-align: center;
+   background-color: #efefef;
+ }
+ .hero-inner{
+   position: absolute;
+   top: 50%;
+   transform: translateY(-50%);
+   display: inline-block;
+   left: 0;
+   right: 0;
+ }
+ svg {
+  max-width: 150px;
+  margin: auto;
+    .st0 {
+      opacity: 0;
+      fill-opacity: 0;
+      fill: $paint-primary;
+      stroke: $paint-primary;
+      stroke-width: 2px;
+      stroke-dasharray: 870px;
+      stroke-dashoffset: 870px;
+      animation-name: draw;
+      animation-duration: 2s;
+      animation-iteration-count: 1;
+      animation-timing-function: linear;
+      animation-fill-mode: forwards; // Stay on the last frame
+    }
 }
-.hero-caption{
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  display: inline-block;
-  left: 0;
-  right: 0;
+@keyframes draw {
+  to{
+    opacity:1; stroke-dashoffset: 1; fill-opacity: 1;
+  }
+}
+.fadeIn{
+  opacity: 0;
+  animation-name: fadeIn;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+  animation-delay: 1s;
+  animation-fill-mode: forwards; // Stay on the last frame
+}
+@keyframes fadeIn {
+  from{
+    opacity: 0;
+
+  }
+  to{
+    opacity:1;
+  }
 }
 .hero-caption h1{
   margin-top: 0;
