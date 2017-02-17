@@ -81,6 +81,9 @@
                     Columns must be wrapped inside a <code>.row</code> element and must be at least assigned a <code>.column</code> class.
                     By default the grid element will divide the width equally amongst its child columns.
                 </p>
+                <p>
+                    The columns will be equal in height by default.
+                </p>
 
                 <div class="dummy">
                     <div class="row">
@@ -181,6 +184,9 @@
             <h2>Container</h2>
             <p>
                 By default the grid expands to the full width of its parent. To provide a left-right responsive margin, nest the grid inside a <code>.container</code> element.
+            </p>
+            <p class="note">
+                Don't add a .container class to the row element. Keep it separate. This will conflict with the way the container deals with its margins.
             </p>
 
             <div class="dummy zebra">
@@ -354,6 +360,9 @@
             <h3 id="responsive-grid">Grid</h3>
             <p>
                 You can force the behaviour of columns and spacing classes in one of these breakpoints. Prepend the class with a <em>breakpoint prefix</em> like <code>xs-, s-, m-, l- or xl-</code>. E.g. Adding <code>.l-column-3</code> to your column will enforce a 1/4 column size for viewports larger than 64em.
+            </p>
+            <p class="note">
+                When using responsive column widths, make sure you also set the default <code>.column-* / .column</code> as well. This makes sure the column really behaves as a column.
             </p>
 
             <div class="dummy">

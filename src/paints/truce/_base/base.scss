@@ -107,3 +107,15 @@ Border-grey
     display:block;
   }
 }
+
+.note{
+  padding: $space-s;
+  font-size: $space-s;
+  color:#ffffff;
+  background-color: $paint-primary;
+  border:2px solid darken($paint-primary, 10%);
+
+  code{
+    background-color: darken($paint-primary, 10%);
+  }
+}

@@ -9,7 +9,7 @@ $sizes: (xs : $space-xs, s : $space-s, m : $space-m, l : $space-l, xl : $space-x
     }
 
     .gutter .xs-column-#{$i}  {
-      width: (100% / $grid-columns  * $i) - (($space-m / 1rem) / $grid-columns  * $i);
+      width: (100% / $grid-columns  * $i) - ($space-m / 1rem);
     }
   }
 
@@ -17,7 +17,7 @@ $sizes: (xs : $space-xs, s : $space-s, m : $space-m, l : $space-l, xl : $space-x
   {
     @for $i from 1 through $grid-columns {
       .gutter-#{$size} .xs-column-#{$i}  {
-        width: (100% / $grid-columns  * $i) - (($space / 1rem) / $grid-columns  * $i);
+        width: (100% / $grid-columns  * $i) - ($space / 1rem);
       }
     }
 
@@ -39,7 +39,7 @@ $sizes: (xs : $space-xs, s : $space-s, m : $space-m, l : $space-l, xl : $space-x
     }
 
     .gutter .s-column-#{$i}  {
-      width: (100% / $grid-columns  * $i) - (($space-m / 1rem) / $grid-columns  * $i);
+      width: (100% / $grid-columns  * $i) - ($space-m / 1rem);
     }
   }
 
@@ -47,7 +47,7 @@ $sizes: (xs : $space-xs, s : $space-s, m : $space-m, l : $space-l, xl : $space-x
   {
     @for $i from 1 through $grid-columns {
       .gutter-#{$size} .s-column-#{$i}  {
-        width: (100% / $grid-columns  * $i) - (($space / 1rem) / $grid-columns  * $i);
+        width: (100% / $grid-columns  * $i) - ($space / 1rem);
       }
     }
 
@@ -69,7 +69,7 @@ $sizes: (xs : $space-xs, s : $space-s, m : $space-m, l : $space-l, xl : $space-x
     }
 
     .gutter .m-column-#{$i}  {
-      width: (100% / $grid-columns  * $i) - (($space-m / 1rem) / $grid-columns  * $i);
+      width: (100% / $grid-columns  * $i) - ($space-m / 1rem);
     }
   }
 
@@ -77,7 +77,7 @@ $sizes: (xs : $space-xs, s : $space-s, m : $space-m, l : $space-l, xl : $space-x
   {
     @for $i from 1 through $grid-columns {
       .gutter-#{$size} .m-column-#{$i}  {
-        width: (100% / $grid-columns  * $i) - (($space / 1rem) / $grid-columns  * $i);
+        width: (100% / $grid-columns  * $i) - ($space / 1rem);
       }
     }
 
@@ -99,7 +99,7 @@ $sizes: (xs : $space-xs, s : $space-s, m : $space-m, l : $space-l, xl : $space-x
     }
 
     .gutter .l-column-#{$i}  {
-      width: (100% / $grid-columns  * $i) - (($space-m / 1rem) / $grid-columns  * $i);
+      width: (100% / $grid-columns  * $i) - ($space-m / 1rem);
     }
   }
 
@@ -107,7 +107,7 @@ $sizes: (xs : $space-xs, s : $space-s, m : $space-m, l : $space-l, xl : $space-x
   {
     @for $i from 1 through $grid-columns {
       .gutter-#{$size} .l-column-#{$i}  {
-        width: (100% / $grid-columns  * $i) - (($space / 1rem) / $grid-columns  * $i);
+        width: (100% / $grid-columns  * $i) - ($space / 1rem);
       }
     }
 
@@ -129,7 +129,7 @@ $sizes: (xs : $space-xs, s : $space-s, m : $space-m, l : $space-l, xl : $space-x
     }
 
     .gutter .xl-column-#{$i}  {
-      width: (100% / $grid-columns  * $i) - (($space-m / 1rem) / $grid-columns  * $i);
+      width: (100% / $grid-columns  * $i) - ($space-m / 1rem);
     }
 
   }
@@ -138,7 +138,7 @@ $sizes: (xs : $space-xs, s : $space-s, m : $space-m, l : $space-l, xl : $space-x
   {
     @for $i from 1 through $grid-columns {
       .gutter-#{$size} .xl-column-#{$i}  {
-        width: (100% / $grid-columns  * $i) - (($space / 1rem) / $grid-columns  * $i);
+        width: (100% / $grid-columns  * $i) - ($space / 1rem);
       }
     }
 

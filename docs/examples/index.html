@@ -31,9 +31,10 @@
         }
 
         .column, [class*="column-"]{
-            background-color:white;
+            background-color:#cccccc;
             color:#444444;
-            border:1px solid #666666;
+            border:none;
+            outline: 1px solid #666666;
         }
 
     </style>
@@ -45,10 +46,8 @@
     <h1>Warpaint - Grid examples</h1>
 
     <p>
-        - grid uses flexbox
-        - equal width columns by default. If '.column' specified without specific width
-        - for specific width, specify width percentage .column-5. This can be combined with width-agnostic columns.
-        - no gutter by default
+        <a href="index.html">Basic grid examples</a>
+        <a href="gutter.html">Gutter examples</a>
     </p>
 
     <p>Testpage for grid layout</p>
@@ -384,6 +383,76 @@
             <div class="inset"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus eligendi in ipsa laborum nihil, obcaecati odit perferendis quis rerum sapiente.</div>
         </div>
         <div class="column-3 m-column-6">
+            <div class="inset"> Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+        </div>
+    </div>
+    <div class="row gutter">
+        <div class="column-2">
+            <div class="inset"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus eligendi in ipsa laborum nihil, obcaecati odit perferendis quis rerum sapiente.</div>
+        </div>
+        <div class="column-2">
+            <div class="inset"> Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+        </div>
+        <div class="column-2">
+            <div class="inset"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus eligendi in ipsa laborum nihil, obcaecati odit perferendis quis rerum sapiente.</div>
+        </div>
+        <div class="column-2">
+            <div class="inset"> Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+        </div>
+        <div class="column-2">
+            <div class="inset"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus eligendi in ipsa laborum nihil, obcaecati odit perferendis quis rerum sapiente.</div>
+        </div>
+        <div class="column-2">
+            <div class="inset"> Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+        </div>
+    </div>
+    <div class="row gutter">
+        <div class="column-6">
+            <div class="inset"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus eligendi in ipsa laborum nihil, obcaecati odit perferendis quis rerum sapiente.</div>
+        </div>
+        <div class="column-6">
+            <div class="inset"> Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+        </div>
+    </div>
+    <div class="row gutter">
+        <div class="column-8">
+            <div class="inset"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus eligendi in ipsa laborum nihil, obcaecati odit perferendis quis rerum sapiente.</div>
+        </div>
+        <div class="column-4">
+            <div class="inset"> Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+        </div>
+    </div>
+    <div class="row gutter">
+        <div class="column-2">
+            <div class="inset"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus eligendi in ipsa laborum nihil, obcaecati odit perferendis quis rerum sapiente.</div>
+        </div>
+        <div class="column-8 inset">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus eligendi in ipsa laborum nihil, obcaecati odit perferendis quis rerum sapiente.
+            <button class="crazy-button">THIS MUST BE CLICKED!</button>
+        </div>
+        <div class="column-2">
+            <div class="inset"> Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+            <button class="crazy-button">THIS MUST BE CLICKED!</button>
+        </div>
+        <div class="column-2">
+            <div class="inset"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus eligendi in ipsa laborum nihil, obcaecati odit perferendis quis rerum sapiente.</div>
+        </div>
+        <div class="column-8 inset">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus eligendi in ipsa laborum nihil, obcaecati odit perferendis quis rerum sapiente.
+            <button class="crazy-button">THIS MUST BE CLICKED!</button>
+        </div>
+    </div>
+    <div class="row gutter">
+        <div class="column-3">
+            <div class="inset"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus eligendi in ipsa laborum nihil, obcaecati odit perferendis quis rerum sapiente.</div>
+        </div>
+        <div class="column-3">
+            <div class="inset"> Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+        </div>
+        <div class="column-4">
+            <div class="inset"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus eligendi in ipsa laborum nihil, obcaecati odit perferendis quis rerum sapiente.</div>
+        </div>
+        <div class="column-2">
             <div class="inset"> Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
         </div>
     </div>
