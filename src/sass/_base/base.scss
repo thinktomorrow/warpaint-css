@@ -17,7 +17,7 @@ html{
   @include xxlarge-view { font-size: $base-font-size * $ratio-xxl; }
 }
 
-li{
+ul li{
   list-style: circle;
 }
 

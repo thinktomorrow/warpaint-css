@@ -500,7 +500,7 @@ html {
   }
 }
 
-li {
+ul li {
   list-style: circle;
 }
 
@@ -1424,20 +1424,85 @@ p {
 
 /**
  * Reset margin top to zero when it is the first element
- * in a column or container
+ * in a column or container when inset or stack is applied
  *
  */
-.container h1:first-child,
-h2:first-child,
-h3:first-child,
-p:first-child {
-  margin-top: 0;
-}
-
-.column h1:first-child,
-h2:first-child,
-h3:first-child,
-p:first-child {
+.inset-xs h1:first-child,
+.inset-xs h2:first-child,
+.inset-xs h3:first-child,
+.inset-xs p:first-child, .inset-s h1:first-child,
+.inset-s h2:first-child,
+.inset-s h3:first-child,
+.inset-s p:first-child, .inset h1:first-child,
+.inset h2:first-child,
+.inset h3:first-child,
+.inset p:first-child, .inset-m h1:first-child,
+.inset-m h2:first-child,
+.inset-m h3:first-child,
+.inset-m p:first-child, .inset-l h1:first-child,
+.inset-l h2:first-child,
+.inset-l h3:first-child,
+.inset-l p:first-child, .inset-xl h1:first-child,
+.inset-xl h2:first-child,
+.inset-xl h3:first-child,
+.inset-xl p:first-child,
+.stack-xs h1:first-child,
+.stack-xs h2:first-child,
+.stack-xs h3:first-child,
+.stack-xs p:first-child, .stack-s h1:first-child,
+.stack-s h2:first-child,
+.stack-s h3:first-child,
+.stack-s p:first-child, .stack h1:first-child,
+.stack h2:first-child,
+.stack h3:first-child,
+.stack p:first-child, .stack-m h1:first-child,
+.stack-m h2:first-child,
+.stack-m h3:first-child,
+.stack-m p:first-child, .stack-l h1:first-child,
+.stack-l h2:first-child,
+.stack-l h3:first-child,
+.stack-l p:first-child, .stack-xl h1:first-child,
+.stack-xl h2:first-child,
+.stack-xl h3:first-child,
+.stack-xl p:first-child,
+.squished-xs h1:first-child,
+.squished-xs h2:first-child,
+.squished-xs h3:first-child,
+.squished-xs p:first-child, .squished-s h1:first-child,
+.squished-s h2:first-child,
+.squished-s h3:first-child,
+.squished-s p:first-child, .squished h1:first-child,
+.squished h2:first-child,
+.squished h3:first-child,
+.squished p:first-child, .squished-m h1:first-child,
+.squished-m h2:first-child,
+.squished-m h3:first-child,
+.squished-m p:first-child, .squished-l h1:first-child,
+.squished-l h2:first-child,
+.squished-l h3:first-child,
+.squished-l p:first-child, .squished-xl h1:first-child,
+.squished-xl h2:first-child,
+.squished-xl h3:first-child,
+.squished-xl p:first-child,
+.stretched-xs h1:first-child,
+.stretched-xs h2:first-child,
+.stretched-xs h3:first-child,
+.stretched-xs p:first-child, .stretched-s h1:first-child,
+.stretched-s h2:first-child,
+.stretched-s h3:first-child,
+.stretched-s p:first-child, .stretched h1:first-child,
+.stretched h2:first-child,
+.stretched h3:first-child,
+.stretched p:first-child, .stretched-m h1:first-child,
+.stretched-m h2:first-child,
+.stretched-m h3:first-child,
+.stretched-m p:first-child, .stretched-l h1:first-child,
+.stretched-l h2:first-child,
+.stretched-l h3:first-child,
+.stretched-l p:first-child, .stretched-xl h1:first-child,
+.stretched-xl h2:first-child,
+.stretched-xl h3:first-child,
+.stretched-xl p:first-child {
   margin-top: 0;
 }
 

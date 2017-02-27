@@ -72,12 +72,17 @@ p{
 
 /**
  * Reset margin top to zero when it is the first element
- * in a column or container
+ * in a column or container when inset or stack is applied
  *
  */
- .container h1:first-child,
-            h2:first-child,
-            h3:first-child,
-            p:first-child{
-                   margin-top: 0
-             }
+ .inset-xs, .inset-s, .inset, .inset-m, .inset-l, .inset-xl,
+ .stack-xs, .stack-s, .stack, .stack-m, .stack-l, .stack-xl,
+ .squished-xs, .squished-s, .squished, .squished-m, .squished-l, .squished-xl,
+ .stretched-xs, .stretched-s, .stretched, .stretched-m, .stretched-l, .stretched-xl {
+  h1:first-child,
+  h2:first-child,
+  h3:first-child,
+  p:first-child{
+     margin-top: 0
+  }
+}

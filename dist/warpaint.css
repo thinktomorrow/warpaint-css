@@ -500,7 +500,7 @@ html {
   }
 }
 
-li {
+ul li {
   list-style: circle;
 }
 
@@ -1424,13 +1424,17 @@ p {
 
 /**
  * Reset margin top to zero when it is the first element
- * in a column or container
+ * in a column or container when inset or stack is applied
  *
  */
-.container h1:first-child,
-h2:first-child,
-h3:first-child,
-p:first-child {
+.inset h1:first-child,
+.inset h2:first-child,
+.inset h3:first-child,
+.inset p:first-child,
+.stack h1:first-child,
+.stack h2:first-child,
+.stack h3:first-child,
+.stack p:first-child {
   margin-top: 0;
 }
 
