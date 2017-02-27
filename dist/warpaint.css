@@ -1434,13 +1434,6 @@ p:first-child {
   margin-top: 0;
 }
 
-.column h1:first-child,
-h2:first-child,
-h3:first-child,
-p:first-child {
-  margin-top: 0;
-}
-
 /**
  * Inset
  * A square inset indents content on all four sides equally.
