@@ -27,10 +27,6 @@ Border-grey
 /* -------------------------------------------------------
  BLOCKS
  ------------------------------------------------------- */
-.first-block{
-  margin-top:50px;
-}
-
 .active-breakpoint-text{
 
   &:after{
@@ -90,17 +86,17 @@ Border-grey
 }
 
 .nav__up.active{
-  
+
   display:block;
-  
+
 }
 
 .nav__up__guidetext{
   position:absolute;
   bottom: -17px;
   left: 0px;
-  white-space: nowrap; 
-  color: #cccccc;   
+  white-space: nowrap;
+  color: #cccccc;
   display:none;
 
   @include small-view{
