@@ -5,18 +5,20 @@ h1, h2, h3, h4, h5, h6{
 h1{
   font-size: $base-font-size * 2.2;
   line-height: 1em;
-  margin-top:2.8125rem; // 45px
+  margin-top: $space-l;
 }
 
 h2{
   font-size: $base-font-size * 1.8;
   line-height:1.25em;
-  margin-top:2.8125rem; // 45px
+  margin-top:$space-l;
+
 }
 
 h3{
   font-size: $base-font-size * 1.4;
-  margin-top:2.1875rem; // 35px
+  margin-top:$space-l;
+  
 }
 
 h4{
@@ -33,7 +35,10 @@ h6{
 
 
 p{
-  margin: #{$base-line-height}rem 0;
+
+  margin-top: $space-m;
+  margin-bottom: $space-m;
+  
 }
 
 /**
@@ -71,18 +76,16 @@ p{
 }
 
 /**
- * Reset margin top to zero when it is the first element
- * in a column or container when inset or stack is applied
- *
+ * All first elements have a collapsed top margin by default. This ensures a better
+ * expected behaviour out of the box. 
  */
- .inset-xs, .inset-s, .inset, .inset-m, .inset-l, .inset-xl,
- .stack-xs, .stack-s, .stack, .stack-m, .stack-l, .stack-xl,
- .squished-xs, .squished-s, .squished, .squished-m, .squished-l, .squished-xl,
- .stretched-xs, .stretched-s, .stretched, .stretched-m, .stretched-l, .stretched-xl {
-  h1:first-child,
-  h2:first-child,
-  h3:first-child,
-  p:first-child{
-     margin-top: 0
-  }
+h1:first-child,
+h2:first-child,
+h3:first-child,
+h4:first-child,
+h5:first-child,
+h6:first-child,
+p:first-child{
+    margin-top:0;
 }
+ 

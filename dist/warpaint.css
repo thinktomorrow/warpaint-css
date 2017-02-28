@@ -1359,18 +1359,18 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
   font-size: 1.925em;
   line-height: 1em;
-  margin-top: 2.8125rem;
+  margin-top: 3rem;
 }
 
 h2 {
   font-size: 1.575em;
   line-height: 1.25em;
-  margin-top: 2.8125rem;
+  margin-top: 3rem;
 }
 
 h3 {
   font-size: 1.225em;
-  margin-top: 2.1875rem;
+  margin-top: 3rem;
 }
 
 h4 {
@@ -1386,7 +1386,8 @@ h6 {
 }
 
 p {
-  margin: 1.5rem 0;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
 }
 
 /**
@@ -1423,18 +1424,16 @@ p {
 }
 
 /**
- * Reset margin top to zero when it is the first element
- * in a column or container when inset or stack is applied
- *
+ * All first elements have a collapsed top margin by default. This ensures a better
+ * expected behaviour out of the box. 
  */
-.inset h1:first-child,
-.inset h2:first-child,
-.inset h3:first-child,
-.inset p:first-child,
-.stack h1:first-child,
-.stack h2:first-child,
-.stack h3:first-child,
-.stack p:first-child {
+h1:first-child,
+h2:first-child,
+h3:first-child,
+h4:first-child,
+h5:first-child,
+h6:first-child,
+p:first-child {
   margin-top: 0;
 }
 
