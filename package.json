@@ -1,7 +1,7 @@
 {
   "name": "warpaint",
-  "version": "1.0.0",
-  "description": "Think Tomorrow bootstrap css stylebase",
+  "version": "0.0.3",
+  "description": "Think Tomorrow responsive typographic stylesheet",
   "main": "gulpfile.js",
   "directories": {
     "doc": "docs"
@@ -14,7 +14,7 @@
     "url": "git+https://github.com/thinktomorrow/warpaint.git"
   },
   "keywords": [
-    "chief",
+    "warpaint",
     "sass",
     "css",
     "bootstrap"

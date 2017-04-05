@@ -10,9 +10,9 @@ It aims for typographic rhythm out of the box.
 ## Quick start
 To get started, download and include the `warpaint.min.css` in the head of your html:
 ```html
-    <link rel="stylesheet" href="/warpaint.min.css" type="text/css">
+<link rel="stylesheet" href="/warpaint.min.css" type="text/css">
 ```
-Full documentation can be consulted at [warpaint.thinktomorrow.be](http://warpaint.thinktomorrow.be).
+Full documentation can be consulted at [warpaint.thinktomorrow.be/docs](http://warpaint.thinktomorrow.be/docs).
 
 ## Project file structure
 ```
