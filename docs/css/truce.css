@@ -1548,31 +1548,48 @@ p:first-child {
 /**
  * Inline
   *
-  * Arrange object inline. For pills, tags, breadrumbs
-  *
+  * Arrange object inline. Ideal for pills, tags, breadrumbs
   */
 .inline-xs {
-  margin-left: 0.375rem;
   margin-right: 0.375rem;
 }
 
 .inline-s {
-  margin-left: 0.75rem;
   margin-right: 0.75rem;
 }
 
 .inline-m, .inline {
-  margin-left: 1.5rem;
   margin-right: 1.5rem;
 }
 
 .inline-l {
-  margin-left: 3rem;
   margin-right: 3rem;
 }
 
 .inline-xl {
-  margin-left: 6rem;
+  margin-right: 6rem;
+}
+
+/**
+ * Inline-group
+  */
+.inline-group-xs > * {
+  margin-right: 0.375rem;
+}
+
+.inline-group-s > * {
+  margin-right: 0.75rem;
+}
+
+.inline-group-m > *, .inline-group > * {
+  margin-right: 1.5rem;
+}
+
+.inline-group-l > * {
+  margin-right: 3rem;
+}
+
+.inline-group-xl > * {
   margin-right: 6rem;
 }
 

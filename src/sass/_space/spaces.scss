@@ -48,11 +48,19 @@
 /**
  * Inline
   *
-  * Arrange object inline. For pills, tags, breadrumbs
-  *
+  * Arrange object inline. Ideal for pills, tags, breadrumbs
   */
-.inline-xs{ margin-left: $space-xs; margin-right:$space-xs; }
-.inline-s{ margin-left: $space-s; margin-right:$space-s; }
-.inline-m,.inline{ margin-left: $space-m; margin-right:$space-m; }
-.inline-l{ margin-left: $space-l; margin-right:$space-l; }
-.inline-xl{ margin-left: $space-xl; margin-right:$space-xl; }
+.inline-xs{ margin-right:$space-xs; }
+.inline-s{ margin-right:$space-s; }
+.inline-m,.inline{ margin-right:$space-m; }
+.inline-l{ margin-right:$space-l; }
+.inline-xl{ margin-right:$space-xl; }
+
+/**
+ * Inline-group
+  */
+.inline-group-xs > *{ margin-right:$space-xs; }
+.inline-group-s > *{ margin-right:$space-s; }
+.inline-group-m > *,.inline-group > *{ margin-right:$space-m; }
+.inline-group-l > *{ margin-right:$space-l; }
+.inline-group-xl > *{ margin-right:$space-xl; }

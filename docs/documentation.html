@@ -243,30 +243,35 @@
 
             <h3 id="spacing-inline">.inline</h3>
 
-            <p>Handle horizontal margins with <code>.inline</code>. This is used for adding space between sibling elements like pills, tags, breadcrumbs or buttons.</p>
+            <p>Handle horizontal spacing with <code>.inline</code>. E.g. adding breathing room between an image and its paragraph on the right.
+            </p>
+            <p>
+                You can opt to use a <code>.inline-group</code> class on the parent element. This will effect its child elements to behave as if they are given the <code>.inline</code> style. Ideal for spacing elements in sequence like pills, tags, breadcrumbs or buttons.</p>
 
             <div class="dummy">
-                <ul class="inline-dummy">
+                <ul class="inline-dummy inline-group-s">
                     <li>Home</li>
-                    <li class="inline-s">></li>
+                    <li>></li>
                     <li>Category</li>
-                    <li class="inline-s">></li>
+                    <li>></li>
                     <li>Subcategory</li>
-                    <li class="inline-s">></li>
+                    <li>></li>
                     <li>Item</li>
                 </ul>
             </div>
             <pre>
-&lt;ul class="breadcrumb"&gt;
+&lt;ul class="breadcrumb inline-group"&gt;
     &lt;li&gt;Home&lt;/li&gt;
-    &lt;li class="inline"&gt;&gt;&lt;/li&gt;
-    &lt;li&gt;Category&lt;/li&gt;
-    &lt;li class="inline"&gt;&gt;&lt;/li&gt;
-    &lt;li&gt;Subcategory&lt;/li&gt;
-    &lt;li class="inline"&gt;&gt;&lt;/li&gt;
-    &lt;li&gt;Item&lt;/li&gt;
+    &lt;li&gt;&gt;&lt;/li&gt;
+    ...
 &lt;/ul>
-            </pre>
+
+// Is the same as setting inline on each element
+&lt;ul class="breadcrumb"&gt;
+    &lt;li class="inline"&gt;Home&lt;/li&gt;
+    &lt;li class="inline"&gt;&gt;&lt;/li&gt;
+    ...
+&lt;/ul></pre>
 
             <h3 id="spacing-inset">.inset</h3>
 
