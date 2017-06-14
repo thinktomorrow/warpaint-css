@@ -1,9 +1,9 @@
 .row{
-  display:block;
+  flex-flow: column wrap;
 
   @include small-view(){
     display:flex;
-    flex-wrap: wrap; /* Allow overflow to wrap to following line */
+    flex-flow: row wrap; /* Allow overflow to wrap to following line */
     justify-content: space-between;
   }
 
