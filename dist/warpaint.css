@@ -537,15 +537,11 @@ img {
 .row {
   display: -webkit-box;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
   flex-flow: column wrap;
 }
 
 @media (min-width: 30em) {
   .row {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
     flex-flow: row wrap;
     /* Allow overflow to wrap to following line */
     -webkit-box-pack: justify;
@@ -553,14 +549,17 @@ img {
   }
   .row.top {
     -webkit-box-align: start;
+    -ms-grid-row-align: flex-start;
     align-items: flex-start;
   }
   .row.center {
     -webkit-box-align: center;
+    -ms-grid-row-align: center;
     align-items: center;
   }
   .row.bottom {
     -webkit-box-align: end;
+    -ms-grid-row-align: flex-end;
     align-items: flex-end;
   }
 }
@@ -1592,6 +1591,29 @@ p:first-child {
 
 .inline-group-xl > * {
   margin-right: 6rem;
+}
+
+/**
+ * last element of inline-group needs to be properly aligned
+ */
+.inline-group-xs > *:last-child {
+  margin-right: 0;
+}
+
+.inline-group-s > *:last-child {
+  margin-right: 0;
+}
+
+.inline-group-m > *:last-child, .inline-group > *:last-child {
+  margin-right: 0;
+}
+
+.inline-group-l > *:last-child {
+  margin-right: 0;
+}
+
+.inline-group-xl > *:last-child {
+  margin-right: 0;
 }
 
 @media (min-width: 20em) {

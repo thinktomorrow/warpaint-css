@@ -64,3 +64,12 @@
 .inline-group-m > *,.inline-group > *{ margin-right:$space-m; }
 .inline-group-l > *{ margin-right:$space-l; }
 .inline-group-xl > *{ margin-right:$space-xl; }
+
+/**
+ * last element of inline-group needs to be properly aligned
+ */
+.inline-group-xs > *:last-child{ margin-right:0; }
+.inline-group-s > *:last-child{ margin-right:0; }
+.inline-group-m > *:last-child,.inline-group > *:last-child{ margin-right:0; }
+.inline-group-l > *:last-child{ margin-right:0; }
+.inline-group-xl > *:last-child{ margin-right:0; }
