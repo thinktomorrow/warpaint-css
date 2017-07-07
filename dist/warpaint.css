@@ -552,7 +552,7 @@ img {
     -ms-grid-row-align: flex-start;
     align-items: flex-start;
   }
-  .row.center {
+  .row.middle {
     -webkit-box-align: center;
     -ms-grid-row-align: center;
     align-items: center;
@@ -561,6 +561,20 @@ img {
     -webkit-box-align: end;
     -ms-grid-row-align: flex-end;
     align-items: flex-end;
+  }
+  .row.left {
+    -webkit-box-pack: start;
+    justify-content: flex-start;
+    float: none;
+  }
+  .row.center {
+    -webkit-box-pack: center;
+    justify-content: center;
+  }
+  .row.right {
+    -webkit-box-pack: end;
+    justify-content: flex-end;
+    float: none;
   }
 }
 

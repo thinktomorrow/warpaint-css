@@ -40,6 +40,11 @@ gulp.task('sass-min', function() {
 });
 
 gulp.task('sass-truce', function() {
+
+    // Copy distributed file for docs
+    gulp.src(config.dest + '/warpaint.min.css')
+        .pipe(gulp.dest('./docs/css/'));
+
     return gulp.src(config.src + '/../paints/truce/truce.scss')
         .pipe(sourcemaps.init())
         .pipe(sass({outputStyle: 'expanded'}).on('error', sass.logError))
