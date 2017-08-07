@@ -7,7 +7,7 @@ $sizes: (xs : $space-xs, s : $space-s, m : $space-m, l : $space-l, xl : $space-x
 
         @for $i from 1 through $grid-columns {
             .gutter-#{$size}{
-                div[class*="column-"]#{$i}{
+                [class*="column-#{$i}"]{
                     width: (100% / $grid-columns  * $i) - ($space / 1rem); // divide by unit to remove unit
                     margin-left: #{($space / 1rem)+"%"};
                     margin-bottom: #{($space / 1rem)+"%"};
@@ -16,7 +16,7 @@ $sizes: (xs : $space-xs, s : $space-s, m : $space-m, l : $space-l, xl : $space-x
             }
         }
 
-        .gutter-#{$size} div[class*="column-"] {
+        .gutter-#{$size} .column {
             margin-left: #{($space / 1rem)+"%"};
             margin-bottom: #{($space / 1rem)+"%"};
         }
@@ -27,7 +27,7 @@ $sizes: (xs : $space-xs, s : $space-s, m : $space-m, l : $space-l, xl : $space-x
 
         .gutter{
 
-            div[class*="column-"]#{$i} {
+            [class*="column-#{$i}"] {
                 width: (100% / $grid-columns  * $i) - ($space-m / 1rem); // divide by unit to remove unit
                 margin-left: #{($space-m / 1rem)+"%"};
                 margin-bottom: #{($space-m / 1rem)+"%"};
@@ -39,11 +39,11 @@ $sizes: (xs : $space-xs, s : $space-s, m : $space-m, l : $space-l, xl : $space-x
 // END OF SMALL VIES GUTTER LOGIC
 
 .gutter{
-    div[class*="column-"] {
+    .column {
         margin-left: #{($space-m / 1rem)+"%"};
         margin-bottom: #{($space-m / 1rem)+"%"};
     }
-    
+
     margin-left: -#{($space-m / 1rem)+"%"};
 }
 
