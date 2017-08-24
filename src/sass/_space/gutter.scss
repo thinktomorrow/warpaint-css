@@ -4,10 +4,9 @@ $sizes: (xs : $space-xs, s : $space-s, m : $space-m, l : $space-l, xl : $space-x
 
     @each $size,$space in $sizes
     {
-
         @for $i from 1 through $grid-columns {
             .gutter-#{$size}{
-                [class$="column-#{$i}"]{
+                [class*="column-#{$i}"]{
                     width: (100% / $grid-columns  * $i) - ($space / 1rem); // divide by unit to remove unit
                     margin-left: #{($space / 1rem)+"%"};
                     margin-bottom: #{($space / 1rem)+"%"};
@@ -27,7 +26,7 @@ $sizes: (xs : $space-xs, s : $space-s, m : $space-m, l : $space-l, xl : $space-x
 
         .gutter{
 
-            [class$="column-#{$i}"] {
+            [class*="column-#{$i}"] {
                 width: (100% / $grid-columns  * $i) - ($space-m / 1rem); // divide by unit to remove unit
                 margin-left: #{($space-m / 1rem)+"%"};
                 margin-bottom: #{($space-m / 1rem)+"%"};

@@ -10,62 +10,24 @@
     <link href='https://fonts.googleapis.com/css?family=Merriweather+Sans:300,300italic,400,400italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Ubuntu:300,400' rel='stylesheet' type='text/css'>
 
-    <link rel="stylesheet" href="/dist/warpaint.min.css">
+    <link rel="stylesheet" href="/css/warpaint.min.css">
+    <link rel="stylesheet" href="/css/examples.css">
     <!--[if IE 9]><link rel="stylesheet" href="/dist/warpaint-ie9.css" type="text/css" /><![endif]-->
-    <style type="text/css">
 
-        html, body{
-            margin:0;
-            padding:0;
-        }
-
-        body{
-            background-color:rgba(0,0,0,0.1);
-            font-family: 'Merriweather Sans', sans-serif;
-        }
-
-        h1, h2, h3, h4, h5, h6 {
-            font-family: 'Ubuntu', sans-serif;
-            font-weight: 300;
-            color: #818181;
-        }
-
-        .column, [class*="column-"]{
-            background-color:#cccccc;
-            color:#444444;
-            border:none;
-            outline: 1px solid #666666;
-        }
-
-        .zebra{
-            background: repeating-linear-gradient(
-                    45deg,
-                    #ffffff,
-                    #ffffff 10px,
-                    #f5f5f5 10px,
-                    #f5f5f5 20px
-            );
-        }
-
-        .container--visible{
-            background-color:#ffffff;
-            outline:1px solid #cccccc;
-        }
-
-    </style>
 </head>
 <body>
 
 <div class="zebra">
     <div class="container container--visible">
 
-        <h1>Grid gutter examples</h1>
-
-        <p>
-            <a href="index.html">Basic grid examples</a>
-            <a href="gutter.html">Gutter examples</a>
-            <a href="typography.html">Typography</a>
-        </p>
+        <header class="stack-m">
+            <h1>Warpaint - gutter examples</h1>
+            <div class="inline-group text-center stack-s">
+                <a href="/examples/index.html">Basic grid examples</a>
+                <a href="/examples/gutter.html">Gutter examples</a>
+                <a href="/examples/typography.html">Typography</a>
+            </div>
+        </header>
 
         <ul>
             <li><a href="#gutter-column">Default <code>.gutter > .column</code></a></li>
@@ -252,6 +214,8 @@
                 <div class="column-4 inset">.column-4</div>
                 <div class="column-4 inset">.column-4</div>
             </div>
+
+            <h3 id="container-as-row">Container as row <code>.row.container.gutter-l</code></h3>
             <div class="container row gutter-l">
                 <div class="column-4 m-column-6 inset">.column-4 .m-column-6</div>
                 <div class="column-4 m-column-6 inset">.column-4 .m-column-6</div>
