@@ -12,6 +12,13 @@ To get started, download and include the `warpaint.min.css` in the head of your 
 ```html
 <link rel="stylesheet" href="/warpaint.min.css" type="text/css">
 ```
+
+Or you can use our unpkg version of warpaint.
+
+```html
+<link rel="stylesheet" href="https://unpkg.com/warpaint@0.0.9/dist/warpaint.min.css" type="text/css">
+```
+
 Full documentation can be consulted at [warpaint.thinktomorrow.be/docs](http://warpaint.thinktomorrow.be/docs).
 
 ## Project file structure
