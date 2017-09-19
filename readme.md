@@ -19,7 +19,7 @@ Or you can use our unpkg version of warpaint.
 <link rel="stylesheet" href="https://unpkg.com/warpaint@0.0.9/dist/warpaint.min.css" type="text/css">
 ```
 
-Full documentation can be consulted at [warpaint.thinktomorrow.be/docs](http://warpaint.thinktomorrow.be/docs).
+Full documentation can be consulted at [warpaint.thinktomorrow.be](http://warpaint.thinktomorrow.be).
 
 ## Project file structure
 ```
