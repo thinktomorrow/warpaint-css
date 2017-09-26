@@ -9,7 +9,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 
-    <link rel="stylesheet" href="/css/truce.css">
+    <link rel="stylesheet" href="../dist/warpaint.css">
+    <link rel="stylesheet" href="css/truce.css">
 </head>
 <body class="">
 
@@ -36,6 +37,7 @@
 
         <h3 class="text-right first">GRID</h3>
         <ul class="sidebar__nav">
+            <li><a href="#grid-container">Containers</a></li>
             <li><a href="#grid-basic">Basic grid</a></li>
             <li><a href="#grid-gutter">Grid gutter</a></li>
             <li><a href="#grid-width">Column width</a></li>
@@ -66,6 +68,11 @@
             <li><a href="#fontsize">Fontsize</a></li>
         </ul>
 
+        <h3 class="text-right">HELPER CLASSES</h3>
+        <ul class="sidebar__nav">
+            <li><a href="#fontsize">Alignment</a></li>
+        </ul>
+
         <a class="btn btn-o nav__up" href="#nav-top">
             &uarr;
             <span class="nav__up__guidetext font-xs"><span class="active-breakpoint-text"></span> viewport</span>
@@ -74,10 +81,21 @@
 
     </sidebar>
     <article class="column">
+        <section id="grid-container">
+            <h2>Containers</h2>
+            <p>
+                To start you basic grid system you need a <code>.container</code> which adds margins to your design.
+            </p>
+            <pre>
+&lt;div class="container"&gt;
+    &lt;!-- Insert rows and columns here --&gt;
+&lt;/div&gt;
+            </pre>
+        </section>
 
         <section id="grid-basic">
 
-                <h2 class="first">Basic grid</h2>
+                <h2>Basic grid</h2>
                 <p>
                     Columns must be wrapped inside a <code>.row</code> element and must be at least assigned a <code>.column</code> class.
                     By default the grid element will divide the width equally amongst its child columns.
@@ -401,7 +419,7 @@
         <!-- typography -->
         <section id="typography">
 
-            <h2 class="first">Typography</h2>
+            <h2>Typography</h2>
             <p>
                 Basic typographic tags are given a sensible font-size and line-height default.
             </p>
@@ -505,7 +523,6 @@
                 }
             });
         });
-
     </script>
 </body>
 </html>
