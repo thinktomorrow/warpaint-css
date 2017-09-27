@@ -63,4 +63,4 @@ gulp.task('watch',function(){
     gulp.watch(config.src+'/**/*.scss',['sass','sass-min'],browserSync.reload());
 });
 
-gulp.task('default', ['sass','sass-min']);
+gulp.task('default', ['sass','sass-min','sass-truce']);

@@ -1,7 +1,3 @@
-h1, h2, h3, h4, h5, h6{
-  margin-bottom:0;
-}
-
 h1{
   font-size: $base-font-size * 2.2;
   line-height: 1em;
@@ -12,13 +8,11 @@ h2{
   font-size: $base-font-size * 1.8;
   line-height:1.25em;
   margin-top:$space-l;
-
 }
 
 h3{
   font-size: $base-font-size * 1.4;
   margin-top:$space-l;
-  
 }
 
 h4{
@@ -33,21 +27,17 @@ h6{
   font-size: $base-font-size;
 }
 
-
 p{
-
   margin-top: $space-m;
   margin-bottom: $space-m;
-  
 }
 
 /**
  * Sizes independent of the viewports
  *
- * Projected line-heights are best guesses and merely
- * approximations towards an optimal vertical rhythm
- * e.g. line-height for font-l will hook into perfect
- * vertical rhythm only on every 6-th line
+ * These font sizes are used internally to slightly change font-sizes by viewport breakpoints.
+ * Projected line-heights are best guesses and approximations aiming for an optimal vertical rhythm
+ * e.g. line-height for font-l will hook into perfect vertical rhythm only on every 6-th line
  */
 
 .font-xs{
@@ -88,4 +78,7 @@ h6:first-child,
 p:first-child{
     margin-top:0;
 }
- 
+
+h1, h2, h3, h4, h5, h6, p:last-child{
+  margin-bottom:0;
+}

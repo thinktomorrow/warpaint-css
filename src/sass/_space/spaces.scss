@@ -45,6 +45,14 @@
 .stack-l{ margin-top: $space-l; margin-bottom:$space-l; }
 .stack-xl{ margin-top: $space-xl; margin-bottom:$space-xl; }
 
+[class*="squished"] [class*="stack"]:first-child,
+[class*="stretched"] [class*="stack"]:first-child,
+[class*="inset"] [class*="stack"]:first-child { margin-top: 0; }
+
+[class*="squished"] [class*="stack"]:last-child,
+[class*="stretched"] [class*="stack"]:last-child,
+[class*="inset"] [class*="stack"]:last-child { margin-bottom: 0; }
+
 /**
  * Inline
   *
@@ -68,8 +76,8 @@
 /**
  * last element of inline-group needs to be properly aligned
  */
-.inline-group-xs > *:last-child{ margin-right:0; }
-.inline-group-s > *:last-child{ margin-right:0; }
-.inline-group-m > *:last-child,.inline-group > *:last-child{ margin-right:0; }
-.inline-group-l > *:last-child{ margin-right:0; }
-.inline-group-xl > *:last-child{ margin-right:0; }
+.inline-group-xs > *:last-child,
+.inline-group-s > *:last-child,
+.inline-group-m > *:last-child,.inline-group > *:last-child,
+.inline-group-l > *:last-child,
+.inline-group-xl > *:last-child { margin-right:0; }

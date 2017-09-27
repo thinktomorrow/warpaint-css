@@ -10,6 +10,17 @@
 
 /*
  | ----------------------------------------------------------------
+ | Container margins columns
+ | ----------------------------------------------------------------
+ |
+ | By default the container has an equal margin to the left and right.
+ | These margins are responsive depending on the viewport width.
+ | Here you can define the maximum value.
+ */
+$container-margin: 16% !default;
+
+/*
+ | ----------------------------------------------------------------
  | Grid columns
  | ----------------------------------------------------------------
  |
@@ -24,10 +35,10 @@ $grid-columns: 12 !default;
  | ----------------------------------------------------------------
  |
  | The default font-size. This is also the value on which all font based spacings
- | and sizings are measured upon. By defaultt this is set to 0.875em. Depending on
+ | and sizings are measured upon. By default this is set to 0.875em. Depending on
  | your font family of choice this should be changed to a proper default.
  */
-$base-font-size:  0.865em;
+$base-font-size:  0.76em;
 
 /*
  | ----------------------------------------------------------------

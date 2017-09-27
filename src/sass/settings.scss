@@ -13,8 +13,9 @@
  | Container margins columns
  | ----------------------------------------------------------------
  |
- | By default your container has a margin-left and -right.
- |
+ | By default the container has an equal margin to the left and right.
+ | These margins are responsive depending on the viewport width.
+ | Here you can define the maximum value.
  */
 $container-margin: 16% !default;
 

@@ -1,17 +1,17 @@
 // content will be contained in relation to the screen width.
 .container {
     @extend .clearfix;
-    margin-left: calc($container-margin / 4);
-    margin-right: calc($container-margin / 4);
+    margin-left: $container-margin / 4;
+    margin-right: $container-margin / 4;
 
     @include medium-view {
-        margin-left: calc($container-margin / 2);
-        margin-right: calc($container-margin / 2);
+        margin-left: $container-margin / 2;
+        margin-right: $container-margin / 2;
     }
 
     @include large-view {
-        margin-left: calc($container-margin / 1.5);
-        margin-right: calc($container-margin / 1.5);
+        margin-left: $container-margin / 1.5;
+        margin-right: $container-margin / 1.5;
     }
 
     @include xlarge-view {

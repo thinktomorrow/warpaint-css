@@ -8,6 +8,15 @@
  */
 /*
  | ----------------------------------------------------------------
+ | Container margins columns
+ | ----------------------------------------------------------------
+ |
+ | By default the container has an equal margin to the left and right.
+ | These margins are responsive depending on the viewport width.
+ | Here you can define the maximum value.
+ */
+/*
+ | ----------------------------------------------------------------
  | Grid columns
  | ----------------------------------------------------------------
  |
@@ -20,7 +29,7 @@
  | ----------------------------------------------------------------
  |
  | The default font-size. This is also the value on which all font based spacings
- | and sizings are measured upon. By defaultt this is set to 0.875em. Depending on
+ | and sizings are measured upon. By default this is set to 0.875em. Depending on
  | your font family of choice this should be changed to a proper default.
  */
 /*
@@ -466,37 +475,37 @@ html {
 }
 
 html {
-  font-size: 0.7785em;
+  font-size: 0.684em;
   line-height: 1.5;
 }
 
 @media (min-width: 30em) {
   html {
-    font-size: 0.865em;
+    font-size: 0.76em;
   }
 }
 
 @media (min-width: 48em) {
   html {
-    font-size: 0.9515em;
+    font-size: 0.836em;
   }
 }
 
 @media (min-width: 64em) {
   html {
-    font-size: 1.038em;
+    font-size: 0.912em;
   }
 }
 
 @media (min-width: 85.375em) {
   html {
-    font-size: 1.211em;
+    font-size: 1.064em;
   }
 }
 
 @media (min-width: 120em) {
   html {
-    font-size: 1.384em;
+    font-size: 1.216em;
   }
 }
 
@@ -522,30 +531,26 @@ img {
 
 @media (min-width: 64em) {
   .container {
-    margin-left: 12%;
-    margin-right: 12%;
+    margin-left: 10.66667%;
+    margin-right: 10.66667%;
   }
 }
 
 @media (min-width: 85.375em) {
   .container {
-    margin-left: 18%;
-    margin-right: 18%;
+    margin-left: 16%;
+    margin-right: 16%;
   }
 }
 
 .row {
   display: -webkit-box;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
   flex-flow: column wrap;
 }
 
 @media (min-width: 30em) {
   .row {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
     flex-flow: row wrap;
     /* Allow overflow to wrap to following line */
     -webkit-box-pack: justify;
@@ -553,14 +558,17 @@ img {
   }
   .row.top {
     -webkit-box-align: start;
+    -ms-grid-row-align: flex-start;
     align-items: flex-start;
   }
   .row.middle {
     -webkit-box-align: center;
+    -ms-grid-row-align: center;
     align-items: center;
   }
   .row.bottom {
     -webkit-box-align: end;
+    -ms-grid-row-align: flex-end;
     align-items: flex-end;
   }
   .row.left {
@@ -1367,37 +1375,33 @@ img {
   }
 }
 
-h1, h2, h3, h4, h5, h6 {
-  margin-bottom: 0;
-}
-
 h1 {
-  font-size: 1.903em;
+  font-size: 1.672em;
   line-height: 1em;
   margin-top: 3rem;
 }
 
 h2 {
-  font-size: 1.557em;
+  font-size: 1.368em;
   line-height: 1.25em;
   margin-top: 3rem;
 }
 
 h3 {
-  font-size: 1.211em;
+  font-size: 1.064em;
   margin-top: 3rem;
 }
 
 h4 {
-  font-size: 1.038em;
+  font-size: 0.912em;
 }
 
 h5 {
-  font-size: 0.9515em;
+  font-size: 0.836em;
 }
 
 h6 {
-  font-size: 0.865em;
+  font-size: 0.76em;
 }
 
 p {
@@ -1408,33 +1412,32 @@ p {
 /**
  * Sizes independent of the viewports
  *
- * Projected line-heights are best guesses and merely
- * approximations towards an optimal vertical rhythm
- * e.g. line-height for font-l will hook into perfect
- * vertical rhythm only on every 6-th line
+ * These font sizes are used internally to slightly change font-sizes by viewport breakpoints.
+ * Projected line-heights are best guesses and approximations aiming for an optimal vertical rhythm
+ * e.g. line-height for font-l will hook into perfect vertical rhythm only on every 6-th line
  */
 .font-xs {
-  font-size: 0.7785em;
+  font-size: 0.684em;
   line-height: 1.35;
 }
 
 .font-s {
-  font-size: 0.865em;
+  font-size: 0.76em;
   line-height: 1.5;
 }
 
 .font-m {
-  font-size: 0.9515em;
+  font-size: 0.836em;
   line-height: 1.65;
 }
 
 .font-l {
-  font-size: 1.038em;
+  font-size: 0.912em;
   line-height: 1.5;
 }
 
 .font-xl {
-  font-size: 1.211em;
+  font-size: 1.064em;
   line-height: 1.5;
 }
 
@@ -1450,6 +1453,10 @@ h5:first-child,
 h6:first-child,
 p:first-child {
   margin-top: 0;
+}
+
+h1, h2, h3, h4, h5, h6, p:last-child {
+  margin-bottom: 0;
 }
 
 /**
@@ -1560,6 +1567,18 @@ p:first-child {
   margin-bottom: 6rem;
 }
 
+[class*="squished"] [class*="stack"]:first-child,
+[class*="stretched"] [class*="stack"]:first-child,
+[class*="inset"] [class*="stack"]:first-child {
+  margin-top: 0;
+}
+
+[class*="squished"] [class*="stack"]:last-child,
+[class*="stretched"] [class*="stack"]:last-child,
+[class*="inset"] [class*="stack"]:last-child {
+  margin-bottom: 0;
+}
+
 /**
  * Inline
   *
@@ -1611,22 +1630,10 @@ p:first-child {
 /**
  * last element of inline-group needs to be properly aligned
  */
-.inline-group-xs > *:last-child {
-  margin-right: 0;
-}
-
-.inline-group-s > *:last-child {
-  margin-right: 0;
-}
-
-.inline-group-m > *:last-child, .inline-group > *:last-child {
-  margin-right: 0;
-}
-
-.inline-group-l > *:last-child {
-  margin-right: 0;
-}
-
+.inline-group-xs > *:last-child,
+.inline-group-s > *:last-child,
+.inline-group-m > *:last-child, .inline-group > *:last-child,
+.inline-group-l > *:last-child,
 .inline-group-xl > *:last-child {
   margin-right: 0;
 }

@@ -8,6 +8,15 @@
  */
 /*
  | ----------------------------------------------------------------
+ | Container margins columns
+ | ----------------------------------------------------------------
+ |
+ | By default the container has an equal margin to the left and right.
+ | These margins are responsive depending on the viewport width.
+ | Here you can define the maximum value.
+ */
+/*
+ | ----------------------------------------------------------------
  | Grid columns
  | ----------------------------------------------------------------
  |
@@ -522,30 +531,26 @@ img {
 
 @media (min-width: 64em) {
   .container {
-    margin-left: 12%;
-    margin-right: 12%;
+    margin-left: 10.66667%;
+    margin-right: 10.66667%;
   }
 }
 
 @media (min-width: 85em) {
   .container {
-    margin-left: 18%;
-    margin-right: 18%;
+    margin-left: 16%;
+    margin-right: 16%;
   }
 }
 
 .row {
   display: -webkit-box;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
   flex-flow: column wrap;
 }
 
 @media (min-width: 30em) {
   .row {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
     flex-flow: row wrap;
     /* Allow overflow to wrap to following line */
     -webkit-box-pack: justify;
@@ -553,14 +558,17 @@ img {
   }
   .row.top {
     -webkit-box-align: start;
+    -ms-grid-row-align: flex-start;
     align-items: flex-start;
   }
   .row.middle {
     -webkit-box-align: center;
+    -ms-grid-row-align: center;
     align-items: center;
   }
   .row.bottom {
     -webkit-box-align: end;
+    -ms-grid-row-align: flex-end;
     align-items: flex-end;
   }
   .row.left {
@@ -1367,10 +1375,6 @@ img {
   }
 }
 
-h1, h2, h3, h4, h5, h6 {
-  margin-bottom: 0;
-}
-
 h1 {
   font-size: 1.925em;
   line-height: 1em;
@@ -1408,10 +1412,9 @@ p {
 /**
  * Sizes independent of the viewports
  *
- * Projected line-heights are best guesses and merely
- * approximations towards an optimal vertical rhythm
- * e.g. line-height for font-l will hook into perfect
- * vertical rhythm only on every 6-th line
+ * These font sizes are used internally to slightly change font-sizes by viewport breakpoints.
+ * Projected line-heights are best guesses and approximations aiming for an optimal vertical rhythm
+ * e.g. line-height for font-l will hook into perfect vertical rhythm only on every 6-th line
  */
 .font-xs {
   font-size: 0.7875em;
@@ -1450,6 +1453,10 @@ h5:first-child,
 h6:first-child,
 p:first-child {
   margin-top: 0;
+}
+
+h1, h2, h3, h4, h5, h6, p:last-child {
+  margin-bottom: 0;
 }
 
 /**
@@ -1560,6 +1567,18 @@ p:first-child {
   margin-bottom: 6rem;
 }
 
+[class*="squished"] [class*="stack"]:first-child,
+[class*="stretched"] [class*="stack"]:first-child,
+[class*="inset"] [class*="stack"]:first-child {
+  margin-top: 0;
+}
+
+[class*="squished"] [class*="stack"]:last-child,
+[class*="stretched"] [class*="stack"]:last-child,
+[class*="inset"] [class*="stack"]:last-child {
+  margin-bottom: 0;
+}
+
 /**
  * Inline
   *
@@ -1611,22 +1630,10 @@ p:first-child {
 /**
  * last element of inline-group needs to be properly aligned
  */
-.inline-group-xs > *:last-child {
-  margin-right: 0;
-}
-
-.inline-group-s > *:last-child {
-  margin-right: 0;
-}
-
-.inline-group-m > *:last-child, .inline-group > *:last-child {
-  margin-right: 0;
-}
-
-.inline-group-l > *:last-child {
-  margin-right: 0;
-}
-
+.inline-group-xs > *:last-child,
+.inline-group-s > *:last-child,
+.inline-group-m > *:last-child, .inline-group > *:last-child,
+.inline-group-l > *:last-child,
 .inline-group-xl > *:last-child {
   margin-right: 0;
 }
