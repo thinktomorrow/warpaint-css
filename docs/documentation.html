@@ -37,11 +37,12 @@
 
         <h3 class="text-right first">GRID</h3>
         <ul class="sidebar__nav">
-            <li><a href="#grid-container">Containers</a></li>
             <li><a href="#grid-basic">Basic grid</a></li>
             <li><a href="#grid-gutter">Grid gutter</a></li>
             <li><a href="#grid-width">Column width</a></li>
             <li><a href="#grid-container">Container</a></li>
+            <li class="sidebar__divider"></li>
+            <li><a href="#">Alignment (todo)</a></li>
         </ul>
 
         <h3 class="text-right">SPACING</h3>
@@ -63,14 +64,9 @@
             <li><a href="#responsive-spacing">spacing</a></li>
         </ul>
 
-        <h3 class="text-right">TYPOGRAPHY</h3>
-        <ul class="sidebar__nav">
-            <li><a href="#fontsize">Fontsize</a></li>
-        </ul>
-
         <h3 class="text-right">HELPER CLASSES</h3>
         <ul class="sidebar__nav">
-            <li><a href="#fontsize">Alignment</a></li>
+
         </ul>
 
         <a class="btn btn-o nav__up" href="#nav-top">
@@ -81,17 +77,6 @@
 
     </sidebar>
     <article class="column">
-        <section id="grid-container">
-            <h2>Containers</h2>
-            <p>
-                To start you basic grid system you need a <code>.container</code> which adds margins to your design.
-            </p>
-            <pre>
-&lt;div class="container"&gt;
-    &lt;!-- Insert rows and columns here --&gt;
-&lt;/div&gt;
-            </pre>
-        </section>
 
         <section id="grid-basic">
 
@@ -201,12 +186,20 @@
         <section id="grid-container" class="stack-l">
 
             <h2>Container</h2>
+
             <p>
-                By default the grid expands to the full width of its parent. To provide a left-right responsive margin, nest the grid inside a <code>.container</code> element.
+                To complement your basic grid system, you can create a <code>.container</code> wrapper. By default the grid expands to the full width of its parent. To provide a left-right responsive margin, nest the grid inside a <code>.container</code> element.
             </p>
+
             <p class="note">
                 Don't add a .container class to the row element. Keep it separate. This will conflict with the way the container deals with its margins.
             </p>
+
+            <pre>
+&lt;div class="container"&gt;
+    &lt;!-- Insert rows and columns here --&gt;
+&lt;/div&gt;
+            </pre>
 
             <div class="dummy zebra">
                 <div class="container">
@@ -229,7 +222,6 @@
               </pre>
 
         </section>
-
 
         <!-- spacing -->
 
@@ -415,75 +407,6 @@
 
         </section>
         <!-- end responsive -->
-
-        <!-- typography -->
-        <section id="typography">
-
-            <h2>Typography</h2>
-            <p>
-                Basic typographic tags are given a sensible font-size and line-height default.
-            </p>
-
-            <h3 id="fontsize">Font size</h3>
-            <p>By default fonts are automatically sizing to each breakpoint. You can however set a specific fontsize with the following classes. These classes still respect the up- or downscaling across the different breakpoints.</p>
-
-            <div class="row">
-
-                <div class="column-6">
-                    <p class="first font-xl">The quick brown fox jumps over the lazy dog</p>
-                </div>
-                <div class="column-6">
-                    <code>&lt;p class="font-xl"&gt;...&lt;/p&gt;</code>
-                </div>
-
-            </div>
-
-            <div class="row">
-
-                <div class="column-6">
-                    <p class="first font-l">The quick brown fox jumps over the lazy dog</p>
-                </div>
-                <div class="column-6">
-                    <code>&lt;p class="font-l"&gt;...&lt;/p&gt;</code>
-                </div>
-
-            </div>
-
-            <div class="row">
-
-                <div class="column-6">
-                    <p class="first font-m">The quick brown fox jumps over the lazy dog</p>
-                </div>
-                <div class="column-6">
-                    <code>&lt;p class="font-m"&gt;...&lt;/p&gt;</code>
-                </div>
-
-            </div>
-
-            <div class="row">
-
-                <div class="column-6">
-                    <p class="first font-s">The quick brown fox jumps over the lazy dog</p>
-                </div>
-                <div class="column-6">
-                    <code>&lt;p class="font-s"&gt;...&lt;/p&gt;</code>
-                </div>
-
-            </div>
-
-            <div class="row">
-
-                <div class="column-6">
-                    <p class="first font-xs">The quick brown fox jumps over the lazy dog</p>
-                </div>
-                <div class="column-6">
-                    <code>&lt;p class="font-xs"&gt;...&lt;/p&gt;</code>
-                </div>
-
-            </div>
-
-        </section>
-        <!-- end typography -->
 
     </div>
 </article>
