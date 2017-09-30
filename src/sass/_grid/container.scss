@@ -19,3 +19,28 @@
         margin-right: $container-margin;
     }
 }
+
+
+/**
+* You should avoid setting container on a gutter row element since the margins will conflict
+* If this is the case, we try to compensate the negative margins of the gutter. This is
+* however not consistent if you use different gutter widths.
+*/
+@each $size,$space in $sizes
+{
+    .container.gutter-#{$size}{
+        margin-left: 4% - ($space / 1rem);
+        @include medium-view { margin-left: 8% - ($space / 1rem); }
+        @include large-view { margin-left: 12% - ($space / 1rem); }
+        @include xlarge-view { margin-left: 18% - ($space / 1rem); }
+    }
+
+}
+
+.container.gutter {
+    margin-left: 4% - ($space-m / 1rem);
+    @include medium-view { margin-left: 8% - ($space-m / 1rem); }
+    @include large-view { margin-left: 12% - ($space-m / 1rem); }
+    @include xlarge-view { margin-left: 18% - ($space-m / 1rem); }
+}
+

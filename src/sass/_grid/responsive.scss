@@ -1,5 +1,3 @@
-$sizes: (xs : $space-xs, s : $space-s, m : $space-m, l : $space-l, xl : $space-xl);
-
 /**
  * ------------------------------------
  * Smallest view (xs)
@@ -7,8 +5,6 @@ $sizes: (xs : $space-xs, s : $space-s, m : $space-m, l : $space-l, xl : $space-x
  */
 @for $i from 1 through $grid-columns {
   .xs-column-#{$i}  {
-    float:left;
-    flex:inherit; // Honour the width
     width: 100% / $grid-columns  * $i;
   }
 
@@ -41,8 +37,6 @@ $sizes: (xs : $space-xs, s : $space-s, m : $space-m, l : $space-l, xl : $space-x
   
   @for $i from 1 through $grid-columns {
     .s-column-#{$i}{
-      float:left;
-      flex:inherit; // Honour the width
       width: 100% / $grid-columns  * $i;
     }
 
@@ -77,8 +71,6 @@ $sizes: (xs : $space-xs, s : $space-s, m : $space-m, l : $space-l, xl : $space-x
   
   @for $i from 1 through $grid-columns {
     .m-column-#{$i} {
-      float:left;
-      flex:inherit; // Honour the width
       width: 100% / $grid-columns  * $i;
     }
 
@@ -113,8 +105,6 @@ $sizes: (xs : $space-xs, s : $space-s, m : $space-m, l : $space-l, xl : $space-x
   
   @for $i from 1 through $grid-columns {
     .l-column-#{$i} {
-      float:left;
-      flex:inherit; // Honour the width
       width: 100% / $grid-columns  * $i;
     }
 
@@ -149,8 +139,6 @@ $sizes: (xs : $space-xs, s : $space-s, m : $space-m, l : $space-l, xl : $space-x
   
   @for $i from 1 through $grid-columns {
     .xl-column-#{$i}{
-      float:left;
-      flex:inherit; // Honour the width
       width: 100% / $grid-columns  * $i;
     }
 

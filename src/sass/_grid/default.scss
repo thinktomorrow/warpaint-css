@@ -5,6 +5,11 @@
  */
 [class*="column-"], [class*="-column"]{
   width: 100%;
+
+  @include small-view(){
+    float:left; /* non-flexbox support for basic columns */
+    flex:inherit; // Honour the width
+  }
 }
 
 .column{
