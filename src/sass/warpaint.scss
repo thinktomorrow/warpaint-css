@@ -5,15 +5,16 @@
 @import '_base/breakpoints';
 @import '_base/base';
 
-@import '_space/container';
-@import '_space/grid';
-@import '_space/gutter';
+@import '_grid/default';
+@import '_grid/gutter';
+@import '_grid/responsive';
+@import '_grid/grid';
+@import '_grid/container';
 
 @import '_elements/text';
 
 // states
 @import '_space/spaces';
-@import '_space/responsive';
 @import '_base/states';
 
 // For Dev purposes you can add a grid overlay to visualize the vertical rhythm

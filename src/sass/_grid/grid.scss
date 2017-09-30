@@ -1,9 +1,9 @@
 .row{
   display:flex;
-  flex-flow: column wrap;
+  flex-flow: row wrap; /* Allow overflow to wrap to following line */
 
   @include small-view(){
-    flex-flow: row wrap; /* Allow overflow to wrap to following line */
+
     justify-content: flex-start; float:none;
 
     &.top{ align-items: flex-start; }
@@ -22,18 +22,9 @@
   @for $i from 1 through $grid-columns {
     .column-#{$i} {
       float:left; /* non-flexbox support for basic columns */
+      flex:inherit; // Honour the width
       width: 100% / $grid-columns  * $i;
     }
   }
 
-}
-
-.column{
-
-  width: 100%;
-
-  @include small-view(){
-      float:left;
-      flex:1;
-    }  
 }

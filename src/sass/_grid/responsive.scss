@@ -1,40 +1,48 @@
 $sizes: (xs : $space-xs, s : $space-s, m : $space-m, l : $space-l, xl : $space-xl);
 
-@include xsmall-view(){
-  
-  @for $i from 1 through $grid-columns {
-    .xs-column-#{$i}  {
-      float:left;
-      width: 100% / $grid-columns  * $i;
-    }
-
-    .gutter .xs-column-#{$i}  {
-      width: (100% / $grid-columns  * $i) - ($space-m / 1rem);
-    }
+/**
+ * ------------------------------------
+ * Smallest view (xs)
+ * ------------------------------------
+ */
+@for $i from 1 through $grid-columns {
+  .xs-column-#{$i}  {
+    float:left;
+    flex:inherit; // Honour the width
+    width: 100% / $grid-columns  * $i;
   }
 
-  @each $size,$space in $sizes
-  {
-    @for $i from 1 through $grid-columns {
-      .gutter-#{$size} .xs-column-#{$i}  {
-        width: (100% / $grid-columns  * $i) - ($space / 1rem);
-      }
-    }
-
-    .xs-inset-#{$size} { padding: $space; }
-    .xs-squished-#{$size} { padding: $space / 2 $space; }
-    .xs-stretched-#{$size}{ padding: $space $space / 2; }
-    .xs-stack-#{$size}{ margin-top: $space; margin-bottom:$space; }
-    .xs-inline-#{$size}{ margin-left: $space; margin-right:$space; }
+  .gutter .xs-column-#{$i}  {
+    width: (100% / $grid-columns  * $i) - ($space-m / 1rem);
   }
-
 }
 
+@each $size,$space in $sizes
+{
+  @for $i from 1 through $grid-columns {
+    .gutter-#{$size} .xs-column-#{$i}  {
+      width: (100% / $grid-columns  * $i) - ($space / 1rem);
+    }
+  }
+
+  .xs-inset-#{$size} { padding: $space; }
+  .xs-squished-#{$size} { padding: $space / 2 $space; }
+  .xs-stretched-#{$size}{ padding: $space $space / 2; }
+  .xs-stack-#{$size}{ margin-top: $space; margin-bottom:$space; }
+  .xs-inline-#{$size}{ margin-left: $space; margin-right:$space; }
+}
+
+/**
+ * ------------------------------------
+ * Small view (s)
+ * ------------------------------------
+ */
 @include small-view(){
   
   @for $i from 1 through $grid-columns {
     .s-column-#{$i}{
       float:left;
+      flex:inherit; // Honour the width
       width: 100% / $grid-columns  * $i;
     }
 
@@ -60,11 +68,17 @@ $sizes: (xs : $space-xs, s : $space-s, m : $space-m, l : $space-l, xl : $space-x
 
 }
 
+/**
+ * ------------------------------------
+ * Medium view (m)
+ * ------------------------------------
+ */
 @include medium-view(){
   
   @for $i from 1 through $grid-columns {
     .m-column-#{$i} {
       float:left;
+      flex:inherit; // Honour the width
       width: 100% / $grid-columns  * $i;
     }
 
@@ -90,11 +104,17 @@ $sizes: (xs : $space-xs, s : $space-s, m : $space-m, l : $space-l, xl : $space-x
 
 }
 
+/**
+ * ------------------------------------
+ * Smallest view (l)
+ * ------------------------------------
+ */
 @include large-view(){
   
   @for $i from 1 through $grid-columns {
     .l-column-#{$i} {
       float:left;
+      flex:inherit; // Honour the width
       width: 100% / $grid-columns  * $i;
     }
 
@@ -120,11 +140,17 @@ $sizes: (xs : $space-xs, s : $space-s, m : $space-m, l : $space-l, xl : $space-x
 
 }
 
+/**
+ * ------------------------------------
+ * Smallest view (xl)
+ * ------------------------------------
+ */
 @include xlarge-view(){
   
   @for $i from 1 through $grid-columns {
     .xl-column-#{$i}{
       float:left;
+      flex:inherit; // Honour the width
       width: 100% / $grid-columns  * $i;
     }
 

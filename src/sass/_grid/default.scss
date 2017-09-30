@@ -1,0 +1,19 @@
+/**
+ * Default width of columns is full width on xs screens
+ * unless explicitly set to a column size. Only the
+ * auto '.column' is left to default behaviour
+ */
+[class*="column-"], [class*="-column"]{
+  width: 100%;
+}
+
+.column{
+
+  width:100%;
+
+  @include small-view(){
+    float:left;
+    flex:1;
+    width:auto;
+  }
+}
