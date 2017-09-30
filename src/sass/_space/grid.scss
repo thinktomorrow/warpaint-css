@@ -4,7 +4,7 @@
 
   @include small-view(){
     flex-flow: row wrap; /* Allow overflow to wrap to following line */
-    justify-content: space-between;
+    justify-content: flex-start; float:none;
 
     &.top{ align-items: flex-start; }
     &.middle{ align-items: center; }
@@ -12,6 +12,7 @@
 
     &.left{ justify-content: flex-start; float:none; }
     &.center{ justify-content: center; }
+    &.edge{ justify-content: space-between; }
     &.right{ justify-content: flex-end; float:none; }
   }
 }
