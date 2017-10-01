@@ -1,3 +1,17 @@
+
+.column{
+
+  width:100%;
+
+  @include small-view(){
+    float:left;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0;
+    width:auto;
+  }
+}
+
 /**
  * Default width of columns is full width on xs screens
  * unless explicitly set to a column size. Only the
@@ -8,17 +22,8 @@
 
   @include small-view(){
     float:left; /* non-flexbox support for basic columns */
-    flex:inherit; // Honour the width
-  }
-}
-
-.column{
-
-  width:100%;
-
-  @include small-view(){
-    float:left;
-    flex:1;
-    width:auto;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: auto; // Honour the width for fixed sizes
   }
 }

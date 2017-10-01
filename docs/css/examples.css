@@ -22,11 +22,15 @@ h3,h4{
     padding:1em;
 }
 
+.row{
+    background-color: rgba(0,0,0,0.1);
+}
+
 .column, [class*="column-"]{
-    background-color:#cccccc;
+    background-color: rgba(0,0,0,0.1);
     color:#444444;
     border:none;
-    outline: 1px solid #666666;
+    outline: 1px solid #ffffff;
 }
 
 .zebra{
@@ -39,7 +43,16 @@ h3,h4{
     );
 }
 
+.box{
+    padding: .75rem; /* inset-m */
+    background-color:#8e44ad;
+    border:1px solid white;
+    color: white;
+    height:100%;
+}
+
 .container--visible{
     background-color:#ffffff;
-    outline:1px solid #cccccc;
+    outline:1px solid #f5f5f5;
+    box-shadow: 0px 0px 41px #ddd;
 }
