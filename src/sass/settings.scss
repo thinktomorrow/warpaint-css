@@ -35,7 +35,7 @@ $grid-columns: 12 !default;
  | ----------------------------------------------------------------
  |
  | The default font-size. This is also the value on which all font based spacings
- | and sizings are measured upon. By defaultt this is set to 0.875em. Depending on
+ | and sizings are measured upon. By default this is set to 0.875em. Depending on
  | your font family of choice this should be changed to a proper default.
  */
 $base-font-size:  0.875em;
@@ -50,12 +50,12 @@ $base-font-size:  0.875em;
  | allow for a responsive typography. Important since
  | font-size determines the sizing of a lot of components
  */
-$ratio-xs: 0.9;
-$ratio-s: 1.0;
-$ratio-m: 1.1;
-$ratio-l: 1.2;
-$ratio-xl: 1.4;
-$ratio-xxl: 1.6;
+$ratio-xs: 0.8;
+$ratio-s: 0.9;
+$ratio-m: 1.0;
+$ratio-l: 1.1;
+$ratio-xl: 1.2;
+$ratio-xxl: 1.4;
 
 /*
  | ----------------------------------------------------------------

@@ -1,3 +1,12 @@
+.box{
+    background-color:rgba(#777777,.5);
+    font-family: monospace, monospace;
+    text-align: center;
+    padding:1rem;
+    border:1px solid #ffffff;
+    color:#777777;
+}
+
 /* crazy overrides to provide a nice demo */
 .dummy .column:not(.inset):not(.inset-xs):not(.inset-s):not(.inset-l):not(.inset-xl):not(.squished):not(.stretched), .dummy [class*="column-"]:not(.inset):not(.squished):not(.stretched){
     background-color:rgba(#777777,.5);
@@ -5,7 +14,12 @@
     text-align: center;
     padding:1rem;
     outline:1px solid #ffffff;
-    color:#ffffff;
+    color:#777777;
+}
+
+.dummy-gutter .column{
+    background-color:transparent;
+    outline:none;
 }
 
 

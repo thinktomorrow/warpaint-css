@@ -17,7 +17,7 @@
  * unless explicitly set to a column size. Only the
  * auto '.column' is left to default behaviour
  */
-[class*="column-"], [class*="-column"]{
+[class^="column-"],[class*="xs-column-"]{
   width: 100%;
 
   @include small-view(){

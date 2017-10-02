@@ -7,28 +7,31 @@ h1{
 h2{
   font-size: $base-font-size * 1.8;
   line-height:1.25em;
-  margin-top:$space-l;
+  margin-top:$space-m;
 }
 
 h3{
   font-size: $base-font-size * 1.4;
-  margin-top:$space-l;
+  margin-top:$space-m;
 }
 
 h4{
   font-size: $base-font-size * 1.2;
+  margin-top:$space-s;
 }
 
 h5{
   font-size: $base-font-size * 1.1;
+  margin-top:$space-s;
 }
 
 h6{
   font-size: $base-font-size;
+  margin-top:$space-s;
 }
 
 p{
-  margin-top: $space-m;
+  margin-top:0;
   margin-bottom: $space-m;
 }
 
@@ -79,6 +82,15 @@ p:first-child{
     margin-top:0;
 }
 
-h1, h2, h3, h4, h5, h6, p:last-child{
-  margin-bottom:0;
+h1:not(:last-child),
+h2:not(:last-child),
+h3:not(:last-child),
+p:last-child{
+  margin-bottom:$space-m;
+}
+
+h4:not(:last-child),
+h5:not(:last-child),
+h6:not(:last-child){
+  margin-bottom:$space-s;
 }

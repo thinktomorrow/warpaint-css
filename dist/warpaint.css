@@ -29,7 +29,7 @@
  | ----------------------------------------------------------------
  |
  | The default font-size. This is also the value on which all font based spacings
- | and sizings are measured upon. By defaultt this is set to 0.875em. Depending on
+ | and sizings are measured upon. By default this is set to 0.875em. Depending on
  | your font family of choice this should be changed to a proper default.
  */
 /*
@@ -513,37 +513,37 @@ html {
 }
 
 html {
-  font-size: 0.7875em;
+  font-size: 0.7em;
   line-height: 1.5;
 }
 
 @media (min-width: 30em) {
   html {
-    font-size: 0.875em;
+    font-size: 0.7875em;
   }
 }
 
 @media (min-width: 48em) {
   html {
-    font-size: 0.9625em;
+    font-size: 0.875em;
   }
 }
 
 @media (min-width: 64em) {
   html {
-    font-size: 1.05em;
+    font-size: 0.9625em;
   }
 }
 
 @media (min-width: 85em) {
   html {
-    font-size: 1.225em;
+    font-size: 1.05em;
   }
 }
 
 @media (min-width: 120em) {
   html {
-    font-size: 1.4em;
+    font-size: 1.225em;
   }
 }
 
@@ -575,12 +575,12 @@ img {
  * unless explicitly set to a column size. Only the
  * auto '.column' is left to default behaviour
  */
-[class*="column-"], [class*="-column"] {
+[class^="column-"], [class*="xs-column-"] {
   width: 100%;
 }
 
 @media (min-width: 30em) {
-  [class*="column-"], [class*="-column"] {
+  [class^="column-"], [class*="xs-column-"] {
     float: left;
     /* non-flexbox support for basic columns */
     -webkit-box-flex: 0;
@@ -814,6 +814,14 @@ img {
  * ------------------------------------
  */
 @media (min-width: 30em) {
+  [class*="s-column-"] {
+    float: left;
+    /* non-flexbox support for basic columns */
+    -webkit-box-flex: 0;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: auto;
+  }
   .s-column-1 {
     width: 8.33333%;
   }
@@ -858,6 +866,14 @@ img {
  * ------------------------------------
  */
 @media (min-width: 48em) {
+  [class*="m-column-"] {
+    float: left;
+    /* non-flexbox support for basic columns */
+    -webkit-box-flex: 0;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: auto;
+  }
   .m-column-1 {
     width: 8.33333%;
   }
@@ -902,6 +918,14 @@ img {
  * ------------------------------------
  */
 @media (min-width: 64em) {
+  [class*="l-column-"] {
+    float: left;
+    /* non-flexbox support for basic columns */
+    -webkit-box-flex: 0;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: auto;
+  }
   .l-column-1 {
     width: 8.33333%;
   }
@@ -946,6 +970,14 @@ img {
  * ------------------------------------
  */
 @media (min-width: 85em) {
+  [class*="xl-column-"] {
+    float: left;
+    /* non-flexbox support for basic columns */
+    -webkit-box-flex: 0;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: auto;
+  }
   .xl-column-1 {
     width: 8.33333%;
   }
@@ -1162,28 +1194,31 @@ h1 {
 h2 {
   font-size: 1.575em;
   line-height: 1.25em;
-  margin-top: 3rem;
+  margin-top: 1.5rem;
 }
 
 h3 {
   font-size: 1.225em;
-  margin-top: 3rem;
+  margin-top: 1.5rem;
 }
 
 h4 {
   font-size: 1.05em;
+  margin-top: 0.75rem;
 }
 
 h5 {
   font-size: 0.9625em;
+  margin-top: 0.75rem;
 }
 
 h6 {
   font-size: 0.875em;
+  margin-top: 0.75rem;
 }
 
 p {
-  margin-top: 1.5rem;
+  margin-top: 0;
   margin-bottom: 1.5rem;
 }
 
@@ -1195,27 +1230,27 @@ p {
  * e.g. line-height for font-l will hook into perfect vertical rhythm only on every 6-th line
  */
 .font-xs {
+  font-size: 0.7em;
+  line-height: 1.2;
+}
+
+.font-s {
   font-size: 0.7875em;
   line-height: 1.35;
 }
 
-.font-s {
+.font-m {
   font-size: 0.875em;
   line-height: 1.5;
 }
 
-.font-m {
-  font-size: 0.9625em;
-  line-height: 1.65;
-}
-
 .font-l {
-  font-size: 1.05em;
+  font-size: 0.9625em;
   line-height: 1.5;
 }
 
 .font-xl {
-  font-size: 1.225em;
+  font-size: 1.05em;
   line-height: 1.5;
 }
 
@@ -1233,8 +1268,17 @@ p:first-child {
   margin-top: 0;
 }
 
-h1, h2, h3, h4, h5, h6, p:last-child {
-  margin-bottom: 0;
+h1:not(:last-child),
+h2:not(:last-child),
+h3:not(:last-child),
+p:last-child {
+  margin-bottom: 1.5rem;
+}
+
+h4:not(:last-child),
+h5:not(:last-child),
+h6:not(:last-child) {
+  margin-bottom: 0.75rem;
 }
 
 /**
