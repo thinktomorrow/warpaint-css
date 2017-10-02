@@ -609,10 +609,7 @@ img {
 
 @media (min-width: 30em) {
   .gutter {
-    margin-left: -0.75rem;
-    margin-right: -0.75rem;
-    margin-top: -0.75rem;
-    margin-bottom: -0.75rem;
+    margin: -0.75rem;
   }
   .gutter:not(:last-child) {
     margin-bottom: 0.75rem;
@@ -621,10 +618,7 @@ img {
     padding: 0.75rem;
   }
   .gutter-xs {
-    margin-left: -0.1875rem;
-    margin-right: -0.1875rem;
-    margin-top: -0.1875rem;
-    margin-bottom: -0.1875rem;
+    margin: -0.1875rem;
   }
   .gutter-xs:not(:last-child) {
     margin-bottom: 0.1875rem;
@@ -633,10 +627,7 @@ img {
     padding: 0.1875rem;
   }
   .gutter-s {
-    margin-left: -0.375rem;
-    margin-right: -0.375rem;
-    margin-top: -0.375rem;
-    margin-bottom: -0.375rem;
+    margin: -0.375rem;
   }
   .gutter-s:not(:last-child) {
     margin-bottom: 0.375rem;
@@ -645,10 +636,7 @@ img {
     padding: 0.375rem;
   }
   .gutter-m {
-    margin-left: -0.75rem;
-    margin-right: -0.75rem;
-    margin-top: -0.75rem;
-    margin-bottom: -0.75rem;
+    margin: -0.75rem;
   }
   .gutter-m:not(:last-child) {
     margin-bottom: 0.75rem;
@@ -657,10 +645,7 @@ img {
     padding: 0.75rem;
   }
   .gutter-l {
-    margin-left: -1.5rem;
-    margin-right: -1.5rem;
-    margin-top: -1.5rem;
-    margin-bottom: -1.5rem;
+    margin: -1.5rem;
   }
   .gutter-l:not(:last-child) {
     margin-bottom: 1.5rem;
@@ -669,10 +654,7 @@ img {
     padding: 1.5rem;
   }
   .gutter-xl {
-    margin-left: -3rem;
-    margin-right: -3rem;
-    margin-top: -3rem;
-    margin-bottom: -3rem;
+    margin: -3rem;
   }
   .gutter-xl:not(:last-child) {
     margin-bottom: 3rem;
@@ -680,10 +662,6 @@ img {
   .gutter-xl > .column, .gutter-xl > [class*="column-"] {
     padding: 3rem;
   }
-}
-
-.gutter-around {
-  justify-content: space-around;
 }
 
 .row {
@@ -931,7 +909,7 @@ img {
 
 /**
  * ------------------------------------
- * Smallest view (l)
+ * large view (l)
  * ------------------------------------
  */
 @media (min-width: 64em) {
@@ -983,7 +961,7 @@ img {
 
 /**
  * ------------------------------------
- * Smallest view (xl)
+ * Extra Large view (xl)
  * ------------------------------------
  */
 @media (min-width: 85em) {

@@ -8,20 +8,7 @@
   .xs-column-#{$i}  {
     width: 100% / $grid-columns  * $i;
   }
-
-  //.gutter .xs-column-#{$i}  {
-  //  width: (100% / $grid-columns  * $i) - ($space-m / 1rem);
-  //}
 }
-
-//@each $size,$space in $sizes
-//{
-//  @for $i from 1 through $grid-columns {
-//    .gutter-#{$size} .xs-column-#{$i}  {
-//      width: (100% / $grid-columns  * $i) - ($space / 1rem);
-//    }
-//  }
-//}
 
 /**
  * ------------------------------------
@@ -41,21 +28,7 @@
     .s-column-#{$i}{
       width: 100% / $grid-columns  * $i;
     }
-
-    //.gutter .s-column-#{$i}  {
-    //  width: (100% / $grid-columns  * $i) - ($space-m / 1rem);
-    //}
   }
-
-  //@each $size,$space in $sizes
-  //{
-  //  @for $i from 1 through $grid-columns {
-  //    .gutter-#{$size} .s-column-#{$i}  {
-  //      width: (100% / $grid-columns  * $i) - ($space / 1rem);
-  //    }
-  //  }
-  //}
-
 }
 
 /**
@@ -76,26 +49,12 @@
     .m-column-#{$i} {
       width: 100% / $grid-columns  * $i;
     }
-
-    //.gutter .m-column-#{$i}  {
-    //  width: (100% / $grid-columns  * $i) - ($space-m / 1rem);
-    //}
   }
-
-  //@each $size,$space in $sizes
-  //{
-  //  @for $i from 1 through $grid-columns {
-  //    .gutter-#{$size} .m-column-#{$i}  {
-  //      width: (100% / $grid-columns  * $i) - ($space / 1rem);
-  //    }
-  //  }
-  //}
-
 }
 
 /**
  * ------------------------------------
- * Smallest view (l)
+ * large view (l)
  * ------------------------------------
  */
 @include large-view(){
@@ -111,26 +70,12 @@
     .l-column-#{$i} {
       width: 100% / $grid-columns  * $i;
     }
-    //
-    //.gutter .l-column-#{$i}  {
-    //  width: (100% / $grid-columns  * $i) - ($space-m / 1rem);
-    //}
   }
-
-  //@each $size,$space in $sizes
-  //{
-  //  @for $i from 1 through $grid-columns {
-  //    .gutter-#{$size} .l-column-#{$i}  {
-  //      width: (100% / $grid-columns  * $i) - ($space / 1rem);
-  //    }
-  //  }
-  //}
-
 }
 
 /**
  * ------------------------------------
- * Smallest view (xl)
+ * Extra Large view (xl)
  * ------------------------------------
  */
 @include xlarge-view(){
@@ -146,20 +91,5 @@
     .xl-column-#{$i}{
       width: 100% / $grid-columns  * $i;
     }
-
-    //.gutter .xl-column-#{$i}  {
-    //  width: (100% / $grid-columns  * $i) - ($space-m / 1rem);
-    //}
-
   }
-
-  //@each $size,$space in $sizes
-  //{
-  //  @for $i from 1 through $grid-columns {
-  //    .gutter-#{$size} .xl-column-#{$i}  {
-  //      width: (100% / $grid-columns  * $i) - ($space / 1rem);
-  //    }
-  //  }
-  //}
-
 }
