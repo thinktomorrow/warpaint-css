@@ -3512,10 +3512,17 @@ nav li a:after {
 HERO
 ------------------------------------------------------- */
 .hero {
-  height: 100vh;
   position: relative;
   text-align: center;
   background-color: #8e44ad;
+}
+
+.hero.--large {
+  height: 100vh;
+}
+
+.hero.--small {
+  height: 30vh;
 }
 
 .hero-inner {
@@ -3617,7 +3624,7 @@ svg .fill {
   max-width: 100px;
 }
 
-.main.--raised {
+main.--raised {
   position: relative;
   background-color: #FFF;
   z-index: 1;
@@ -3658,8 +3665,8 @@ Border-grey
 }
 
 /* -------------------------------------------------------
- BLOCKS
- ------------------------------------------------------- */
+BLOCKS
+------------------------------------------------------- */
 .active-breakpoint-text:after {
   display: inline-block;
   content: 'default';
@@ -3740,6 +3747,15 @@ Border-grey
 
 .note code {
   background-color: #703688;
+}
+
+@media (max-width: 676px) {
+  aside {
+    display: none;
+  }
+  .offset {
+    margin-top: 0.75rem;
+  }
 }
 
 a {
