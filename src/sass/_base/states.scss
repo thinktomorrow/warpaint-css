@@ -26,8 +26,18 @@
   margin-top:0;
 }
 
-.center-center{ 
+.center-center{
   display:flex;
-  align-items: center; 
+  align-items: center;
   justify-content: center;
+}
+
+.center-x{
+  display:flex;
+  justify-content: center;
+}
+
+.center-y{
+  display:flex;
+  align-items: center;
 }

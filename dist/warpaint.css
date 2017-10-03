@@ -503,16 +503,13 @@ template {
   display: none;
 }
 
-/* apply a natural box layout model to all elements, but allowing components to change */
-html {
-  box-sizing: border-box;
-}
-
 *, *:before, *:after {
   box-sizing: inherit;
 }
 
 html {
+  /* apply a natural box layout model to all elements, but allowing components to change */
+  box-sizing: border-box;
   font-size: 0.7875em;
   line-height: 1.5;
 }
@@ -880,8 +877,6 @@ img {
 .row {
   display: -webkit-box;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
   flex-flow: row wrap;
   /* Allow overflow to wrap to following line */
 }
@@ -894,14 +889,17 @@ img {
   }
   .row.top {
     -webkit-box-align: start;
+    -ms-grid-row-align: flex-start;
     align-items: flex-start;
   }
   .row.middle {
     -webkit-box-align: center;
+    -ms-grid-row-align: center;
     align-items: center;
   }
   .row.bottom {
     -webkit-box-align: end;
+    -ms-grid-row-align: flex-end;
     align-items: flex-end;
   }
   .row.left {
@@ -3308,6 +3306,20 @@ h1, h2, h3, h4, h5, h6, p:last-child {
   align-items: center;
   -webkit-box-pack: center;
   justify-content: center;
+}
+
+.center-x {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+}
+
+.center-y {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
 }
 
 /*# sourceMappingURL=warpaint.css.map */
