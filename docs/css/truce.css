@@ -3341,9 +3341,9 @@ h1, h2, h3, h4, h5, h6, p:last-child {
 
 .btn {
   border-radius: 3px;
-  background: #8e44ad;
-  border: 1px solid #8e44ad;
-  color: #FFF;
+  background: #FFF;
+  border: 1px solid #FFF;
+  color: #8e44ad;
   display: inline-block;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
@@ -3351,17 +3351,17 @@ h1, h2, h3, h4, h5, h6, p:last-child {
 
 .btn:hover {
   background: transparent;
-  color: #8e44ad;
+  color: #FFF;
 }
 
 .btn-o {
   background: transparent;
-  color: #8e44ad;
+  color: #FFF;
 }
 
 .btn-o:hover {
-  background: #8e44ad;
-  color: #FFF;
+  background: #FFF;
+  color: #8e44ad;
 }
 
 .btn-link {
@@ -3509,13 +3509,13 @@ nav li a:after {
 }
 
 /* -------------------------------------------------------
- HERO
- ------------------------------------------------------- */
+HERO
+------------------------------------------------------- */
 .hero {
   height: 100vh;
   position: relative;
   text-align: center;
-  background-color: #efefef;
+  background-color: #8e44ad;
 }
 
 .hero-inner {
@@ -3533,11 +3533,11 @@ svg {
   margin: auto;
 }
 
-svg .st0 {
+svg .fill {
   opacity: 0;
   fill-opacity: 0;
-  fill: #8e44ad;
-  stroke: #8e44ad;
+  fill: #432051;
+  stroke: #25122d;
   stroke-width: 2px;
   stroke-dasharray: 870px;
   stroke-dashoffset: 870px;
@@ -3603,6 +3603,10 @@ svg .st0 {
   }
 }
 
+.hero-caption {
+  color: #432051;
+}
+
 .hero-caption h1 {
   margin-top: 0;
   font-weight: lighter;
@@ -3611,6 +3615,16 @@ svg .st0 {
 
 .hero-logo {
   max-width: 100px;
+}
+
+.main.--raised {
+  position: relative;
+  background-color: #FFF;
+  z-index: 1;
+  overflow-y: hidden;
+  margin: -60px 30px 0px;
+  border-radius: 6px;
+  box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
 }
 
 ::-moz-selection {
