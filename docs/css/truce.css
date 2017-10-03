@@ -3450,11 +3450,11 @@ nav li a {
   font-size: 0.65rem;
   letter-spacing: 1px;
   position: relative;
-  color: #8e44ad;
+  color: #432051;
 }
 
 nav li a:hover {
-  color: #34193f;
+  color: #FFF;
 }
 
 nav li a:hover:after {
