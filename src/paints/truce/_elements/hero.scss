@@ -19,6 +19,7 @@ HERO
 svg {
     max-width: 150px;
     margin: auto;
+    animation: floating 5s linear infinite;
     .fill {
         opacity: 0;
         fill-opacity: 0;
@@ -55,6 +56,17 @@ svg {
     }
     to{
         opacity:1;
+    }
+}
+@keyframes floating {
+    0%{
+        transform: translateY(-5px);
+    }
+    50%{
+        transform: translateY(5px);
+    }
+    100%{
+        transform: translateY(-5px);
     }
 }
 .hero-caption{

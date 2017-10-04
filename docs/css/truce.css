@@ -3523,6 +3523,7 @@ HERO
 
 .hero.--small {
   height: 30vh;
+  min-height: 200px;
 }
 
 .hero-inner {
@@ -3538,6 +3539,8 @@ HERO
 svg {
   max-width: 150px;
   margin: auto;
+  -webkit-animation: floating 5s linear infinite;
+  animation: floating 5s linear infinite;
 }
 
 svg .fill {
@@ -3607,6 +3610,36 @@ svg .fill {
   }
   to {
     opacity: 1;
+  }
+}
+
+@-webkit-keyframes floating {
+  0% {
+    -webkit-transform: translateY(-5px);
+    transform: translateY(-5px);
+  }
+  50% {
+    -webkit-transform: translateY(5px);
+    transform: translateY(5px);
+  }
+  100% {
+    -webkit-transform: translateY(-5px);
+    transform: translateY(-5px);
+  }
+}
+
+@keyframes floating {
+  0% {
+    -webkit-transform: translateY(-5px);
+    transform: translateY(-5px);
+  }
+  50% {
+    -webkit-transform: translateY(5px);
+    transform: translateY(5px);
+  }
+  100% {
+    -webkit-transform: translateY(-5px);
+    transform: translateY(-5px);
   }
 }
 
