@@ -43,7 +43,7 @@ gulp.task('sass-truce', function() {
 
     // Copy distributed file for docs
     gulp.src(config.dest + '/warpaint.min.css')
-        .pipe(gulp.dest('./docs/css/'));
+        .pipe(gulp.dest('./docs/assets/css/'));
 
     return gulp.src(config.src + '/../paints/truce/truce.scss')
         .pipe(sourcemaps.init())
@@ -51,7 +51,7 @@ gulp.task('sass-truce', function() {
         .pipe(autoprefix({cascade:false, browsers: ['> 1%']}))
         .pipe(sourcemaps.write('.'))
         .pipe(rename('truce.css'))
-        .pipe(gulp.dest('./docs/css/'))
+        .pipe(gulp.dest('./docs/assets/css/'))
         .pipe(reload({ stream:true }));
 });
 
