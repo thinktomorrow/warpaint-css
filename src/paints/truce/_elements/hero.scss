@@ -6,7 +6,7 @@ HERO
     text-align: center;
     background-color: $paint-primary;
     &.--large{height: 100vh;}
-    &.--small{height: 30vh;}
+    &.--small{height: 30vh; min-height: 200px;}
 }
 .hero-inner{
     position: absolute;
