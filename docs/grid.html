@@ -1,11 +1,30 @@
 <!doctype html>
 <html class="no-js" lang="en">
-<div w3-include-html="views/partials/head.html"></div>
+<head>
+    <link rel="stylesheet" href="assets/css/fonts.css">
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Warpaint</title>
+    <meta name="description" content="Warpaint stylesheet. Design with freedom. Style with constraints.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+
+    <link href="//fonts.googleapis.com/css?family=Raleway:300,400,500,600,700,800,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/css/truce.css">
+
+    <script src="https://www.w3schools.com/lib/w3data.js"></script>
+</head>
 <body>
 <div w3-include-html="views/partials/navigation.html"></div>
 
 <span id="nav-top"></span>
-
+<div class="hero --small row center-center">
+    <div class="hero-caption">
+        <h1>Grid</h1>
+    </div>
+</div>
+<main class="--raised">
 <div class="container row offset">
     <aside class="column-3 sidebar">
 
@@ -258,43 +277,12 @@
         </section>
     </article>
 </div>
-<footer class="size-xs text-center inset-m zebra">
-    <small>  &copy; Warpaint</small>
-</footer>
-
+</main>
+<div w3-include-html="views/partials/footer.html"></div>
+<script> w3IncludeHTML(); </script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-<script src="/js/highlight/highlight.pack.js"></script>
+<script type="text/javascript" src="assets/js/warpaint.js"></script>
+<script src="assets/js/highlight/highlight.pack.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
-<script>
-
-    // STICKY
-    var stickable = $("header");
-    var navUp = $('.nav__up');
-
-    $(document).on( 'scroll', function(){
-        if ($(this).scrollTop() > 100) {
-            stickable.addClass("sticky");
-            navUp.addClass('active');
-        } else {
-            stickable.removeClass("sticky");
-            navUp.removeClass('active');
-        }
-    });
-
-    $(function() {
-        $('a[href*="#"]:not([href="#"])').click(function() {
-            if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-                var target = $(this.hash);
-                target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-                if (target.length) {
-                    $('html, body').animate({
-                        scrollTop: target.offset().top - 120
-                    }, 1000);
-                    return false;
-                }
-            }
-        });
-    });
-</script>
 </body>
 </html>
