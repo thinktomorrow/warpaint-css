@@ -1,8 +1,8 @@
 // STICKY
-var stickable = $("header");
+var stickable = $("div header");
 var navUp = $('.nav__up');
 
-$(document).on( 'scroll', function(){
+$(document).onLoad( 'scroll', function(){
     if ($(this).scrollTop() > 100) {
         stickable.addClass("sticky");
         navUp.addClass('active');
