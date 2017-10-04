@@ -503,16 +503,13 @@ template {
   display: none;
 }
 
-/* apply a natural box layout model to all elements, but allowing components to change */
-html {
-  box-sizing: border-box;
-}
-
 *, *:before, *:after {
   box-sizing: inherit;
 }
 
 html {
+  /* apply a natural box layout model to all elements, but allowing components to change */
+  box-sizing: border-box;
   font-size: 0.7em;
   line-height: 1.5;
 }
@@ -1976,6 +1973,20 @@ h6:not(:last-child) {
   align-items: center;
   -webkit-box-pack: center;
   justify-content: center;
+}
+
+.center-x {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+}
+
+.center-y {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
 }
 
 /*# sourceMappingURL=warpaint.css.map */

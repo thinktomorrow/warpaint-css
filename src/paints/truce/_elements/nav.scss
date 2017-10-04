@@ -62,9 +62,9 @@ nav li{
     font-size: 0.65rem;
     letter-spacing: 1px;
     position:relative;
-    color: $paint-primary;
+    color: darken($paint-primary, 25%);
     &:hover{
-      color: darken($paint-primary, 30%);
+      color: $paint-truce;
       &:after{
         transform: scaleX(1);
       }

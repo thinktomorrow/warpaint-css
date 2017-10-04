@@ -1,22 +1,22 @@
 .btn{
   border-radius: 3px;
-  background: $paint-primary;
-  border: 1px solid $paint-primary;
-  color: $paint-truce;
+  background: $paint-truce;
+  border: 1px solid $paint-truce;
+  color: $paint-primary;
   display: inline-block;
   transition: all 0.3s ease-in-out;
   &:hover{
     background: transparent;
-    color: $paint-primary;
+    color: $paint-truce;
   }
 }
 
 .btn-o{
   background: transparent;
-  color: $paint-primary;
+  color: $paint-truce;
   &:hover{
-    background: $paint-primary;;
-    color: $paint-truce;
+    background: $paint-truce;;
+    color: $paint-primary;
   }
 }
 

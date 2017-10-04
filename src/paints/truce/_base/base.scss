@@ -1,19 +1,19 @@
 ::selection{
-  color: $paint-truce;
-  background-color: $paint-primary
+    color: $paint-truce;
+    background-color: $paint-primary
 }
 
 body{
-  font-family: Gotham SSm,sans-serif;
-  font-weight: 300;
-  color:#777777;
+    font-family: Gotham SSm,sans-serif;
+    font-weight: 300;
+    color:#777777;
 }
 
 mark{
-  background-color: #cccccc;
-  color: white;
-  font-style: italic;
-  padding: 3px;
+    background-color: #cccccc;
+    color: white;
+    font-style: italic;
+    padding: 3px;
 }
 
 
@@ -21,53 +21,53 @@ mark{
 Border-grey
 ------------------------------------------------------- */
 .border-grey{
-  border: 1px solid #ccc;
+    border: 1px solid #ccc;
 }
 
 /* -------------------------------------------------------
- BLOCKS
- ------------------------------------------------------- */
+BLOCKS
+------------------------------------------------------- */
 .active-breakpoint-text{
 
-  &:after{
-    display:inline-block;
-    content:'default';
-  }
-
-  @include xsmall-view{
     &:after{
-      content:'xsmall';
-
+        display:inline-block;
+        content:'default';
     }
-  }
 
-  @include small-view{
-    &:after{
-      content:'small';
+    @include xsmall-view{
+        &:after{
+            content:'xsmall';
 
+        }
     }
-  }
 
-  @include medium-view{
-    &:after{
-      content:'medium';
+    @include small-view{
+        &:after{
+            content:'small';
 
+        }
     }
-  }
 
-  @include large-view{
-    &:after{
-      content:'large';
+    @include medium-view{
+        &:after{
+            content:'medium';
 
+        }
     }
-  }
 
-  @include xlarge-view{
-    &:after{
-      content:'xlarge';
+    @include large-view{
+        &:after{
+            content:'large';
 
+        }
     }
-  }
+
+    @include xlarge-view{
+        &:after{
+            content:'xlarge';
+
+        }
+    }
 }
 
 .nav__up{
@@ -80,38 +80,47 @@ Border-grey
     left: -0.6rem;
 
     @include small-view{
-      bottom: 2rem;
-      left: 2rem;
+        bottom: 2rem;
+        left: 2rem;
     }
 }
 
 .nav__up.active{
 
-  display:block;
+    display:block;
 
 }
 
 .nav__up__guidetext{
-  position:absolute;
-  bottom: -17px;
-  left: 0px;
-  white-space: nowrap;
-  color: #cccccc;
-  display:none;
+    position:absolute;
+    bottom: -17px;
+    left: 0px;
+    white-space: nowrap;
+    color: #cccccc;
+    display:none;
 
-  @include small-view{
-    display:block;
-  }
+    @include small-view{
+        display:block;
+    }
 }
 
 .note{
-  padding: $space-s;
-  font-size: $space-s;
-  color:#ffffff;
-  background-color: $paint-primary;
-  border:2px solid darken($paint-primary, 10%);
+    padding: $space-s;
+    font-size: $space-s;
+    color:#ffffff;
+    background-color: $paint-primary;
+    border:2px solid darken($paint-primary, 10%);
 
-  code{
-    background-color: darken($paint-primary, 10%);
-  }
+    code{
+        background-color: darken($paint-primary, 10%);
+    }
+}
+
+@media (max-width: 676px) {
+    aside {
+        display: none;
+    }
+    .offset {
+        margin-top: $space-s;
+    }
 }

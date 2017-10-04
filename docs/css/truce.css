@@ -520,16 +520,13 @@ template {
   display: none;
 }
 
-/* apply a natural box layout model to all elements, but allowing components to change */
-html {
-  box-sizing: border-box;
-}
-
 *, *:before, *:after {
   box-sizing: inherit;
 }
 
 html {
+  /* apply a natural box layout model to all elements, but allowing components to change */
+  box-sizing: border-box;
   font-size: 0.7em;
   line-height: 1.5;
 }
@@ -1995,28 +1992,42 @@ h6:not(:last-child) {
   justify-content: center;
 }
 
+.center-x {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+}
+
+.center-y {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+}
+
 .btn {
   border-radius: 3px;
-  background: #8e44ad;
-  border: 1px solid #8e44ad;
-  color: #FFF;
+  background: #FFF;
+  border: 1px solid #FFF;
+  color: #8e44ad;
   display: inline-block;
   transition: all 0.3s ease-in-out;
 }
 
 .btn:hover {
   background: transparent;
-  color: #8e44ad;
+  color: #FFF;
 }
 
 .btn-o {
   background: transparent;
-  color: #8e44ad;
+  color: #FFF;
 }
 
 .btn-o:hover {
-  background: #8e44ad;
-  color: #FFF;
+  background: #FFF;
+  color: #8e44ad;
 }
 
 .btn-link {
@@ -2103,11 +2114,11 @@ nav li a {
   font-size: 0.65rem;
   letter-spacing: 1px;
   position: relative;
-  color: #8e44ad;
+  color: #432051;
 }
 
 nav li a:hover {
-  color: #34193f;
+  color: #FFF;
 }
 
 nav li a:hover:after {
@@ -2161,13 +2172,21 @@ nav li a:after {
 }
 
 /* -------------------------------------------------------
- HERO
- ------------------------------------------------------- */
+HERO
+------------------------------------------------------- */
 .hero {
-  height: 100vh;
   position: relative;
   text-align: center;
-  background-color: #efefef;
+  background-color: #8e44ad;
+}
+
+.hero.--large {
+  height: 100vh;
+}
+
+.hero.--small {
+  height: 30vh;
+  min-height: 200px;
 }
 
 .hero-inner {
@@ -2183,13 +2202,15 @@ nav li a:after {
 svg {
   max-width: 150px;
   margin: auto;
+  -webkit-animation: floating 5s linear infinite;
+  animation: floating 5s linear infinite;
 }
 
-svg .st0 {
+svg .fill {
   opacity: 0;
   fill-opacity: 0;
-  fill: #8e44ad;
-  stroke: #8e44ad;
+  fill: #432051;
+  stroke: #25122d;
   stroke-width: 2px;
   stroke-dasharray: 870px;
   stroke-dashoffset: 870px;
@@ -2255,6 +2276,40 @@ svg .st0 {
   }
 }
 
+@-webkit-keyframes floating {
+  0% {
+    -webkit-transform: translateY(-5px);
+    transform: translateY(-5px);
+  }
+  50% {
+    -webkit-transform: translateY(5px);
+    transform: translateY(5px);
+  }
+  100% {
+    -webkit-transform: translateY(-5px);
+    transform: translateY(-5px);
+  }
+}
+
+@keyframes floating {
+  0% {
+    -webkit-transform: translateY(-5px);
+    transform: translateY(-5px);
+  }
+  50% {
+    -webkit-transform: translateY(5px);
+    transform: translateY(5px);
+  }
+  100% {
+    -webkit-transform: translateY(-5px);
+    transform: translateY(-5px);
+  }
+}
+
+.hero-caption {
+  color: #432051;
+}
+
 .hero-caption h1 {
   margin-top: 0;
   font-weight: lighter;
@@ -2263,6 +2318,16 @@ svg .st0 {
 
 .hero-logo {
   max-width: 100px;
+}
+
+main.--raised {
+  position: relative;
+  background-color: #FFF;
+  z-index: 1;
+  overflow-y: hidden;
+  margin: -60px 30px 0px;
+  border-radius: 6px;
+  box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
 }
 
 ::-moz-selection {
@@ -2296,8 +2361,8 @@ Border-grey
 }
 
 /* -------------------------------------------------------
- BLOCKS
- ------------------------------------------------------- */
+BLOCKS
+------------------------------------------------------- */
 .active-breakpoint-text:after {
   display: inline-block;
   content: 'default';
@@ -2378,6 +2443,15 @@ Border-grey
 
 .note code {
   background-color: #703688;
+}
+
+@media (max-width: 676px) {
+  aside {
+    display: none;
+  }
+  .offset {
+    margin-top: 0.75rem;
+  }
 }
 
 a {

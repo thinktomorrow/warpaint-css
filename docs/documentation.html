@@ -9,20 +9,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 
-    <link rel="stylesheet" href="/css/truce.css">
+    <link rel="stylesheet" href="css/truce.css">
 </head>
 <body class="">
 
 <header>
     <div class="container header-container stack">
         <div class="header-logo">
-          <a href="/index.html"><img src="/img/warpaint-logo.svg" alt="Warpaint"></a>
+          <a href="/index.html"><img src="img/warpaint-logo.svg" alt="Warpaint"></a>
         </div>
         <nav class="header-navigation">
             <ul>
-                <li class="inline-s"><a href="/index.html#quickstart">Get started</a></li>
-                <li class="inline-s"><a href="/index.html#mindset">Mindset</a></li>
-                <li class="inline-s"><a href="/documentation.html">Documentation</a></li>
+                <li class="inline-s"><a href="index.html#quickstart">Get started</a></li>
+                <li class="inline-s"><a href="index.html#mindset">Mindset</a></li>
+                <li class="inline-s"><a href="documentation.html">Documentation</a></li>
                 <li class="inline-s"><a target="_blank" href="https://github.com/thinktomorrow/warpaint">Github</a></li>
             </ul>
         </nav>
@@ -30,9 +30,14 @@
 </header>
 
 <span id="nav-top"></span>
-
+<div class="hero --small row center-center">
+    <div class="hero-caption">
+        <h1>Documentation</h1>
+    </div>
+</div>
+<main class="--raised">
 <div class="container row offset">
-    <sidebar class="column-3 sidebar">
+    <aside class="column-3 sidebar">
 
         <h3 class="text-right first">GRID</h3>
         <ul class="sidebar__nav">
@@ -65,7 +70,8 @@
 
         <h3 class="text-right">HELPER CLASSES</h3>
         <ul class="sidebar__nav">
-
+            <li><a href="#floats">Floats</a></li>
+            <li><a href="#flex-alignment">Flex alignment</a></li>
         </ul>
 
         <a class="btn btn-o nav__up" href="#nav-top">
@@ -74,7 +80,7 @@
         </a>
 
 
-    </sidebar>
+    </aside>
     <article class="column">
 
         <section id="grid-basic">
@@ -351,7 +357,7 @@
             <p>
                 Since the develop mindset of warpaint is mobile first, the general idea is that you don't need to account for every viewport size in particular.
             </p>
-            <p>Having said that, there are some cases where working with breakpoints can be useful. Warpaint provides 5 breakpoints: </p>
+            <p>Having that said, there are some cases where working with breakpoints can be useful. Warpaint provides 5 breakpoints: </p>
 
 <pre>
 
@@ -406,10 +412,82 @@
 
         </section>
         <!-- end responsive -->
+        <!-- start helper classes -->
+        <section class="stack-l">
+            <h2>Alignment</h2>
+            <p>There are several helper classes to help define the grid or the items within a row or column.</p>
 
+
+            <h3 id="floats">Floats</h3>
+
+            <div class="dummy dummy-inset stack">
+                <div class="row zebra">
+                    <div class="column zebra">
+                        <div class="column-3 inside-element inset left center-center">.left</div>
+                    </div>
+                </div>
+            </div>
+            <div class="dummy dummy-inset stack">
+                <div class="row zebra">
+                    <div class="column zebra">
+                        <div class="column-3 inside-element inset right center-center">.right</div>
+                    </div>
+                </div>
+            </div>
+            <div class="dummy dummy-inset stack">
+                <div class="row zebra">
+                    <div class="column zebra">
+                        <div class="column-3 inside-element inset center center-center">.center</div>
+                    </div>
+                </div>
+            </div>
+
+            <p>If there is some unexpected behaviour, e.g. your columns are floating all over the place, you can simply add a <code>.clearfix</code> after the column that is behaving poorly.</p>
+
+            <h3 id="flex-alignment">Flexbox alignment</h3>
+
+            <p>Because Warpaint is a Flexbox-based grid, we have added a few flexbox classes for centering elements within a row or a div. </p>
+
+            <div class="row gutter top dummy-inset zebra inset">
+                <code> .center-y </code>
+                <div class="center-y">
+                    <div class="column">
+                        <div class="inside-element inset">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+                    </div>
+                    <div class="column">
+                         <div class="inside-element inset">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+                    </div>
+                    <div class="column">
+                         <div class="inside-element inset">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.</div>
+                    </div>
+                </div>
+            </div>
+            <div class="row gutter top dummy-inset zebra stack">
+                <div class="center-center" style="height:500px;">
+                    <div class="column-4">
+                         <div class="inside-element inset">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+                    </div>
+                </div>
+            </div>
+            <div class="row gutter top dummy-inset zebra inset">
+                <code> .center-x </code>
+                <div class="center-x">
+                    <div class="column">
+                        <div class="inside-element inset">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+                    </div>
+                    <div class="column">
+                         <div class="inside-element inset">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+                    </div>
+                    <div class="column">
+                         <div class="inside-element inset">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end Helper classes -->
     </div>
 </article>
-
+</main>
 <footer class="size-xs text-center inset-m zebra">
     <small>  &copy; Warpaint</small>
 </footer>
