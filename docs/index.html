@@ -1,7 +1,7 @@
 <!doctype html>
 <html class="no-js" lang="en">
 <head>
-    <link rel="stylesheet" href="/css/fonts.css">
+    <link rel="stylesheet" href="assets/css/fonts.css">
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>Warpaint</title>
@@ -11,27 +11,12 @@
 
     <link href="//fonts.googleapis.com/css?family=Raleway:300,400,500,600,700,800,900" rel="stylesheet">
 
-    <link rel="stylesheet" href="css/truce.css">
-</head>
-<body class="">
+    <link rel="stylesheet" href="assets/css/truce.css">
 
-<header>
-    <div class="container header-container stack-s">
-        <div class="header-logo">
-          <span class="header-sticky-logo">
-              <a href="/index.html#top"><img src="img/warpaint-logo.svg" alt="Warpaint"></a>
-          </span>
-        </div>
-        <nav class="header-navigation fadeIn">
-            <ul>
-                <li class="inset-s"><a href="index.html#quickstart">Get started</a></li>
-                <li class="inset-s"><a href="index.html#mindset">Mindset</a></li>
-                <li class="inset-s"><a href="documentation.html">Documentation</a></li>
-                <li class="inset-s"><a target="_blank" href="https://github.com/thinktomorrow/warpaint">Github</a></li>
-            </ul>
-        </nav>
-    </div>
-</header>
+    <script src="https://www.w3schools.com/lib/w3data.js"></script>
+</head>
+<body>
+<div w3-include-html="views/partials/navigation.html"></div>
 
 <section class="hero --large" id="top">
   <div class="hero-inner">
@@ -156,39 +141,15 @@ $base-font-size:  0.875em
 </div>
 
 </main>
-<footer class="size-xs text-center inset-m zebra">
-  <small>  &copy; Warpaint</small>
-</footer>
 
+
+
+
+
+<script> w3IncludeHTML(); </script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-<script>
-
-    // STICKY
-    var stickable = $("header");
-
-    $(document).on( 'scroll', function(){
-        if ($(this).scrollTop() > 100) {
-            stickable.addClass("sticky");
-        } else {
-            stickable.removeClass("sticky");
-        }
-    });
-
-    $(function() {
-        $('a[href*="#"]:not([href="#"])').click(function() {
-          if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-            var target = $(this.hash);
-            target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-            if (target.length) {
-              $('html, body').animate({
-                scrollTop: target.offset().top - 120
-              }, 1000);
-              return false;
-            }
-          }
-        });
-      });
-
-</script>
+<script type="text/javascript" src="assets/js/warpaint.js"></script>
+<script src="assets//js/highlight/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
 </body>
 </html>

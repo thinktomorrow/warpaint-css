@@ -647,8 +647,6 @@ img {
 .row {
   display: -webkit-box;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
   flex-flow: row wrap;
   /* Allow overflow to wrap to following line */
 }
@@ -661,14 +659,17 @@ img {
   }
   .row.top {
     -webkit-box-align: start;
+    -ms-grid-row-align: flex-start;
     align-items: flex-start;
   }
   .row.middle {
     -webkit-box-align: center;
+    -ms-grid-row-align: center;
     align-items: center;
   }
   .row.bottom {
     -webkit-box-align: end;
+    -ms-grid-row-align: flex-end;
     align-items: flex-end;
   }
   .row.left {
