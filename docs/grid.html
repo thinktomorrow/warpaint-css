@@ -12,12 +12,25 @@
     <link href="//fonts.googleapis.com/css?family=Raleway:300,400,500,600,700,800,900" rel="stylesheet">
 
     <link rel="stylesheet" href="assets/css/truce.css">
-
-    <script src="https://www.w3schools.com/lib/w3data.js"></script>
 </head>
 <body>
-<div w3-include-html="views/partials/navigation.html"></div>
-
+    <header>
+        <div class="container header-container stack-s">
+            <div class="header-logo">
+              <span class="header-sticky-logo">
+                  <a href="/index.html#top"><img src="../assets/img/warpaint-logo.svg" alt="Warpaint"></a>
+              </span>
+            </div>
+            <nav class="header-navigation fadeIn">
+                <ul>
+                    <li class="inset-s"><a href="index.html">Mindset</a></li>
+                    <li class="inset-s"><a href="grid.html">The grid</a></li>
+                    <li class="inset-s"><a href="spacing.html">Spacing</a></li>
+                    <li class="inset-s"><a target="_blank" href="https://github.com/thinktomorrow/warpaint">Github</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 <span id="nav-top"></span>
 <div class="hero --small row center-center">
     <div class="hero-caption">
@@ -278,8 +291,10 @@
     </article>
 </div>
 </main>
-<div w3-include-html="views/partials/footer.html"></div>
-<script> w3IncludeHTML(); </script>
+<footer class="size-xs text-center inset-m zebra">
+    <small>  &copy; Warpaint</small>
+</footer>
+
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script type="text/javascript" src="assets/js/warpaint.js"></script>
 <script src="assets/js/highlight/highlight.pack.js"></script>
