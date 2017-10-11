@@ -337,47 +337,6 @@
 
         </section>
 
-        <section id="grid-gutter">
-            <h2>Gutters</h2>
-            <p>
-                If you like some spacing between columns, add the <code>.gutter</code> class to your <code>.row</code> element.
-                This way all child columns will receive an equally spaced gutter between them.
-            </p>
-
-            <div class="dummy-gutter stack inset-s" style="background-color:aliceblue">
-                <div class="row gutter-s">
-                    <div class="column"><div class="box">I'm guttered</div></div>
-                    <div class="column"><div class="box">I'm guttered</div></div>
-                </div>
-                <div class="row gutter-s">
-                    <div class="column"><div class="box">We're all guttered</div></div>
-                    <div class="column"><div class="box">We're all guttered</div></div>
-                    <div class="column"><div class="box">We're all guttered</div></div>
-                </div>
-            </div>
-
-            <pre><code class="html">&lt;div class="row gutter"&gt;
-    &lt;div class="column"&gt;&lt;div class="box"&gt;I'm guttered&lt;/div&gt;&lt;/div&gt;
-    &lt;div class="column"&gt;&lt;div class="box"&gt;I'm guttered&lt;/div&gt;&lt;/div&gt;
-&lt;/div&gt;</code></pre>
-
-            <p>
-                It is important to note that when using gutters, the column element acts as a wrapper of the displayed content.
-                The gutter logic add padding to each column in order to realize flexible spacing in between.
-            </p><p>
-            Instead of styling the column itself you should rather apply styles on the inner child element.
-        </p>
-
-            <p class="note">
-                <strong>Overflow due to negative margins</strong><br><br>
-                For optimal positioning of guttered columns, the parent row has negative margins on left and right sides.
-                There is no issue when using the container wrapper but if you have columns from edge to edge of the viewport, be aware that the negative margins will cause an overflow on your body element.
-                <br><br>
-                Hide the horizontal overflow on the body like so: <code>body{ overflow-x:hidden; }</code>
-            </p>
-
-        </section>
-
         <section class="stack-l" id="grid-responsive">
             <h2 id="responsive-grid">Responsive sizing</h2>
             <p>
@@ -427,8 +386,8 @@
 <div w3-include-html="views/partials/footer.html"></div>
 <script> w3IncludeHTML(); </script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-<script type="text/javascript" src="assets/js/warpaint.js"></script>
-<script src="assets/js/highlight/highlight.pack.js"></script>
+<script type="text/javascript" src="/assets/js/warpaint.js"></script>
+<script src="/assets/js/highlight/highlight.pack.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
 </body>
 </html>
