@@ -1,16 +1,6 @@
 /*
  | ----------------------------------------------------------------
- | Style settings
- | ----------------------------------------------------------------
- |
- | Here you should configure your project specific settings
- |
- */
-
-
-/*
- | ----------------------------------------------------------------
- | Container margins columns
+ | Container margin
  | ----------------------------------------------------------------
  |
  | By default the container has an equal margin to the left and right.
@@ -38,7 +28,7 @@ $grid-columns: 12 !default;
  | and sizings are measured upon. By default this is set to 0.875em. Depending on
  | your font family of choice this should be changed to a proper default.
  */
-$base-font-size:  0.875em;
+$base-font-size:  0.875em !default;
 
 /*
  | ----------------------------------------------------------------
@@ -50,12 +40,12 @@ $base-font-size:  0.875em;
  | allow for a responsive typography. Important since
  | font-size determines the sizing of a lot of components
  */
-$ratio-xs: 0.8;
-$ratio-s: 0.9;
-$ratio-m: 1.0;
-$ratio-l: 1.1;
-$ratio-xl: 1.2;
-$ratio-xxl: 1.4;
+$ratio-xs: 0.8 !default;
+$ratio-s: 0.9 !default;
+$ratio-m: 1.0 !default;
+$ratio-l: 1.1 !default;
+$ratio-xl: 1.2 !default;
+$ratio-xxl: 1.4 !default;
 
 /*
  | ----------------------------------------------------------------
@@ -66,15 +56,15 @@ $ratio-xxl: 1.4;
  | spacing of elements like margins and paddings. These settings
  | are the base of all responsive sizings.
  */
-$space-xs: 0.375rem;
-$space-s: 0.75rem;
-$space-m: 1.5rem;
-$space-l: 3rem;
-$space-xl: 6rem;
+$space-xs: 0.375rem !default;
+$space-s: 0.75rem !default;
+$space-m: 1.5rem !default;
+$space-l: 3rem !default;
+$space-xl: 6rem !default;
 
 // Line-height
-$base-line-height: 1.5;
-$header-line-height: 1.25;
+$base-line-height: 1.5 !default;
+$header-line-height: 1.25 !default;
 
 /*
  | ----------------------------------------------------------------
@@ -85,12 +75,12 @@ $header-line-height: 1.25;
  | is mobile first and encourages to use as little breakpoints as
  | possible. We use relative units to account for proper zooming of the webpage.
  */
-$bp-xsmall: 20em; // 320px
-$bp-small: 30em; // 480px
-$bp-medium: 48em; // 768px
-$bp-large: 64em; // 1024px
-$bp-xlarge: 85em; // 1365px
-$bp-xxlarge: 120em; // 1920px
+$bp-xsmall: 20em !default; // 320px
+$bp-small: 30em !default; // 480px
+$bp-medium: 48em !default; // 768px
+$bp-large: 64em !default; // 1024px
+$bp-xlarge: 85em !default; // 1365px
+$bp-xxlarge: 120em !default; // 1920px
 
 /*
  | ----------------------------------------------------------------

@@ -62,9 +62,9 @@ nav li{
     font-size: 0.65rem;
     letter-spacing: 1px;
     position:relative;
-    color: darken($paint-primary, 25%);
+    color: hsl($paint-primary-hue,$paint-primary-sat,90);
     &:hover{
-      color: $paint-truce;
+      color: hsl($paint-primary-hue,$paint-primary-sat,80);
       &:after{
         transform: scaleX(1);
       }
@@ -96,7 +96,7 @@ nav li a:after{
 // SIDEBAR
 .sidebar{
   padding-right:1rem;
-  margin-right:2rem;
+  margin-right:3rem;
   border-right:1px dotted #cccccc;
 }
 
@@ -106,7 +106,6 @@ nav li a:after{
 
 .sidebar__nav li{
   list-style: none outside none;
-  text-align: right;
 }
 
 .sidebar__divider{

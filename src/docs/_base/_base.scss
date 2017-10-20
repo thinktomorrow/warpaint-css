@@ -1,16 +1,20 @@
 ::selection{
-    color: $paint-truce;
+    color: $paint-white;
     background-color: $paint-primary
 }
 
 body{
-    font-family: Gotham SSm,sans-serif;
+    font-family: "Source Sans Pro", "Helvetica Neue", Arial, sans-serif;
     font-weight: 300;
-    color:#777777;
+    color: hsl($paint-primary-hue, 10 ,$paint-primary-light);
+}
+
+h1,h2,h3,h4,h5{
+    font-family: Gotham SSm,"Source Sans Pro", "Helvetica Neue", Arial, sans-serif;
 }
 
 mark{
-    background-color: #cccccc;
+    background-color: hsl($paint-primary-hue, 6 ,$paint-primary-light);
     color: white;
     font-style: italic;
     padding: 3px;
@@ -110,6 +114,11 @@ BLOCKS
     color:#ffffff;
     background-color: $paint-primary;
     border:2px solid darken($paint-primary, 10%);
+
+    a{
+        color: $paint-white;
+        text-decoration:underline;
+    }
 
     code{
         background-color: darken($paint-primary, 10%);

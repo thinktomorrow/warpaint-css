@@ -39,18 +39,18 @@ gulp.task('sass-min', function() {
         .pipe(reload({ stream:true }));
 });
 
-gulp.task('sass-truce', function() {
+gulp.task('sass-docs', function() {
 
     // Copy distributed file for docs
     gulp.src(config.dest + '/warpaint.min.css')
         .pipe(gulp.dest('./docs/assets/css/'));
 
-    return gulp.src(config.src + '/../paints/truce/truce.scss')
+    return gulp.src(config.src + '/../docs/docs.scss')
         .pipe(sourcemaps.init())
         .pipe(sass({outputStyle: 'expanded'}).on('error', sass.logError))
         .pipe(autoprefix({cascade:false, browsers: ['> 1%']}))
         .pipe(sourcemaps.write('.'))
-        .pipe(rename('truce.css'))
+        .pipe(rename('docs.css'))
         .pipe(gulp.dest('./docs/assets/css/'))
         .pipe(reload({ stream:true }));
 });
@@ -63,4 +63,4 @@ gulp.task('watch',function(){
     gulp.watch(config.src+'/**/*.scss',['sass','sass-min'],browserSync.reload());
 });
 
-gulp.task('default', ['sass','sass-min','sass-truce']);
+gulp.task('default', ['sass','sass-min','sass-docs']);

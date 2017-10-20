@@ -4,296 +4,439 @@
     <link rel="stylesheet" href="assets/css/fonts.css">
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Warpaint</title>
+    <title>Warpaint documentation</title>
     <meta name="description" content="Warpaint stylesheet. Design with freedom. Style with constraints.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 
     <link href="//fonts.googleapis.com/css?family=Raleway:300,400,500,600,700,800,900" rel="stylesheet">
 
-    <link rel="stylesheet" href="assets/js/highlight/highlight-warpaint.css">
-    <link rel="stylesheet" href="assets/css/truce.css">
+    <link rel="stylesheet" href="assets/css/docs.css">
 </head>
 <body>
-    <header>
-        <div class="container header-container stack-s">
-            <div class="header-logo">
+<header>
+    <div class="container header-container stack-s">
+        <div class="header-logo">
               <span class="header-sticky-logo">
                   <a href="/index.html#top"><img src="../assets/img/warpaint-logo.svg" alt="Warpaint"></a>
               </span>
-            </div>
-            <nav class="header-navigation fadeIn">
-                <ul>
-                    <li class="inset-s"><a href="index.html">Mindset</a></li>
-                    <li class="inset-s"><a href="grid.html">The grid</a></li>
-                    <li class="inset-s"><a href="spacing.html">Spacing</a></li>
-                    <li class="inset-s"><a target="_blank" href="https://github.com/thinktomorrow/warpaint">Github</a></li>
-                </ul>
-            </nav>
         </div>
-    </header>
+        <nav class="header-navigation fadeIn">
+            <ul>
+                <li class="inset-s"><a href="index.html">Mindset</a></li>
+                <li class="inset-s"><a href="grid.html">Documentation</a></li>
+                <li class="inset-s"><a target="_blank" href="https://github.com/thinktomorrow/warpaint">Github</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
 <span id="nav-top"></span>
 <div class="hero --small row center-center">
     <div class="hero-caption">
-        <h1>Grid</h1>
+        <h1>Documentation</h1>
     </div>
 </div>
-<main class="--raised">
-<div class="container row offset">
-    <aside class="column-3 sidebar">
+<main class="container">
+    <div class="row inset-l">
+        <aside class="column-3 sidebar">
 
-        <h3 class="text-right first">GRID</h3>
-        <ul class="sidebar__nav">
-            <li><a href="#grid-basic">Basic grid</a></li>
-            <li><a href="#columns">Columns</a></li>
-            <li><a href="#grid-width">Fixed sizes</a></li>
-            <li><a href="#grid-container">Container</a></li>
-            <li><a href="#grid-gutter">Gutters</a></li>
-            <li><a href="#grid-responsive">Responsive sizing</a></li>
-        </ul>
-
-        <a class="btn btn-o nav__up" href="#nav-top">
-            &uarr;
-            <span class="nav__up__guidetext font-xs"><span class="active-breakpoint-text"></span> viewport</span>
-        </a>
-
-
-    </aside>
-    <article class="column">
-
-        <section class="stack-l" id="grid-basic">
-
-            <h2>Basic grid</h2>
-            <h4>Quick start:</h4>
-            <ol>
-                <li>Create a <code>&lt;div class="row"&gt;</code> element.</li>
-                <li>Add multiple <code>&lt;div class="column"&gt;</code> elements to the row.</li>
-            </ol>
-
-            <div class="dummy">
-                <div class="row">
-                    <div class="column text-center">First column</div>
-                    <div class="column text-center">Second column</div>
-                </div>
-            </div>
-
-            <pre><code class="html">&lt;div class="row"&gt;
-    &lt;div class="column"&gt;First column&lt;/div&gt;
-    &lt;div class="column"&gt;Second column&lt;/div&gt;
-&lt;/div&gt;</code></pre>
-
-            <h4>Additional info:</h4>
-
-            <ul>
-                <li>The row element acts as a wrapper for a group of columns. It functions as the flexbox parent and makes sure the child columns are positioned properly.</li>
-            </ul>
-        </section>
-        <section class="stack-l" id="columns">
-
-            <h2>Columns</h2>
-
-            <ul>
-                <li>By default, columns are equally divided inside the row element.</li>
-                <li>Columns inside the same row are equal in height.</li>
+            <h3>Getting started</h3>
+            <ul class="sidebar__nav">
+                <li><a href="#getting-started">Installation</a></li>
+                <li><a href="#custom-build">Customize build</a></li>
+                <li><a href="#custom-settings">Settings</a></li>
             </ul>
 
-            <div class="dummy">
-                <div class="row">
-                    <div class="column">1</div>
-                    <div class="column">2</div>
-                    <div class="column">3</div>
-                </div>
-                <div class="row">
-                    <div class="column">1</div>
-                    <div class="column">2</div>
-                    <div class="column">3.<br>Pushing the entire row down</div>
-                    <div class="column">4</div>
-                    <div class="column">5</div>
-                </div>
-            </div>
+            <h3>Layout</h3>
+            <ul class="sidebar__nav">
+                <li><a href="#grid-basic">Basic grid</a></li>
+                <li><a href="#columns">Columns</a></li>
+                <li><a href="#grid-width">Fixed sizes</a></li>
+                <li><a href="#grid-container">Container</a></li>
+                <li><a href="#grid-gutter">Gutters</a></li>
+                <li><a href="#grid-responsive">Responsive sizing</a></li>
+            </ul>
 
-            <pre><code class="html">&lt;div class="row"&gt;
-    &lt;div class="column"&gt;1&lt;/div&gt;
-    &lt;div class="column"&gt;2&lt;/div&gt;
-    &lt;div class="column"&gt;3&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="row"&gt;
-    &lt;div class="column"&gt;1&lt;/div&gt;
-    &lt;div class="column"&gt;2&lt;/div&gt;
-    &lt;div class="column"&gt;3.&lt;br&gt;Pushing the entire row down&lt;/div&gt;
-    &lt;div class="column"&gt;4&lt;/div&gt;
-    &lt;div class="column"&gt;5&lt;/div&gt;
-&lt;/div&gt;</code></pre>
+            <a class="btn btn-o nav__up" href="#nav-top">
+                &uarr;
+                <span class="nav__up__guidetext font-xs"><span class="active-breakpoint-text"></span> viewport</span>
+            </a>
 
-        </section>
 
-        <section class="stack-l" id="grid-width">
+        </aside>
+        <article class="column">
 
-            <h2>Fixed sizes</h2>
-            <p>
-                If you need to fixate the relative width of your columns, warpaint provides a basic set of sizing classes for you to use.
-                For the 12-column grid, you can opt to size from <code>.column-1</code> to <code>.column-12</code>.
-            </p>
+            <section class="stack-l" id="getting-started">
 
-            <div class="dummy">
-                <div class="row">
-                    <div class="column-6">.column-6</div>
-                    <div class="column-6">.column-6</div>
-                </div>
-                <div class="row">
-                    <div class="column-7">.column-7</div>
-                    <div class="column-5">.column-5</div>
-                </div>
-                <div class="row">
-                    <div class="column-8">.column-8</div>
-                    <div class="column-4">.column-4</div>
-                </div>
-                <div class="row">
-                    <div class="column-9">.column-9</div>
-                    <div class="column-3">.column-3</div>
-                </div>
-                <div class="row">
-                    <div class="column-10">.column-10</div>
-                    <div class="column-2">2</div>
-                </div>
-                <div class="row">
-                    <div class="column-11">.column-11</div>
-                    <div class="column-1">1</div>
-                </div>
-            </div>
+                <h2>Getting started</h2>
 
-            <pre><code class="html">&lt;div class="row"&gt;
-    &lt;div class="column-6"&gt;6&lt;/div&gt;
-    &lt;div class="column-6"&gt;6&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="row"&gt;
-    &lt;div class="column-10"&gt;10&lt;/div&gt;
-    &lt;div class="column-2"&gt;2&lt;/div&gt;
-&lt;/div&gt;
-...</code></pre>
-            <p class="note">
-                The default structure is a 12-column grid. But if you compile from sass, this can be easily changed by changing the <code>$grid-columns</code> value in the <em>settings.scss</em> file.
-            </p>
+                <section class="stack-l">
+                    <h3>Installation</h3>
 
-        </section>
+                    Current stable version is <a href="https://github.com/thinktomorrow/warpaint/tree/0.0.9">0.0.9</a>.
 
-        <section id="grid-container" class="stack-l">
+                    <p>Install warpaint via npm</p>
+                    <pre><code>$ npm install warpaint --save-dev
+    </code></pre>
 
-            <h2>Container</h2>
+                    <p>Or download from github:</p>
+                    <div>
+                        <a download class="btn" href="https://github.com/thinktomorrow/warpaint/archive/0.0.9.zip">Full zip</a>
+                        <a download class="btn" href="https://raw.githubusercontent.com/thinktomorrow/warpaint/0.0.9/dist/warpaint.min.css">warpaint.min.css (17 kb)</a>
+                    </div>
 
-            <p>
-                To present your content with some space to the left and right, place your rows inside a <code>.container</code> wrapper.
-                By default the grid expands to the full width of its parent.
-            </p>
+                </section>
 
-            <div class="dummy zebra">
-                <div class="container">
+                <section class="stack-l">
+                    <h3>Browser support</h3>
+                    <p> Out of the box, warpaint is supported in all modern browsers: Chrome, Firefox, Safari, Edge and
+                        Opera.
+                    </p>
+                    <p>
+                        There is a fairly good support for IE10+ and most functionality should be working.
+                        Since it relies on flexbox there is limited compatibility with IE9.
+                    </p>
+                </section>
+            </section>
+
+            <section class="stack-l" id="custom-build">
+                <h2>Customize build</h2>
+
+                <p>You can build from the sass files yourself if you like to customize the warpaint logic.</p>
+                <ol>
+                    <li>After installing the package via npm, copy the following file to your application:
+                        <code>node_modules/warpaint/src/sass/settings.scss</code>
+                    </li>
+                    <li>
+                        In your main sass file refer to this settings file as wel as to the warpaint compilations file.
+                        This is located at <code>node_modules/warpaint/src/sass/warpaint.scss</code>
+                        The warpaint file is the main file for compilation and contains all the source references.
+                    </li>
+                    <li>
+                        The settings file contains all the customisable features and you can change these to your liking.
+                        Note: in order to to override the default settings, be sure to import the settings source before
+                        importing the warpaint file.
+                    </li>
+                </ol>
+            </section>
+
+            <section class="stack-l" id="custom-settings">
+                <h2>Settings</h2>
+
+                <section class="stack-l">
+                    <h3>Container margin</h3>
+                    <p>By default the container has an equal margin to the left and right. These margins are responsive
+                        depending on the viewport width. Here you can define the maximum value.</p>
+                    <pre><code class="html">$container-margin: 16% !default;</code></pre>
+                </section>
+                <section class="stack-l">
+                    <h3>Grid columns</h3>
+                    <p>By default the grid consists of 12 blocks but you can set this whatever you like. If you feel
+                        experimental, we suggest some good alternatives such as a 10 or 15 block division.</p>
+                    <pre><code class="html">$grid-columns: 12 !default;</code></pre>
+                </section>
+                <section class="stack-l">
+                    <h3>Base font size</h3>
+                    <p>The default font-size. This is also the value on which all font based spacings and sizings are
+                        measured upon. By default this is set to 0.875em. Depending on your font family of choice this
+                        should be changed to a proper default.</p>
+                    <pre><code class="html">$base-font-size:  0.875em !default;</code></pre>
+                </section>
+                <section class="stack-l">
+                    <h3>Size ratios</h3>
+                    <p>Based upon the base font size, here we set the font-size ratios for the different screen sizes. These
+                        values are carefully selected to allow for a responsive typography. Important since font-size
+                        determines the sizing of a lot of components</p>
+                    <pre><code class="html">$ratio-xs: 0.8 !default;
+    $ratio-s: 0.9 !default;
+    $ratio-m: 1.0 !default;
+    $ratio-l: 1.1 !default;
+    $ratio-xl: 1.2 !default;
+    $ratio-xxl: 1.4 !default;
+    </code></pre>
+                </section>
+            </section>
+            <section class="stack-l">
+                <h3>Spacing</h3>
+                <p>Based upon the base font size, These values determine the spacing of elements like margins and paddings.
+                    These settings are the base of all responsive sizings.</p>
+                <pre><code class="html">$space-xs: 0.375rem !default;
+    $space-s: 0.75rem !default;
+    $space-m: 1.5rem !default;
+    $space-l: 3rem !default;
+    $space-xl: 6rem !default;
+    </code></pre>
+
+            </section>
+
+
+            <section class="stack-l" id="grid-basic">
+
+                <h2>Basic grid</h2>
+                <h4>Quick start:</h4>
+                <ol>
+                    <li>Create a <code>&lt;div class="row"&gt;</code> element.</li>
+                    <li>Add multiple <code>&lt;div class="column"&gt;</code> elements to the row.</li>
+                </ol>
+
+                <div class="dummy">
                     <div class="row">
-                        <div class="column">This is content</div>
-                        <div class="column">placed inside a container.</div>
+                        <div class="column text-center">First column</div>
+                        <div class="column text-center">Second column</div>
                     </div>
                 </div>
-            </div>
 
-            <pre><code class="html">
-&lt;div class="container"&gt;
-    &lt;div class="row"&gt;
-        &lt;div class="column"&gt;This is content&lt;/div&gt;
-        &lt;div class="column"&gt;placed inside a container.&lt;/div&gt;
+                <pre><code class="html">&lt;div class="row"&gt;
+        &lt;div class="column"&gt;First column&lt;/div&gt;
+        &lt;div class="column"&gt;Second column&lt;/div&gt;
+    &lt;/div&gt;</code></pre>
+
+                <h4>Additional info:</h4>
+
+                <ul>
+                    <li>The row element acts as a wrapper for a group of columns. It functions as the flexbox parent and
+                        makes sure the child columns are positioned properly.
+                    </li>
+                </ul>
+            </section>
+            <section class="stack-l" id="columns">
+
+                <h2>Columns</h2>
+
+                <ul>
+                    <li>By default, columns are equally divided inside the row element.</li>
+                    <li>Columns inside the same row are equal in height.</li>
+                </ul>
+
+                <div class="dummy">
+                    <div class="row">
+                        <div class="column">1</div>
+                        <div class="column">2</div>
+                        <div class="column">3</div>
+                    </div>
+                    <div class="row">
+                        <div class="column">1</div>
+                        <div class="column">2</div>
+                        <div class="column">3.<br>Pushing the entire row down</div>
+                        <div class="column">4</div>
+                        <div class="column">5</div>
+                    </div>
+                </div>
+
+                <pre><code class="html">&lt;div class="row"&gt;
+        &lt;div class="column"&gt;1&lt;/div&gt;
+        &lt;div class="column"&gt;2&lt;/div&gt;
+        &lt;div class="column"&gt;3&lt;/div&gt;
     &lt;/div&gt;
-&lt;/div&gt;</code></pre>
+    &lt;div class="row"&gt;
+        &lt;div class="column"&gt;1&lt;/div&gt;
+        &lt;div class="column"&gt;2&lt;/div&gt;
+        &lt;div class="column"&gt;3.&lt;br&gt;Pushing the entire row down&lt;/div&gt;
+        &lt;div class="column"&gt;4&lt;/div&gt;
+        &lt;div class="column"&gt;5&lt;/div&gt;
+    &lt;/div&gt;</code></pre>
 
-        </section>
+            </section>
 
-        <section id="grid-gutter">
-            <h2>Gutters</h2>
-            <p>
-                If you like some spacing between columns, add the <code>.gutter</code> class to your <code>.row</code> element.
-                This way all child columns will receive an equally spaced gutter between them.
-            </p>
+            <section class="stack-l" id="grid-width">
 
-            <div class="dummy-gutter stack inset-s" style="background-color:aliceblue">
-                <div class="row gutter-s">
-                    <div class="column"><div class="box">I'm guttered</div></div>
-                    <div class="column"><div class="box">I'm guttered</div></div>
+                <h2>Fixed sizes</h2>
+                <p>
+                    If you need to fixate the relative width of your columns, warpaint provides a basic set of sizing
+                    classes for you to use.
+                    For the 12-column grid, you can opt to size from <code>.column-1</code> to <code>.column-12</code>.
+                </p>
+
+                <div class="dummy">
+                    <div class="row">
+                        <div class="column-6">.column-6</div>
+                        <div class="column-6">.column-6</div>
+                    </div>
+                    <div class="row">
+                        <div class="column-7">.column-7</div>
+                        <div class="column-5">.column-5</div>
+                    </div>
+                    <div class="row">
+                        <div class="column-8">.column-8</div>
+                        <div class="column-4">.column-4</div>
+                    </div>
+                    <div class="row">
+                        <div class="column-9">.column-9</div>
+                        <div class="column-3">.column-3</div>
+                    </div>
+                    <div class="row">
+                        <div class="column-10">.column-10</div>
+                        <div class="column-2">2</div>
+                    </div>
+                    <div class="row">
+                        <div class="column-11">.column-11</div>
+                        <div class="column-1">1</div>
+                    </div>
                 </div>
-                <div class="row gutter-s">
-                    <div class="column"><div class="box">We're all guttered</div></div>
-                    <div class="column"><div class="box">We're all guttered</div></div>
-                    <div class="column"><div class="box">We're all guttered</div></div>
-                </div>
-            </div>
 
-<pre><code class="html">&lt;div class="row gutter"&gt;
-    &lt;div class="column"&gt;&lt;div class="box"&gt;I'm guttered&lt;/div&gt;&lt;/div&gt;
-    &lt;div class="column"&gt;&lt;div class="box"&gt;I'm guttered&lt;/div&gt;&lt;/div&gt;
-&lt;/div&gt;</code></pre>
-
-            <p>
-                It is important to note that when using gutters, the column element acts as a wrapper of the displayed content.
-                The gutter logic add padding to each column in order to realize flexible spacing in between.
-            </p><p>
-            Instead of styling the column itself you should rather apply styles on the inner child element.
-        </p>
-
-            <p class="note">
-                <strong>Overflow due to negative margins</strong><br><br>
-                For optimal positioning of guttered columns, the parent row has negative margins on left and right sides.
-                There is no issue when using the container wrapper but if you have columns from edge to edge of the viewport, be aware that the negative margins will cause an overflow on your body element.
-                <br><br>
-                Hide the horizontal overflow on the body like so: <code>body{ overflow-x:hidden; }</code>
-            </p>
-
-        </section>
-
-        <section class="stack-l" id="grid-responsive">
-            <h2 id="responsive-grid">Responsive sizing</h2>
-            <p>
-                Warpaint utilizes <a href="documentation.html#responsive-breakpoints">5 breakpoints</a> You can set a specific column size for each of these breakpoints.
-                </p><p>
-            Prepend the column class with a <em>breakpoint prefix</em> like <code>xs-, s-, m-, l- or xl-</code>.
-                E.g. Adding <code>.l-column-3</code> to your column will enforce a 1/4 column size for all viewports equal or wider than the large breakpoint (around 64em)
-            </p>
-
-            <div class="dummy">
-                <div class="row">
-                    <div class="l-column-3 column-6"><div class="inset-dummy">.l-column-3 .column-6</div></div>
-                    <div class="l-column-3 column-6"><div class="inset-dummy">.l-column-3 .column-6</div></div>
-                    <div class="l-column-3 column-6"><div class="inset-dummy">.l-column-3 .column-6</div></div>
-                    <div class="l-column-3 column-6"><div class="inset-dummy">.l-column-3 .column-6</div></div>
-                </div>
-            </div>
-            <div class="text-center stack-xs font-s"><em>Resize the viewport to view the change. Active breakpoint is <span class="active-breakpoint-text"></span></em>. </div>
-
-<pre><code class="html">&lt;div class="row"&gt;
-    &lt;div class="l-column-3 column-6"&gt;...&lt;/div&gt;
-    &lt;div class="l-column-3 column-6"&gt;...&lt;/div&gt;
-    &lt;div class="l-column-3 column-6"&gt;...&lt;/div&gt;
-    &lt;div class="l-column-3 column-6"&gt;...&lt;/div&gt;
-&lt;/div&gt;</code></pre>
-
-            <h4>Multiple sizes</h4>
-            <p>
-                Sizing logic is calculated from smaller to larger viewports (aka mobile first).
-                You can add responsive sizes for each breakpoint. However it is good practise to just set a default column size and only add responsive sizing if it's needed.
-            </p>
-
-<pre><code class="html">&lt;!-- Don't do this --&gt;
-&lt;div class="row"&gt;
-    &lt;div class="xs-column-6 l-column-6 xl-column-3"&gt;&lt;/div&gt;
-    ...
-
-&lt;!-- instead do this --&gt;
-&lt;div class="row"&gt;
-    &lt;div class="column-6 xl-column-3"&gt;&lt;/div&gt;
+                <pre><code class="html">&lt;div class="row"&gt;
+        &lt;div class="column-6"&gt;6&lt;/div&gt;
+        &lt;div class="column-6"&gt;6&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="row"&gt;
+        &lt;div class="column-10"&gt;10&lt;/div&gt;
+        &lt;div class="column-2"&gt;2&lt;/div&gt;
+    &lt;/div&gt;
     ...</code></pre>
+                <p class="note">
+                    The default structure is a 12-column grid. But if you compile from sass, this can be easily changed by
+                    changing the <code>$grid-columns</code> value in the <em>settings.scss</em> file.
+                </p>
 
-        </section>
-    </article>
-</div>
+            </section>
+
+            <section id="grid-container" class="stack-l">
+
+                <h2>Container</h2>
+
+                <p>
+                    To present your content with some space to the left and right, place your rows inside a
+                    <code>.container</code> wrapper.
+                    By default the grid expands to the full width of its parent.
+                </p>
+
+                <div class="dummy zebra">
+                    <div class="container">
+                        <div class="row">
+                            <div class="column">This is content</div>
+                            <div class="column">placed inside a container.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <pre><code class="html">
+    &lt;div class="container"&gt;
+        &lt;div class="row"&gt;
+            &lt;div class="column"&gt;This is content&lt;/div&gt;
+            &lt;div class="column"&gt;placed inside a container.&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;</code></pre>
+
+            </section>
+
+            <section id="grid-gutter">
+                <h2>Gutters</h2>
+                <p>
+                    If you like some spacing between columns, add the <code>.gutter</code> class to your <code>.row</code>
+                    element.
+                    This way all child columns will receive an equally spaced gutter between them.
+                </p>
+
+                <div class="dummy-gutter stack inset-s" style="background-color:aliceblue">
+                    <div class="row gutter-s">
+                        <div class="column">
+                            <div class="box">I'm guttered</div>
+                        </div>
+                        <div class="column">
+                            <div class="box">I'm guttered</div>
+                        </div>
+                    </div>
+                    <div class="row gutter-s">
+                        <div class="column">
+                            <div class="box">We're all guttered</div>
+                        </div>
+                        <div class="column">
+                            <div class="box">We're all guttered</div>
+                        </div>
+                        <div class="column">
+                            <div class="box">We're all guttered</div>
+                        </div>
+                    </div>
+                </div>
+
+                <pre><code class="html">&lt;div class="row gutter"&gt;
+        &lt;div class="column"&gt;&lt;div class="box"&gt;I'm guttered&lt;/div&gt;&lt;/div&gt;
+        &lt;div class="column"&gt;&lt;div class="box"&gt;I'm guttered&lt;/div&gt;&lt;/div&gt;
+    &lt;/div&gt;</code></pre>
+
+                <p>
+                    It is important to note that when using gutters, the column element acts as a wrapper of the displayed
+                    content.
+                    The gutter logic add padding to each column in order to realize flexible spacing in between.
+                </p>
+                <p>
+                    Instead of styling the column itself you should rather apply styles on the inner child element.
+                </p>
+
+                <p class="note">
+                    <strong>Overflow due to negative margins</strong><br><br>
+                    For optimal positioning of guttered columns, the parent row has negative margins on left and right
+                    sides.
+                    There is no issue when using the container wrapper but if you have columns from edge to edge of the
+                    viewport, be aware that the negative margins will cause an overflow on your body element.
+                    <br><br>
+                    Hide the horizontal overflow on the body like so: <code>body{ overflow-x:hidden; }</code>
+                </p>
+
+            </section>
+
+            <section class="stack-l" id="grid-responsive">
+                <h2 id="responsive-grid">Responsive sizing</h2>
+                <p>
+                    Warpaint utilizes <a href="documentation.html#responsive-breakpoints">5 breakpoints</a> You can set a
+                    specific column size for each of these breakpoints.
+                </p>
+                <p>
+                    Prepend the column class with a <em>breakpoint prefix</em> like <code>xs-, s-, m-, l- or xl-</code>.
+                    E.g. Adding <code>.l-column-3</code> to your column will enforce a 1/4 column size for all viewports
+                    equal or wider than the large breakpoint (around 64em)
+                </p>
+
+                <div class="dummy">
+                    <div class="row">
+                        <div class="l-column-3 column-6">
+                            <div class="inset-dummy">.l-column-3 .column-6</div>
+                        </div>
+                        <div class="l-column-3 column-6">
+                            <div class="inset-dummy">.l-column-3 .column-6</div>
+                        </div>
+                        <div class="l-column-3 column-6">
+                            <div class="inset-dummy">.l-column-3 .column-6</div>
+                        </div>
+                        <div class="l-column-3 column-6">
+                            <div class="inset-dummy">.l-column-3 .column-6</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center stack-xs font-s"><em>Resize the viewport to view the change. Active breakpoint is
+                    <span class="active-breakpoint-text"></span></em>.
+                </div>
+
+                <pre><code class="html">&lt;div class="row"&gt;
+        &lt;div class="l-column-3 column-6"&gt;...&lt;/div&gt;
+        &lt;div class="l-column-3 column-6"&gt;...&lt;/div&gt;
+        &lt;div class="l-column-3 column-6"&gt;...&lt;/div&gt;
+        &lt;div class="l-column-3 column-6"&gt;...&lt;/div&gt;
+    &lt;/div&gt;</code></pre>
+
+                <h4>Multiple sizes</h4>
+                <p>
+                    Sizing logic is calculated from smaller to larger viewports (aka mobile first).
+                    You can add responsive sizes for each breakpoint. However it is good practise to just set a default
+                    column size and only add responsive sizing if it's needed.
+                </p>
+
+                <pre><code class="html">&lt;!-- Don't do this --&gt;
+    &lt;div class="row"&gt;
+        &lt;div class="xs-column-6 l-column-6 xl-column-3"&gt;&lt;/div&gt;
+        ...
+
+    &lt;!-- instead do this --&gt;
+    &lt;div class="row"&gt;
+        &lt;div class="column-6 xl-column-3"&gt;&lt;/div&gt;
+        ...</code></pre>
+
+            </section>
+        </article>
+    </div><!-- row -->
 </main>
 <footer class="size-xs text-center inset-m zebra">
-    <small>  &copy; Warpaint</small>
+    <small> &copy; Warpaint</small>
 </footer>
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>

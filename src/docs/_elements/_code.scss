@@ -1,12 +1,29 @@
-/*
-Based on Dark style from softwaremaniacs.org (c) Ivan Sagalaev <Maniac@SoftwareManiacs.Org>
-*/
 
+code{
+  background-color:hsl($paint-primary-hue, 10 ,90);
+  font-size:1em;
+  padding: 0.2em 0.4em;
+  border-radius: 3px;
+  border:none;
+}
+
+pre{
+  background-color:hsl($paint-primary-hue, 12 ,24);
+  font-size:1em;
+  padding:0;
+  border-radius:3px;
+  white-space: pre-wrap; /* Avoid breaking columns */
+}
+
+/**
+ * CODE HIGHLIGHT
+ * Based on Dark style from softwaremaniacs.org (c) Ivan Sagalaev <Maniac@SoftwareManiacs.Org>
+ */
 .hljs {
   display: block;
   overflow-x: auto;
   padding: 1.5em;
-  background: #444;
+  background-color:hsl($paint-primary-hue, 12 ,24);
 }
 
 .hljs-keyword,
@@ -34,7 +51,7 @@ Based on Dark style from softwaremaniacs.org (c) Ivan Sagalaev <Maniac@SoftwareM
 .hljs-variable,
 .hljs-template-tag,
 .hljs-template-variable {
-  color: #dd88c7;
+  color: lighten($paint-primary,20);
 }
 
 .hljs-comment,
