@@ -35,6 +35,11 @@ p{
   margin-bottom: $space-m;
 }
 
+ol, ul{
+  margin-top: 0;
+  margin-bottom: $space-m;
+}
+
 /**
  * Sizes independent of the viewports
  *

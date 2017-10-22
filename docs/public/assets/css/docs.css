@@ -1,9 +1,9 @@
 /*
  | ----------------------------------------------------------------
- | Paint settings
+ | Documentation settings
  | ----------------------------------------------------------------
  |
- | Here you should configure your paint related settings
+ | Here you should configure your related settings
  |
  */
 /*
@@ -17,15 +17,7 @@
  */
 /*
  | ----------------------------------------------------------------
- | Style settings
- | ----------------------------------------------------------------
- |
- | Here you should configure your project specific settings
- |
- */
-/*
- | ----------------------------------------------------------------
- | Container margins columns
+ | Container margin
  | ----------------------------------------------------------------
  |
  | By default the container has an equal margin to the left and right.
@@ -527,37 +519,37 @@ template {
 html {
   /* apply a natural box layout model to all elements, but allowing components to change */
   box-sizing: border-box;
-  font-size: 0.7em;
+  font-size: 10.4px;
   line-height: 1.5;
 }
 
 @media (min-width: 30em) {
   html {
-    font-size: 0.7875em;
+    font-size: 11.7px;
   }
 }
 
 @media (min-width: 48em) {
   html {
-    font-size: 0.875em;
+    font-size: 13px;
   }
 }
 
 @media (min-width: 64em) {
   html {
-    font-size: 0.9625em;
+    font-size: 14.3px;
   }
 }
 
 @media (min-width: 85em) {
   html {
-    font-size: 1.05em;
+    font-size: 15.6px;
   }
 }
 
 @media (min-width: 120em) {
   html {
-    font-size: 1.225em;
+    font-size: 18.2px;
   }
 }
 
@@ -1174,38 +1166,43 @@ img {
 }
 
 h1 {
-  font-size: 1.925em;
+  font-size: 28.6px;
   line-height: 1em;
   margin-top: 3rem;
 }
 
 h2 {
-  font-size: 1.575em;
+  font-size: 23.4px;
   line-height: 1.25em;
   margin-top: 1.5rem;
 }
 
 h3 {
-  font-size: 1.225em;
+  font-size: 18.2px;
   margin-top: 1.5rem;
 }
 
 h4 {
-  font-size: 1.05em;
+  font-size: 15.6px;
   margin-top: 0.75rem;
 }
 
 h5 {
-  font-size: 0.9625em;
+  font-size: 14.3px;
   margin-top: 0.75rem;
 }
 
 h6 {
-  font-size: 0.875em;
+  font-size: 13px;
   margin-top: 0.75rem;
 }
 
 p {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+}
+
+ol, ul {
   margin-top: 0;
   margin-bottom: 1.5rem;
 }
@@ -1218,27 +1215,27 @@ p {
  * e.g. line-height for font-l will hook into perfect vertical rhythm only on every 6-th line
  */
 .font-xs {
-  font-size: 0.7em;
+  font-size: 10.4px;
   line-height: 1.2;
 }
 
 .font-s {
-  font-size: 0.7875em;
+  font-size: 11.7px;
   line-height: 1.35;
 }
 
 .font-m {
-  font-size: 0.875em;
+  font-size: 13px;
   line-height: 1.5;
 }
 
 .font-l {
-  font-size: 0.9625em;
+  font-size: 14.3px;
   line-height: 1.5;
 }
 
 .font-xl {
-  font-size: 1.05em;
+  font-size: 15.6px;
   line-height: 1.5;
 }
 
@@ -1454,113 +1451,113 @@ h6:not(:last-child) {
  * ------------------------------------
  */
 .xs-inset-xs {
-  padding: 0.375rem;
+  padding: 0.375rem !important;
 }
 
 .xs-squished-xs {
-  padding: 0.1875rem 0.375rem;
+  padding: 0.1875rem 0.375rem !important;
 }
 
 .xs-stretched-xs {
-  padding: 0.375rem 0.1875rem;
+  padding: 0.375rem 0.1875rem !important;
 }
 
 .xs-stack-xs {
   margin-top: 0.375rem;
-  margin-bottom: 0.375rem;
+  margin-bottom: 0.375rem !important;
 }
 
 .xs-inline-xs {
   margin-left: 0.375rem;
-  margin-right: 0.375rem;
+  margin-right: 0.375rem !important;
 }
 
 .xs-inset-s {
-  padding: 0.75rem;
+  padding: 0.75rem !important;
 }
 
 .xs-squished-s {
-  padding: 0.375rem 0.75rem;
+  padding: 0.375rem 0.75rem !important;
 }
 
 .xs-stretched-s {
-  padding: 0.75rem 0.375rem;
+  padding: 0.75rem 0.375rem !important;
 }
 
 .xs-stack-s {
   margin-top: 0.75rem;
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.75rem !important;
 }
 
 .xs-inline-s {
   margin-left: 0.75rem;
-  margin-right: 0.75rem;
+  margin-right: 0.75rem !important;
 }
 
 .xs-inset-m {
-  padding: 1.5rem;
+  padding: 1.5rem !important;
 }
 
 .xs-squished-m {
-  padding: 0.75rem 1.5rem;
+  padding: 0.75rem 1.5rem !important;
 }
 
 .xs-stretched-m {
-  padding: 1.5rem 0.75rem;
+  padding: 1.5rem 0.75rem !important;
 }
 
 .xs-stack-m {
   margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.5rem !important;
 }
 
 .xs-inline-m {
   margin-left: 1.5rem;
-  margin-right: 1.5rem;
+  margin-right: 1.5rem !important;
 }
 
 .xs-inset-l {
-  padding: 3rem;
+  padding: 3rem !important;
 }
 
 .xs-squished-l {
-  padding: 1.5rem 3rem;
+  padding: 1.5rem 3rem !important;
 }
 
 .xs-stretched-l {
-  padding: 3rem 1.5rem;
+  padding: 3rem 1.5rem !important;
 }
 
 .xs-stack-l {
   margin-top: 3rem;
-  margin-bottom: 3rem;
+  margin-bottom: 3rem !important;
 }
 
 .xs-inline-l {
   margin-left: 3rem;
-  margin-right: 3rem;
+  margin-right: 3rem !important;
 }
 
 .xs-inset-xl {
-  padding: 6rem;
+  padding: 6rem !important;
 }
 
 .xs-squished-xl {
-  padding: 3rem 6rem;
+  padding: 3rem 6rem !important;
 }
 
 .xs-stretched-xl {
-  padding: 6rem 3rem;
+  padding: 6rem 3rem !important;
 }
 
 .xs-stack-xl {
   margin-top: 6rem;
-  margin-bottom: 6rem;
+  margin-bottom: 6rem !important;
 }
 
 .xs-inline-xl {
   margin-left: 6rem;
-  margin-right: 6rem;
+  margin-right: 6rem !important;
 }
 
 /**
@@ -1570,89 +1567,89 @@ h6:not(:last-child) {
  */
 @media (min-width: 30em) {
   .s-inset-xs {
-    padding: 0.375rem;
+    padding: 0.375rem !important;
   }
   .s-squished-xs {
-    padding: 0.1875rem 0.375rem;
+    padding: 0.1875rem 0.375rem !important;
   }
   .s-stretched-xs {
-    padding: 0.375rem 0.1875rem;
+    padding: 0.375rem 0.1875rem !important;
   }
   .s-stack-xs {
     margin-top: 0.375rem;
-    margin-bottom: 0.375rem;
+    margin-bottom: 0.375rem !important;
   }
   .s-inline-xs {
     margin-left: 0.375rem;
-    margin-right: 0.375rem;
+    margin-right: 0.375rem !important;
   }
   .s-inset-s {
-    padding: 0.75rem;
+    padding: 0.75rem !important;
   }
   .s-squished-s {
-    padding: 0.375rem 0.75rem;
+    padding: 0.375rem 0.75rem !important;
   }
   .s-stretched-s {
-    padding: 0.75rem 0.375rem;
+    padding: 0.75rem 0.375rem !important;
   }
   .s-stack-s {
     margin-top: 0.75rem;
-    margin-bottom: 0.75rem;
+    margin-bottom: 0.75rem !important;
   }
   .s-inline-s {
     margin-left: 0.75rem;
-    margin-right: 0.75rem;
+    margin-right: 0.75rem !important;
   }
   .s-inset-m {
-    padding: 1.5rem;
+    padding: 1.5rem !important;
   }
   .s-squished-m {
-    padding: 0.75rem 1.5rem;
+    padding: 0.75rem 1.5rem !important;
   }
   .s-stretched-m {
-    padding: 1.5rem 0.75rem;
+    padding: 1.5rem 0.75rem !important;
   }
   .s-stack-m {
     margin-top: 1.5rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.5rem !important;
   }
   .s-inline-m {
     margin-left: 1.5rem;
-    margin-right: 1.5rem;
+    margin-right: 1.5rem !important;
   }
   .s-inset-l {
-    padding: 3rem;
+    padding: 3rem !important;
   }
   .s-squished-l {
-    padding: 1.5rem 3rem;
+    padding: 1.5rem 3rem !important;
   }
   .s-stretched-l {
-    padding: 3rem 1.5rem;
+    padding: 3rem 1.5rem !important;
   }
   .s-stack-l {
     margin-top: 3rem;
-    margin-bottom: 3rem;
+    margin-bottom: 3rem !important;
   }
   .s-inline-l {
     margin-left: 3rem;
-    margin-right: 3rem;
+    margin-right: 3rem !important;
   }
   .s-inset-xl {
-    padding: 6rem;
+    padding: 6rem !important;
   }
   .s-squished-xl {
-    padding: 3rem 6rem;
+    padding: 3rem 6rem !important;
   }
   .s-stretched-xl {
-    padding: 6rem 3rem;
+    padding: 6rem 3rem !important;
   }
   .s-stack-xl {
     margin-top: 6rem;
-    margin-bottom: 6rem;
+    margin-bottom: 6rem !important;
   }
   .s-inline-xl {
     margin-left: 6rem;
-    margin-right: 6rem;
+    margin-right: 6rem !important;
   }
 }
 
@@ -1663,89 +1660,89 @@ h6:not(:last-child) {
  */
 @media (min-width: 48em) {
   .m-inset-xs {
-    padding: 0.375rem;
+    padding: 0.375rem !important;
   }
   .m-squished-xs {
-    padding: 0.1875rem 0.375rem;
+    padding: 0.1875rem 0.375rem !important;
   }
   .m-stretched-xs {
-    padding: 0.375rem 0.1875rem;
+    padding: 0.375rem 0.1875rem !important;
   }
   .m-stack-xs {
     margin-top: 0.375rem;
-    margin-bottom: 0.375rem;
+    margin-bottom: 0.375rem !important;
   }
   .m-inline-xs {
     margin-left: 0.375rem;
-    margin-right: 0.375rem;
+    margin-right: 0.375rem !important;
   }
   .m-inset-s {
-    padding: 0.75rem;
+    padding: 0.75rem !important;
   }
   .m-squished-s {
-    padding: 0.375rem 0.75rem;
+    padding: 0.375rem 0.75rem !important;
   }
   .m-stretched-s {
-    padding: 0.75rem 0.375rem;
+    padding: 0.75rem 0.375rem !important;
   }
   .m-stack-s {
     margin-top: 0.75rem;
-    margin-bottom: 0.75rem;
+    margin-bottom: 0.75rem !important;
   }
   .m-inline-s {
     margin-left: 0.75rem;
-    margin-right: 0.75rem;
+    margin-right: 0.75rem !important;
   }
   .m-inset-m {
-    padding: 1.5rem;
+    padding: 1.5rem !important;
   }
   .m-squished-m {
-    padding: 0.75rem 1.5rem;
+    padding: 0.75rem 1.5rem !important;
   }
   .m-stretched-m {
-    padding: 1.5rem 0.75rem;
+    padding: 1.5rem 0.75rem !important;
   }
   .m-stack-m {
     margin-top: 1.5rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.5rem !important;
   }
   .m-inline-m {
     margin-left: 1.5rem;
-    margin-right: 1.5rem;
+    margin-right: 1.5rem !important;
   }
   .m-inset-l {
-    padding: 3rem;
+    padding: 3rem !important;
   }
   .m-squished-l {
-    padding: 1.5rem 3rem;
+    padding: 1.5rem 3rem !important;
   }
   .m-stretched-l {
-    padding: 3rem 1.5rem;
+    padding: 3rem 1.5rem !important;
   }
   .m-stack-l {
     margin-top: 3rem;
-    margin-bottom: 3rem;
+    margin-bottom: 3rem !important;
   }
   .m-inline-l {
     margin-left: 3rem;
-    margin-right: 3rem;
+    margin-right: 3rem !important;
   }
   .m-inset-xl {
-    padding: 6rem;
+    padding: 6rem !important;
   }
   .m-squished-xl {
-    padding: 3rem 6rem;
+    padding: 3rem 6rem !important;
   }
   .m-stretched-xl {
-    padding: 6rem 3rem;
+    padding: 6rem 3rem !important;
   }
   .m-stack-xl {
     margin-top: 6rem;
-    margin-bottom: 6rem;
+    margin-bottom: 6rem !important;
   }
   .m-inline-xl {
     margin-left: 6rem;
-    margin-right: 6rem;
+    margin-right: 6rem !important;
   }
 }
 
@@ -1756,89 +1753,89 @@ h6:not(:last-child) {
  */
 @media (min-width: 64em) {
   .l-inset-xs {
-    padding: 0.375rem;
+    padding: 0.375rem !important;
   }
   .l-squished-xs {
-    padding: 0.1875rem 0.375rem;
+    padding: 0.1875rem 0.375rem !important;
   }
   .l-stretched-xs {
-    padding: 0.375rem 0.1875rem;
+    padding: 0.375rem 0.1875rem !important;
   }
   .l-stack-xs {
     margin-top: 0.375rem;
-    margin-bottom: 0.375rem;
+    margin-bottom: 0.375rem !important;
   }
   .l-inline-xs {
     margin-left: 0.375rem;
-    margin-right: 0.375rem;
+    margin-right: 0.375rem !important;
   }
   .l-inset-s {
-    padding: 0.75rem;
+    padding: 0.75rem !important;
   }
   .l-squished-s {
-    padding: 0.375rem 0.75rem;
+    padding: 0.375rem 0.75rem !important;
   }
   .l-stretched-s {
-    padding: 0.75rem 0.375rem;
+    padding: 0.75rem 0.375rem !important;
   }
   .l-stack-s {
     margin-top: 0.75rem;
-    margin-bottom: 0.75rem;
+    margin-bottom: 0.75rem !important;
   }
   .l-inline-s {
     margin-left: 0.75rem;
-    margin-right: 0.75rem;
+    margin-right: 0.75rem !important;
   }
   .l-inset-m {
-    padding: 1.5rem;
+    padding: 1.5rem !important;
   }
   .l-squished-m {
-    padding: 0.75rem 1.5rem;
+    padding: 0.75rem 1.5rem !important;
   }
   .l-stretched-m {
-    padding: 1.5rem 0.75rem;
+    padding: 1.5rem 0.75rem !important;
   }
   .l-stack-m {
     margin-top: 1.5rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.5rem !important;
   }
   .l-inline-m {
     margin-left: 1.5rem;
-    margin-right: 1.5rem;
+    margin-right: 1.5rem !important;
   }
   .l-inset-l {
-    padding: 3rem;
+    padding: 3rem !important;
   }
   .l-squished-l {
-    padding: 1.5rem 3rem;
+    padding: 1.5rem 3rem !important;
   }
   .l-stretched-l {
-    padding: 3rem 1.5rem;
+    padding: 3rem 1.5rem !important;
   }
   .l-stack-l {
     margin-top: 3rem;
-    margin-bottom: 3rem;
+    margin-bottom: 3rem !important;
   }
   .l-inline-l {
     margin-left: 3rem;
-    margin-right: 3rem;
+    margin-right: 3rem !important;
   }
   .l-inset-xl {
-    padding: 6rem;
+    padding: 6rem !important;
   }
   .l-squished-xl {
-    padding: 3rem 6rem;
+    padding: 3rem 6rem !important;
   }
   .l-stretched-xl {
-    padding: 6rem 3rem;
+    padding: 6rem 3rem !important;
   }
   .l-stack-xl {
     margin-top: 6rem;
-    margin-bottom: 6rem;
+    margin-bottom: 6rem !important;
   }
   .l-inline-xl {
     margin-left: 6rem;
-    margin-right: 6rem;
+    margin-right: 6rem !important;
   }
 }
 
@@ -1849,89 +1846,89 @@ h6:not(:last-child) {
  */
 @media (min-width: 85em) {
   .xl-inset-xs {
-    padding: 0.375rem;
+    padding: 0.375rem !important;
   }
   .xl-squished-xs {
-    padding: 0.1875rem 0.375rem;
+    padding: 0.1875rem 0.375rem !important;
   }
   .xl-stretched-xs {
-    padding: 0.375rem 0.1875rem;
+    padding: 0.375rem 0.1875rem !important;
   }
   .xl-stack-xs {
     margin-top: 0.375rem;
-    margin-bottom: 0.375rem;
+    margin-bottom: 0.375rem !important;
   }
   .xl-inline-xs {
     margin-left: 0.375rem;
-    margin-right: 0.375rem;
+    margin-right: 0.375rem !important;
   }
   .xl-inset-s {
-    padding: 0.75rem;
+    padding: 0.75rem !important;
   }
   .xl-squished-s {
-    padding: 0.375rem 0.75rem;
+    padding: 0.375rem 0.75rem !important;
   }
   .xl-stretched-s {
-    padding: 0.75rem 0.375rem;
+    padding: 0.75rem 0.375rem !important;
   }
   .xl-stack-s {
     margin-top: 0.75rem;
-    margin-bottom: 0.75rem;
+    margin-bottom: 0.75rem !important;
   }
   .xl-inline-s {
     margin-left: 0.75rem;
-    margin-right: 0.75rem;
+    margin-right: 0.75rem !important;
   }
   .xl-inset-m {
-    padding: 1.5rem;
+    padding: 1.5rem !important;
   }
   .xl-squished-m {
-    padding: 0.75rem 1.5rem;
+    padding: 0.75rem 1.5rem !important;
   }
   .xl-stretched-m {
-    padding: 1.5rem 0.75rem;
+    padding: 1.5rem 0.75rem !important;
   }
   .xl-stack-m {
     margin-top: 1.5rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.5rem !important;
   }
   .xl-inline-m {
     margin-left: 1.5rem;
-    margin-right: 1.5rem;
+    margin-right: 1.5rem !important;
   }
   .xl-inset-l {
-    padding: 3rem;
+    padding: 3rem !important;
   }
   .xl-squished-l {
-    padding: 1.5rem 3rem;
+    padding: 1.5rem 3rem !important;
   }
   .xl-stretched-l {
-    padding: 3rem 1.5rem;
+    padding: 3rem 1.5rem !important;
   }
   .xl-stack-l {
     margin-top: 3rem;
-    margin-bottom: 3rem;
+    margin-bottom: 3rem !important;
   }
   .xl-inline-l {
     margin-left: 3rem;
-    margin-right: 3rem;
+    margin-right: 3rem !important;
   }
   .xl-inset-xl {
-    padding: 6rem;
+    padding: 6rem !important;
   }
   .xl-squished-xl {
-    padding: 3rem 6rem;
+    padding: 3rem 6rem !important;
   }
   .xl-stretched-xl {
-    padding: 6rem 3rem;
+    padding: 6rem 3rem !important;
   }
   .xl-stack-xl {
     margin-top: 6rem;
-    margin-bottom: 6rem;
+    margin-bottom: 6rem !important;
   }
   .xl-inline-xl {
     margin-left: 6rem;
-    margin-right: 6rem;
+    margin-right: 6rem !important;
   }
 }
 
@@ -2004,32 +2001,32 @@ h6:not(:last-child) {
 
 .btn {
   border-radius: 3px;
-  background: #FFF;
-  border: 1px solid #FFF;
-  color: #8e44ad;
+  padding: .5em 1em;
+  background: #7a5cd6;
+  border: none;
+  color: white;
   display: inline-block;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.1s ease-in-out;
 }
 
 .btn:hover {
-  background: transparent;
-  color: #FFF;
+  background: #5933cc;
 }
 
 .btn-o {
   background: transparent;
-  color: #FFF;
+  color: white;
 }
 
 .btn-o:hover {
-  background: #FFF;
-  color: #8e44ad;
+  background: white;
+  color: #962cc3;
 }
 
 .btn-link {
   background: none;
   border: none;
-  color: #8e44ad;
+  color: #962cc3;
 }
 
 .btn-link:hover {
@@ -2110,11 +2107,11 @@ nav li a {
   font-size: 0.65rem;
   letter-spacing: 1px;
   position: relative;
-  color: #432051;
+  color: #ecd5f6;
 }
 
 nav li a:hover {
-  color: #FFF;
+  color: #d9acec;
 }
 
 nav li a:hover:after {
@@ -2146,7 +2143,7 @@ nav li a:after {
 
 .sidebar {
   padding-right: 1rem;
-  margin-right: 2rem;
+  margin-right: 3rem;
   border-right: 1px dotted #cccccc;
 }
 
@@ -2156,7 +2153,6 @@ nav li a:after {
 
 .sidebar__nav li {
   list-style: none outside none;
-  text-align: right;
 }
 
 .sidebar__divider {
@@ -2173,7 +2169,8 @@ HERO
 .hero {
   position: relative;
   text-align: center;
-  background-color: #8e44ad;
+  background-color: #962cc3;
+  background: linear-gradient(185deg, #6c3ef4 -110%, #962cc3);
 }
 
 .hero.--large {
@@ -2205,8 +2202,8 @@ svg {
 svg .fill {
   opacity: 0;
   fill-opacity: 0;
-  fill: #432051;
-  stroke: #25122d;
+  fill: #46155b;
+  stroke: #260b32;
   stroke-width: 2px;
   stroke-dasharray: 870px;
   stroke-dashoffset: 870px;
@@ -2302,48 +2299,136 @@ svg .fill {
   }
 }
 
-.hero-caption {
-  color: #432051;
-}
-
 .hero-caption h1 {
   margin-top: 0;
   font-weight: lighter;
   text-transform: uppercase;
+  color: white;
+  margin: 0;
 }
 
 .hero-logo {
   max-width: 100px;
 }
 
-main.--raised {
-  position: relative;
-  background-color: #FFF;
-  z-index: 1;
-  overflow-y: hidden;
-  margin: -60px 30px 0px;
-  border-radius: 6px;
-  box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+main.container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+@media (min-width: 64em) {
+  main.container {
+    position: relative;
+    background-color: #FFF;
+    z-index: 1;
+    overflow-y: hidden;
+    margin-top: -60px;
+    border-radius: 6px;
+    box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+  }
+}
+
+code {
+  background-color: #e7e3e8;
+  font-size: 1em;
+  padding: 0.2em 0.4em;
+  border-radius: 3px;
+  border: none;
+}
+
+pre {
+  background-color: #403645;
+  font-size: 1em;
+  padding: 0;
+  border-radius: 3px;
+  white-space: pre-wrap;
+  /* Avoid breaking columns */
+}
+
+/**
+ * CODE HIGHLIGHT
+ * Based on Dark style from softwaremaniacs.org (c) Ivan Sagalaev <Maniac@SoftwareManiacs.Org>
+ */
+.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 1.5em;
+  background-color: #403645;
+}
+
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-literal,
+.hljs-section,
+.hljs-link {
+  color: white;
+}
+
+.hljs,
+.hljs-subst {
+  color: #ddd;
+}
+
+.hljs-string,
+.hljs-title,
+.hljs-name,
+.hljs-type,
+.hljs-attribute,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-built_in,
+.hljs-addition,
+.hljs-variable,
+.hljs-template-tag,
+.hljs-template-variable {
+  color: #c076e0;
+}
+
+.hljs-comment,
+.hljs-quote,
+.hljs-deletion,
+.hljs-meta {
+  color: #777;
+}
+
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-literal,
+.hljs-title,
+.hljs-section,
+.hljs-doctag,
+.hljs-type,
+.hljs-name,
+.hljs-strong {
+  font-weight: bold;
+}
+
+.hljs-emphasis {
+  font-style: italic;
 }
 
 ::-moz-selection {
-  color: #FFF;
-  background-color: #8e44ad;
+  color: white;
+  background-color: #962cc3;
 }
 
 ::selection {
-  color: #FFF;
-  background-color: #8e44ad;
+  color: white;
+  background-color: #962cc3;
 }
 
 body {
-  font-family: Gotham SSm,sans-serif;
+  font-family: "Source Sans Pro", "Helvetica Neue", Arial, sans-serif;
   font-weight: 300;
-  color: #777777;
+  color: #7d6c84;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: Gotham SSm,"Source Sans Pro", "Helvetica Neue", Arial, sans-serif;
 }
 
 mark {
-  background-color: #cccccc;
+  background-color: #7b717f;
   color: white;
   font-style: italic;
   padding: 3px;
@@ -2433,12 +2518,17 @@ BLOCKS
   padding: 0.75rem;
   font-size: 0.75rem;
   color: #ffffff;
-  background-color: #8e44ad;
-  border: 2px solid #703688;
+  background-color: #962cc3;
+  border: 2px solid #76239a;
+}
+
+.note a {
+  color: white;
+  text-decoration: underline;
 }
 
 .note code {
-  background-color: #703688;
+  background-color: #76239a;
 }
 
 @media (max-width: 676px) {
@@ -2452,28 +2542,19 @@ BLOCKS
 
 a {
   text-decoration: none;
-  color: #8e44ad;
+  color: #8d43ad;
 }
 
 h2 {
-  color: #8e44ad;
-  border-bottom: 1px solid #8e44ad;
+  color: #8d43ad;
   font-weight: 100;
+  text-transform: uppercase;
+  letter-spacing: -0.05em;
 }
 
-code {
-  background-color: #f5f5f5;
-  font-size: .86em;
-  padding: 0.2em 0.3em;
-  border-radius: 3px;
-  border: 1px solid #cccccc;
-}
-
-pre {
-  background-color: #f5f5f5;
-  font-size: .86em;
-  padding: 1rem;
-  border-radius: 3px;
+h3 {
+  text-transform: uppercase;
+  font-size: .9em;
 }
 
 .box {
@@ -2524,4 +2605,4 @@ pre {
   background: repeating-linear-gradient(45deg, #ffffff, #ffffff 10px, #f5f5f5 10px, #f5f5f5 20px);
 }
 
-/*# sourceMappingURL=truce.css.map */
+/*# sourceMappingURL=docs.css.map */

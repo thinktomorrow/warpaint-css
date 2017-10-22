@@ -43,15 +43,15 @@ gulp.task('sass-docs', function() {
 
     // Copy distributed file for docs
     gulp.src(config.dest + '/warpaint.min.css')
-        .pipe(gulp.dest('./docs/assets/css/'));
+        .pipe(gulp.dest('./docs/public/assets/css/'));
 
-    return gulp.src(config.src + '/../docs/docs.scss')
+    return gulp.src('./docs/src/docs.scss')
         .pipe(sourcemaps.init())
         .pipe(sass({outputStyle: 'expanded'}).on('error', sass.logError))
         .pipe(autoprefix({cascade:false, browsers: ['> 1%']}))
         .pipe(sourcemaps.write('.'))
         .pipe(rename('docs.css'))
-        .pipe(gulp.dest('./docs/assets/css/'))
+        .pipe(gulp.dest('./docs/public/assets/css/'))
         .pipe(reload({ stream:true }));
 });
 
