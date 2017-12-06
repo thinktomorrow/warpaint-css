@@ -1,33 +1,30 @@
-@include small-view(){
+.gutter{
+    margin: -$space-m / 2;
 
-    .gutter{
-        margin: -$space-m / 2;
+    &:not(:last-child){
+        margin-bottom: $space-m / 2;
+    }
+}
+
+.gutter{
+    & > [class*="column-"], & > .column {
+
+        padding: $space-m / 2;
+    }
+}
+
+@each $size,$space in $sizes
+{
+    .gutter-#{$size}{
+
+        margin: -$space / 2;
 
         &:not(:last-child){
-            margin-bottom: $space-m / 2;
+            margin-bottom: $space / 2;
         }
-    }
 
-    .gutter{
-        & > [class*="column-"], & > .column {
-
-            padding: $space-m / 2;
-        }
-    }
-
-    @each $size,$space in $sizes
-    {
-        .gutter-#{$size}{
-
-            margin: -$space / 2;
-
-            &:not(:last-child){
-                margin-bottom: $space / 2;
-            }
-
-            & > .column, & > [class*="column-"]{
-                padding: $space / 2;
-            }
+        & > .column, & > [class*="column-"]{
+            padding: $space / 2;
         }
     }
 }
