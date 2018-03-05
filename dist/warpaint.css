@@ -548,9 +548,7 @@ img {
   .column {
     float: left;
     -webkit-box-flex: 1;
-    flex-grow: 1;
-    flex-shrink: 1;
-    flex-basis: 0;
+    flex: 1 1 0;
     width: auto;
   }
 }
@@ -569,9 +567,7 @@ img {
     float: left;
     /* non-flexbox support for basic columns */
     -webkit-box-flex: 0;
-    flex-grow: 0;
-    flex-shrink: 0;
-    flex-basis: auto;
+    flex: 0 0 auto;
   }
 }
 
@@ -650,8 +646,6 @@ img {
 .row {
   display: -webkit-box;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
   flex-flow: row wrap;
   /* Allow overflow to wrap to following line */
 }
@@ -664,14 +658,17 @@ img {
   }
   .row.top {
     -webkit-box-align: start;
+    -ms-grid-row-align: flex-start;
     align-items: flex-start;
   }
   .row.middle {
     -webkit-box-align: center;
+    -ms-grid-row-align: center;
     align-items: center;
   }
   .row.bottom {
     -webkit-box-align: end;
+    -ms-grid-row-align: flex-end;
     align-items: flex-end;
   }
   .row.left {
