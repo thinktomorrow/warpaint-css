@@ -1,0 +1,83 @@
+/**
+ * Inset
+ * A square inset indents content on all four sides equally.
+ * Based and inspired by https://medium.com/eightshapes-llc/space-in-design-systems-188bcbae0d62#.w5ff4nwob
+ */
+.inset-xs{ padding: $space-xs !important; }
+.inset-s{ padding: $space-s !important; }
+.inset-m,.inset{ padding: $space-m !important; }
+.inset-l{ padding: $space-l !important; }
+.inset-xl{ padding: $space-xl !important; }
+
+/**
+ * Squished inset
+ *
+ * A squished inset stretches horizontally as it reduces space top and bottom by 50% of the inset.
+ * Less common than the square inset but is used for buttons and
+ * cell-like containers as tables of lists
+ */
+.squished-xs{ padding: $space-xs / 2 $space-xs !important; }
+.squished-s{ padding: $space-s / 2 $space-s !important; }
+.squished-m,.squished{ padding: $space-m / 2 $space-m !important; }
+.squished-l{ padding: $space-l / 2 $space-l !important; }
+.squished-xl{ padding: $space-xl / 2 $space-xl !important; }
+
+/**
+ * Stretched inset
+ *
+ * Stretched inset stretches vertically and is
+ * used for textboxes and other form elements
+ */
+.stretched-xs{ padding: $space-xs $space-xs / 2 !important; }
+.stretched-s{ padding: $space-s $space-s / 2 !important; }
+.stretched-m,.stretched{ padding: $space-m $space-m / 2 !important; }
+.stretched-l{ padding: $space-l $space-l / 2 !important; }
+.stretched-xl{ padding: $space-xl $space-xl / 2 !important; }
+
+/**
+ * Stack
+ *
+ * Stack elements on each other
+ */
+.stack-xs{ margin-top: $space-xs; margin-bottom:$space-xs !important; }
+.stack-s{ margin-top: $space-s; margin-bottom:$space-s !important; }
+.stack-m,.stack{ margin-top: $space-m; margin-bottom:$space-m !important; }
+.stack-l{ margin-top: $space-l; margin-bottom:$space-l !important; }
+.stack-xl{ margin-top: $space-xl; margin-bottom:$space-xl !important; }
+
+[class*="squished"] [class*="stack"]:first-child,
+[class*="stretched"] [class*="stack"]:first-child,
+[class*="inset"] [class*="stack"]:first-child { margin-top: 0 !important; }
+
+[class*="squished"] [class*="stack"]:last-child,
+[class*="stretched"] [class*="stack"]:last-child,
+[class*="inset"] [class*="stack"]:last-child { margin-bottom: 0 !important; }
+
+/**
+ * Inline
+  *
+  * Arrange object inline. Ideal for pills, tags, breadrumbs
+  */
+.inline-xs{ margin-right:$space-xs !important; }
+.inline-s{ margin-right:$space-s !important; }
+.inline-m,.inline{ margin-right:$space-m !important; }
+.inline-l{ margin-right:$space-l !important; }
+.inline-xl{ margin-right:$space-xl !important; }
+
+/**
+ * Inline-group
+  */
+.inline-group-xs > *{ margin-right:$space-xs !important; }
+.inline-group-s > *{ margin-right:$space-s !important; }
+.inline-group-m > *,.inline-group > *{ margin-right:$space-m !important; }
+.inline-group-l > *{ margin-right:$space-l !important; }
+.inline-group-xl > *{ margin-right:$space-xl !important; }
+
+/**
+ * last element of inline-group needs to be properly aligned
+ */
+.inline-group-xs > *:last-child,
+.inline-group-s > *:last-child,
+.inline-group-m > *:last-child,.inline-group > *:last-child,
+.inline-group-l > *:last-child,
+.inline-group-xl > *:last-child { margin-right:0 !important; }

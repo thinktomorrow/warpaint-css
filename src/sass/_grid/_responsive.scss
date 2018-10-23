@@ -1,0 +1,95 @@
+/**
+ * ------------------------------------
+ * Smallest view (xs)
+ * ------------------------------------
+ */
+
+@for $i from 1 through $grid-columns {
+  .xs-column-#{$i}  {
+    width: 100% / $grid-columns  * $i;
+  }
+}
+
+/**
+ * ------------------------------------
+ * Small view (s)
+ * ------------------------------------
+ */
+@include small-view(){
+
+  [class*="s-column-"]{
+    float:left; /* non-flexbox support for basic columns */
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: auto; // Honour the width for fixed sizes
+  }
+  
+  @for $i from 1 through $grid-columns {
+    .s-column-#{$i}{
+      width: 100% / $grid-columns  * $i;
+    }
+  }
+}
+
+/**
+ * ------------------------------------
+ * Medium view (m)
+ * ------------------------------------
+ */
+@include medium-view(){
+
+  [class*="m-column-"]{
+    float:left; /* non-flexbox support for basic columns */
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: auto; // Honour the width for fixed sizes
+  }
+
+  @for $i from 1 through $grid-columns {
+    .m-column-#{$i} {
+      width: 100% / $grid-columns  * $i;
+    }
+  }
+}
+
+/**
+ * ------------------------------------
+ * large view (l)
+ * ------------------------------------
+ */
+@include large-view(){
+
+  [class*="l-column-"]{
+    float:left; /* non-flexbox support for basic columns */
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: auto; // Honour the width for fixed sizes
+  }
+
+  @for $i from 1 through $grid-columns {
+    .l-column-#{$i} {
+      width: 100% / $grid-columns  * $i;
+    }
+  }
+}
+
+/**
+ * ------------------------------------
+ * Extra Large view (xl)
+ * ------------------------------------
+ */
+@include xlarge-view(){
+
+  [class*="xl-column-"]{
+    float:left; /* non-flexbox support for basic columns */
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: auto; // Honour the width for fixed sizes
+  }
+
+  @for $i from 1 through $grid-columns {
+    .xl-column-#{$i}{
+      width: 100% / $grid-columns  * $i;
+    }
+  }
+}

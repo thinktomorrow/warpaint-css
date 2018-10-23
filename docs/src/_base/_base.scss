@@ -1,0 +1,135 @@
+::selection{
+    color: $paint-white;
+    background-color: $paint-primary
+}
+
+body{
+    font-family: "Source Sans Pro", "Helvetica Neue", Arial, sans-serif;
+    font-weight: 300;
+    color: hsl($paint-primary-hue, 10 ,$paint-primary-light);
+}
+
+h1,h2,h3,h4,h5{
+    font-family: Gotham SSm,"Source Sans Pro", "Helvetica Neue", Arial, sans-serif;
+}
+
+mark{
+    background-color: hsl($paint-primary-hue, 6 ,$paint-primary-light);
+    color: white;
+    font-style: italic;
+    padding: 3px;
+}
+
+
+/* -------------------------------------------------------
+Border-grey
+------------------------------------------------------- */
+.border-grey{
+    border: 1px solid #ccc;
+}
+
+/* -------------------------------------------------------
+BLOCKS
+------------------------------------------------------- */
+.active-breakpoint-text{
+
+    &:after{
+        display:inline-block;
+        content:'default';
+    }
+
+    @include xsmall-view{
+        &:after{
+            content:'xsmall';
+
+        }
+    }
+
+    @include small-view{
+        &:after{
+            content:'small';
+
+        }
+    }
+
+    @include medium-view{
+        &:after{
+            content:'medium';
+
+        }
+    }
+
+    @include large-view{
+        &:after{
+            content:'large';
+
+        }
+    }
+
+    @include xlarge-view{
+        &:after{
+            content:'xlarge';
+
+        }
+    }
+}
+
+.nav__up{
+    position: fixed;
+    padding: 1rem;
+    background-color:#ffffff;
+    display:none;
+
+    bottom: 0.6rem;
+    left: -0.6rem;
+
+    @include small-view{
+        bottom: 2rem;
+        left: 2rem;
+    }
+}
+
+.nav__up.active{
+
+    display:block;
+
+}
+
+.nav__up__guidetext{
+    position:absolute;
+    bottom: -17px;
+    left: 0px;
+    white-space: nowrap;
+    color: #cccccc;
+    display:none;
+
+    @include small-view{
+        display:block;
+    }
+}
+
+.note{
+    padding: $space-s;
+    font-size: $space-s;
+    color:#ffffff;
+    background-color: $paint-primary;
+    border:2px solid darken($paint-primary, 10%);
+
+    a{
+        color: $paint-white;
+        text-decoration:underline;
+    }
+
+    code{
+        background-color: darken($paint-primary, 10%);
+    }
+}
+
+@media (max-width: 676px) {
+    aside {
+        display: none;
+    }
+    .offset {
+        margin-top: $space-s;
+    }
+}

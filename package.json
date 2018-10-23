@@ -27,6 +27,7 @@
   "homepage": "https://github.com/thinktomorrow/warpaint#readme",
   "devDependencies": {
     "browser-sync": "^2.15.0",
+    "clipboard": "^1.7.1",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.1",
     "gulp-rename": "^1.2.2",

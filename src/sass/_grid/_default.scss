@@ -1,0 +1,25 @@
+
+.column{
+
+  width:100%;
+
+  @include small-view(){
+    float:left;
+    flex: 1 1 0; // grow - shrink - basis
+    width:auto;
+  }
+}
+
+/**
+ * Default width of columns is full width on xs screens
+ * unless explicitly set to a column size. Only the
+ * auto '.column' is left to default behaviour
+ */
+[class^="column-"],[class*="xs-column-"]{
+  width: 100%;
+
+  @include small-view(){
+    float:left; /* non-flexbox support for basic columns */
+    flex: 0 0 auto; // grow - shrink - basis
+  }
+}

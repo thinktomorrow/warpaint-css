@@ -7,7 +7,8 @@
 
 @import '_grid/default';
 @import '_grid/gutter';
-@import '_grid/grid';
+@import '_grid/row';
+@import '_grid/sizes';
 @import '_grid/responsive';
 @import '_grid/container';
 
@@ -15,7 +16,7 @@
 
 // states
 @import '_space/spaces';
-@import '_space/responsive.scss';
+@import '_space/responsive';
 @import '_base/states';
 
 // For Dev purposes you can add a grid overlay to visualize the vertical rhythm

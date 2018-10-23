@@ -1,0 +1,78 @@
+
+code{
+  background-color:hsl($paint-primary-hue, 10 ,90);
+  font-size:1em;
+  padding: 0.2em 0.4em;
+  border-radius: 3px;
+  border:none;
+}
+
+pre{
+  background-color:hsl($paint-primary-hue, 12 ,24);
+  font-size:1em;
+  padding:0;
+  border-radius:3px;
+  white-space: pre-wrap; /* Avoid breaking columns */
+}
+
+/**
+ * CODE HIGHLIGHT
+ * Based on Dark style from softwaremaniacs.org (c) Ivan Sagalaev <Maniac@SoftwareManiacs.Org>
+ */
+.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 1.5em;
+  background-color:hsl($paint-primary-hue, 12 ,24);
+}
+
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-literal,
+.hljs-section,
+.hljs-link {
+  color: white;
+}
+
+.hljs,
+.hljs-subst {
+  color: #ddd;
+}
+
+.hljs-string,
+.hljs-title,
+.hljs-name,
+.hljs-type,
+.hljs-attribute,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-built_in,
+.hljs-addition,
+.hljs-variable,
+.hljs-template-tag,
+.hljs-template-variable {
+  color: lighten($paint-primary,20);
+}
+
+.hljs-comment,
+.hljs-quote,
+.hljs-deletion,
+.hljs-meta {
+  color: #777;
+}
+
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-literal,
+.hljs-title,
+.hljs-section,
+.hljs-doctag,
+.hljs-type,
+.hljs-name,
+.hljs-strong {
+  font-weight: bold;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}

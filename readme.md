@@ -47,6 +47,11 @@ Since it relies on flexbox there is limited compatibility with IE9. For those in
     <!--[if IE 9]><link rel="stylesheet" href="/warpaint-ie9.css" type="text/css" /><![endif]-->
 ```
 
+## Document
+- overflow-y
+- column as child element and as wrapper of inner
+- 
+
 ## Customize
 You can customize Warpaint by editing the `src/sass/settings.scss` file. The most important settings are:
 

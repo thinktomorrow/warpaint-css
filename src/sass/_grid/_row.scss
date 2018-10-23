@@ -1,0 +1,18 @@
+.row{
+  display:flex;
+  flex-flow: row wrap; /* Allow overflow to wrap to following line */
+
+  @include small-view(){
+
+    justify-content: flex-start; float:none;
+
+    &.top{ align-items: flex-start; }
+    &.middle{ align-items: center; }
+    &.bottom{ align-items: flex-end; }
+
+    &.left{ justify-content: flex-start; float:none; }
+    &.right{ justify-content: flex-end; float:none; }
+    &.center{ justify-content: center; }
+    &.edge{ justify-content: space-between; }
+  }
+}

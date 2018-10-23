@@ -1,0 +1,33 @@
+/*
+ | ----------------------------------------------------------------
+ | Documentation settings
+ | ----------------------------------------------------------------
+ |
+ | Here you should configure your related settings
+ |
+ */
+
+// PRIMARY COLOR
+$paint-primary-hue: 282; // set our color values separate for more control
+$paint-primary-sat: 63;
+$paint-primary-light: 47;
+$paint-primary: hsl($paint-primary-hue, $paint-primary-sat, $paint-primary-light); // #8e44ad;
+
+// SECONDARY COLOR
+$paint-secondary-hue: 255;
+$paint-secondary-sat: 89;
+$paint-secondary-light: 60;
+$paint-secondary: hsl($paint-secondary-hue, $paint-secondary-sat, $paint-secondary-light); // #6b3ef4;
+
+$paint-white: lighten($paint-primary,90%); // White
+
+/*
+ | ----------------------------------------------------------------
+ | Base font size
+ | ----------------------------------------------------------------
+ |
+ | The default font-size. This is also the value on which all font based spacings
+ | and sizings are measured upon. By default this is set to 0.875em. Depending on
+ | your font family of choice this should be changed to a proper default.
+ */
+$base-font-size:  13px;

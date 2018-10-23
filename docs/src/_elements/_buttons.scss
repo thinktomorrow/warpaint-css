@@ -1,0 +1,30 @@
+.btn{
+  border-radius: 3px;
+  padding:.5em 1em;
+  background: hsl($paint-secondary-hue,60,60);
+  border: none;
+  color: $paint-white;
+  display: inline-block;
+  transition: all 0.1s ease-in-out;
+  &:hover{
+    background: hsl($paint-secondary-hue,60,50);
+  }
+}
+
+.btn-o{
+  background: transparent;
+  color: $paint-white;
+  &:hover{
+    background: $paint-white;
+    color: $paint-primary;
+  }
+}
+
+.btn-link{
+  background: none;
+  border: none;
+  color: $paint-primary;
+  &:hover{
+    text-decoration: underline
+  }
+}
