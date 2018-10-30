@@ -3,8 +3,6 @@
   &:before, &:after {
     content: " ";
     display: table;
-    /* Small hack for Safari to remove a non-visual line */
-    position: absolute; 
   }
   &:after {
     clear: both;
