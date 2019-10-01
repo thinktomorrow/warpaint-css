@@ -5,11 +5,11 @@
  */
 @each $size,$space in $sizes
 {
-  .xs-inset-#{$size} { padding: $space !important; }
-  .xs-squished-#{$size} { padding: $space / 2 $space !important; }
-  .xs-stretched-#{$size}{ padding: $space $space / 2 !important; }
-  .xs-stack-#{$size}{ margin-top: $space; margin-bottom:$space !important; }
-  .xs-inline-#{$size}{ margin-left: $space; margin-right:$space !important; }
+  .xs-inset-#{$size} { padding: $space; }
+  .xs-squished-#{$size} { padding: $space / 2 $space; }
+  .xs-stretched-#{$size}{ padding: $space $space / 2; }
+  .xs-stack-#{$size}{ margin-top: $space; margin-bottom:$space; }
+  .xs-inline-#{$size}{ margin-left: $space; margin-right:$space; }
 }
 
 /**
@@ -21,11 +21,11 @@
 
   @each $size,$space in $sizes
   {
-    .s-inset-#{$size}{ padding: $space !important; }
-    .s-squished-#{$size} { padding: $space / 2 $space !important; }
-    .s-stretched-#{$size}{ padding: $space $space / 2 !important; }
-    .s-stack-#{$size}{ margin-top: $space; margin-bottom:$space !important; }
-    .s-inline-#{$size}{ margin-left: $space; margin-right:$space !important; }
+    .s-inset-#{$size}{ padding: $space; }
+    .s-squished-#{$size} { padding: $space / 2 $space; }
+    .s-stretched-#{$size}{ padding: $space $space / 2; }
+    .s-stack-#{$size}{ margin-top: $space; margin-bottom:$space; }
+    .s-inline-#{$size}{ margin-left: $space; margin-right:$space; }
   }
 
 }
@@ -39,11 +39,11 @@
 
   @each $size,$space in $sizes
   {
-    .m-inset-#{$size} { padding: $space !important; }
-    .m-squished-#{$size} { padding: $space / 2 $space !important; }
-    .m-stretched-#{$size}{ padding: $space $space / 2 !important; }
-    .m-stack-#{$size}{ margin-top: $space; margin-bottom:$space !important; }
-    .m-inline-#{$size}{ margin-left: $space; margin-right:$space !important; }
+    .m-inset-#{$size} { padding: $space; }
+    .m-squished-#{$size} { padding: $space / 2 $space; }
+    .m-stretched-#{$size}{ padding: $space $space / 2; }
+    .m-stack-#{$size}{ margin-top: $space; margin-bottom:$space; }
+    .m-inline-#{$size}{ margin-left: $space; margin-right:$space; }
   }
 
 }
@@ -57,11 +57,11 @@
 
   @each $size,$space in $sizes
   {
-    .l-inset-#{$size} { padding: $space !important; }
-    .l-squished-#{$size} { padding: $space / 2 $space !important; }
-    .l-stretched-#{$size}{ padding: $space $space / 2 !important; }
-    .l-stack-#{$size}{ margin-top: $space; margin-bottom:$space !important; }
-    .l-inline-#{$size}{ margin-left: $space; margin-right:$space !important; }
+    .l-inset-#{$size} { padding: $space; }
+    .l-squished-#{$size} { padding: $space / 2 $space; }
+    .l-stretched-#{$size}{ padding: $space $space / 2; }
+    .l-stack-#{$size}{ margin-top: $space; margin-bottom:$space; }
+    .l-inline-#{$size}{ margin-left: $space; margin-right:$space; }
   }
 
 }
@@ -75,11 +75,11 @@
 
   @each $size,$space in $sizes
   {
-    .xl-inset-#{$size} { padding: $space !important; }
-    .xl-squished-#{$size} { padding: $space / 2 $space !important; }
-    .xl-stretched-#{$size}{ padding: $space $space / 2 !important; }
-    .xl-stack-#{$size}{ margin-top: $space; margin-bottom:$space !important; }
-    .xl-inline-#{$size}{ margin-left: $space; margin-right:$space !important; }
+    .xl-inset-#{$size} { padding: $space; }
+    .xl-squished-#{$size} { padding: $space / 2 $space; }
+    .xl-stretched-#{$size}{ padding: $space $space / 2; }
+    .xl-stack-#{$size}{ margin-top: $space; margin-bottom:$space; }
+    .xl-inline-#{$size}{ margin-left: $space; margin-right:$space; }
   }
 
 }
