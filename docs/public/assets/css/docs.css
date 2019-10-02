@@ -1192,23 +1192,23 @@ p:last-child {
  * Based and inspired by https://medium.com/eightshapes-llc/space-in-design-systems-188bcbae0d62#.w5ff4nwob
  */
 .inset-xs {
-  padding: 0.375rem !important;
+  padding: 0.375rem;
 }
 
 .inset-s {
-  padding: 0.75rem !important;
+  padding: 0.75rem;
 }
 
 .inset-m, .inset {
-  padding: 1.5rem !important;
+  padding: 1.5rem;
 }
 
 .inset-l {
-  padding: 3rem !important;
+  padding: 3rem;
 }
 
 .inset-xl {
-  padding: 6rem !important;
+  padding: 6rem;
 }
 
 /**
@@ -1219,23 +1219,23 @@ p:last-child {
  * cell-like containers as tables of lists
  */
 .squished-xs {
-  padding: 0.1875rem 0.375rem !important;
+  padding: 0.1875rem 0.375rem;
 }
 
 .squished-s {
-  padding: 0.375rem 0.75rem !important;
+  padding: 0.375rem 0.75rem;
 }
 
 .squished-m, .squished {
-  padding: 0.75rem 1.5rem !important;
+  padding: 0.75rem 1.5rem;
 }
 
 .squished-l {
-  padding: 1.5rem 3rem !important;
+  padding: 1.5rem 3rem;
 }
 
 .squished-xl {
-  padding: 3rem 6rem !important;
+  padding: 3rem 6rem;
 }
 
 /**
@@ -1245,23 +1245,23 @@ p:last-child {
  * used for textboxes and other form elements
  */
 .stretched-xs {
-  padding: 0.375rem 0.1875rem !important;
+  padding: 0.375rem 0.1875rem;
 }
 
 .stretched-s {
-  padding: 0.75rem 0.375rem !important;
+  padding: 0.75rem 0.375rem;
 }
 
 .stretched-m, .stretched {
-  padding: 1.5rem 0.75rem !important;
+  padding: 1.5rem 0.75rem;
 }
 
 .stretched-l {
-  padding: 3rem 1.5rem !important;
+  padding: 3rem 1.5rem;
 }
 
 .stretched-xl {
-  padding: 6rem 3rem !important;
+  padding: 6rem 3rem;
 }
 
 /**
@@ -1271,39 +1271,39 @@ p:last-child {
  */
 .stack-xs {
   margin-top: 0.375rem;
-  margin-bottom: 0.375rem !important;
+  margin-bottom: 0.375rem;
 }
 
 .stack-s {
   margin-top: 0.75rem;
-  margin-bottom: 0.75rem !important;
+  margin-bottom: 0.75rem;
 }
 
 .stack-m, .stack {
   margin-top: 1.5rem;
-  margin-bottom: 1.5rem !important;
+  margin-bottom: 1.5rem;
 }
 
 .stack-l {
   margin-top: 3rem;
-  margin-bottom: 3rem !important;
+  margin-bottom: 3rem;
 }
 
 .stack-xl {
   margin-top: 6rem;
-  margin-bottom: 6rem !important;
+  margin-bottom: 6rem;
 }
 
 [class*="squished"] [class*="stack"]:first-child,
 [class*="stretched"] [class*="stack"]:first-child,
 [class*="inset"] [class*="stack"]:first-child {
-  margin-top: 0 !important;
+  margin-top: 0;
 }
 
 [class*="squished"] [class*="stack"]:last-child,
 [class*="stretched"] [class*="stack"]:last-child,
 [class*="inset"] [class*="stack"]:last-child {
-  margin-bottom: 0 !important;
+  margin-bottom: 0;
 }
 
 /**
@@ -1312,46 +1312,46 @@ p:last-child {
   * Arrange object inline. Ideal for pills, tags, breadrumbs
   */
 .inline-xs {
-  margin-right: 0.375rem !important;
+  margin-right: 0.375rem;
 }
 
 .inline-s {
-  margin-right: 0.75rem !important;
+  margin-right: 0.75rem;
 }
 
 .inline-m, .inline {
-  margin-right: 1.5rem !important;
+  margin-right: 1.5rem;
 }
 
 .inline-l {
-  margin-right: 3rem !important;
+  margin-right: 3rem;
 }
 
 .inline-xl {
-  margin-right: 6rem !important;
+  margin-right: 6rem;
 }
 
 /**
  * Inline-group
   */
 .inline-group-xs > * {
-  margin-right: 0.375rem !important;
+  margin-right: 0.375rem;
 }
 
 .inline-group-s > * {
-  margin-right: 0.75rem !important;
+  margin-right: 0.75rem;
 }
 
 .inline-group-m > *, .inline-group > * {
-  margin-right: 1.5rem !important;
+  margin-right: 1.5rem;
 }
 
 .inline-group-l > * {
-  margin-right: 3rem !important;
+  margin-right: 3rem;
 }
 
 .inline-group-xl > * {
-  margin-right: 6rem !important;
+  margin-right: 6rem;
 }
 
 /**
@@ -1362,7 +1362,7 @@ p:last-child {
 .inline-group-m > *:last-child, .inline-group > *:last-child,
 .inline-group-l > *:last-child,
 .inline-group-xl > *:last-child {
-  margin-right: 0 !important;
+  margin-right: 0;
 }
 
 /**
