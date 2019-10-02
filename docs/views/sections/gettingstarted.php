@@ -10,15 +10,15 @@
 
         <p>Or download from github:</p>
         <div>
-            <a download class="btn" href="https://github.com/thinktomorrow/warpaint/archive/0.0.9.zip">Full zip</a>
-            <a download class="btn" href="https://raw.githubusercontent.com/thinktomorrow/warpaint/0.0.9/dist/warpaint.min.css">warpaint.min.css (17 kb)</a>
+            <a download class="btn" href="https://github.com/thinktomorrow/warpaint/archive/0.0.10.zip">Full zip</a>
+            <a download class="btn" href="https://raw.githubusercontent.com/thinktomorrow/warpaint/0.0.10/dist/warpaint.min.css">warpaint.min.css (17 kb)</a>
         </div>
 
     </section>
 
     <section class="stack-l">
         <h3>Stability</h3>
-        <p>Current stable version is <a href="https://github.com/thinktomorrow/warpaint/tree/0.0.9">0.0.9</a>.</p>
+        <p>Current stable version is <a href="https://github.com/thinktomorrow/warpaint/tree/0.0.10">0.0.10</a>.</p>
         <p> Out of the box, warpaint is supported in all modern browsers: Chrome, Firefox, Safari, Edge and
             Opera. There is a fairly good support for IE10+ and most functionality should be working.
             Since it relies on flexbox there is limited compatibility with IE9.
