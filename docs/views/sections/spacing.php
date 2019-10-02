@@ -2,6 +2,7 @@
     <h2>Spacing</h2>
 
     <p>Warpaint provides margin and padding utility classes. the spacing of elements inside their parent container (margins) and spacing inside the element (paddings).</p>
+    <p>In general, these classes will work as expected. In the case your project's css contains nested css rules, there's a chance the latter will override the given utility classes.</p>
 
 <section>
     <h3 id="spacing-stack">.stack</h3>
