@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/thinktomorrow/warpaint.git"
+    "url": "git+https://github.com/thinktomorrow/warpaint-css.git"
   },
   "keywords": [
     "warpaint",
@@ -22,9 +22,9 @@
   "author": "Ben Cavens, Johnny Berkmans",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/thinktomorrow/warpaint/issues"
+    "url": "https://github.com/thinktomorrow/warpaint-css/issues"
   },
-  "homepage": "https://github.com/thinktomorrow/warpaint#readme",
+  "homepage": "https://github.com/thinktomorrow/warpaint-css#readme",
   "devDependencies": {
     "browser-sync": "^2.15.0",
     "clipboard": "^1.7.1",
